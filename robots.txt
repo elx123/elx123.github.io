@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://chenjiajun1207.github.io/sitemap.xml
