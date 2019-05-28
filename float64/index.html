@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Tags - 人生苦短,只争朝夕</title>
+  <title>Golang float - 人生苦短,只争朝夕</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -22,8 +22,9 @@
 
 <meta name="mobile-web-app-capable" content="yes">
 
-<meta name="author" content="RT" />
-  <meta name="description" content="Hugo theme jane example site." />
+<meta name="author" content="xianmin" />
+  <meta name="description" content="简介 两个浮点数相加减，可能不准确 相减 最近在工作遇到float的精度问题,记录下解决思路 浮点数数据格式有许多种,IEEE754标准的浮点数与I" />
+
   <meta name="keywords" content="Hugo, theme, jane" />
 
 
@@ -34,8 +35,7 @@
 <meta name="generator" content="Hugo 0.55.6" />
 
 
-<link rel="canonical" href="https://chenjiajun1207.github.io/tags/" />
-<link href="%7balternate%20%7bRSS%20application/rss&#43;xml%20%20index%20alternate%20%20false%20false%20true%20false%20false%200%7d%20/tags/index.xml%20https://chenjiajun1207.github.io/tags/index.xml%7d" rel="alternate" type="application/rss+xml" title="人生苦短,只争朝夕" />
+<link rel="canonical" href="https://chenjiajun1207.github.io/float64/" />
 
 
 
@@ -57,18 +57,27 @@
 
 
 
-<meta property="og:title" content="Tags" />
-<meta property="og:description" content="Hugo theme jane example site." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://chenjiajun1207.github.io/tags/" />
+<meta property="og:title" content="Golang float" />
+<meta property="og:description" content="简介 两个浮点数相加减，可能不准确 相减 最近在工作遇到float的精度问题,记录下解决思路 浮点数数据格式有许多种,IEEE754标准的浮点数与I" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chenjiajun1207.github.io/float64/" />
+<meta property="article:published_time" content="2018-10-14T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2018-10-14T00:00:00&#43;00:00"/>
+
+<meta itemprop="name" content="Golang float">
+<meta itemprop="description" content="简介 两个浮点数相加减，可能不准确 相减 最近在工作遇到float的精度问题,记录下解决思路 浮点数数据格式有许多种,IEEE754标准的浮点数与I">
 
 
-<meta itemprop="name" content="Tags">
-<meta itemprop="description" content="Hugo theme jane example site.">
+<meta itemprop="datePublished" content="2018-10-14T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-10-14T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="390">
 
+
+
+<meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Tags"/>
-<meta name="twitter:description" content="Hugo theme jane example site."/>
+<meta name="twitter:title" content="Golang float"/>
+<meta name="twitter:description" content="简介 两个浮点数相加减，可能不准确 相减 最近在工作遇到float的精度问题,记录下解决思路 浮点数数据格式有许多种,IEEE754标准的浮点数与I"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -130,6 +139,35 @@
           
             <a class="menu-item-link" href="https://chenjiajun1207.github.io/about/">About</a>
           
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          <div class="mobile-menu-parent">
+            <span class="mobile-submenu-open"></span>
+            <a href="https://chenjiajun1207.github.io/">
+              docs
+            </a>
+          </div>
+          <ul class="mobile-submenu-list">
+            
+              <li>
+                <a href="https://chenjiajun1207.github.io/post/jane-theme-preview/">Jane Theme Preview</a>
+              </li>
+            
+              <li>
+                <a href="https://chenjiajun1207.github.io/post/shortcodes-preview/">Shortcodes Preview</a>
+              </li>
+            
+              <li>
+                <a href="https://chenjiajun1207.github.io/post/image-preview/">Image Preview</a>
+              </li>
+            
+              <li>
+                <a href="https://chenjiajun1207.github.io/post/syntax-highlighting/">Syntax Highlighting</a>
+              </li>
+            
+          </ul>
         
       </li>
     
@@ -234,7 +272,7 @@
 
       </li>
     
-        <li class="menu-item active">
+        <li class="menu-item">
         
           
           
@@ -267,6 +305,34 @@
 
       </li>
     
+        <li class="menu-item">
+        
+          
+          <a class="menu-item-link menu-parent" href="https://chenjiajun1207.github.io/">docs</a>
+          <ul class="submenu">
+            
+              <li>
+                <a href="https://chenjiajun1207.github.io/post/jane-theme-preview/">Jane Theme Preview</a>
+              </li>
+            
+              <li>
+                <a href="https://chenjiajun1207.github.io/post/shortcodes-preview/">Shortcodes Preview</a>
+              </li>
+            
+              <li>
+                <a href="https://chenjiajun1207.github.io/post/image-preview/">Image Preview</a>
+              </li>
+            
+              <li>
+                <a href="https://chenjiajun1207.github.io/post/syntax-highlighting/">Syntax Highlighting</a>
+              </li>
+            
+          </ul>
+
+        
+
+      </li>
+    
     
   </ul>
 </nav>
@@ -277,15 +343,115 @@
     <main id="main" class="main bg-llight">
       <div class="content-wrapper">
         <div id="content" class="content container">
-          
+          <article class="post bg-white">
+  
+  <header class="post-header">
+    <h1 class="post-title">Golang float</h1>
+    
+    <div class="post-meta">
+      <time datetime="2018-10-14" class="post-time">
+        2018-10-14
+      </time>
+    </div>
+  </header>
+
   
   
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Table of Contents</h2>
+  <div class="post-toc-content">
+    
+  </div>
+</div>
+
   
+  <div class="post-content">
+      <h1 id="简介">简介</h1>
+
+<h1 id="两个浮点数相加减-可能不准确">两个浮点数相加减，可能不准确</h1>
+
+<h2 id="相减">相减</h2>
+
+<p><!--more-->
+最近在工作遇到float的精度问题,记录下解决思路
+浮点数数据格式有许多种,IEEE754标准的浮点数与IBM格式浮点数用的比较多
+Go提供了两种size的浮点数,float32和float64.它们的算术规范是由IEEE754国际标准定义，现代CPU都实现了这个规范.
+不是所有的float相加减乘除都一定出现偏差,具体要根据golang实现IEEE 754的情况定.</p>
+
+<p>x := 74.96
+y := 20.48
+b := x - y
+fmt.Println(b) //output: 54.47999999999999</p>
+
+<h2 id="相加">相加</h2>
+
+<p>var a = 0.6
+fmt.Println(a + 0.7) //output: 1.2999999999999998var a</p>
+
+<h1 id="解决思路">解决思路</h1>
+
+<h1 id="参考资料">参考资料</h1>
+
+<p>尽量在设计之初,采用正确的设计方法.
+例如比方说 1.1 元钱,
+因为这个变量必须精确的等于十进制的 1.1,
+而变量本身是二进制,可以考虑用精确到分的110来表示这个数字,避免了小数.
+类似的,如果是计算器的话,如果用户是用十进制的格式输入,那么直接转换成二进制用计算机进行运算,最后再转换成十进制显示,这就不可避免的会有误差.
+https://www.zhihu.com/question/65960911/answer/237638982
+https://blog.csdn.net/sjy8207380/article/details/79013827
+https://studygolang.com/articles/6429
+http://blog.163.com/w_fox/blog/static/6233953620091115113529198/</p>
+
+  </div>
+
+  
+  
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">xianmin</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">2018-10-14</span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+
+  
+  
+</article>
+
+
+
+
   
 
   
   
+    <div class="post bg-white">
+      <script src="https://utteranc.es/client.js"
+            repo= "chenjiajun1207/commentSave"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+      </script>
+    </div>
+  
 
+  
+
+  
+
+  
+
+    
 
         </div>
       </div>
@@ -525,7 +691,7 @@
 
       </i>
     </span><span class="author">
-        RT
+        xianmin
         
       </span></span>
 
