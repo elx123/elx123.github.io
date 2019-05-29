@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>adsfsd on 人生苦短,只争朝夕</title>
+    <link>https://chenjiajun1207.github.io/categories/adsfsd/</link>
+    <description>Recent content in adsfsd on 人生苦短,只争朝夕</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 28 May 2019 16:13:03 +0800</lastBuildDate>
+    
+	<atom:link href="https://chenjiajun1207.github.io/categories/adsfsd/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>sdfdsf</title>
+      <link>https://chenjiajun1207.github.io/post/float64/</link>
+      <pubDate>Tue, 28 May 2019 16:13:03 +0800</pubDate>
+      
+      <guid>https://chenjiajun1207.github.io/post/float64/</guid>
+      <description>最近在工作遇到float的精度问题,记录下解决思路 简介 浮点数数据格式有许多种,IEEE754标准的浮点数与IBM格式浮点数用的比较多 Go提供</description>
+    </item>
+    
+  </channel>
+</rss>

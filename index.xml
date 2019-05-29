@@ -6,30 +6,2788 @@
     <description>Recent content on 人生苦短,只争朝夕</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 20 Aug 2017 21:38:52 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 29 May 2019 00:00:00 +0800</lastBuildDate>
     
         <atom:link href="https://chenjiajun1207.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>About</title>
+      <title>关于</title>
       <link>https://chenjiajun1207.github.io/about/</link>
-      <pubDate>Sun, 20 Aug 2017 21:38:52 +0800</pubDate>
+      <pubDate>Wed, 29 May 2019 00:00:00 +0800</pubDate>
       
       <guid>https://chenjiajun1207.github.io/about/</guid>
       
-        <description>&lt;p&gt;Hugo is a static site engine written in Go.&lt;/p&gt;
+        <description>
 
-&lt;p&gt;It makes use of a variety of open source projects including:&lt;/p&gt;
+&lt;h2 id=&#34;人生苦短-只争朝夕-浮生若梦-为欢几何&#34;&gt;人生苦短,只争朝夕,浮生若梦,为欢几何&lt;/h2&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Golang Sort</title>
+      <link>https://chenjiajun1207.github.io/post/golang_sort/</link>
+      <pubDate>Mon, 14 Jan 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://chenjiajun1207.github.io/post/golang_sort/</guid>
+      
+        <description>
+
+&lt;!-- more --&gt;
+
+&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
+
+&lt;p&gt;在实际项目中用到对结构按结构体中的某个字段进行排序，记录下使用心得&lt;/p&gt;
+
+&lt;h2 id=&#34;示例&#34;&gt;示例&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/spf13/cobra&#34;&gt;Cobra&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/spf13/viper&#34;&gt;Viper&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/spf13/jWalterWeatherman&#34;&gt;J Walter Weatherman&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/spf13/cast&#34;&gt;Cast&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;首先定义数据结构，为了能清楚说明问题，只给两个字段。&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Learn more and contribute on &lt;a href=&#34;https://github.com/gohugoio&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;type User struct {
+        Name  string
+        Score int
+}
+
+type Users []User
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;golang中想要自定义排序，自己的结构要实现三个方法&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;// 摘自: $GOROOT/src/sort/sort.go
+type Interface interface {
+        // Len is the number of elements in the collection.
+        Len() int
+        // Less reports whether the element with
+        // index i should sort before the element with index j.
+        Less(i, j int) bool
+        // Swap swaps the elements with indexes i and j.
+        Swap(i, j int)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;先按它说的，实现这三个方法&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;func (us Users) Len() int {
+        return len(us)
+}
+
+func (us Users) Less(i, j int) bool {
+        return us[i].Score &amp;lt; us[j].Score
+}
+
+func (us Users) Swap(i, j int) {
+        us[i], us[j] = us[j], us[i]
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;然后就能排序了：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;func main() {
+        var us Users
+        const N = 6
+
+        for i := 0; i &amp;lt; N; i++ {
+                us = append(us, User{
+                        Name:  &amp;quot;user&amp;quot; + strconv.Itoa(i),
+                        Score: rand.Intn(N * N),
+                })
+        }
+
+        fmt.Printf(&amp;quot;%v\n&amp;quot;, us)
+        sort.Sort(us)
+        fmt.Printf(&amp;quot;%v\n&amp;quot;, us)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;基于结构体中不同的字段排序&#34;&gt;基于结构体中不同的字段排序&lt;/h2&gt;
+
+&lt;p&gt;可以利用嵌套结构体实现，即定义基本的Len()和Swap()方法，然后基本嵌套结构封装Less()比较方法。具体如下：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;/*
+  对结构按多字段排序
+ */
+
+type student struct {
+        Name string
+        Age int
+}
+
+type stus []student
+func(s stus) Len() int { return len(s) }
+func(s stus) Swap(i, j int) { s[i], s[j] = s[j], s[i] }
+
+type sortByName struct{ stus }
+// 按名字排序
+func(m sortByName) Less(i, j int) bool {
+        return m.stus[i].Name &amp;gt; m.stus[j].Name
+}
+
+type sortByAge struct { stus }
+// 按年龄排序
+func(m sortByAge) Less(i, j int) bool {
+        return m.stus[i].Age &amp;gt; m.stus[j].Age
+}
+
+func main() {
+        s := stus {
+                {
+                        Name:&amp;quot;test123&amp;quot;,
+                        Age:20,
+                },
+                {
+                        Name:&amp;quot;test1&amp;quot;,
+                        Age:22,
+                },
+                {
+                        Name:&amp;quot;test21&amp;quot;,
+                        Age:21,
+                },
+        }
+
+        sort.Sort(sortByName{s})
+        //sort.Stable(sortByAge{s})
+        fmt.Println(s)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/butterfly5211314/article/details/83589945&#34;&gt;https://blog.csdn.net/butterfly5211314/article/details/83589945&lt;/a&gt;
+&lt;a href=&#34;https://blog.csdn.net/u012050154/article/details/82379385&#34;&gt;https://blog.csdn.net/u012050154/article/details/82379385&lt;/a&gt;&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Weighted Random Selection</title>
+      <link>https://chenjiajun1207.github.io/post/weightsort/</link>
+      <pubDate>Mon, 14 Jan 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://chenjiajun1207.github.io/post/weightsort/</guid>
+      
+        <description>
+
+&lt;!-- more --&gt;
+
+&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
+
+&lt;p&gt;最近在项目中遇到了加密权重算法,记录下使用心得&lt;/p&gt;
+
+&lt;h2 id=&#34;问题描述&#34;&gt;问题描述&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Given a list of items where each item has a weight (integer value), select a random item from the list based on that weight.&lt;/li&gt;
+&lt;li&gt;The key requirement — items with a higher weight value are more likely to be returned. So even the lowest weighted value will still sometimes be returned from the function.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;解决思路&#34;&gt;解决思路&lt;/h2&gt;
+
+&lt;p&gt;1.Add up all the weights for all the items in the list
+2.Pick a number at random between 1 and the sum of the weights
+3.Iterate over the items
+4.For the current item, subtract the item’s weight from the random number that was originally picked
+5.Compare the result to zero. If less than or equal to zero then break otherwise keep iterating. The key is that the larger the weight the more likely to be less than zero when compared to the random selection between zero and the sum of weights.
+6.If not less than zero, continue iterating over the list, all the while subtracting more and more weights off the random number chosen from the sum of the weights.&lt;/p&gt;
+
+&lt;h2 id=&#34;伪码&#34;&gt;伪码&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;randomWeight = rand(1, sumOfWeights)
+for each item in array
+     randomWeight = randomWeight - item.Weight
+     if randomWeight &amp;lt;= 0
+          break // done, we select this item
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;例子--golang&#34;&gt;例子(golang)&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;package main
+
+import (
+    &amp;quot;errors&amp;quot;
+     &amp;quot;fmt&amp;quot;
+     &amp;quot;math/rand&amp;quot;
+     &amp;quot;time&amp;quot;
+)
+
+type Game struct {
+    Name   string
+    Weight int
+}
+
+func main() {
+    games := []Game{
+        Game{Name: &amp;quot;Mario&amp;quot;, Weight: 1},
+        Game{Name: &amp;quot;Sonic&amp;quot;, Weight: 2},
+        Game{Name: &amp;quot;CoD&amp;quot;, Weight: 4},
+        Game{Name: &amp;quot;Link&amp;quot;, Weight: 8},
+        Game{Name: &amp;quot;Fantasy&amp;quot;, Weight: 10},
+        Game{Name: &amp;quot;Destiny&amp;quot;, Weight: 7},
+    }
+
+    var totalWeight int
+        for _, g := range games {
+        totalWeight += g.Weight
+    }
+
+    results := map[string]int{}
+    for i := 0; i &amp;lt; 10000; i++ {
+        g, err := RandomWeightedSelect(games, totalWeight)
+        if err != nil {
+            panic(err)
+        }
+        if _, ok := results[g.Name]; ok {
+            results[g.Name]++
+        } else {
+            results[g.Name] = 1
+        }
+    }
+    fmt.Println(results)
+}
+
+func RandomWeightedSelect(games []Game, totalWeight int) (Game, error) {
+    rand.Seed(time.Now().UnixNano())
+    r := rand.Intn(totalWeight)
+    for _, g := range games {
+        r -= g.Weight
+        if r &amp;lt;= 0 {
+            return g, nil
+        }
+    }
+    return Game{}, errors.New(&amp;quot;No game selected&amp;quot;)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;参考连接&#34;&gt;参考连接&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.cnblogs.com/UnGeek/p/5917995.html&#34;&gt;https://www.cnblogs.com/UnGeek/p/5917995.html&lt;/a&gt;
+&lt;a href=&#34;https://medium.com/@peterkellyonline/weighted-random-selection-3ff222917eb6&#34;&gt;https://medium.com/@peterkellyonline/weighted-random-selection-3ff222917eb6&lt;/a&gt;&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Golang位运算符的溢出情况</title>
+      <link>https://chenjiajun1207.github.io/post/golang_/</link>
+      <pubDate>Sun, 23 Dec 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://chenjiajun1207.github.io/post/golang_/</guid>
+      
+        <description>
+
+&lt;!-- more --&gt;
+
+&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
+
+&lt;p&gt;在编码过程中,经常会遇到使用逻辑运算符的情况,其中对于溢出操作需要特别小心&lt;/p&gt;
+
+&lt;h2 id=&#34;介绍&#34;&gt;介绍&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;编译型语言，编译器的静态求值是自然的。&lt;/li&gt;
+&lt;li&gt;必须使用强制类型转换。甚至于对一个uint16变量赋uint8的值都是不允许的。&lt;/li&gt;
+&lt;li&gt;整数字面值不包含存储空间的大小，可以直接赋给各种uintX（必须不溢出）。&lt;/li&gt;
+&lt;li&gt;&amp;lt;&amp;lt;运算的结果的类型，以左侧操作数为准。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;直接表现为&#34;&gt;直接表现为&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;静态求值的规则是先不顾代码范围，强制求值，之后再塞回目标的存储空间中&lt;/li&gt;
+&lt;li&gt;对变量左移的时候，会直接考虑存储空间大小，将左移的数据丢弃&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;反例&#34;&gt;反例&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;const c_i8 uint8 = 255
+var i16 uint16
+i16 = uint16(c_i8 &amp;lt;&amp;lt; 4) // constant 4080 overflows uint8
+i16 = uint16(uint8(255) &amp;lt;&amp;lt; 4) // constant 4080 overflows uint8
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;因为&amp;lt;&amp;lt;左侧都是uint8，所以最终的结果也是uint8，则得出的结果装不下uint8就会报错，哪怕最后准备了uint16的容器也不行&lt;/p&gt;
+
+&lt;h3 id=&#34;对于常量&#34;&gt;对于常量&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;var i8 uint8
+var i8_2 uint8 = 255
+i8 = i8_2 &amp;lt;&amp;lt; 4
+fmt.Printf(&amp;quot;%x\n&amp;quot;, i8) // f0
+i8_2 &amp;lt;&amp;lt;= 4
+fmt.Printf(&amp;quot;%x\n&amp;quot;, i8_2) // f0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这里也会有溢出的报警&lt;/p&gt;
+
+&lt;h3 id=&#34;结论&#34;&gt;结论&lt;/h3&gt;
+
+&lt;p&gt;常量左移之后，Go面对溢出的行为并不是截断而是报错。&lt;/p&gt;
+
+&lt;h2 id=&#34;临时解决方案&#34;&gt;临时解决方案&lt;/h2&gt;
+
+&lt;h3 id=&#34;方案一&#34;&gt;方案一&lt;/h3&gt;
+
+&lt;p&gt;对付这个问题，你可能需要先用不定长度的uint类型绕开溢出的限制，
+再用掩码(&amp;amp; 0xFF)运算去约束结果的范围：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;const c_i8 uint8 = 255
+var i16 uint16
+i16 = uint16(uint(c_i8) &amp;lt;&amp;lt; 4 &amp;amp; 0xFF)
+fmt.Printf(&amp;quot;%x\n&amp;quot;, i16)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;方案二&#34;&gt;方案二&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-nil&#34;&gt;package main
+
+import (
+        &amp;quot;fmt&amp;quot;
+        &amp;quot;math&amp;quot;
+)
+
+func main() {
+        var cronField uint64
+        var start int
+        var end int
+
+        start = 1
+        end = 30
+        cronField |= ^(math.MaxUint64 &amp;lt;&amp;lt; uint(end+1)) &amp;amp; (math.MaxUint64 &amp;lt;&amp;lt; uint(start))
+        fmt.Println(uint64(math.MaxUint64))
+        fmt.Println(cronField)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这里首先将math.math.MaxUint64左移end+1,然后与math.MaxUint64左移动start位的结果相与,然后再取反,画个简单的示意图
+假设end=1,start=1&lt;/p&gt;
+
+&lt;h4 id=&#34;流程一&#34;&gt;流程一&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;| 1 | 1 | 1 | 1 | 1 | ===&amp;gt;        1   1 | 1 | 1 | 1 | 0 | 0 |
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这里右补0&lt;/p&gt;
+
+&lt;h4 id=&#34;流程二--取反&#34;&gt;流程二(取反)&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;| 1 | 1 | 1 | 1 | 1 | ===&amp;gt;   0   0 | 0 | 0 | 0 | 1 | 1 |
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;流程三&#34;&gt;流程三&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;| 1 | 1 | 1 | 1 | 1 | ===&amp;gt;  1 | 1 | 1 | 1 | 1 | 0 |
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;流程四&#34;&gt;流程四&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;0   0 | 0 | 0 | 0 | 1 | 1 |
+             &amp;amp;
+    1 | 1 | 1 | 1 | 1 | 0 |
+
+    0   0   0   0   1   0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;总结下&#34;&gt;总结下&lt;/h3&gt;
+
+&lt;p&gt;在计算过程中,先不顾代码范围，强制求值，之后再塞回目标的存储空间中,
+特别是例子二中,cronField最终作为目标,单独(math.MaxUint64 &amp;lt;&amp;lt; uint(start))已不再提示溢出&lt;/p&gt;
+
+&lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://segmentfault.com/q/1010000000420677&#34;&gt;https://segmentfault.com/q/1010000000420677&lt;/a&gt;&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>[转载]Golang Json库源码</title>
+      <link>https://chenjiajun1207.github.io/post/golang_json/</link>
+      <pubDate>Sun, 23 Dec 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://chenjiajun1207.github.io/post/golang_json/</guid>
+      
+        <description>
+
+&lt;!-- more --&gt;
+
+&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
+
+&lt;p&gt;最近发现一篇关于golang原生Json库的文章,转载过来&lt;br /&gt;
+&lt;a href=&#34;https://zhuanlan.zhihu.com/p/37165706&#34;&gt;https://zhuanlan.zhihu.com/p/37165706&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;介绍&#34;&gt;介绍&lt;/h2&gt;
+
+&lt;p&gt;encoding/json库的意义相对其他语言来说在Golang中尤其重要，因为它还扮演着struct转换器的角色，即对于字段列表存在公共子集的不同结构体之间进行转换（如果你不知道为什么要做这件事，这是另一个话题，需要单独讨论）。目前来看使用Marshal和Unmarshal方法是最优解（不要告诉我你要对字段进行one by one的赋值，虽然这种low逼方法有时候更加有效）。&lt;/p&gt;
+
+&lt;h2 id=&#34;基本规则&#34;&gt;基本规则&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;只有合法的json串才能解析（废话）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;key只能是string；&lt;br /&gt;
+map的形式必须是map[string]T，T是Go的基本类型；&lt;br /&gt;
+Channel, complex, function 不能进行编码；&lt;br /&gt;
+循环数据不支持；&lt;br /&gt;
+指针会被编码成指针的值，nil是null。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;只有可导出（exported）的字段才能解析&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;即首字符大写的字段才能显示在json对象中，解析规则有如下顺序，例如一个key：Foo&lt;br /&gt;
+1.先找tag是Foo的&lt;br /&gt;
+2.找字段名是Foo的&lt;br /&gt;
+3.找FOO或者FoO等&lt;br /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;只能解码在目标对象存在的字段&lt;/li&gt;
+&lt;li&gt;这个特性其实是很有用的，你可以设计一个大而全的兼容结构体，当你希望从里面挑选一些字段时就可以利用它；&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;这也意味着目标对象中unexported的字段不受Unmarshal的影响；&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Unmarshal可以自动对对象内部的指针赋值&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;//这个特性是指一个struct包含其他的引用类型的字段，你不需要先创建它
+//看下面的例子，对于Parents这个数组你不需要提前声明，有值就自动创建好，没值就是nil
+type FamilyMember struct {
+        Name    string	`json:&amp;quot;name&amp;quot;`
+        Age     int	`json:&amp;quot;age&amp;quot;`
+        Parents []string
+}
+b := []byte(`{&amp;quot;Name&amp;quot;:&amp;quot;Wednesday&amp;quot;,&amp;quot;Age&amp;quot;:6,&amp;quot;Parents&amp;quot;:[&amp;quot;Gomez&amp;quot;,&amp;quot;Morticia&amp;quot;]}`)
+var m FamilyMember
+err := json.Unmarshal(b, &amp;amp;m)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;类库解析&#34;&gt;类库解析&lt;/h2&gt;
+
+&lt;h3 id=&#34;主要的接口和结构&#34;&gt;主要的接口和结构&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Marshaler&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;核心的encode接口，为第三方提供了encode的可能性。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;// Marshaler is the interface implemented by types that
+// can marshal themselves into valid JSON.
+type Marshaler interface {
+        MarshalJSON() ([]byte, error)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Unmarshaler&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;同上，核心的decode接口&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;// Unmarshaler is the interface implemented by types
+// that can unmarshal a JSON description of themselves.
+// The input can be assumed to be a valid encoding of
+// a JSON value. UnmarshalJSON must copy the JSON data
+// if it wishes to retain the data after returning.
+//
+// By convention, to approximate the behavior of Unmarshal itself,
+// Unmarshalers implement UnmarshalJSON([]byte(&amp;quot;null&amp;quot;)) as a no-op.
+type Unmarshaler interface {
+        UnmarshalJSON([]byte) error
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Decoder / Encoder：解码输入流和编码json到输出流的对象&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;UnmarshalTypeError：最主要的错误类型，表示一个json值不能转化为特定的go类型的值，还提供了其他若干Error类型，不一一列举了。&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Number：实际上是json的number类型的包装类，解析时提供对应方法取得值&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;RawMessage：保持原本的json对象。实现了Marshaler和Unmarshaler接口，用于延迟json的解码或者预计算json的编码。前面是注释的翻译，其实就是个[]byte，delay和预计算没理解什么意思，这个类型在encode和decode过程中也没有用到&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;重要方法&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;其中最主要的就是Marshal和Unmarshal两个方法，有很多细节需要注意。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Marshal&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;func Marshal(v interface{}) ([]byte, error) {
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Marshal函数返回v的json编码。&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;数组和切片类型的值编码为json数组，但[]byte编码为base64编码字符串；nil切片编码为null；结构体编码为json对象。每一个导出字段变成该对象的一个成员，除非：&lt;br /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;字段的标签是&amp;rdquo;-&amp;rdquo;&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;字段是空值，而其标签指定了omitempty //空值包括false、0、&amp;rdquo;&amp;ldquo;、nil指针、nil接口、长度为0的数组、切片、映射。（经我测试，空值是可以正常解析并显示的，tag里加上omitempty后就会被忽略掉）&lt;br /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&amp;ldquo;string&amp;rdquo;选项标记一个字段在编码json时应编码为字符串。它只适用于字符串、浮点数、整数类型的字段。（这在对象转换过程中非常有用，避免了类型必须一致的尴尬，可动态调整目标对象，提高了灵活性）&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;id int64 `json:&amp;quot;id,string&amp;quot;`
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;map类型的值编码为json对象，键必须是字符串，对象的键直接使用map的key。指针类型的值编码为其指向的值，nil指针编码为null。接口类型的值编码为接口内保持的具体类型的值，nil接口编码为null。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Unmarshal&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;func Unmarshal(data []byte, v interface{}) error {
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Unmarshal函数解析json编码的数据并将结果存入v指向的值。&lt;br /&gt;
+要将json数据解码写入一个指针，Unmarshal函数首先处理json数据是json字面值null的情况。此时，函数将指针设为nil；否则，函数将json数据解码写入指针指向的值；如果指针本身是nil，函数会先申请一个值并使指针指向它。&lt;br /&gt;
+要将json数据解码写入一个结构体，函数会匹配输入对象的键和Marshal使用的键（结构体字段名或者它的标签指定的键名），优先选择精确的匹配，但也接受大小写不敏感的匹配。&lt;br /&gt;
+JSON的null值解码为go的接口、指针、切片时会将它们设为nil&lt;br /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Compact：将json编码的src中无用的空白字符剔除后写入dst&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;func Compact(dst *bytes.Buffer, src []byte) error
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Indent：将json编码的调整缩进之后写入dst，说白了就是美化一下，加个缩进啥的&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;func Indent(dst *bytes.Buffer, src []byte, prefix, indent string) error
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;源码分析&#34;&gt;源码分析&lt;/h2&gt;
+
+&lt;p&gt;接下来看看Marshal和Unmarshal具体是如何工作的，重要和需要解释的地方我都加了相应的注释。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Marshal&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;func Marshal(v interface{}) ([]byte, error) {
+        e := &amp;amp;encodeState{}  //一个内部结构，其实就是Buffer的包装
+        //具体将v递归转换为json串并写入结构e的buffer中
+        err := e.marshal(v, encOpts{escapeHTML: true})
+        if err != nil {
+                return nil, err
+        }
+        //Buffer的Bytes方法返回，即拿到JSON串
+        return e.Bytes(), nil
+}
+//==&amp;gt;
+func (e *encodeState) marshal(v interface{}, opts encOpts) (err error) {
+    //defer 错误
+    //...
+    e.reflectValue(reflect.ValueOf(v), opts)
+}
+//==&amp;gt;
+func valueEncoder(v reflect.Value) encoderFunc {
+    //判断v是否是value，0值返回false
+        if !v.IsValid() {
+            //实际上是写null
+                return invalidValueEncoder
+        }
+        return typeEncoder(v.Type())
+}
+//==&amp;gt;
+func typeEncoder(t reflect.Type) encoderFunc {
+//load...
+// Compute the real encoder and replace the indirect func with it.
+        f = newTypeEncoder(t, true)
+//store...
+}
+
+//==&amp;gt;
+newTypeEncoder是核心方法，递归，根据类型回写buffer对应的json字符串（buf.WriteString）
+
+// newTypeEncoder constructs an encoderFunc for a type.
+// The returned encoder only checks CanAddr when allowAddr is true.
+func newTypeEncoder(t reflect.Type, allowAddr bool) encoderFunc {
+        if t.Implements(marshalerType) {
+                return marshalerEncoder //优先处理nil情况
+        }
+        if t.Kind() != reflect.Ptr &amp;amp;&amp;amp; allowAddr {
+                //对可以寻址的，调用m.MarshalJSON()，即addrMarshalerEncoder方法里通过调用Addr拿到具体值，否则继续回到这个方法
+                if reflect.PtrTo(t).Implements(marshalerType) {
+                        return newCondAddrEncoder(addrMarshalerEncoder, newTypeEncoder(t, false))
+                }
+        }
+        if t.Implements(textMarshalerType) {
+                return textMarshalerEncoder
+        }
+        if t.Kind() != reflect.Ptr &amp;amp;&amp;amp; allowAddr {
+                if reflect.PtrTo(t).Implements(textMarshalerType) {
+                        return newCondAddrEncoder(addrTextMarshalerEncoder, newTypeEncoder(t, false))
+                }
+        }
+        //对各种类型进行encode，复合类型继续调用typeEncoder递归处理
+        switch t.Kind() {
+        case reflect.Bool:
+                return boolEncoder
+        case reflect.Int, reflect.Int8, reflect.Int16, reflect.Int32, reflect.Int64:
+                return intEncoder
+        case reflect.Uint, reflect.Uint8, reflect.Uint16, reflect.Uint32, reflect.Uint64, reflect.Uintptr:
+                return uintEncoder
+        case reflect.Float32:
+                return float32Encoder
+        case reflect.Float64:
+                return float64Encoder
+        case reflect.String:
+                return stringEncoder
+        case reflect.Interface:
+                return interfaceEncoder
+        case reflect.Struct:
+                return newStructEncoder(t)
+        case reflect.Map:
+                return newMapEncoder(t)
+        case reflect.Slice:
+                return newSliceEncoder(t)
+        case reflect.Array:
+                return newArrayEncoder(t)
+        case reflect.Ptr:
+                return newPtrEncoder(t)
+        default:
+                return unsupportedTypeEncoder
+        }
+        //... ...
+}
+//通过bool的encoder看看最终的json串赋值操作：是不是也挺low逼的？
+func boolEncoder(e *encodeState, v reflect.Value, opts encOpts) {
+        if opts.quoted {
+                e.WriteByte(&#39;&amp;quot;&#39;)
+        }
+        if v.Bool() {
+                e.WriteString(&amp;quot;true&amp;quot;)
+        } else {
+                e.WriteString(&amp;quot;false&amp;quot;)
+        }
+        if opts.quoted {
+                e.WriteByte(&#39;&amp;quot;&#39;)
+        }
+}
+
+//再看一个对结构体encode的，很明显看到进行{key:value}的封装操作：
+func (se *structEncoder) encode(e *encodeState, v reflect.Value, opts encOpts) {
+        e.WriteByte(&#39;{&#39;)
+        first := true
+        for i, f := range se.fields {
+                fv := fieldByIndex(v, f.index)
+                if !fv.IsValid() || f.omitEmpty &amp;amp;&amp;amp; isEmptyValue(fv) {
+                        continue
+                }
+                if first {
+                        first = false
+                } else {
+                        e.WriteByte(&#39;,&#39;)
+                }
+                e.string(f.name, opts.escapeHTML)
+                e.WriteByte(&#39;:&#39;)
+                opts.quoted = f.quoted
+                se.fieldEncs[i](e, fv, opts)
+        }
+        e.WriteByte(&#39;}&#39;)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Marshal的核心代码差不多就这些，没有太多玄机，基本上就是递归对对象进行json解析操作。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Unmarshal&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;1. 创建一个data的包装类，check是否合法，调用unmarshal
+func Unmarshal(data []byte, v interface{}) error {
+        // Check for well-formedness.
+        // Avoids filling out half a data structure
+        // before discovering a JSON syntax error.
+        var d decodeState
+        err := checkValid(data, &amp;amp;d.scan)
+        if err != nil {
+                return err
+        }
+
+        d.init(data)
+        return d.unmarshal(v)
+}
+2. scan是一个状态机，用来把byte数组分割成一个个完整的值，然后调用d.value进行赋值处理
+func (d *decodeState) unmarshal(v interface{}) (err error) {
+        //... ...
+        rv := reflect.ValueOf(v)
+        if rv.Kind() != reflect.Ptr || rv.IsNil() {
+                return &amp;amp;InvalidUnmarshalError{reflect.TypeOf(v)}
+        }
+        //scan是状态机，reset方法用来分割byte数组
+        d.scan.reset()
+        // We decode rv not rv.Elem because the Unmarshaler interface
+        // test must be applied at the top level of the value.
+        d.value(rv)
+        return d.savedError
+}
+3. 主要是对不同的类型如array、obj调用对应方法继续处理
+// value decodes a JSON value from d.data[d.off:] into the value.
+// it updates d.off to point past the decoded value.
+func (d *decodeState) value(v reflect.Value) {
+        if !v.IsValid() {
+                _, rest, err := nextValue(d.data[d.off:], &amp;amp;d.nextscan)
+                //... ...
+        }
+        switch op := d.scanWhile(scanSkipSpace); op {
+        default:
+                d.error(errPhase)
+        //对复合类型继续调用d.value进行处理；
+        //内部对各个元素也是使用Zero进行假赋值（没分配内存）
+        // Array. Zero the rest.
+        //		z := reflect.Zero(v.Type().Elem())
+        //		for ; i &amp;lt; v.Len(); i++ {
+        //			v.Index(i).Set(z)
+        //		}
+        case scanBeginArray:
+                d.array(v)
+        //对map单独进行了处理，对应子指针和map类型都使用了New分配地址，估计目的是让子对象的赋值操作正常，单个值调用了literalStore方法
+        //if subv.Kind() == reflect.Ptr {
+        //	if subv.IsNil() {
+        //		subv.Set(reflect.New(subv.Type().Elem()))
+        //	}
+        //	subv = subv.Elem()
+        //}
+        case scanBeginObject:
+                d.object(v)
+    //字面量的处理，调用literalStore
+        case scanBeginLiteral:
+                d.literal(v)
+        }
+}
+注意：上面3个具体的decode方法都先判断实现了Unmarshaler接口的v直接调用实现的UnmarshalJSON进行处理而不走自己的流程，为三方扩展提供可能性。
+下面的literalStore是核心方法，具体将json串赋值给Value
+// literalStore decodes a literal stored in item into v.
+// fromQuoted indicates whether this literal came from unwrapping a
+// string from the &amp;quot;,string&amp;quot; struct tag option. this is used only to
+// produce more helpful error messages.
+func (d *decodeState) literalStore(item []byte, v reflect.Value, fromQuoted bool) {
+        //...
+        isNull := item[0] == &#39;n&#39; // null
+        //找到非空指针的value然后返回
+        u, ut, pv := d.indirect(v, isNull)
+        if u != nil {
+                err := u.UnmarshalJSON(item)
+                if err != nil {
+                        d.error(err)
+                }
+                return
+        }
+        //... ...
+        //核心代码，对不同类型进行value的赋值操作
+        switch c := item[0]; c {
+        case &#39;n&#39;: // null
+                // The main parser checks that only true and false can reach here,
+                // but if this was a quoted string input, it could be anything.
+                if fromQuoted &amp;amp;&amp;amp; string(item) != &amp;quot;null&amp;quot; {
+                        d.saveError(fmt.Errorf(&amp;quot;json: invalid use of ,string struct tag, trying to unmarshal %q into %v&amp;quot;, item, v.Type()))
+                        break
+                }
+                switch v.Kind() {
+                case reflect.Interface, reflect.Ptr, reflect.Map, reflect.Slice:
+                       //重要地方：对空值这些引用类型使用了未分配地址的Zero方法
+                        v.Set(reflect.Zero(v.Type()))
+                        // otherwise, ignore null for primitives/string
+                }
+        case &#39;t&#39;, &#39;f&#39;: // true, false
+                value := item[0] == &#39;t&#39;
+                // The main parser checks that only true and false can reach here,
+                // but if this was a quoted string input, it could be anything.
+                if fromQuoted &amp;amp;&amp;amp; string(item) != &amp;quot;true&amp;quot; &amp;amp;&amp;amp; string(item) != &amp;quot;false&amp;quot; {
+                        d.saveError(fmt.Errorf(&amp;quot;json: invalid use of ,string struct tag, trying to unmarshal %q into %v&amp;quot;, item, v.Type()))
+                        break
+                }
+                switch v.Kind() {
+                default:
+                        if fromQuoted {
+                                d.saveError(fmt.Errorf(&amp;quot;json: invalid use of ,string struct tag, trying to unmarshal %q into %v&amp;quot;, item, v.Type()))
+                        } else {
+                                d.saveError(&amp;amp;UnmarshalTypeError{Value: &amp;quot;bool&amp;quot;, Type: v.Type(), Offset: int64(d.off)})
+                        }
+                case reflect.Bool:
+                        v.SetBool(value)
+                case reflect.Interface:
+                        if v.NumMethod() == 0 {
+                                v.Set(reflect.ValueOf(value))
+                        } else {
+                                d.saveError(&amp;amp;UnmarshalTypeError{Value: &amp;quot;bool&amp;quot;, Type: v.Type(), Offset: int64(d.off)})
+                        }
+                }
+
+        case &#39;&amp;quot;&#39;: // string
+                s, ok := unquoteBytes(item)
+                if !ok {
+                        if fromQuoted {
+                                d.error(fmt.Errorf(&amp;quot;json: invalid use of ,string struct tag, trying to unmarshal %q into %v&amp;quot;, item, v.Type()))
+                        } else {
+                                d.error(errPhase)
+                        }
+                }
+                switch v.Kind() {
+                default:
+                        d.saveError(&amp;amp;UnmarshalTypeError{Value: &amp;quot;string&amp;quot;, Type: v.Type(), Offset: int64(d.off)})
+                case reflect.Slice:
+                        if v.Type().Elem().Kind() != reflect.Uint8 {
+                                d.saveError(&amp;amp;UnmarshalTypeError{Value: &amp;quot;string&amp;quot;, Type: v.Type(), Offset: int64(d.off)})
+                                break
+                        }
+                        b := make([]byte, base64.StdEncoding.DecodedLen(len(s)))
+                        n, err := base64.StdEncoding.Decode(b, s)
+                        if err != nil {
+                                d.saveError(err)
+                                break
+                        }
+                        v.SetBytes(b[:n])
+                case reflect.String:
+                        v.SetString(string(s))
+                case reflect.Interface:
+                        if v.NumMethod() == 0 {
+                                v.Set(reflect.ValueOf(string(s)))
+                        } else {
+                                d.saveError(&amp;amp;UnmarshalTypeError{Value: &amp;quot;string&amp;quot;, Type: v.Type(), Offset: int64(d.off)})
+                        }
+                }
+
+        default: // number
+                if c != &#39;-&#39; &amp;amp;&amp;amp; (c &amp;lt; &#39;0&#39; || c &amp;gt; &#39;9&#39;) {
+                        if fromQuoted {
+                                d.error(fmt.Errorf(&amp;quot;json: invalid use of ,string struct tag, trying to unmarshal %q into %v&amp;quot;, item, v.Type()))
+                        } else {
+                                d.error(errPhase)
+                        }
+                }
+                s := string(item)
+                switch v.Kind() {
+                default:
+                        if v.Kind() == reflect.String &amp;amp;&amp;amp; v.Type() == numberType {
+                                v.SetString(s)
+                                if !isValidNumber(s) {
+                                        d.error(fmt.Errorf(&amp;quot;json: invalid number literal, trying to unmarshal %q into Number&amp;quot;, item))
+                                }
+                                break
+                        }
+                        if fromQuoted {
+                                d.error(fmt.Errorf(&amp;quot;json: invalid use of ,string struct tag, trying to unmarshal %q into %v&amp;quot;, item, v.Type()))
+                        } else {
+                                d.error(&amp;amp;UnmarshalTypeError{Value: &amp;quot;number&amp;quot;, Type: v.Type(), Offset: int64(d.off)})
+                        }
+                case reflect.Interface:
+                        n, err := d.convertNumber(s)
+                        if err != nil {
+                                d.saveError(err)
+                                break
+                        }
+                        if v.NumMethod() != 0 {
+                                d.saveError(&amp;amp;UnmarshalTypeError{Value: &amp;quot;number&amp;quot;, Type: v.Type(), Offset: int64(d.off)})
+                                break
+                        }
+                        v.Set(reflect.ValueOf(n))
+
+                case reflect.Int, reflect.Int8, reflect.Int16, reflect.Int32, reflect.Int64:
+                        n, err := strconv.ParseInt(s, 10, 64)
+                        if err != nil || v.OverflowInt(n) {
+                                d.saveError(&amp;amp;UnmarshalTypeError{Value: &amp;quot;number &amp;quot; + s, Type: v.Type(), Offset: int64(d.off)})
+                                break
+                        }
+                        v.SetInt(n)
+
+                case reflect.Uint, reflect.Uint8, reflect.Uint16, reflect.Uint32, reflect.Uint64, reflect.Uintptr:
+                        n, err := strconv.ParseUint(s, 10, 64)
+                        if err != nil || v.OverflowUint(n) {
+                                d.saveError(&amp;amp;UnmarshalTypeError{Value: &amp;quot;number &amp;quot; + s, Type: v.Type(), Offset: int64(d.off)})
+                                break
+                        }
+                        v.SetUint(n)
+
+                case reflect.Float32, reflect.Float64:
+                        n, err := strconv.ParseFloat(s, v.Type().Bits())
+                        if err != nil || v.OverflowFloat(n) {
+                                d.saveError(&amp;amp;UnmarshalTypeError{Value: &amp;quot;number &amp;quot; + s, Type: v.Type(), Offset: int64(d.off)})
+                                break
+                        }
+                        v.SetFloat(n)
+                }
+        }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Unmarshal的代码稍微复杂一点点，引入了一个状态机scan对[]byte进行分割，其他还是一个套路，递归，利用反射把json串写入Value中，最终还原结构体。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;几个重要的reflect方法&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;在encode特别是decode的过程中，有几个反射方法非常重要，会直接影响json转换的结果稍后在分析一个三方库的时候会做比较，这里先抛出在Golang的反射中几个比较重要的概念。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;根据类型新建一个值
+// New returns a Value representing a pointer to a new zero value
+// for the specified type. That is, the returned Value&#39;s Type is PtrTo(typ).
+func New(typ Type) Value {
+        if typ == nil {
+                panic(&amp;quot;reflect: New(nil)&amp;quot;)
+        }
+        ptr := unsafe_New(typ.(*rtype))
+        fl := flag(Ptr)
+        return Value{typ.common().ptrTo(), ptr, fl} //注意此处和下面方法的比较
+}
+
+对一个空值进行假赋值，返回值不可寻址也不能set值，没有分配内存
+// Zero returns a Value representing the zero value for the specified type.
+// The result is different from the zero value of the Value struct,
+// which represents no value at all.
+// For example, Zero(TypeOf(42)) returns a Value with Kind Int and value 0.
+// The returned value is neither addressable nor settable.
+func Zero(typ Type) Value {
+        if typ == nil {
+                panic(&amp;quot;reflect: Zero(nil)&amp;quot;)
+        }
+        t := typ.common()
+        fl := flag(t.Kind())
+        if ifaceIndir(t) {
+                return Value{t, unsafe_New(typ.(*rtype)), fl | flagIndir}
+        }
+        return Value{t, nil, fl} //直接赋值nil，导致这个Value不可寻址不能Set
+}
+
+这个方法提到了可寻址的概念，在Marshal的newTypeEncoder方法中用到
+// CanAddr reports whether the value&#39;s address can be obtained with Addr.
+// Such values are called addressable. A value is addressable if it is
+// an element of a slice, an element of an addressable array,
+// a field of an addressable struct, or the result of dereferencing a pointer.
+// If CanAddr returns false, calling Addr will panic.
+func (v Value) CanAddr() bool {
+        return v.flag&amp;amp;flagAddr != 0
+}
+对应的CanSet的解释，即不可寻址的Value无法Set值
+// CanSet reports whether the value of v can be changed.
+// A Value can be changed only if it is addressable and was not
+// obtained by the use of unexported struct fields.
+// If CanSet returns false, calling Set or any type-specific
+// setter (e.g., SetBool, SetInt) will panic.
+func (v Value) CanSet() bool {
+        return v.flag&amp;amp;(flagAddr|flagRO) == flagAddr
+}
+
+另外需要注意这个注释，0值表示没值，对应的方法要么false要不不可用
+// The zero Value represents no value.
+// Its IsValid method returns false, its Kind method returns Invalid,
+// its String method returns &amp;quot;&amp;lt;invalid Value&amp;gt;&amp;quot;, and all other methods panic.
+// Most functions and methods never return an invalid value.
+// If one does, its documentation states the conditions explicitly.
+type Value struct {
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;总结一下上面几个方法中提出的重要概念：&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;addressable：可寻址的，表示一个Value被分配了地址空间，即真实存在的，可以取到值也可以赋值；&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;unaddressable：反之，不可寻址，没分配内存，就是个nil，无法获取无法Set值。unaddressable的Value会导致转换的json中对应键的缺失，这也是为什么我们的项目中Unmarshal没有用标准库的原因。&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;zero value：0值，就是没值，反射包中提供的若干Value的方法都不可用。&lt;br /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;另外，通过源码也可以看出来，递归以及反射的大量使用导致转换的效率并不高，代码的质量很一般，为实现功能而写，没有经过精雕细琢（有人可能说你说不好你咋不写一个好的？老实说，我还真写不出来。。。）。有一些开源的三方lib在性能方面做了改进，可以参考。&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Tcp分包</title>
+      <link>https://chenjiajun1207.github.io/post/tcp_subcontracting/</link>
+      <pubDate>Thu, 25 Oct 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://chenjiajun1207.github.io/post/tcp_subcontracting/</guid>
+      
+        <description>
+
+&lt;!-- more --&gt;
+
+&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
+
+&lt;p&gt;如今的游戏服务器框架都会涉及到Tcp分包,今天记录下自己的心得&lt;/p&gt;
+
+&lt;h2 id=&#34;问题描述&#34;&gt;问题描述&lt;/h2&gt;
+
+&lt;p&gt;Tcp长连接,通过分包解决粘包问题&lt;/p&gt;
+
+&lt;h2 id=&#34;解法一--peek方式&#34;&gt;解法一(peek方式)&lt;/h2&gt;
+
+&lt;p&gt;大体思路:从conn里面读取数据然后缓存，然后不断peek数据拿来分析(我不能拿走数据，因为数据可能不完整，所以一直做peek)，
+自己管理buffer
+源码如下&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-golang&#34;&gt;receive := func() &amp;lt;-chan string {
+                results := make(chan string)
+                go func() {
+                        defer close(results)
+                        input := bufio.NewReaderSize(conn, 65536)
+                        var len_heard int32
+                        for {
+                                heard_len, ok := input.Peek(4)
+                                if ok != nil &amp;amp;&amp;amp; ok != bufio.ErrBufferFull {
+                                        log15.Error(ok.Error())
+                                        break
+                                }
+                                buf := bytes.NewReader(heard_len)
+                                err := binary.Read(buf, binary.LittleEndian, &amp;amp;len_heard)
+                                if err != nil {
+                                        log15.Error(ok.Error())
+                                        break
+                                }
+                                if len_heard &amp;gt; 65536 || len_heard &amp;lt; 0 {
+                                        log15.Error(&amp;quot;Invalid length :&amp;quot;, len_heard)
+                                        break
+                                } else if int32(input.Buffered()-4) &amp;gt;= (len_heard) {
+                                        input.Discard(4)
+                                        message_byte, ok := input.Peek(int(len_heard))
+                                        if ok != nil {
+                                                log15.Error(ok.Error())
+                                        }
+                                        results &amp;lt;- string(message_byte)
+                                        input.Discard(int(len_heard))
+                                } else {
+                                        continue
+                                }
+                        }
+                }()
+                return results
+        }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;解法二--bufio-dot-scanner&#34;&gt;解法二(bufio.Scanner)&lt;/h2&gt;
+
+&lt;p&gt;在golang的bufio包中其实已经封装了更通用的Scanner,通过设置split,完成分包
+源码如下&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-golang&#34;&gt;receive := func() &amp;lt;-chan string {
+        results := make(chan string)
+        go func() {
+                defer close(results)
+
+                scanner := bufio.NewScanner(conn)
+
+                split := func(data []byte, atEOF bool) (advance int, token []byte, err error) {
+                        if !atEOF {
+                                if len(data) &amp;gt; 4 {
+                                        var lenData int32
+                                        err := binary.Read(bytes.NewReader(data[:4]), binary.LittleEndian, &amp;amp;lenData)
+                                        if err != nil {
+                                                log15.Error(err.Error())
+                                                return 0, nil, err
+                                        }
+                                        if int(lenData)+4 &amp;lt;= len(data) {
+                                                log15.Info(string(data[:int(lenData)+4]))
+                                                return int(lenData) + 4, data[0 : int(lenData)+4], nil
+                                        }
+                                }
+                        }
+                        return
+                }
+                scanner.Split(split)
+
+                for scanner.Scan() {
+                        results &amp;lt;- string(scanner.Bytes())
+                        log15.Info(string(scanner.Bytes()))
+                }
+
+                if err := scanner.Err(); err != nil {
+                        fmt.Printf(&amp;quot;Invalid input: %s&amp;quot;, err)
+                }
+        }()
+        return results
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;验证正确性&#34;&gt;验证正确性&lt;/h2&gt;
+
+&lt;p&gt;无论哪种解决方法,最终都为了处理以下几种情况&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;数据分两次到达，第一次收到 2 个字节，不足消息的长度字段；&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;数据分两次到达，第一次收到 4 个字节，刚好够长度字段，但是没有 body；&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;数据分两次到达，第一次收到 8 个字节，长度完整，但 body 不完整；&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;数据分两次到达，第一次收到 9 个字节，长度完整，body 也完整；&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;数据分两次到达，第一次收到 10 个字节，第一条消息的长度完整、body 也完整，第二条消息长度不完整；&lt;br /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;同时还有buf的自适应性问题等等&lt;/p&gt;
+
+&lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.cppblog.com/Solstice/archive/2011/02/04/139718.html&#34;&gt;http://www.cppblog.com/Solstice/archive/2011/02/04/139718.html&lt;/a&gt; &lt;br /&gt;
+&lt;a href=&#34;http://feixiao.github.io/2016/05/08/bufio/&#34;&gt;http://feixiao.github.io/2016/05/08/bufio/&lt;/a&gt;&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>go包管理器</title>
+      <link>https://chenjiajun1207.github.io/post/package/</link>
+      <pubDate>Thu, 25 Oct 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://chenjiajun1207.github.io/post/package/</guid>
+      
+        <description>
+
+&lt;!-- more --&gt;
+
+&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
+
+&lt;p&gt;分别记录下glide和dep的使用心得&lt;/p&gt;
+
+&lt;h2 id=&#34;问题描述&#34;&gt;问题描述&lt;/h2&gt;
+
+&lt;p&gt;如果公司存在多个版本库,那么控制第三方包的版本能有效降低风险&lt;/p&gt;
+
+&lt;h2 id=&#34;使用心得&#34;&gt;使用心得&lt;/h2&gt;
+
+&lt;h3 id=&#34;glide&#34;&gt;glide&lt;/h3&gt;
+
+&lt;h4 id=&#34;glide-dot-yaml和glide-dot-lock&#34;&gt;glide.yaml和glide.lock&lt;/h4&gt;
+
+&lt;p&gt;通过glide.yaml管理第三方包,并使用glide.lock控制具体包的版本.&lt;br /&gt;
+lock 文件是一个比较通用的依赖关系持久化机制.在 NodeJs 的 yarn 、Rust 的 Cargo 以及 Ruby 的 Bundler 等工具上同样被使用。它会记录所有的依赖关系树，并且记录初始化时候拉取的具体版本。&lt;br /&gt;
+举个例子：即使两个人都只有一个相同内容的 glide.yaml 文件，但是他们未必拉取的版本是相同的。原因在于版本是可以取范围的：例如上面的: ~v0.11 。&lt;/p&gt;
+
+&lt;h4 id=&#34;如何管理local包&#34;&gt;如何管理local包&lt;/h4&gt;
+
+&lt;p&gt;glide官方是不支持将local包移进vendor的,作者推荐的解决办法: &lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;glide-can-handle-private-packages-using-the-repo-property-dot&#34;&gt;Glide can handle private packages using the repo property.&lt;/h4&gt;
+
+&lt;p&gt;See the glide.yaml file docs. You can specify a repo, such as git@git.example.com/foo/bar.git.
+If you&amp;rsquo;re using a build environment that does not know how to
+access your private packages check them into the app.&lt;/p&gt;
+
+&lt;h4 id=&#34;the-packages-that-need-manual-building-dot-dot-dot-dot-vendor&#34;&gt;The packages that need manual building&amp;hellip;. vendor/&lt;/h4&gt;
+
+&lt;p&gt;was designed for external dependency storage rather than
+ our internally generated elements. In writing responses here
+ I double checked the intent of vendor/ from the original authors.
+ This may not be the best place for your built elements.&lt;/p&gt;
+
+&lt;h4 id=&#34;glide缺点&#34;&gt;glide缺点&lt;/h4&gt;
+
+&lt;p&gt;每次get新的包总会对已经有的包做更新操作,假如yaml中包多了这点是很恶心的,推荐使用dep&lt;/p&gt;
+
+&lt;h3 id=&#34;dep&#34;&gt;dep&lt;/h3&gt;
+
+&lt;p&gt;dep的使用逻辑和glide差不&lt;/p&gt;
+
+&lt;h4 id=&#34;添加包&#34;&gt;添加包&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;dep ensure -add xxx
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;更新包&#34;&gt;更新包&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;dep ensure -update -v
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;参考材料&#34;&gt;参考材料&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.bluerain.io/p/Golang-Glide.html&#34;&gt;https://blog.bluerain.io/p/Golang-Glide.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Masterminds/glide/issues/579&#34;&gt;https://github.com/Masterminds/glide/issues/579&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Masterminds/glide/issues/328&#34;&gt;https://github.com/Masterminds/glide/issues/328&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>优先队列</title>
+      <link>https://chenjiajun1207.github.io/post/priorityqueue/</link>
+      <pubDate>Thu, 25 Oct 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://chenjiajun1207.github.io/post/priorityqueue/</guid>
+      
+        <description>
+
+&lt;!-- more --&gt;
+
+&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
+
+&lt;p&gt;最近在多个框架中遇到优先队列,在这里记录下原理&lt;/p&gt;
+
+&lt;h2 id=&#34;实现方式&#34;&gt;实现方式&lt;/h2&gt;
+
+&lt;h3 id=&#34;堆&#34;&gt;堆&lt;/h3&gt;
+
+&lt;p&gt;目前只知道顺序数组可以用来作为heap底层结构,以实现优先队列&lt;/p&gt;
+
+&lt;h4 id=&#34;实现&#34;&gt;实现&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;// An Item is something we manage in a priority queue.
+type Item struct {
+        value    string // The value of the item; arbitrary.
+        priority int    // The priority of the item in the queue.
+        // The index is needed by update and is maintained by the heap.Interface methods.
+        index int // The index of the item in the heap.
+}
+
+// A PriorityQueue implements heap.Interface and holds Items.
+type PriorityQueue []*Item
+
+func (pq PriorityQueue) Len() int { return len(pq) }
+
+func (pq PriorityQueue) Less(i, j int) bool {
+        // We want Pop to give us the highest, not lowest, priority so we use greater than here.
+        return pq[i].priority &amp;gt; pq[j].priority
+}
+
+func (pq PriorityQueue) Swap(i, j int) {
+        pq[i], pq[j] = pq[j], pq[i]
+        pq[i].index = i
+        pq[j].index = j
+}
+
+func (pq *PriorityQueue) Push(x interface{}) {
+        n := len(*pq)
+        item := x.(*Item)
+        item.index = n
+        *pq = append(*pq, item)
+}
+
+func (pq *PriorityQueue) Pop() interface{} {
+        old := *pq
+        n := len(old)
+        item := old[n-1]
+        item.index = -1 // for safety
+        *pq = old[0 : n-1]
+        return item
+}
+
+// update modifies the priority and value of an Item in the queue.
+func (pq *PriorityQueue) update(item *Item, value string, priority int) {
+        item.value = value
+        item.priority = priority
+        heap.Fix(pq, item.index)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这里index是给sort.Interface的几个接口使用的,另外2个成员不言自明.&lt;/p&gt;
+
+&lt;h4 id=&#34;使用例子&#34;&gt;使用例子&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;// Some items and their priorities.
+        items := map[string]int{
+                &amp;quot;banana&amp;quot;: 3, &amp;quot;apple&amp;quot;: 2, &amp;quot;pear&amp;quot;: 4,
+        }
+
+        // Create a priority queue, put the items in it, and
+        // establish the priority queue (heap) invariants.
+        pq := make(PriorityQueue, len(items))
+        i := 0
+        for value, priority := range items {
+                pq[i] = &amp;amp;Item{
+                        value:    value,
+                        priority: priority,
+                        index:    i,
+                }
+                i++
+        }
+        heap.Init(&amp;amp;pq)
+
+        // Insert a new item and then modify its priority.
+        item := &amp;amp;Item{
+                value:    &amp;quot;orange&amp;quot;,
+                priority: 1,
+        }
+        item2 := &amp;amp;Item{
+                value:    &amp;quot;ssss&amp;quot;,
+                priority: 2,
+        }
+        heap.Push(&amp;amp;pq, item)
+        heap.Push(&amp;amp;pq, item2)
+        pq.update(item, item.value, 5)
+
+        // Take the items out; they arrive in decreasing priority order.
+        for pq.Len() &amp;gt; 0 {
+                item := heap.Pop(&amp;amp;pq).(*Item)
+                fmt.Printf(&amp;quot;%.2d:%s &amp;quot;, item.priority, item.value)
+        }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;通过调整Less,我们可以调整最大小堆,从而控制优先队列的排序规则&lt;/p&gt;
+
+&lt;h3 id=&#34;queue&#34;&gt;Queue&lt;/h3&gt;
+
+&lt;p&gt;未完待续&lt;/p&gt;
+
+&lt;h2 id=&#34;参考材料&#34;&gt;参考材料&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://studygolang.com/articles/13173&#34;&gt;https://studygolang.com/articles/13173&lt;/a&gt;&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>读写锁(RWLock),递归锁(reentrant)和互斥锁(mutex)</title>
+      <link>https://chenjiajun1207.github.io/post/rwlockandrecursive/</link>
+      <pubDate>Thu, 25 Oct 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://chenjiajun1207.github.io/post/rwlockandrecursive/</guid>
+      
+        <description>
+
+&lt;!-- more --&gt;
+
+&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
+
+&lt;p&gt;这里介绍下我对于3种锁的使用观点&lt;/p&gt;
+
+&lt;h2 id=&#34;个人观点&#34;&gt;个人观点&lt;/h2&gt;
+
+&lt;p&gt;个人观点尽量使用互斥锁,因为递归锁和读写锁的复杂度,下面举出几种错误例子&lt;/p&gt;
+
+&lt;h3 id=&#34;递归锁&#34;&gt;递归锁&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-C++&#34;&gt;#include &amp;quot;../Mutex.h&amp;quot;
+#include &amp;quot;../Thread.h&amp;quot;
+#include &amp;lt;vector&amp;gt;
+#include &amp;lt;stdio.h&amp;gt;
+
+using namespace muduo;
+
+class Foo
+{
+ public:
+  void doit() const;
+};
+
+MutexLock mutex;
+std::vector&amp;lt;Foo&amp;gt; foos;
+
+void post(const Foo&amp;amp; f)
+{
+  MutexLockGuard lock(mutex);
+  foos.push_back(f);
+}
+
+void traverse()
+{
+  MutexLockGuard lock(mutex);
+  for (std::vector&amp;lt;Foo&amp;gt;::const_iterator it = foos.begin();
+      it != foos.end(); ++it)
+  {
+    it-&amp;gt;doit();
+  }
+}
+
+void Foo::doit() const
+{
+  Foo f;
+  post(f);
+}
+
+int main()
+{
+  Foo f;
+  post(f);
+  traverse();
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这里doit()调用了post(),由于push_back()可能(但不总是)导致vector迭代器失效,程序偶尔会crash
+这时候就能体现 non-recursive 的优越性:把程序的逻辑错误暴露出来.&lt;/p&gt;
+
+&lt;h3 id=&#34;读写锁&#34;&gt;读写锁&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;这里引用陈硕的几个观点 ::
+
+&lt;ul&gt;
+&lt;li&gt;从正确性方面来说,一种典型的易犯错误是在持有read lock的时候修改了共享数据.这通常发生在程序的维护阶段,为了新增功能,程序员不小心在原来read lock保护的函数中调用了会修改状态的函数.这种错误的后果跟无保护并发读写共享数据是一样的.&lt;/li&gt;
+&lt;li&gt;从性能方面来说, 读写锁不见得比普通 mutex 更高效.无论如何read lock加锁的开销不会比mutex lock小,因为它要更新当前 reader 的数目.如果临界区很小,锁竞争不激烈,那么mutex往往会更快.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;再有JCP中(&lt;a id=&#34;orgb0f9808&#34;&gt;&lt;/a&gt;)
+
+&lt;ul&gt;
+&lt;li&gt;Read-write locks are a performance optimization designed to allow greater concurrency in certain situations. In practice, read-write locks can improve performance for frequently accessed read-mostly data structures on multiprocessor systems; under other conditions they perform slightly worse than exclusive locks due to their greater complexity.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;总结&#34;&gt;总结&lt;/h2&gt;
+
+&lt;p&gt;可能,递归锁和读写锁在某些特定场合可以获得可观的提升,但是用对这2种锁,
+也需要相当的学习和实践,目前我的水平还不足以驾驭这2种锁,留待以后再学习&lt;/p&gt;
+
+&lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Linux多线程服务端编程&lt;/li&gt;
+&lt;li&gt;Java concurrency in practice&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Golang float</title>
+      <link>https://chenjiajun1207.github.io/post/float64/</link>
+      <pubDate>Sun, 14 Oct 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://chenjiajun1207.github.io/post/float64/</guid>
+      
+        <description>
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;最近在工作遇到float的精度问题,记录下解决思路&lt;/p&gt;
+
+&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
+
+&lt;p&gt;浮点数数据格式有许多种,IEEE754标准的浮点数与IBM格式浮点数用的比较多&lt;br /&gt;
+Go提供了两种size的浮点数,float32和float64.它们的算术规范是由IEEE754国际标准定义，现代CPU都实现了这个规范.&lt;/p&gt;
+
+&lt;h2 id=&#34;两个浮点数相加减-可能不准确&#34;&gt;两个浮点数相加减，可能不准确&lt;/h2&gt;
+
+&lt;p&gt;不是所有的float相加减乘除都一定出现偏差,具体要根据golang实现IEEE 754的情况定.&lt;/p&gt;
+
+&lt;h3 id=&#34;相减&#34;&gt;相减&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-golang&#34;&gt;x := 74.96
+y := 20.48
+b := x - y
+fmt.Println(b) //output: 54.47999999999999
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;相加&#34;&gt;相加&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-golang&#34;&gt;var a = 0.6
+fmt.Println(a + 0.7) //output: 1.2999999999999998var a
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;解决思路&#34;&gt;解决思路&lt;/h2&gt;
+
+&lt;p&gt;尽量在设计之初,采用正确的设计方法.&lt;br /&gt;
+例如比方说 1.1 元钱,&lt;br /&gt;
+因为这个变量必须精确的等于十进制的 1.1,&lt;br /&gt;
+而变量本身是二进制,可以考虑用精确到分的110来表示这个数字,避免了小数.&lt;br /&gt;
+类似的,如果是计算器的话,如果用户是用十进制的格式输入,那么直接转换成二进制用计算机进行运算,最后再转换成十进制显示,这就不可避免的会有误差.&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.zhihu.com/question/65960911/answer/237638982&#34;&gt;https://www.zhihu.com/question/65960911/answer/237638982&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://blog.csdn.net/sjy8207380/article/details/79013827&#34;&gt;https://blog.csdn.net/sjy8207380/article/details/79013827&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://studygolang.com/articles/6429&#34;&gt;https://studygolang.com/articles/6429&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://blog.163.com/w%5Ffox/blog/static/6233953620091115113529198/&#34;&gt;http://blog.163.com/w%5Ffox/blog/static/6233953620091115113529198/&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>[转载]mgo 的 session 与连接池</title>
+      <link>https://chenjiajun1207.github.io/post/mgoandsession/</link>
+      <pubDate>Mon, 08 Oct 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://chenjiajun1207.github.io/post/mgoandsession/</guid>
+      
+        <description>
+
+&lt;!-- more --&gt;
+
+&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
+
+&lt;p&gt;最近发现一篇关于mgo连接池很有价值的文章,转载过来&lt;br /&gt;
+&lt;a href=&#34;https://cardinfolink.github.io/2017/05/17/mgo-session/&#34;&gt;https://cardinfolink.github.io/2017/05/17/mgo-session/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;介绍&#34;&gt;介绍&lt;/h2&gt;
+
+&lt;p&gt;mgo是由Golang编写的开源mongodb驱动。由于mongodb官方并没有开发Golang驱动，因此这款驱动被广泛使用。mongodb官网也推荐了这款开源驱动，并且作者在github也表示受到了mongodb官方的赞助。但由于作者的个人安排
+原因，该驱动的更新、bug修复、issue维护略微受到诟病。&lt;br /&gt;
+mgo在功能方面还是比较完善的，api使用也方便。由于mongodb丰富的玩法，mgo代码庞大，其中大部分是与mongodb的协议代码。核心的处理连接和请求的结构，逻辑上还是比较清晰的。&lt;/p&gt;
+
+&lt;h2 id=&#34;简单的使用&#34;&gt;简单的使用&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;func dial() {
+        session ,_ := mgo.Dial(&amp;quot;mongodb://127.0.0.1&amp;quot;)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;mgo面向调用者的核心数据结构是mgo.Session，dial函数演示了如何获取一个session&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;func foo1() {
+        session.DB(&amp;quot;test&amp;quot;).C(&amp;quot;coll&amp;quot;).Insert(bson.M{&amp;quot;name&amp;quot;:&amp;quot;zhangsan&amp;quot;})
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;foo1函数通过生成的session，向test数据库的coll集合写入了一条数据。但mgo的正确使用方法并非如此，而是应该在每次使用时从源session拷贝&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;func foo2() {
+        s := session.Copy()
+        defer s.Close()
+        s.DB(&amp;quot;test&amp;quot;).C(&amp;quot;coll&amp;quot;).Insert(bson.M{&amp;quot;name&amp;quot;:&amp;quot;zhangsan&amp;quot;})
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;foo2函数从源session拷贝出了一个临时的session，使用临时session写入一条数据，在函数退出时关闭这个临时的session。&lt;/p&gt;
+
+&lt;h2 id=&#34;session的拷贝与并发&#34;&gt;session的拷贝与并发&lt;/h2&gt;
+
+&lt;p&gt;为什么要在每次使用时都Copy，而不是直接使用Dial生成的session实例呢？个人认为，这与mgo.Session的Socket缓存机制有关。
+来看Session的核心数据结构。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;type Session struct {
+        m                sync.RWMutex
+        ...
+        slaveSocket      *mongoSocket
+        masterSocket     *mongoSocket
+        ...
+        consistency      Mode
+        ...
+        poolLimit        int
+        ...
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这里列出了mgo.Session的五个私有成员变量，与Copy机制有关的是，m,slaveSocket,masterSocket。
+m是mgo.Session的并发锁，因此所有的Session实例都是线程安全的。&lt;br /&gt;
+slaveSocket,masterSocket代表了该Session到mongodb主节点和从节点的一个物理连接的缓存。
+而Session的策略总是优先使用缓存的连接。是否缓存连接，由consistency也就是该Session的模式决定。
+假设在并发程序中，使用同一个Session实例，不使用Copy，而该Session实例的模式又恰好会缓存连接，
+那么，所有的通过该Session实例的操作，都会通过同一条连接到达mongodb。虽然mongodb本身的网络模型
+是非阻塞通信，请求可以通过一条链路，非阻塞地处理；但经过比较简陋的性能测试，在mongodb3.0中，
+10条连接并发写比单条连接的效率高一倍（在mongodb3.4中基本没有差别）。所以，使用Session Copy的
+一个重要原因是，可以将请求并发地分散到多个连接中。&lt;br /&gt;
+以上只是效率问题，但第二个问题是致命的。mgo.Session缓存的一主一从连接，实例本身不负责维护。
+也就是说，当slaveSocket,masterSocket任意其一，连接断开，Session自己不会重置缓存，该Session
+的使用者如果不主动重置缓存，调用者得到的将永远是EOF。这种情况在主从切换时就会发生，在网络抖动
+时也会发生。在业务代码中主动维护数据库Session的可用性，显然是不招人喜欢的。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;func (s *Session) Copy() *Session {
+        s.m.Lock()
+        scopy := copySession(s, true)
+        s.m.Unlock()
+        scopy.Refresh()
+        return scopy
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;以上是Copy函数的实现，解决了使用全局Session的两个问题。其中，copySession将源Session浅拷贝到临时
+Session中，这样源Session的配置就拷贝到了临时Session中。关键的Refresh，将源Session浅拷贝到临时
+Session的连接缓存指针，也就是slaveSocket,masterSocket置为空，这样临时Session就不存在缓存连接，
+而转为去尝试获取一个空闲的连接。&lt;/p&gt;
+
+&lt;h2 id=&#34;session的连接从哪里来-连接池&#34;&gt;Session的连接从哪里来？连接池&lt;/h2&gt;
+
+&lt;p&gt;明确了使用Session Copy机制的必要性，那么问题来了，Copy出来的临时Session是怎么获取一个到mongodb的物理连接的。
+答案就是连接池。mgo自身维护了一套到mongodb集群的连接池。这套连接池机制以mongodb数据库服务器为最小单位，每个
+mongodb都会在mgo内部，对应一个mongoServer结构体的实例，一个实例代表着mgo持有的到该数据库的连接。来看该连接池的定义。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;type mongoServer struct {
+        sync.RWMutex
+        ...
+        unusedSockets []*mongoSocket
+        liveSockets   []*mongoSocket
+        ...
+        info          *mongoServerInfo
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;其中，info代表了该实例对应的数据库服务器在集群中的信息——是否master，ReplicaSetName等。而两个Slice，就是传说中的连接池
+。unusedSockets存储当前空闲的连接，liveSockets存储当前活跃中的连接，Session缓存的连接就同时存放在liveSockets切片中，
+而临时Session获取到的连接就位于unusedSockets切片中。&lt;br /&gt;
+每个mongoServer都会隶属于一个mongoCluster结构，相当于mgo在内部，模拟出了mongo数据库集群的模型。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;type mongoCluster struct {
+        sync.RWMutex
+        ...
+        servers      mongoServers
+        masters      mongoServers
+        ...
+        setName      string
+        ...
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;如定义所示，mongoCluster持有一系列mongoServer的实例，以主从结构分散到两个数组中。
+每个Session都会存储自己对应的，要操作的mongoCluster的引用。&lt;/p&gt;
+
+&lt;h2 id=&#34;长途跋涉的session&#34;&gt;长途跋涉的Session&lt;/h2&gt;
+
+&lt;p&gt;以下描述一个Copy出来的临时Session是如何获取到一个mongodb物理连接的。 &lt;br /&gt;
+当临时Session被Copy出来，并且通过调用一系列api，将一次数据库操作设置到了Session内部后，此时万事俱备，
+只差连接。新生的Session首先会检查自己的缓存里是否有连接可用，初来乍到的他当然不知道自己是一个一无所有
+的光杆司令。由于mgo的实现，可怜的他还要去检查两次，一次使用读锁，一次使用写锁。作者的意图应该是期望在对
+同一个session并发操作时，能在第二次排他锁检查之前，恰巧缓存到一条连接，那么就可以减少一次对连接池的操作。
+但这次，这种好事没有发生在这个Session身上，“摸”了两次“口袋”反复确认以后，他终于还是发现自己身无分文。没有
+连接的他向组织求救，也就是这个session所要操作的mongodb集群，也就是所提到的mongoCluster结构。&lt;br /&gt;
+“组织”问了这个Session一系列问题，其中最主要的是两个问题，一是”你要主库连接还是从库连接”，二是“你期望的连接池
+最大大小是多少”。第一个问题，Session很好回答，他首先看了看自己的模式，是必须到主库还是必须到从库，还是两者皆可
+看情况而定。再看了看自己手里的操作是读还是写，写操作当然不可能到从库去完成。第二个问题就有点强人所难，但是他不
+用自己思考，因为这是从源Session那里拿过来的配置，也算是一点祖产吧。这个Cluster此时表现得像一个掌柜，他先根据主从，
+从自己手下的mongoServer里挑出了一个，然后问他，你现在手里有没有空闲的连接。如果有，那幸运的Session就可以顺利地
+获取到这个空闲的连接，高高兴兴的揣到兜里回家干活。但如果不巧，正好unusedSockets为空，那么掌柜会问另一个问题，
+你有没有超过这个家伙的期望的最大连接数。如果没有超过，那还好，作为伙计的mongoServer就干活了，他会跑到他负责的
+数据库服务器那里去申请一条全新的连接，亲手交到Session的手里。但如果这个伙计算了算，还去申请新连接的话，恐怕就超限了，
+那就Session同学对不起了您，您等吧。每100ms,伙计自旋一次，等着unusedSockets里出现可用的连接。&lt;br /&gt;
+当然有人会问，那这么自旋下去，如果连接一直被其他Session占用，会不会就死循环了呢，答案是不会。这个伙计作为一个数据库
+服务器的管理员吧可以说，他自己也要常常去确认他负责的这个服务器是不是还活着。因此，伙计同学每15s会给服务器发一个ping命令。
+作为管理员，伙计可就不管什么连接池大小超不超的问题了，那是他们那些普通session要考虑的琐事。伙计同学要ping的时候，也去
+unusedSockets里看，如果有最好，就拿一个来用；没有的话，直接去问服务器要新的。ping完之后，新的连接就会被放入unusedSockets中。
+这样的话，自旋中的获取连接请求，就可以拿到连接了。&lt;br /&gt;
+经过摸口袋，找组织，问伙计，伙计再干点小活，临时Session终于拿到了梦寐以求的数据库物理连接，把他放到了自己的口袋里
+（当然有些模式的Session不会这么干）。心满意足地将自己手里的操作通过这条连接写了出去，等到数据库给了他想要的应答，
+他的生命也就结束了。通过Close方法，我们剥夺了他口袋里的得之不易的连接，放回到了对应mongoServer的unusedSockets中。
+不久之后，GC又杀死了这个Session。&lt;/p&gt;
+
+&lt;h2 id=&#34;为什么我司的代码没有使用copy也没有出问题&#34;&gt;为什么我司的代码没有使用Copy也没有出问题？&lt;/h2&gt;
+
+&lt;p&gt;看过我司Go项目代码的同学可能知道，我司的服务端代码中并没有使用Copy，而是类似如下的使用&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;func Dial(){
+        localSession ,_ := mgo.Dial(mongoUrl)
+        localSession.SetMode(mgo.Eventual)
+        globalDatabase = localSession.DB(&amp;quot;db&amp;quot;)
+}
+
+func Insert() {
+        globalDatabase.C(&amp;quot;coll&amp;quot;).Insert(...)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;使用了一个全局的mgo.Database实例，所有的对该db的操作，都通过这个实例完成。
+原因就在于，我们使用的是模式是mgo.Eventual，该模式最大的特点就是不会缓存连接，拒绝持有mongodb的一针一线。
+通过该mgo.Database实例的操作，每次都会发现自己的口袋里一无所有，都会经过一次上一节所述的长途跋涉获取连接，
+因此也规避了不使用Copy带来的两个副作用。一并发效率问题，Eventual的Session每次操作都从连接池取连接，
+相当于分散在连接池中完成了操作，二连接可用性问题，连接池机制确保了，从mongoServer取得的连接，都是活的连接。&lt;/p&gt;
+
+&lt;h2 id=&#34;copy机制或eventual模式的并发模型的问题&#34;&gt;Copy机制或Eventual模式的并发模型的问题&lt;/h2&gt;
+
+&lt;h3 id=&#34;并发锁效率&#34;&gt;并发锁效率&lt;/h3&gt;
+
+&lt;p&gt;Copy机制或Eventual模式的共同点是，每次的数据库操作都要经过一次代码路径略深的获取连接的过程。
+而这个路径中，会操作多个线程安全的结构体，包括mongoServer、mongoCluster等，线程安全的代价就是并发锁冲突带来的性能下降。
+举个例子，假设有十个写操作并发，无论使用Copy还是Eventual，最终都会走到cluster的masterServer，请求一个主库连接；
+而完成这个请求，需要写两个slice，将连接从unusedSockets删除，并加入liveSockets，对切片的更新势必要加排他锁，
+因此这十个请求很有可能会产生锁冲突。&lt;/p&gt;
+
+&lt;h3 id=&#34;连接池上限与冲击数据库&#34;&gt;连接池上限与冲击数据库&lt;/h3&gt;
+
+&lt;p&gt;mgo对Session有一个poolLimit配置，也就是上文中所说的cluster问session的第二个问题——代表了对连接池连接数的上限限制。
+默认配置的连接数上限是4096，显然对生产环境来说太过大了。但这个配置我以为非常的鸡肋，属于设置也不好，不设置也不好；
+个人认为这是被mgo的并发模型所拖累了。&lt;br /&gt;
+假设高并发场景，若设置的连接池上限为4096，并发为10000，那么理论上，一瞬间，mgo可能会产生4096个到mongodb的物理连接，
+而剩下的六千的请求会自旋等待。4096个连接对mongodb来说，首先意味着4096 * 10M的内存消耗，如此高的连接会导致各种各样的问题。
+那么加入设置连接池上限为100，并发为10000，9900个等待的请求每次100个排队完成，对应用的效率又是不小的消耗。况且实际测试中，
+poolLimit的设置也无法严格地限制住连接数。&lt;/p&gt;
+
+&lt;h3 id=&#34;连接池只伸不缩&#34;&gt;连接池只伸不缩&lt;/h3&gt;
+
+&lt;p&gt;mgo另一个问题是连接池连接不释放，一旦由于并发原因，连接池的数量被撑大，之后再也不会变小，除非客户机或服务器重启&lt;/p&gt;
+
+&lt;h3 id=&#34;m-1-1-1-m-n&#34;&gt;M:1? 1:1 ? M:N!&lt;/h3&gt;
+
+&lt;p&gt;排除连接可用性问题，全局缓存连接的Session的问题是M个数据库操作通过1个连接完成。
+通过Copy、Eventual完成数据库操作的问题是，取到一个连接后，只做一件事情就归还了连接。
+这两种并发模型都存在问题。因此，最好的模型是M:N，有M个数据库操作需要完成，一次性取N个连接，分散到N个连接中完成，
+此后无论有多少批请求，都可以在N个连接中分散完成。第一可以规避连接池锁冲突，第二不会大规模产生真实连接，充分利用已建立的连接。&lt;/p&gt;
+
+&lt;h3 id=&#34;sessionpool&#34;&gt;SessionPool&lt;/h3&gt;
+
+&lt;p&gt;M:N的模型无法通过mgo原生支持完成，api也无法支持用户获取到物理连接。&lt;br /&gt;
+可以利用Session会缓存连接的特性，通过一些小技巧实现一个SessionPool。
+例如，有M个写操作，则可以一次性生成N个StrongSession，每个StrongSession自己会缓存一条masterSocket；
+于是，之后的写操作，可以以某种方式负载均衡到这N个由Strong模式的Session缓存的连接中。&lt;br /&gt;
+mgop简单实现了上述的StrongSessionPool，以轮询的方式负载。对从库连接的缓存以及动态负载还有待实现。
+实现SessionPool要特别注意的问题是刷新问题，缓存Session中的连接随时可能会失效，mgop的方式是遍历发送isMaster命令，
+第一确认连接存活，第二确认连接确实是到主库的。若发现问题，则马上重置缓存。&lt;/p&gt;
+
+&lt;h3 id=&#34;空闲连接释放&#34;&gt;空闲连接释放&lt;/h3&gt;
+
+&lt;p&gt;mgo的连接池释放问题，在我的mgo fork中做了一个简单的实现解决这个问题。github.com/JodeZer/mgo
+在mongodb url标准中，有两个option：minPoolSize，maxIdleTimeMS。mgo没有支持这两个选项，通过实现这两个选项可以达到释放连接的目的。官网描述：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;minPoolSize
+The minimum number of connections in the connection pool. The default value is 0.
+
+maxIdleTimeMS
+The maximum number of milliseconds that a connection can remain idle in the pool before being removed and closed.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;实现方式是，将mongoServer中的unusedSockets类型改造为timedMongoSocket(fork中自定义的类型)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;type timedMongoSocket struct {
+        soc          *mongoSocket
+        lastTimeUsed *time.Time
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;每次有连接被重置到空闲池时，打一个时间戳。在轮询goroutine中每隔一段时间review空闲连接的空闲时长，
+当时长大于maxIdleTimeMS时，就释放连接，将空闲池的大小控制在minPoolSize。&lt;br /&gt;
+实现中，没有特地写设置函数，可以通过在mongo url中写入选项设置，
+如：mongodb://127.0.0.1?minPoolSize=0&amp;amp;maxIdleTimeMS=3000，若maxIdleTimeMS不设置或为0，则默认为不进行释放&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>go-mgo/mgo入门</title>
+      <link>https://chenjiajun1207.github.io/post/mgo/</link>
+      <pubDate>Mon, 08 Oct 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://chenjiajun1207.github.io/post/mgo/</guid>
+      
+        <description>
+
+&lt;!-- more --&gt;
+
+&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
+
+&lt;p&gt;在游戏服务器开发这一块,nosql越来越流行,今天就来开一篇关于如何使用go-mgo/mgo的文章&lt;/p&gt;
+
+&lt;h2 id=&#34;源码&#34;&gt;源码&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/go-mgo/mgo&#34;&gt;https://github.com/go-mgo/mgo&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;使用select方法和struct区别&#34;&gt;使用Select方法和struct区别&lt;/h2&gt;
+
+&lt;h3 id=&#34;假如我们要在xxxx表中只取出value字段&#34;&gt;假如我们要在xxxx表中只取出Value字段&lt;/h3&gt;
+
+&lt;h4 id=&#34;使用select&#34;&gt;使用select&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-golang&#34;&gt;session, err := mgo.Dial(&amp;quot;localhost:40001&amp;quot;)
+        c.Assert(err, IsNil)
+        defer session.Close()
+
+        coll := session.DB(&amp;quot;mydb&amp;quot;).C(&amp;quot;mycoll&amp;quot;)
+        coll.Insert(M{&amp;quot;a&amp;quot;: 1, &amp;quot;b&amp;quot;: 2})
+
+        result := struct{ A, B int }{}
+
+        err = coll.Find(M{&amp;quot;a&amp;quot;: 1}).Select(M{&amp;quot;b&amp;quot;: 1}).One(&amp;amp;result)
+        c.Assert(err, IsNil)
+        c.Assert(result.A, Equals, 0)
+        c.Assert(result.B, Equals, 2)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;使用struct-plus-tag&#34;&gt;使用struct+Tag&lt;/h4&gt;
+
+&lt;p&gt;结合bson的特殊Tag,例子如下&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-golang&#34;&gt;type Profit struct {
+        Id    string  &amp;quot;_id,omitempty&amp;quot;
+        Value float64 &amp;quot;value,omitempty&amp;quot;
+}
+session, err := mgo.Dial(&amp;quot;192.168.1.250:27017&amp;quot;)
+c.Assert(err, IsNil)
+defer session.Close()
+coll := session.DB(&amp;quot;test&amp;quot;).C(&amp;quot;xxxxxx&amp;quot;)
+
+var profit []Profit
+
+err = coll.Find(bson.M{}).All(&amp;amp;profit)
+c.Assert(err, IsNil)
+c.Log(profit)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;结论&#34;&gt;结论&lt;/h4&gt;
+
+&lt;p&gt;对于不存在和不关心的值,两种方式都赋0值&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>推荐几本数据库相关的书籍</title>
+      <link>https://chenjiajun1207.github.io/post/recommendbook/</link>
+      <pubDate>Mon, 08 Oct 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://chenjiajun1207.github.io/post/recommendbook/</guid>
+      
+        <description>
+
+&lt;!-- more --&gt;
+
+&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
+
+&lt;h3 id=&#34;sql&#34;&gt;sql&lt;/h3&gt;
+
+&lt;p&gt;推荐几本数据库方面的书籍,不包括数据库设计,只关心如何在业务层面更好的使用数据库同时兼顾性能
+&lt;a id=&#34;org01ec441&#34;&gt;&lt;/a&gt;
+&lt;a id=&#34;org299f99c&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;nosql&#34;&gt;nosql&lt;/h3&gt;
+
+&lt;h4 id=&#34;mongodb&#34;&gt;mongodb&lt;/h4&gt;
+
+&lt;p&gt;mongodb比较灵活,sql那一套建模逻辑不适用,尤以多表查询比较弱,更适合将复杂结构放入一个表,暂时未找到
+nosql相关建模书籍&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>MySQL Benchmark Tool</title>
+      <link>https://chenjiajun1207.github.io/post/sysbench/</link>
+      <pubDate>Mon, 24 Sep 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://chenjiajun1207.github.io/post/sysbench/</guid>
+      
+        <description>
+
+&lt;!-- more --&gt;
+
+&lt;h2 id=&#34;sysbench&#34;&gt;sysbench&lt;/h2&gt;
+
+&lt;p&gt;sysbench是mysql的一款性能测试工具,最近试着使用了一下,感觉不错,并记录下流程&lt;/p&gt;
+
+&lt;h3 id=&#34;源码地址&#34;&gt;源码地址&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/akopytov/sysbench&#34;&gt;https://github.com/akopytov/sysbench&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;部分参数涵义--github&#34;&gt;部分参数涵义(github)&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;events&lt;/p&gt;
+
+&lt;p&gt;Limit for total number of requests. 0 (the default) means no limit&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;warmup-time&lt;/p&gt;
+
+&lt;p&gt;忽略启动时间,然后统计&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;percentile&lt;/p&gt;
+
+&lt;p&gt;采用95% percentile用来测量execution times(执行时间) for all processed requests&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;luajit-cmd&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;什么是JIT&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/ecidevilin/article/details/78630176&#34;&gt;https://blog.csdn.net/ecidevilin/article/details/78630176&lt;/a&gt; &lt;br /&gt;
+JIT = Just In Time即时编译，是动态编译的一种形式，是一种优化虚拟机运行的技术。
+程序运行通常有两种方式，一种是静态编译，一种是动态解释，即时编译混合了这二者。Java和.Net/mono中都使用了这种技术。
+然而IOS中禁止使用（不是针对JIT，而是所有的动态编译都不支持）！&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;db-ps-mode&lt;/p&gt;
+
+&lt;p&gt;The MySQL database supports prepared statements.
+A prepared statement or a parameterized statement is used to execute the same statement repeatedly with high efficiency.
+The prepared statement execution consists of two stages: prepare and execute.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;tables&lt;/p&gt;
+
+&lt;p&gt;Number of tables&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;table_size&lt;/p&gt;
+
+&lt;p&gt;Number of rows per table&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;fileio模块&#34;&gt;fileio模块&lt;/h3&gt;
+
+&lt;p&gt;以前的写法可能是&amp;ndash;test=fileio,现在&amp;ndash;test已经舍弃,变成fileio,&amp;ndash;max-time=300变成&amp;ndash;time=300,&amp;ndash;max-requests=0变成&amp;ndash;events=0&lt;/p&gt;
+
+&lt;h3 id=&#34;以vultr上vps以测试例子&#34;&gt;以vultr上vps以测试例子&lt;/h3&gt;
+
+&lt;p&gt;准备测试文件&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sysbench fileio --file-total-size=10G prepare
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;测试磁盘读写性能&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;nohup sysbench fileio --file-total-size=10G --file-test-mode=rndrw --time=300 --events=0 run &amp;gt; temp.log &amp;amp;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sysbench 1.0.15 (using bundled LuaJIT 2.1.0-beta2)
+
+Running the test with following options:
+Number of threads: 1
+Initializing random number generator from current time
+
+
+Extra file open flags: (none)
+128 files, 80MiB each
+10GiB total file size
+Block size 16KiB
+Number of IO requests: 0
+Read/Write ratio for combined random IO test: 1.50
+Periodic FSYNC enabled, calling fsync() each 100 requests.
+Calling fsync() at the end of test, Enabled.
+Using synchronous I/O mode
+Doing random r/w test
+Initializing worker threads...
+
+Threads started!
+
+
+File operationsn:
+    reads/s:                      1662.89
+    writes/s:                     1108.59
+    fsyncs/s:                     3547.93
+
+Throughput:
+    read, MiB/s:                  25.98
+    written, MiB/s:               17.32
+
+General statistics:
+    total time:                          300.0155s
+    total number of events:              1895821
+
+Latency (ms):
+         min:                                    0.00
+         avg:                                    0.16
+         max:                                   31.18
+         95th percentile:                        0.42
+         sum:                               297920.06
+
+Threads fairness:
+    events (avg/stddev):           1895821.0000/0.00
+    execution time (avg/stddev):   297.9201/0.00
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;以本地虚拟机测试为例&#34;&gt;以本地虚拟机测试为例&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sysbench 1.0.15 (using bundled LuaJIT 2.1.0-beta2)
+
+Running the test with following options:
+Number of threads: 1
+Initializing random number generator from current time
+
+
+Extra file open flags: (none)
+128 files, 80MiB each
+10GiB total file size
+Block size 16KiB
+Number of IO requests: 0
+Read/Write ratio for combined random IO test: 1.50
+Periodic FSYNC enabled, calling fsync() each 100 requests.
+Calling fsync() at the end of test, Enabled.
+Using synchronous I/O mode
+Doing random r/w test
+Initializing worker threads...
+
+Threads started!
+
+
+File operations:
+    reads/s:                      58.63
+    writes/s:                     39.09
+    fsyncs/s:                     125.32
+
+Throughput:
+    read, MiB/s:                  0.92
+    written, MiB/s:               0.61
+
+General statistics:
+    total time:                          300.8602s
+    total number of events:              66977
+
+Latency (ms):
+         min:                                    0.00
+         avg:                                    4.48
+         max:                                   66.62
+         95th percentile:                       13.46
+         sum:                               299812.67
+
+Threads fairness:
+    events (avg/stddev):           66977.0000/0.00
+    execution time (avg/stddev):   299.8127/0.00
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;oltp模块&#34;&gt;oltp模块&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;oltp只读测试&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;文件准备&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sysbench /usr/share/sysbench/oltp_read_only.lua --threads=4 --mysql-host=127.0.0.1 --mysql-user=root --mysql-password=my-secret-pw --mysql-port=3306 --tables=10 --table-size=1000000 prepare
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sysbench  /usr/share/sysbench/oltp_read_only.lua --threads=4 --events=0 --time=300 --mysql-host=192.168.1.250 --mysql-user=root --mysql-password=my-secret-pw --mysql-port=3306 --tables=10 --table-size=1000000 --range_selects=off --db-ps-mode=disable --report-interval=1 run
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;实际测试数据(机械硬盘)&lt;/p&gt;
+
+&lt;p&gt;一部分数据:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[ 295s ] thds: 4 tps: 3264.47 qps: 39178.67 (r/w/o: 32649.73/0.00/6528.95) lat (ms,95%): 1.58 err/s: 0.00 reconn/s: 0.00
+[ 296s ] thds: 4 tps: 3197.48 qps: 38362.74 (r/w/o: 31967.78/0.00/6394.96) lat (ms,95%): 1.61 err/s: 0.00 reconn/s: 0.00
+[ 297s ] thds: 4 tps: 3225.32 qps: 38714.85 (r/w/o: 32264.21/0.00/6450.64) lat (ms,95%): 1.61 err/s: 0.00 reconn/s: 0.00
+[ 298s ] thds: 4 tps: 3231.27 qps: 38768.21 (r/w/o: 32305.68/0.00/6462.54) lat (ms,95%): 1.61 err/s: 0.00 reconn/s: 0.00
+[ 299s ] thds: 4 tps: 3195.45 qps: 38352.44 (r/w/o: 31961.53/0.00/6390.91) lat (ms,95%): 1.61 err/s: 0.00 reconn/s: 0.00
+[ 300s ] thds: 4 tps: 3204.74 qps: 38452.91 (r/w/o: 32043.43/0.00/6409.49) lat (ms,95%): 1.61 err/s: 0.00 reconn/s: 0.00
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;综合分析:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;SQL statistics:
+    queries performed:
+        read:                            6722290
+        write:                           0
+        other:                           1344458
+        total:                           8066748
+    transactions:                        672229 (2240.73 per sec.)
+    queries:                             8066748 (26888.77 per sec.)
+    ignored errors:                      0      (0.00 per sec.)
+    reconnects:                          0      (0.00 per sec.)
+
+General statistics:
+    total time:                          300.0029s
+    total number of events:              672229
+
+Latency (ms):
+         min:                                    1.06
+         avg:                                    1.78
+         max:                                   30.43
+         95th percentile:                        2.48
+         sum:                              1199029.80
+
+Threads fairness:
+    events (avg/stddev):           168057.2500/764.02
+    execution time (avg/stddev):   299.7574/0.00
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;oltp读写混合测试&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;准备测试文件&#34;&gt;准备测试文件&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sysbench /usr/share/sysbench/oltp_read_write.lua --threads=4 --mysql-host=127.0.0.1 --mysql-user=root --mysql-password=my-secret-pw --mysql-port=3306 --tables=20 --table-size=1000000 prepare
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;测试&#34;&gt;测试&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sysbench /usr/share/sysbench/oltp_read_write.lua --threads=8 --events=0 --time=300 --mysql-host=127.0.0.1 --mysql-user=root --mysql-password=my-secret-pw --mysql-port=3306 --tables=20 --delete_inserts=10 --index_updates=10 --non_index_updates=10 --table-size=1000000 --db-ps-mode=disable --report-interval=1 run
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;部分数据:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[ 297s ] thds: 16 tps: 8.00 qps: 431.91 (r/w/o: 108.98/306.94/16.00) lat (ms,95%): 2082.91 err/s: 0.00 reconn/s: 0.00
+[ 298s ] thds: 16 tps: 12.06 qps: 658.22 (r/w/o: 147.72/486.38/24.12) lat (ms,95%): 2320.55 err/s: 0.00 reconn/s: 0.00
+[ 299s ] thds: 16 tps: 15.00 qps: 878.05 (r/w/o: 229.01/619.04/30.00) lat (ms,95%): 2082.91 err/s: 0.00 reconn/s: 0.00
+[ 300s ] thds: 16 tps: 12.00 qps: 765.23 (r/w/o: 170.05/571.17/24.01) lat (ms,95%): 1479.41 err/s: 0.00 reconn/s: 0.00
+[ 301s ] thds: 15 tps: 14.92 qps: 310.40 (r/w/o: 35.82/259.66/14.92) lat (ms,95%): 1903.57 err/s: 0.00 reconn/s: 0.00
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;综合数据:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;SQL statistics:
+    queries performed:
+        read:                            43162
+        write:                           123320
+        other:                           6166
+        total:                           172648
+    transactions:                        3083   (10.22 per sec.)
+    queries:                             172648 (572.25 per sec.)
+    ignored errors:                      0      (0.00 per sec.)
+    reconnects:                          0      (0.00 per sec.)
+
+General statistics:
+    total time:                          301.6946s
+    total number of events:              3083
+
+Latency (ms):
+         min:                                   39.06
+         avg:                                 1559.83
+         max:                                 5007.99
+         95th percentile:                     2880.27
+         sum:                              4808951.49
+
+Threads fairness:
+    events (avg/stddev):           192.6875/4.98
+    execution time (avg/stddev):   300.5595/0.37
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;参考资料&#34;&gt;参考资料&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://severalnines.com/blog/how-benchmark-performance-mysql-mariadb-using-sysbench&#34;&gt;https://severalnines.com/blog/how-benchmark-performance-mysql-mariadb-using-sysbench&lt;/a&gt;&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>&#34;About&#34;</title>
+      <link>https://chenjiajun1207.github.io/posts/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://chenjiajun1207.github.io/posts/about/</guid>
+      
+        <description>&lt;h1 id=&#34;人生苦短-只争朝夕-浮生若梦-为欢几何&#34;&gt;人生苦短,只争朝夕,浮生若梦,为欢几何&lt;/h1&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Golang Sort</title>
+      <link>https://chenjiajun1207.github.io/posts/golang_sort/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://chenjiajun1207.github.io/posts/golang_sort/</guid>
+      
+        <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
+
+&lt;h1 id=&#34;示例&#34;&gt;示例&lt;/h1&gt;
+
+&lt;ul&gt;
+在实际项目中用到对结构按结构体中的某个字段进行排序，记录下使用心得
+&lt;li&gt;首先定义数据结构，为了能清楚说明问题，只给两个字段。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;type User struct {
+	Name  string
+	Score int
+&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;type Users []User
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;golang中想要自定义排序，自己的结构要实现三个方法&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;// 摘自: $GOROOT/src/sort/sort.go
+type Interface interface {
+	// Len is the number of elements in the collection.
+	Len() int
+	// Less reports whether the element with
+	// index i should sort before the element with index j.
+	Less(i, j int) bool
+	// Swap swaps the elements with indexes i and j.
+	Swap(i, j int)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;先按它说的，实现这三个方法&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;func (us Users) Len() int {
+	return len(us)
+}
+
+func (us Users) Less(i, j int) bool {
+	return us[i].Score &amp;lt; us[j].Score
+}
+
+func (us Users) Swap(i, j int) {
+	us[i], us[j] = us[j], us[i]
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;然后就能排序了：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;func main() {
+	var us Users
+	const N = 6
+
+	for i := 0; i &amp;lt; N; i++ {
+		us = append(us, User{
+			Name:  &amp;quot;user&amp;quot; + strconv.Itoa(i),
+			Score: rand.Intn(N * N),
+		})
+	}
+
+	fmt.Printf(&amp;quot;%v\n&amp;quot;, us)
+	sort.Sort(us)
+	fmt.Printf(&amp;quot;%v\n&amp;quot;, us)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;基于结构体中不同的字段排序&#34;&gt;基于结构体中不同的字段排序&lt;/h1&gt;
+
+&lt;p&gt;可以利用嵌套结构体实现，即定义基本的Len()和Swap()方法，然后基本嵌套结构封装Less()比较方法。具体如下：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;/*
+  对结构按多字段排序
+ */
+
+type student struct {
+	Name string
+ 	Age int
+}
+
+type stus []student
+func(s stus) Len() int { return len(s) }
+func(s stus) Swap(i, j int) { s[i], s[j] = s[j], s[i] }
+
+type sortByName struct{ stus }
+// 按名字排序
+func(m sortByName) Less(i, j int) bool {
+	return m.stus[i].Name &amp;gt; m.stus[j].Name
+}
+
+type sortByAge struct { stus }
+// 按年龄排序
+func(m sortByAge) Less(i, j int) bool {
+	return m.stus[i].Age &amp;gt; m.stus[j].Age
+}
+
+func main() {
+	s := stus {
+		{
+			Name:&amp;quot;test123&amp;quot;,
+			Age:20,
+		},
+		{
+			Name:&amp;quot;test1&amp;quot;,
+			Age:22,
+		},
+		{
+			Name:&amp;quot;test21&amp;quot;,
+			Age:21,
+		},
+	}
+
+	sort.Sort(sortByName{s})
+	//sort.Stable(sortByAge{s})
+	fmt.Println(s)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&#34;参考资料&#34;&gt;参考资料&lt;/h1&gt;
+
+&lt;p&gt;https://blog.csdn.net/butterfly5211314/article/details/83589945
+https://blog.csdn.net/u012050154/article/details/82379385&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Golang float</title>
+      <link>https://chenjiajun1207.github.io/posts/float64/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://chenjiajun1207.github.io/posts/float64/</guid>
+      
+        <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
+
+&lt;h1 id=&#34;两个浮点数相加减-可能不准确&#34;&gt;两个浮点数相加减，可能不准确&lt;/h1&gt;
+
+&lt;h2 id=&#34;相减&#34;&gt;相减&lt;/h2&gt;
+
+&lt;p&gt;最近在工作遇到float的精度问题,记录下解决思路
+浮点数数据格式有许多种,IEEE754标准的浮点数与IBM格式浮点数用的比较多\\
+Go提供了两种size的浮点数,float32和float64.它们的算术规范是由IEEE754国际标准定义，现代CPU都实现了这个规范.
+不是所有的float相加减乘除都一定出现偏差,具体要根据golang实现IEEE 754的情况定.&lt;/p&gt;
+
+&lt;p&gt;x := 74.96
+y := 20.48
+b := x - y
+fmt.Println(b) //output: 54.47999999999999&lt;/p&gt;
+
+&lt;h2 id=&#34;相加&#34;&gt;相加&lt;/h2&gt;
+
+&lt;p&gt;var a = 0.6
+fmt.Println(a + 0.7) //output: 1.2999999999999998var a&lt;/p&gt;
+
+&lt;h1 id=&#34;解决思路&#34;&gt;解决思路&lt;/h1&gt;
+
+&lt;h1 id=&#34;参考资料&#34;&gt;参考资料&lt;/h1&gt;
+
+&lt;p&gt;尽量在设计之初,采用正确的设计方法.\\
+例如比方说 1.1 元钱,\\
+因为这个变量必须精确的等于十进制的 1.1,\\
+而变量本身是二进制,可以考虑用精确到分的110来表示这个数字,避免了小数.\\
+类似的,如果是计算器的话,如果用户是用十进制的格式输入,那么直接转换成二进制用计算机进行运算,最后再转换成十进制显示,这就不可避免的会有误差.\\
+https://www.zhihu.com/question/65960911/answer/237638982\\
+https://blog.csdn.net/sjy8207380/article/details/79013827\\
+https://studygolang.com/articles/6429\\
+http://blog.163.com/w_fox/blog/static/6233953620091115113529198/\\&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Golang位运算符的溢出情况</title>
+      <link>https://chenjiajun1207.github.io/posts/golang_/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://chenjiajun1207.github.io/posts/golang_/</guid>
+      
+        <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
+
+&lt;h1 id=&#34;介绍&#34;&gt;介绍&lt;/h1&gt;
+
+&lt;h2 id=&#34;直接表现为&#34;&gt;直接表现为&lt;/h2&gt;
+
+&lt;h1 id=&#34;反例&#34;&gt;反例&lt;/h1&gt;
+
+&lt;ol&gt;
+在编码过程中,经常会遇到使用逻辑运算符的情况,其中对于溢出操作需要特别小心
+&lt;li&gt;编译型语言，编译器的静态求值是自然的。&lt;/li&gt;
+&lt;li&gt;必须使用强制类型转换。甚至于对一个uint16变量赋uint8的值都是不允许的。&lt;/li&gt;
+&lt;li&gt;整数字面值不包含存储空间的大小，可以直接赋给各种uintX（必须不溢出）。&lt;/li&gt;
+&lt;li&gt;&lt;&lt;运算的结果的类型，以左侧操作数为准。&lt;/li&gt;
+&lt;li&gt;静态求值的规则是先不顾代码范围，强制求值，之后再塞回目标的存储空间中&lt;/li&gt;
+&lt;li&gt;对变量左移的时候，会直接考虑存储空间大小，将左移的数据丢弃&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;const c_i8 uint8 = 255
+var i16 uint16
+i16 = uint16(c_i8 &lt;&lt; 4) // constant 4080 overflows uint8
+i16 = uint16(uint8(255) &lt;&lt; 4) // constant 4080 overflows uint&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;对于常量&#34;&gt;对于常量&lt;/h2&gt;
+
+&lt;p&gt;因为&lt;&lt;左侧都是uint8，所以最终的结果也是uint8，则得出的结果装不下uint8就会报错，哪怕最后准备了uint16的容器也不行&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;var i8 uint8
+var i8_2 uint8 = 255
+i8 = i8_2 &amp;lt;&amp;lt; 4
+fmt.Printf(&amp;quot;%x\n&amp;quot;, i8) // f0
+i8_2 &amp;lt;&amp;lt;= 4
+fmt.Printf(&amp;quot;%x\n&amp;quot;, i8_2) // f0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;结论&#34;&gt;结论&lt;/h2&gt;
+
+&lt;h1 id=&#34;临时解决方案&#34;&gt;临时解决方案&lt;/h1&gt;
+
+&lt;h2 id=&#34;方案一&#34;&gt;方案一&lt;/h2&gt;
+
+&lt;p&gt;这里也会有溢出的报警
+常量左移之后，Go面对溢出的行为并不是截断而是报错。
+对付这个问题，你可能需要先用不定长度的uint类型绕开溢出的限制，
+再用掩码(&amp; 0xFF)运算去约束结果的范围：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-go&#34;&gt;const c_i8 uint8 = 255
+var i16 uint16
+i16 = uint16(uint(c_i8) &amp;lt;&amp;lt; 4 &amp;amp; 0xFF)
+fmt.Printf(&amp;quot;%x\n&amp;quot;, i16)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;方案二&#34;&gt;方案二&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;package main
+
+import (
+	&amp;quot;fmt&amp;quot;
+	&amp;quot;math&amp;quot;
+)
+
+func main() {
+	var cronField uint64
+	var start int
+	var end int
+
+	start = 1
+	end = 30
+	cronField |= ^(math.MaxUint64 &amp;lt;&amp;lt; uint(end+1)) &amp;amp; (math.MaxUint64 &amp;lt;&amp;lt; uint(start))
+	fmt.Println(uint64(math.MaxUint64))
+	fmt.Println(cronField)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;流程一&#34;&gt;流程一&lt;/h3&gt;
+
+&lt;p&gt;这里首先将math.math.MaxUint64左移end+1,然后与math.MaxUint64左移动start位的结果相与,然后再取反,画个简单的示意图
+假设end=1,start=1&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt; | 1 | 1 | 1 | 1 | 1 | ===&amp;gt;        1   1 | 1 | 1 | 1 | 0 | 0 |
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;流程二-取反&#34;&gt;流程二(取反)&lt;/h3&gt;
+
+&lt;p&gt;这里右补0&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt; | 1 | 1 | 1 | 1 | 1 | ===&amp;gt;   0   0 | 0 | 0 | 0 | 1 | 1 |
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;流程三&#34;&gt;流程三&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt; | 1 | 1 | 1 | 1 | 1 | ===&amp;gt;  1 | 1 | 1 | 1 | 1 | 0 |
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;流程四&#34;&gt;流程四&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt; 0   0 | 0 | 0 | 0 | 1 | 1 |
+              &amp;amp;
+     1 | 1 | 1 | 1 | 1 | 0 |
+
+     0   0   0   0   1   0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;总结下&#34;&gt;总结下&lt;/h2&gt;
+
+&lt;h1 id=&#34;参考资料&#34;&gt;参考资料&lt;/h1&gt;
+
+&lt;p&gt;在计算过程中,先不顾代码范围，强制求值，之后再塞回目标的存储空间中,
+特别是例子二中,cronField最终作为目标,单独(math.MaxUint64 &lt;&lt; uint(start))已不再提示溢出
+https://segmentfault.com/q/1010000000420677&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>MySQL Benchmark Tool</title>
+      <link>https://chenjiajun1207.github.io/posts/sysbench/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://chenjiajun1207.github.io/posts/sysbench/</guid>
+      
+        <description>&lt;h1 id=&#34;sysbench&#34;&gt;sysbench&lt;/h1&gt;
+
+&lt;h2 id=&#34;源码地址&#34;&gt;源码地址&lt;/h2&gt;
+
+&lt;h2 id=&#34;部分参数涵义-github&#34;&gt;部分参数涵义(github)&lt;/h2&gt;
+
+&lt;h4 id=&#34;events&#34;&gt;events&lt;/h4&gt;
+
+&lt;h4 id=&#34;warmup-time&#34;&gt;warmup-time&lt;/h4&gt;
+
+&lt;h4 id=&#34;percentile&#34;&gt;percentile&lt;/h4&gt;
+
+&lt;h4 id=&#34;luajit-cmd&#34;&gt;luajit-cmd&lt;/h4&gt;
+
+&lt;h5 id=&#34;什么是jit&#34;&gt;什么是JIT&lt;/h5&gt;
+
+&lt;h4 id=&#34;db-ps-mode&#34;&gt;db-ps-mode&lt;/h4&gt;
+
+&lt;h4 id=&#34;tables&#34;&gt;tables&lt;/h4&gt;
+
+&lt;h4 id=&#34;table-size&#34;&gt;table_size&lt;/h4&gt;
+
+&lt;h2 id=&#34;fileio模块&#34;&gt;fileio模块&lt;/h2&gt;
+
+&lt;h2 id=&#34;以vultr上vps以测试例子&#34;&gt;以vultr上vps以测试例子&lt;/h2&gt;
+
+&lt;p&gt;sysbench是mysql的一款性能测试工具,最近试着使用了一下,感觉不错,并记录下流程
+https://github.com/akopytov/sysbench
+Limit for total number of requests. 0 (the default) means no limit
+忽略启动时间,然后统计
+采用95% percentile用来测量execution times(执行时间) for all processed requests
+https://blog.csdn.net/ecidevilin/article/details/78630176 \\
+JIT = Just In Time即时编译，是动态编译的一种形式，是一种优化虚拟机运行的技术。 
+程序运行通常有两种方式，一种是静态编译，一种是动态解释，即时编译混合了这二者。Java和.Net/mono中都使用了这种技术。 
+然而IOS中禁止使用（不是针对JIT，而是所有的动态编译都不支持）！
+The MySQL database supports prepared statements. 
+A prepared statement or a parameterized statement is used to execute the same statement repeatedly with high efficiency.
+The prepared statement execution consists of two stages: prepare and execute.
+Number of tables
+Number of rows per table
+    以前的写法可能是--test=fileio,现在--test已经舍弃,变成fileio,--max-time=300变成--time=300,--max-requests=0变成--events=0
+准备测试文件&lt;/p&gt;
+
+&lt;p&gt;sysbench fileio --file-total-size=10G prepare&lt;/p&gt;
+
+&lt;p&gt;测试磁盘读写性能&lt;/p&gt;
+
+&lt;p&gt;nohup sysbench fileio --file-total-size=10G --file-test-mode=rndrw --time=300 --events=0 run &gt; temp.log &amp;&lt;/p&gt;
+
+&lt;p&gt;sysbench 1.0.15 (using bundled LuaJIT 2.1.0-beta2)&lt;/p&gt;
+
+&lt;p&gt;Running the test with following options:
+Number of threads: 1
+Initializing random number generator from current time&lt;/p&gt;
+
+&lt;p&gt;Extra file open flags: (none)
+128 files, 80MiB each
+10GiB total file size
+Block size 16KiB
+Number of IO requests: 0
+Read/Write ratio for combined random IO test: 1.50
+Periodic FSYNC enabled, calling fsync() each 100 requests.
+Calling fsync() at the end of test, Enabled.
+Using synchronous I/O mode
+Doing random r/w test
+Initializing worker threads...&lt;/p&gt;
+
+&lt;p&gt;Threads started!&lt;/p&gt;
+
+&lt;p&gt;File operationsn:
+    reads/s:                      1662.89
+    writes/s:                     1108.59
+    fsyncs/s:                     3547.93&lt;/p&gt;
+
+&lt;p&gt;Throughput:
+    read, MiB/s:                  25.98
+    written, MiB/s:               17.32&lt;/p&gt;
+
+&lt;p&gt;General statistics:
+    total time:                          300.0155s
+    total number of events:              1895821&lt;/p&gt;
+
+&lt;p&gt;Latency (ms):
+         min:                                    0.00
+         avg:                                    0.16
+         max:                                   31.18
+         95th percentile:                        0.42
+         sum:                               297920.06&lt;/p&gt;
+
+&lt;p&gt;Threads fairness:
+    events (avg/stddev):           1895821.0000/0.00
+    execution time (avg/stddev):   297.9201/0.00&lt;/p&gt;
+
+&lt;h2 id=&#34;以本地虚拟机测试为例&#34;&gt;以本地虚拟机测试为例&lt;/h2&gt;
+
+&lt;p&gt;sysbench 1.0.15 (using bundled LuaJIT 2.1.0-beta2)&lt;/p&gt;
+
+&lt;p&gt;Running the test with following options:
+Number of threads: 1
+Initializing random number generator from current time&lt;/p&gt;
+
+&lt;p&gt;Extra file open flags: (none)
+128 files, 80MiB each
+10GiB total file size
+Block size 16KiB
+Number of IO requests: 0
+Read/Write ratio for combined random IO test: 1.50
+Periodic FSYNC enabled, calling fsync() each 100 requests.
+Calling fsync() at the end of test, Enabled.
+Using synchronous I/O mode
+Doing random r/w test
+Initializing worker threads...&lt;/p&gt;
+
+&lt;p&gt;Threads started!&lt;/p&gt;
+
+&lt;p&gt;File operations:
+    reads/s:                      58.63
+    writes/s:                     39.09
+    fsyncs/s:                     125.32&lt;/p&gt;
+
+&lt;p&gt;Throughput:
+    read, MiB/s:                  0.92
+    written, MiB/s:               0.61&lt;/p&gt;
+
+&lt;p&gt;General statistics:
+    total time:                          300.8602s
+    total number of events:              66977&lt;/p&gt;
+
+&lt;p&gt;Latency (ms):
+         min:                                    0.00
+         avg:                                    4.48
+         max:                                   66.62
+         95th percentile:                       13.46
+         sum:                               299812.67&lt;/p&gt;
+
+&lt;p&gt;Threads fairness:
+    events (avg/stddev):           66977.0000/0.00
+    execution time (avg/stddev):   299.8127/0.00&lt;/p&gt;
+
+&lt;h2 id=&#34;oltp模块&#34;&gt;oltp模块&lt;/h2&gt;
+
+&lt;h4 id=&#34;oltp只读测试&#34;&gt;oltp只读测试&lt;/h4&gt;
+
+&lt;h5 id=&#34;文件准备&#34;&gt;文件准备&lt;/h5&gt;
+
+&lt;p&gt;sysbench /usr/share/sysbench/oltp_read_only.lua --threads=4 --mysql-host=127.0.0.1 --mysql-user=root --mysql-password=my-secret-pw --mysql-port=3306 --tables=10 --table-size=1000000 prepare&lt;/p&gt;
+
+&lt;p&gt;sysbench  /usr/share/sysbench/oltp_read_only.lua --threads=4 --events=0 --time=300 --mysql-host=192.168.1.250 --mysql-user=root --mysql-password=my-secret-pw --mysql-port=3306 --tables=10 --table-size=1000000 --range_selects=off --db-ps-mode=disable --report-interval=1 run&lt;/p&gt;
+
+&lt;h5 id=&#34;实际测试数据-机械硬盘&#34;&gt;实际测试数据(机械硬盘)&lt;/h5&gt;
+
+&lt;p&gt;一部分数据:&lt;/p&gt;
+
+&lt;p&gt;[ 295s ] thds: 4 tps: 3264.47 qps: 39178.67 (r/w/o: 32649.73/0.00/6528.95) lat (ms,95%): 1.58 err/s: 0.00 reconn/s: 0.00
+[ 296s ] thds: 4 tps: 3197.48 qps: 38362.74 (r/w/o: 31967.78/0.00/6394.96) lat (ms,95%): 1.61 err/s: 0.00 reconn/s: 0.00
+[ 297s ] thds: 4 tps: 3225.32 qps: 38714.85 (r/w/o: 32264.21/0.00/6450.64) lat (ms,95%): 1.61 err/s: 0.00 reconn/s: 0.00
+[ 298s ] thds: 4 tps: 3231.27 qps: 38768.21 (r/w/o: 32305.68/0.00/6462.54) lat (ms,95%): 1.61 err/s: 0.00 reconn/s: 0.00
+[ 299s ] thds: 4 tps: 3195.45 qps: 38352.44 (r/w/o: 31961.53/0.00/6390.91) lat (ms,95%): 1.61 err/s: 0.00 reconn/s: 0.00
+[ 300s ] thds: 4 tps: 3204.74 qps: 38452.91 (r/w/o: 32043.43/0.00/6409.49) lat (ms,95%): 1.61 err/s: 0.00 reconn/s: 0.00&lt;/p&gt;
+
+&lt;p&gt;综合分析:&lt;/p&gt;
+
+&lt;p&gt;SQL statistics:
+    queries performed:
+        read:                            6722290
+        write:                           0
+        other:                           1344458
+        total:                           8066748
+    transactions:                        672229 (2240.73 per sec.)
+    queries:                             8066748 (26888.77 per sec.)
+    ignored errors:                      0      (0.00 per sec.)
+    reconnects:                          0      (0.00 per sec.)&lt;/p&gt;
+
+&lt;p&gt;General statistics:
+    total time:                          300.0029s
+    total number of events:              672229&lt;/p&gt;
+
+&lt;p&gt;Latency (ms):
+         min:                                    1.06
+         avg:                                    1.78
+         max:                                   30.43
+         95th percentile:                        2.48
+         sum:                              1199029.80&lt;/p&gt;
+
+&lt;p&gt;Threads fairness:
+    events (avg/stddev):           168057.2500/764.02
+    execution time (avg/stddev):   299.7574/0.00&lt;/p&gt;
+
+&lt;h4 id=&#34;oltp读写混合测试&#34;&gt;oltp读写混合测试&lt;/h4&gt;
+
+&lt;h3 id=&#34;准备测试文件&#34;&gt;准备测试文件&lt;/h3&gt;
+
+&lt;p&gt;sysbench /usr/share/sysbench/oltp_read_write.lua --threads=4 --mysql-host=127.0.0.1 --mysql-user=root --mysql-password=my-secret-pw --mysql-port=3306 --tables=20 --table-size=1000000 prepare&lt;/p&gt;
+
+&lt;h3 id=&#34;测试&#34;&gt;测试&lt;/h3&gt;
+
+&lt;p&gt;sysbench /usr/share/sysbench/oltp_read_write.lua --threads=8 --events=0 --time=300 --mysql-host=127.0.0.1 --mysql-user=root --mysql-password=my-secret-pw --mysql-port=3306 --tables=20 --delete_inserts=10 --index_updates=10 --non_index_updates=10 --table-size=1000000 --db-ps-mode=disable --report-interval=1 run&lt;/p&gt;
+
+&lt;p&gt;部分数据:&lt;/p&gt;
+
+&lt;p&gt;[ 297s ] thds: 16 tps: 8.00 qps: 431.91 (r/w/o: 108.98/306.94/16.00) lat (ms,95%): 2082.91 err/s: 0.00 reconn/s: 0.00
+[ 298s ] thds: 16 tps: 12.06 qps: 658.22 (r/w/o: 147.72/486.38/24.12) lat (ms,95%): 2320.55 err/s: 0.00 reconn/s: 0.00
+[ 299s ] thds: 16 tps: 15.00 qps: 878.05 (r/w/o: 229.01/619.04/30.00) lat (ms,95%): 2082.91 err/s: 0.00 reconn/s: 0.00
+[ 300s ] thds: 16 tps: 12.00 qps: 765.23 (r/w/o: 170.05/571.17/24.01) lat (ms,95%): 1479.41 err/s: 0.00 reconn/s: 0.00
+[ 301s ] thds: 15 tps: 14.92 qps: 310.40 (r/w/o: 35.82/259.66/14.92) lat (ms,95%): 1903.57 err/s: 0.00 reconn/s: 0.00&lt;/p&gt;
+
+&lt;p&gt;综合数据:&lt;/p&gt;
+
+&lt;p&gt;SQL statistics:
+    queries performed:
+        read:                            43162
+        write:                           123320
+        other:                           6166
+        total:                           172648
+    transactions:                        3083   (10.22 per sec.)
+    queries:                             172648 (572.25 per sec.)
+    ignored errors:                      0      (0.00 per sec.)
+    reconnects:                          0      (0.00 per sec.)&lt;/p&gt;
+
+&lt;p&gt;General statistics:
+    total time:                          301.6946s
+    total number of events:              3083&lt;/p&gt;
+
+&lt;p&gt;Latency (ms):
+         min:                                   39.06
+         avg:                                 1559.83
+         max:                                 5007.99
+         95th percentile:                     2880.27
+         sum:                              4808951.49&lt;/p&gt;
+
+&lt;p&gt;Threads fairness:
+    events (avg/stddev):           192.6875/4.98
+    execution time (avg/stddev):   300.5595/0.37&lt;/p&gt;
+
+&lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
+
+&lt;p&gt;https://severalnines.com/blog/how-benchmark-performance-mysql-mariadb-using-sysbench&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Tcp分包</title>
+      <link>https://chenjiajun1207.github.io/posts/tcp_subcontracting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://chenjiajun1207.github.io/posts/tcp_subcontracting/</guid>
+      
+        <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
+
+&lt;h1 id=&#34;问题描述&#34;&gt;问题描述&lt;/h1&gt;
+
+&lt;h1 id=&#34;解法一-peek方式&#34;&gt;解法一(peek方式)&lt;/h1&gt;
+
+&lt;p&gt;如今的游戏服务器框架都会涉及到Tcp分包,今天记录下自己的心得
+  Tcp长连接,通过分包解决粘包问题
+大体思路:从conn里面读取数据然后缓存，然后不断peek数据拿来分析(我不能拿走数据，因为数据可能不完整，所以一直做peek)，
+自己管理buffer
+源码如下&lt;/p&gt;
+
+&lt;p&gt;receive := func() &lt;-chan string {
+		results := make(chan string)
+		go func() {
+			defer close(results)
+			input := bufio.NewReaderSize(conn, 65536)
+			var len_heard int32
+			for {
+				heard_len, ok := input.Peek(4)
+				if ok != nil &amp;&amp; ok != bufio.ErrBufferFull {
+					log15.Error(ok.Error())
+					break
+				}
+				buf := bytes.NewReader(heard_len)
+				err := binary.Read(buf, binary.LittleEndian, &amp;len_heard)
+				if err != nil {
+					log15.Error(ok.Error())
+					break
+				}
+				if len_heard &gt; 65536 || len_heard &lt; 0 {
+					log15.Error(&#34;Invalid length :&#34;, len_heard)
+					break
+				} else if int32(input.Buffered()-4) &gt;= (len_heard) {
+					input.Discard(4)
+					message_byte, ok := input.Peek(int(len_heard))
+					if ok != nil {
+						log15.Error(ok.Error())
+					}
+					results &lt;- string(message_byte)
+					input.Discard(int(len_heard))
+				} else {
+					continue
+				}
+			}
+		}()
+		return results
+	}&lt;/p&gt;
+
+&lt;h1 id=&#34;解法二-bufio-scanner&#34;&gt;解法二(bufio.Scanner)&lt;/h1&gt;
+
+&lt;p&gt;在golang的bufio包中其实已经封装了更通用的Scanner,通过设置split,完成分包
+源码如下&lt;/p&gt;
+
+&lt;p&gt;	receive := func() &lt;-chan string {
+		results := make(chan string)
+		go func() {
+			defer close(results)&lt;/p&gt;
+
+&lt;p&gt;			scanner := bufio.NewScanner(conn)&lt;/p&gt;
+
+&lt;p&gt;			split := func(data []byte, atEOF bool) (advance int, token []byte, err error) {
+				if !atEOF {
+					if len(data) &gt; 4 {
+						var lenData int32
+						err := binary.Read(bytes.NewReader(data[:4]), binary.LittleEndian, &amp;lenData)
+						if err != nil {
+							log15.Error(err.Error())
+							return 0, nil, err
+						}
+						if int(lenData)+4 &lt;= len(data) {
+							log15.Info(string(data[:int(lenData)+4]))
+							return int(lenData) + 4, data[0 : int(lenData)+4], nil
+						}
+					}
+				}
+				return
+			}
+			scanner.Split(split)&lt;/p&gt;
+
+&lt;p&gt;			for scanner.Scan() {
+				results &lt;- string(scanner.Bytes())
+				log15.Info(string(scanner.Bytes()))
+			}&lt;/p&gt;
+
+&lt;p&gt;			if err := scanner.Err(); err != nil {
+				fmt.Printf(&#34;Invalid input: %s&#34;, err)
+			}
+		}()
+		return results
+	}&lt;/p&gt;
+
+&lt;h1 id=&#34;验证正确性&#34;&gt;验证正确性&lt;/h1&gt;
+
+&lt;h1 id=&#34;参考资料&#34;&gt;参考资料&lt;/h1&gt;
+
+&lt;ol&gt;
+无论哪种解决方法,最终都为了处理以下几种情况
+&lt;li&gt;数据分两次到达，第一次收到 2 个字节，不足消息的长度字段；\\&lt;/li&gt;
+&lt;li&gt;数据分两次到达，第一次收到 4 个字节，刚好够长度字段，但是没有 body；\\&lt;/li&gt;
+&lt;li&gt;数据分两次到达，第一次收到 8 个字节，长度完整，但 body 不完整；\\&lt;/li&gt;
+&lt;li&gt;数据分两次到达，第一次收到 9 个字节，长度完整，body 也完整；\\&lt;/li&gt;
+&lt;li&gt;数据分两次到达，第一次收到 10 个字节，第一条消息的长度完整、body 也完整，第二条消息长度不完整；\\&lt;/li&gt;
+同时还有buf的自适应性问题等等
+http://www.cppblog.com/Solstice/archive/2011/02/04/139718.html \\
+http://feixiao.github.io/2016/05/08/bufio/
+&lt;/ol&gt;
 </description>
       
     </item>

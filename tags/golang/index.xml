@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>golang on 人生苦短,只争朝夕</title>
+    <link>https://chenjiajun1207.github.io/tags/golang/</link>
+    <description>Recent content in golang on 人生苦短,只争朝夕</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 14 Jan 2019 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://chenjiajun1207.github.io/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Golang Sort</title>
+      <link>https://chenjiajun1207.github.io/post/golang_sort/</link>
+      <pubDate>Mon, 14 Jan 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://chenjiajun1207.github.io/post/golang_sort/</guid>
+      <description>简介 在实际项目中用到对结构按结构体中的某个字段进行排序，记录下使用心得 示例 首先定义数据结构，为了能清楚说明问题，只给两个字段。 type User struct { Name string Score</description>
+    </item>
+    
+    <item>
+      <title>Weighted Random Selection</title>
+      <link>https://chenjiajun1207.github.io/post/weightsort/</link>
+      <pubDate>Mon, 14 Jan 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://chenjiajun1207.github.io/post/weightsort/</guid>
+      <description>简介 最近在项目中遇到了加密权重算法,记录下使用心得 问题描述 Given a list of items where each item has a weight (integer value), select a random item from the list based on that weight. The key requirement — items with a higher weight value are more likely to be returned. So</description>
+    </item>
+    
+    <item>
+      <title>Golang位运算符的溢出情况</title>
+      <link>https://chenjiajun1207.github.io/post/golang_/</link>
+      <pubDate>Sun, 23 Dec 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://chenjiajun1207.github.io/post/golang_/</guid>
+      <description>简介 在编码过程中,经常会遇到使用逻辑运算符的情况,其中对于溢出操作需要特别小心 介绍 编译型语言，编译器的静态求值是自然的。 必须使用强制类型转换</description>
+    </item>
+    
+    <item>
+      <title>[转载]Golang Json库源码</title>
+      <link>https://chenjiajun1207.github.io/post/golang_json/</link>
+      <pubDate>Sun, 23 Dec 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://chenjiajun1207.github.io/post/golang_json/</guid>
+      <description>简介 最近发现一篇关于golang原生Json库的文章,转载过来 https://zhuanlan.zhihu.com/p/37165706 介绍 encoding/json库的意义相对其他语言来说在Golang中尤其重</description>
+    </item>
+    
+    <item>
+      <title>Tcp分包</title>
+      <link>https://chenjiajun1207.github.io/post/tcp_subcontracting/</link>
+      <pubDate>Thu, 25 Oct 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://chenjiajun1207.github.io/post/tcp_subcontracting/</guid>
+      <description>简介 如今的游戏服务器框架都会涉及到Tcp分包,今天记录下自己的心得 问题描述 Tcp长连接,通过分包解决粘包问题 解法一(peek方式) 大体思路:</description>
+    </item>
+    
+    <item>
+      <title>go包管理器</title>
+      <link>https://chenjiajun1207.github.io/post/package/</link>
+      <pubDate>Thu, 25 Oct 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://chenjiajun1207.github.io/post/package/</guid>
+      <description>简介 分别记录下glide和dep的使用心得 问题描述 如果公司存在多个版本库,那么控制第三方包的版本能有效降低风险 使用心得 glide glide.yaml</description>
+    </item>
+    
+    <item>
+      <title>优先队列</title>
+      <link>https://chenjiajun1207.github.io/post/priorityqueue/</link>
+      <pubDate>Thu, 25 Oct 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://chenjiajun1207.github.io/post/priorityqueue/</guid>
+      <description>简介 最近在多个框架中遇到优先队列,在这里记录下原理 实现方式 堆 目前只知道顺序数组可以用来作为heap底层结构,以实现优先队列 实现 // An Item is something we manage</description>
+    </item>
+    
+    <item>
+      <title>读写锁(RWLock),递归锁(reentrant)和互斥锁(mutex)</title>
+      <link>https://chenjiajun1207.github.io/post/rwlockandrecursive/</link>
+      <pubDate>Thu, 25 Oct 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://chenjiajun1207.github.io/post/rwlockandrecursive/</guid>
+      <description>简介 这里介绍下我对于3种锁的使用观点 个人观点 个人观点尽量使用互斥锁,因为递归锁和读写锁的复杂度,下面举出几种错误例子 递归锁 #include &amp;quot;../Mutex.h&amp;quot; #include &amp;quot;../Thread.h&amp;quot; #include &amp;lt;vector&amp;gt; #include &amp;lt;stdio.h&amp;gt; using</description>
+    </item>
+    
+    <item>
+      <title>Golang float</title>
+      <link>https://chenjiajun1207.github.io/post/float64/</link>
+      <pubDate>Sun, 14 Oct 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://chenjiajun1207.github.io/post/float64/</guid>
+      <description>最近在工作遇到float的精度问题,记录下解决思路 简介 浮点数数据格式有许多种,IEEE754标准的浮点数与IBM格式浮点数用的比较多 Go提供</description>
+    </item>
+    
+    <item>
+      <title>[转载]mgo 的 session 与连接池</title>
+      <link>https://chenjiajun1207.github.io/post/mgoandsession/</link>
+      <pubDate>Mon, 08 Oct 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://chenjiajun1207.github.io/post/mgoandsession/</guid>
+      <description>简介 最近发现一篇关于mgo连接池很有价值的文章,转载过来 https://cardinfolink.github.io/2017/05/17/mgo-session/ 介绍 mgo是由Golang编写的开源mongodb驱动。由于mongodb官方并没</description>
+    </item>
+    
+    <item>
+      <title>go-mgo/mgo入门</title>
+      <link>https://chenjiajun1207.github.io/post/mgo/</link>
+      <pubDate>Mon, 08 Oct 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://chenjiajun1207.github.io/post/mgo/</guid>
+      <description>简介 在游戏服务器开发这一块,nosql越来越流行,今天就来开一篇关于如何使用go-mgo/mgo的文章 源码 https://github.com/go-mgo/mgo 使用Select方法和struc</description>
+    </item>
+    
+    <item>
+      <title>推荐几本数据库相关的书籍</title>
+      <link>https://chenjiajun1207.github.io/post/recommendbook/</link>
+      <pubDate>Mon, 08 Oct 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://chenjiajun1207.github.io/post/recommendbook/</guid>
+      <description>简介 sql 推荐几本数据库方面的书籍,不包括数据库设计,只关心如何在业务层面更好的使用数据库同时兼顾性能 nosql mongodb mongodb比较灵活,sql那一套建</description>
+    </item>
+    
+  </channel>
+</rss>
