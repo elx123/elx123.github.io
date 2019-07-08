@@ -2,9 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://chenjiajun1207.github.io/</loc>
-    <lastmod>2019-05-29T17:11:53+08:00</lastmod>
+    <loc>https://chenjiajun1207.github.io/categories/</loc>
+    <lastmod>2019-07-08T17:27:30+08:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://chenjiajun1207.github.io/post/</loc>
+    <lastmod>2019-07-08T17:27:30+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://chenjiajun1207.github.io/tags/</loc>
+    <lastmod>2019-07-08T17:27:30+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://chenjiajun1207.github.io/categories/cpu/</loc>
+    <lastmod>2019-07-08T17:27:30+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://chenjiajun1207.github.io/tags/cpu/</loc>
+    <lastmod>2019-07-08T17:27:30+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://chenjiajun1207.github.io/</loc>
+    <lastmod>2019-07-08T17:27:30+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://chenjiajun1207.github.io/post/cpu/</loc>
+    <lastmod>2019-07-08T17:27:30+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -15,28 +52,10 @@
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/categories/</loc>
-    <lastmod>2019-05-29T17:05:23+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://chenjiajun1207.github.io/post/golang_sort/</loc>
     <lastmod>2019-05-29T17:04:43+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://chenjiajun1207.github.io/post/</loc>
-    <lastmod>2019-05-29T17:05:23+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://chenjiajun1207.github.io/tags/</loc>
-    <lastmod>2019-05-29T17:05:23+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -268,6 +287,12 @@
   
   <url>
     <loc>https://chenjiajun1207.github.io/posts/rwlockandrecursive/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://chenjiajun1207.github.io/posts/cpu/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

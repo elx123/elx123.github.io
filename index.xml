@@ -6,10 +6,28 @@
     <description>Recent content on 人生苦短,只争朝夕</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 29 May 2019 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 08 Jul 2019 00:00:00 +0800</lastBuildDate>
     
         <atom:link href="https://chenjiajun1207.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>转载一篇关于cpu如何运作的文章</title>
+      <link>https://chenjiajun1207.github.io/post/cpu/</link>
+      <pubDate>Mon, 08 Jul 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://chenjiajun1207.github.io/post/cpu/</guid>
+      
+        <description>
+
+&lt;!-- more --&gt;
+
+&lt;h2 id=&#34;地址&#34;&gt;地址&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://hackernoon.com/how-does-a-cpu-work-af3488d182a2&#34;&gt;https://hackernoon.com/how-does-a-cpu-work-af3488d182a2&lt;/a&gt;&lt;/p&gt;
+</description>
+      
+    </item>
     
     <item>
       <title>关于</title>
@@ -2670,124 +2688,6 @@ Initializing worker threads...&lt;/p&gt;
 &lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
 
 &lt;p&gt;https://severalnines.com/blog/how-benchmark-performance-mysql-mariadb-using-sysbench&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Tcp分包</title>
-      <link>https://chenjiajun1207.github.io/posts/tcp_subcontracting/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://chenjiajun1207.github.io/posts/tcp_subcontracting/</guid>
-      
-        <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
-
-&lt;h1 id=&#34;问题描述&#34;&gt;问题描述&lt;/h1&gt;
-
-&lt;h1 id=&#34;解法一-peek方式&#34;&gt;解法一(peek方式)&lt;/h1&gt;
-
-&lt;p&gt;如今的游戏服务器框架都会涉及到Tcp分包,今天记录下自己的心得
-  Tcp长连接,通过分包解决粘包问题
-大体思路:从conn里面读取数据然后缓存，然后不断peek数据拿来分析(我不能拿走数据，因为数据可能不完整，所以一直做peek)，
-自己管理buffer
-源码如下&lt;/p&gt;
-
-&lt;p&gt;receive := func() &lt;-chan string {
-		results := make(chan string)
-		go func() {
-			defer close(results)
-			input := bufio.NewReaderSize(conn, 65536)
-			var len_heard int32
-			for {
-				heard_len, ok := input.Peek(4)
-				if ok != nil &amp;&amp; ok != bufio.ErrBufferFull {
-					log15.Error(ok.Error())
-					break
-				}
-				buf := bytes.NewReader(heard_len)
-				err := binary.Read(buf, binary.LittleEndian, &amp;len_heard)
-				if err != nil {
-					log15.Error(ok.Error())
-					break
-				}
-				if len_heard &gt; 65536 || len_heard &lt; 0 {
-					log15.Error(&#34;Invalid length :&#34;, len_heard)
-					break
-				} else if int32(input.Buffered()-4) &gt;= (len_heard) {
-					input.Discard(4)
-					message_byte, ok := input.Peek(int(len_heard))
-					if ok != nil {
-						log15.Error(ok.Error())
-					}
-					results &lt;- string(message_byte)
-					input.Discard(int(len_heard))
-				} else {
-					continue
-				}
-			}
-		}()
-		return results
-	}&lt;/p&gt;
-
-&lt;h1 id=&#34;解法二-bufio-scanner&#34;&gt;解法二(bufio.Scanner)&lt;/h1&gt;
-
-&lt;p&gt;在golang的bufio包中其实已经封装了更通用的Scanner,通过设置split,完成分包
-源码如下&lt;/p&gt;
-
-&lt;p&gt;	receive := func() &lt;-chan string {
-		results := make(chan string)
-		go func() {
-			defer close(results)&lt;/p&gt;
-
-&lt;p&gt;			scanner := bufio.NewScanner(conn)&lt;/p&gt;
-
-&lt;p&gt;			split := func(data []byte, atEOF bool) (advance int, token []byte, err error) {
-				if !atEOF {
-					if len(data) &gt; 4 {
-						var lenData int32
-						err := binary.Read(bytes.NewReader(data[:4]), binary.LittleEndian, &amp;lenData)
-						if err != nil {
-							log15.Error(err.Error())
-							return 0, nil, err
-						}
-						if int(lenData)+4 &lt;= len(data) {
-							log15.Info(string(data[:int(lenData)+4]))
-							return int(lenData) + 4, data[0 : int(lenData)+4], nil
-						}
-					}
-				}
-				return
-			}
-			scanner.Split(split)&lt;/p&gt;
-
-&lt;p&gt;			for scanner.Scan() {
-				results &lt;- string(scanner.Bytes())
-				log15.Info(string(scanner.Bytes()))
-			}&lt;/p&gt;
-
-&lt;p&gt;			if err := scanner.Err(); err != nil {
-				fmt.Printf(&#34;Invalid input: %s&#34;, err)
-			}
-		}()
-		return results
-	}&lt;/p&gt;
-
-&lt;h1 id=&#34;验证正确性&#34;&gt;验证正确性&lt;/h1&gt;
-
-&lt;h1 id=&#34;参考资料&#34;&gt;参考资料&lt;/h1&gt;
-
-&lt;ol&gt;
-无论哪种解决方法,最终都为了处理以下几种情况
-&lt;li&gt;数据分两次到达，第一次收到 2 个字节，不足消息的长度字段；\\&lt;/li&gt;
-&lt;li&gt;数据分两次到达，第一次收到 4 个字节，刚好够长度字段，但是没有 body；\\&lt;/li&gt;
-&lt;li&gt;数据分两次到达，第一次收到 8 个字节，长度完整，但 body 不完整；\\&lt;/li&gt;
-&lt;li&gt;数据分两次到达，第一次收到 9 个字节，长度完整，body 也完整；\\&lt;/li&gt;
-&lt;li&gt;数据分两次到达，第一次收到 10 个字节，第一条消息的长度完整、body 也完整，第二条消息长度不完整；\\&lt;/li&gt;
-同时还有buf的自适应性问题等等
-http://www.cppblog.com/Solstice/archive/2011/02/04/139718.html \\
-http://feixiao.github.io/2016/05/08/bufio/
-&lt;/ol&gt;
 </description>
       
     </item>

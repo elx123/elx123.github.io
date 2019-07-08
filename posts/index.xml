@@ -136,5 +136,14 @@
       <description>简介 个人观点 递归锁 这里介绍下我对于3种锁的使用观点 个人观点尽量使用互斥锁,因为递归锁和读写锁的复杂度,下面举出几种错误例子 #include &amp;quot;../Mutex.h&amp;quot; #include &amp;quot;../Thread.h&amp;quot; #include &amp;lt;vector&amp;gt; #include &amp;lt;stdio.h&amp;gt; using</description>
     </item>
     
+    <item>
+      <title>转载一篇关于cpu如何运作的文章</title>
+      <link>https://chenjiajun1207.github.io/posts/cpu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://chenjiajun1207.github.io/posts/cpu/</guid>
+      <description>地址 https://hackernoon.com/how-does-a-cpu-work-af3488d182a2</description>
+    </item>
+    
   </channel>
 </rss>
