@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Archive - 人生苦短,只争朝夕</title>
+  <title> - 人生苦短,只争朝夕</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -23,7 +23,8 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="RT" />
-  <meta name="description" content="Hugo theme jane example site." />
+  <meta name="description" content="转载自 正文 https://bbs.pediy.com/thread-249309.htm 回顾一下前文提到的东西 游戏主要检测分为5大块 1.CALL检测 -由TenRpcs负责 2.文件及内存检测 - 由TCJ负责 3.客户行为游" />
+
   <meta name="keywords" content="Hugo, theme, jane" />
 
 
@@ -34,8 +35,7 @@
 <meta name="generator" content="Hugo 0.55.6" />
 
 
-<link rel="canonical" href="https://chenjiajun1207.github.io/posts/" />
-<link href="%7balternate%20%7bRSS%20application/rss&#43;xml%20%20index%20alternate%20%20false%20false%20true%20false%20false%200%7d%20/posts/index.xml%20https://chenjiajun1207.github.io/posts/index.xml%7d" rel="alternate" type="application/rss+xml" title="人生苦短,只争朝夕" />
+<link rel="canonical" href="https://chenjiajun1207.github.io/posts/anticheattwo/" />
 
 
 
@@ -57,18 +57,25 @@
 
 
 
-<meta property="og:title" content="Posts" />
-<meta property="og:description" content="Hugo theme jane example site." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://chenjiajun1207.github.io/posts/" />
+<meta property="og:title" content="" />
+<meta property="og:description" content="转载自 正文 https://bbs.pediy.com/thread-249309.htm 回顾一下前文提到的东西 游戏主要检测分为5大块 1.CALL检测 -由TenRpcs负责 2.文件及内存检测 - 由TCJ负责 3.客户行为游" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chenjiajun1207.github.io/posts/anticheattwo/" />
 
 
-<meta itemprop="name" content="Posts">
-<meta itemprop="description" content="Hugo theme jane example site.">
+<meta itemprop="name" content="">
+<meta itemprop="description" content="转载自 正文 https://bbs.pediy.com/thread-249309.htm 回顾一下前文提到的东西 游戏主要检测分为5大块 1.CALL检测 -由TenRpcs负责 2.文件及内存检测 - 由TCJ负责 3.客户行为游">
 
+
+
+<meta itemprop="wordCount" content="1650">
+
+
+
+<meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Posts"/>
-<meta name="twitter:description" content="Hugo theme jane example site."/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="转载自 正文 https://bbs.pediy.com/thread-249309.htm 回顾一下前文提到的东西 游戏主要检测分为5大块 1.CALL检测 -由TenRpcs负责 2.文件及内存检测 - 由TCJ负责 3.客户行为游"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -277,38 +284,205 @@
     <main id="main" class="main bg-llight">
       <div class="content-wrapper">
         <div id="content" class="content container">
-          
-<section id="archive" class="archive">
-    <div class="archive-title">
-      <span class="archive-post-counter">
-          19 posts In Total
-      </span>
-    </div></section>
+          <article class="post bg-white">
+  
+  <header class="post-header">
+    <h1 class="post-title"></h1>
+    
+    <div class="post-meta">
+      <time datetime="0001-01-01" class="post-time">
+        0001-01-01
+      </time>
+    </div>
+  </header>
+
+  
+  
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Table of Contents</h2>
+  <div class="post-toc-content">
+    
+  </div>
+</div>
+
+  
+  <div class="post-content">
+      <h1 id="转载自">转载自</h1>
+
+<h1 id="正文">正文</h1>
+
+<p>https://bbs.pediy.com/thread-249309.htm
+回顾一下前文提到的东西
+游戏主要检测分为5大块</p>
+
+<p>1.CALL检测 ->由TenRpcs负责
+2.文件及内存检测 - > 由TCJ负责
+3.客户行为游戏数据检测以及本地封包加密解密发送回传 - > 由GameRpcs负责
+4.本地机器码查询 - > 由PolicyProbe负责
+5.调试游戏等保护 -> 由TerSafe负责
+我们需要处理的东西是1.2.3
+机器码解决办法是 老办法 钩住 LoadLibraryExW 让  PolicyProbe 不在载入列表里即可过掉机器码检测
+TerSafe 我们不做处理，没有必要</p>
+
+<p>接下来我们编写一个注入到游戏大厅的DLL，然后转换成ShellCode，为了安全起见，先要把大厅的保护干掉
+代码如下</p>
+
+<p>VOID 干游戏大厅检测() //稳妥起见还是要干掉把
+{
+    INT 判断计次 = NULL;
+    BYTE 判断字节 = NULL;
+    DWORD 临时变量 = NULL;
+    DWORD 修改前的页面保护属性 = NULL;</p>
+
+<p>ULONG32 模块地址 = NULL;</p>
+
+<p>do
+    {
+        模块地址 = ULONG32(GetModuleHandle("TenRpcs.dll"));
+    } while (!模块地址);</p>
+
+<p>do
+    {
+        RtlCopyMemory(&判断字节, LPVOID(模块地址 + <em><strong>此处地址屏蔽</strong></em>), sizeof(判断字节));
+    } while (判断字节 != 0x68);</p>
+
+<p>临时变量 = /*此处地址屏蔽*/;
+    BYTE TenRpcs检测点1[] = { 0xE9, 0x60, 0x06, 0x00, 0x00, };
+    if (VirtualProtect(LPVOID(模块地址 + 临时变量), sizeof(TenRpcs检测点1), PAGE_EXECUTE_READWRITE, &修改前的页面保护属性))
+    {
+        RtlCopyMemory(LPVOID(模块地址 + 临时变量), &TenRpcs检测点1, sizeof(TenRpcs检测点1));</p>
+
+<p>if (VirtualProtect(LPVOID(模块地址 + 临时变量), sizeof(TenRpcs检测点1), PAGE_EXECUTE, &修改前的页面保护属性))
+        {
+            RtlZeroMemory(TenRpcs检测点1, sizeof(TenRpcs检测点1));
+        }
+    }</p>
+
+<p>CloseHandle(保护检测线程句柄);
+}</p>
+
+<p>干掉这个检测点之后 游戏大厅的保护系统就崩溃了，包括TerSafe，所有检测不会初始化，不知道大厅检测什么，为了安全起见还是干掉把
+一定要在第一时间注入，否则保护初始化完成就没机会了</p>
+
+<p>VOID 等待游戏()
+{
+    INT 对局计次 = 1;
+    HWND 窗口句柄 = NULL;
+    DWORD 游戏进程ID = NULL;
+    ULONG32 模块句柄 = NULL;
+    INT 文字颜色[4] = { FOREGROUND_BLUE, FOREGROUND_GREEN, FOREGROUND_RED, FOREGROUND_INTENSITY };</p>
+
+<p>do
+    {
+        Sleep(100);
+        窗口句柄 = FindWindow("RCLIENT", "League of Legends");
+    } while (!窗口句柄);</p>
+
+<p>AllocConsole();
+    srand((int)time(0));
+    freopen("conout$", "w", stdout);
+    CONSOLE_CURSOR_INFO Cursor_info = { 1, 0 };
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 文字颜色[rand() % 3 + 1]);
+    //DeleteMenu(GetSystemMenu(GetConsoleWindow(), FALSE), SC_CLOSE, MF_BYCOMMAND);</p>
+
+<p>JMP1:</p>
+
+<p>std::cout << std::endl;
+    std::cout << "[+] 正在等待游戏对局中" << std::endl;</p>
+
+<p>do
+    {
+        Sleep(10);
+        游戏进程ID = GetPID("League of Legends.exe");
+    } while (!游戏进程ID);</p>
+
+<p>if (内存注入远程线程DLL(游戏进程ID, hexData1, sizeof(hexData1)))
+    {
+        if (内存注入远程线程DLL(游戏进程ID, hexData2, sizeof(hexData2)))
+            std::cout << "[+] 第" << 对局计次 << "场游戏对局已开始" << std::endl;
+    }</p>
+
+<p>do
+    {
+        Sleep(100);
+        游戏进程ID = GetPID("League of Legends.exe");
+    } while (游戏进程ID);</p>
+
+<p>对局计次++;</p>
+
+<p>goto JMP1;
+}</p>
+
+<ul>
+注入之后执行我们的循环代码，判断游戏是否启动
+<a href="./../resources/_gen/images/773537_CWY5ZQVHHBNRQ59.png" title="./../resources/_gen/images/773537_CWY5ZQVHHBNRQ59.png">./../resources/_gen/images/773537_CWY5ZQVHHBNRQ59.png</a>\\
+启动后第一时间注入我们的 ShellCode 并执行
+DLL转ShellCode用010Editor即可\\
+初步尝试1:抹掉TCJ\\
+<li>TCJ模块加载失败后，游戏正常运行5分钟后自动退出，上一篇文章说到是GameRpcs的问题然后尝试方案2</li>
+初步尝试2:抹掉GameRpcs+TCJ \\
+<li>正常游戏，不会掉线，大概打了3-4局之后，被服务器断开链接，封7天</li>
+初步尝试3:正常加载 GameRpcs+TCJ 在TCJ线程入口处返回Error\\
+<li>游戏正常运行，7分钟左右掉线，打完一局掉5次线，和尝试1没有太大区别，检测处理0状态，笔者难受的打了5局，不会封7天也不会封三年，但是太难受</li>
+再次尝试4:改TCJ线程里的Sleep，Push 64 Push1470 等这些参数\\
+<li>游戏正常运行，不会掉线，三年，说明了还是检测到了外挂，于是我把参数范围扩大到四字节，Sleep(1000000000)例如这样，笔者脑子坏掉了，开始这样做的时候想没有通讯肯定会7天，事实证明了我脑子进水了，的确是7天，没有必要做这个举动</li>
+到这里，我静下心来想，有没有一个完美的办法，既能让TCJ检测不到外挂特征，又能正常的与GameRpcs通讯呢
+可行的办法1. 钩住所有TCJ调用的重要的Fun包括
+<a href="./../resources/_gen/images/773537_YUM2F8HFSWFAB2G.png" title="./../resources/_gen/images/773537_YUM2F8HFSWFAB2G.png">./../resources/_gen/images/773537_YUM2F8HFSWFAB2G.png</a>\\
+笔者检查了一下，他的导入全都是外挂检测相关，如果要一个一个去处理，那我的工作量太大了，没有半个月一个月弄不完
+然后又想有没有什么简单的方法，想想想了一晚上，最后想出了一个办法，预知结果如何，下次分解，今天先讲到这里
+</ul>
+
+  </div>
+
+  
+  
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">RT</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">0001-01-01</span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
 
 
+  
+  
+</article>
 
 
 
 
   
-  
-  
 
   
   
+    <div class="post bg-white">
+      <script src="https://utteranc.es/client.js"
+            repo= "chenjiajun1207/commentSave"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+      </script>
+    </div>
+  
 
   
-  
 
   
-  
 
   
-  
 
-
-
-
+    
 
         </div>
       </div>

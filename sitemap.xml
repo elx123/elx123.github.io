@@ -203,6 +203,30 @@
   </url>
   
   <url>
+    <loc>https://chenjiajun1207.github.io/posts/seh/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://chenjiajun1207.github.io/posts/anticheatone/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://chenjiajun1207.github.io/posts/anticheatthree/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://chenjiajun1207.github.io/posts/anticheattwo/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://chenjiajun1207.github.io/posts/about/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

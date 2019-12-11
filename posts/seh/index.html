@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Archive - 人生苦短,只争朝夕</title>
+  <title> - 人生苦短,只争朝夕</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -23,7 +23,8 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="RT" />
-  <meta name="description" content="Hugo theme jane example site." />
+  <meta name="description" content="SEH OS异常处理的办法 异常 SEH详细说明 SEH是window操作系统默认的异常处理机制，逆向分析中，SEH除了基本的异常处理功能外，还大量用于" />
+
   <meta name="keywords" content="Hugo, theme, jane" />
 
 
@@ -34,8 +35,7 @@
 <meta name="generator" content="Hugo 0.55.6" />
 
 
-<link rel="canonical" href="https://chenjiajun1207.github.io/posts/" />
-<link href="%7balternate%20%7bRSS%20application/rss&#43;xml%20%20index%20alternate%20%20false%20false%20true%20false%20false%200%7d%20/posts/index.xml%20https://chenjiajun1207.github.io/posts/index.xml%7d" rel="alternate" type="application/rss+xml" title="人生苦短,只争朝夕" />
+<link rel="canonical" href="https://chenjiajun1207.github.io/posts/seh/" />
 
 
 
@@ -57,18 +57,25 @@
 
 
 
-<meta property="og:title" content="Posts" />
-<meta property="og:description" content="Hugo theme jane example site." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://chenjiajun1207.github.io/posts/" />
+<meta property="og:title" content="" />
+<meta property="og:description" content="SEH OS异常处理的办法 异常 SEH详细说明 SEH是window操作系统默认的异常处理机制，逆向分析中，SEH除了基本的异常处理功能外，还大量用于" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chenjiajun1207.github.io/posts/seh/" />
 
 
-<meta itemprop="name" content="Posts">
-<meta itemprop="description" content="Hugo theme jane example site.">
+<meta itemprop="name" content="">
+<meta itemprop="description" content="SEH OS异常处理的办法 异常 SEH详细说明 SEH是window操作系统默认的异常处理机制，逆向分析中，SEH除了基本的异常处理功能外，还大量用于">
 
+
+
+<meta itemprop="wordCount" content="1924">
+
+
+
+<meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Posts"/>
-<meta name="twitter:description" content="Hugo theme jane example site."/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="SEH OS异常处理的办法 异常 SEH详细说明 SEH是window操作系统默认的异常处理机制，逆向分析中，SEH除了基本的异常处理功能外，还大量用于"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -277,38 +284,165 @@
     <main id="main" class="main bg-llight">
       <div class="content-wrapper">
         <div id="content" class="content container">
-          
-<section id="archive" class="archive">
-    <div class="archive-title">
-      <span class="archive-post-counter">
-          19 posts In Total
-      </span>
-    </div></section>
+          <article class="post bg-white">
+  
+  <header class="post-header">
+    <h1 class="post-title"></h1>
+    
+    <div class="post-meta">
+      <time datetime="0001-01-01" class="post-time">
+        0001-01-01
+      </time>
+    </div>
+  </header>
+
+  
+  
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Table of Contents</h2>
+  <div class="post-toc-content">
+    
+  </div>
+</div>
+
+  
+  <div class="post-content">
+      <h1 id="seh">SEH</h1>
+
+<h1 id="os异常处理的办法">OS异常处理的办法</h1>
+
+<h1 id="异常">异常</h1>
+
+<h1 id="seh详细说明">SEH详细说明</h1>
+
+<p>SEH是window操作系统默认的异常处理机制，逆向分析中，SEH除了基本的异常处理功能外，还大量用于反调试程序（这里SEH时保存在栈中的，漏洞利用的时候会用到）
+SEH是windows操作系统异常处理机制，在程序源代码中使用__try,__except,__finally关键字来具体实现。
+  2.1正常运行时候的异常处理方法
+     进程运行过程中若发生异常，OS会委托进程进行处理。若进程代码中存在具体的异常处理（如SEH异常处理器）代码，则能够顺利处理相关异常，程序继续运行，但如果进程内部没有具体实现SEH，那么相关异常就无法处理，OS就会启动默认的异常处理机制，终止进程运行
+  2.2 调试运行时的异常处理方法
+     被调试的进程内部发生异常，OS会首先把异常抛给调试进程处理。调器拥有被调试者的所有权限。被调试者内部发生的异常都由调试器处理。调试过程中的所有异常都先由调试器管理。被调试者发生异常时，调试器会停止运行，必须采取相应的措施来处理异常，完成后续的调试。遇到异常的时候的处理方法如下。
+     1）直接修改异常：代码、寄存器、内存
+     2）将异常泡杯被调试程序，使用od的shift+f7/f8/f9直接将异常抛还给被调试者
+     3）OS默认异常处理机制
+  操作系统中常见的异常
+     #+begin_src c++
+EXCEPTION_ACCESS_VIOLATION     0xC0000005     程序企图读写一个不可访问的地址时引发的异常。例如企图读取0地址处的内存。
+EXCEPTION_ARRAY_BOUNDS_EXCEEDED    0xC000008C     数组访问越界时引发的异常。
+EXCEPTION_BREAKPOINT                           0x80000003     触发断点时引发的异常。
+EXCEPTION_DATATYPE_MISALIGNMENT    0x80000002     程序读取一个未经对齐的数据时引发的异常。
+EXCEPTION_FLT_DENORMAL_OPERAND     0xC000008D     如果浮点数操作的操作数是非正常的，则引发该异常。所谓非正常，即它的值太小以至于不能用标准格式表示出来。
+EXCEPTION_FLT_DIVIDE_BY_ZERO                   0xC000008E     浮点数除法的除数是0时引发该异常。
+EXCEPTION_FLT_INEXACT_RESULT           0xC000008F     浮点数操作的结果不能精确表示成小数时引发该异常。
+EXCEPTION_FLT_INVALID_OPERATION            0xC0000090     该异常表示不包括在这个表内的其它浮点数异常。
+EXCEPTION_FLT_OVERFLOW                             0xC0000091     浮点数的指数超过所能表示的最大值时引发该异常。
+EXCEPTION_FLT_STACK_CHECK                  0xC0000092     进行浮点数运算时栈发生溢出或下溢时引发该异常。
+EXCEPTION_FLT_UNDERFLOW                    0xC0000093     浮点数的指数小于所能表示的最小值时引发该异常。
+EXCEPTION_ILLEGAL_INSTRUCTION          0xC000001D     程序企图执行一个无效的指令时引发该异常。
+EXCEPTION_IN_PAGE_ERROR                        0xC0000006     程序要访问的内存页不在物理内存中时引发的异常。
+EXCEPTION_INT_DIVIDE_BY_ZERO                   0xC0000094     整数除法的除数是0时引发该异常。
+EXCEPTION_INT_OVERFLOW                             0xC0000095     整数操作的结果溢出时引发该异常。
+EXCEPTION_INVALID_DISPOSITION                  0xC0000026     异常处理器返回一个无效的处理的时引发该异常。
+EXCEPTION_NONCONTINUABLE_EXCEPTION     0xC0000025     发生一个不可继续执行的异常时，如果程序继续执行，则会引发该异常。
+EXCEPTION_PRIV_INSTRUCTION                     0xC0000096     程序企图执行一条当前CPU模式不允许的指令时引发该异常。
+EXCEPTION_SINGLE_STEP                          0x80000004     标志寄存器的TF位为1时，每执行一条指令就会引发该异常。主要用于单步调试。
+EXCEPTION_STACK_OVERFLOW                   0xC00000FD     栈溢出时引发该异常。
+     #+end_src
+  调试的时候经常触发5中最具代表性的异常
+  3.1  EXCEPTION_ACCESS_VIOLATION     0xC0000005    
+  程序企图读写一个不可访问的地址时引发的异常（不存在，或者不具有访问权限）。例如企图读取0地址处的内存。
+  3.2EXCEPTION_BREAKPOINT  0x80000003  
+  触发断点时引发的异常。在运行的代码中设置断点以后，cpu尝试执行该处的指令时将触发队形的EXCEPTION_BREAKPOINT异常
+  INT3,设置断点对应的汇编指令为INT3,对应的机器指令为0xCC.灵活运用这个原理可以为程序运行带来很大的便利。比如使用hex editor打开PE文件，修改EP地址对应的文件偏移处的第一个字节为0xCC,然后运行该PE文件就会发生EXCEPTION_BREAKPOINT异常，经过OS的默认异常处理后会终止程序运行，若在操作系统的注册表中将默认调试器设置为OllyDbg，那么发生以上异常时OS会自动运行ollydbg调试器，附加发生异常的进程
+  3.3EXCEPTION_ILLEGAL_INSTRUCTION  0xC000001D 
+  程序企图执行一个无效的指令时引发该异常。
+  3.4EXCEPTION_INT_DIVIDE_BY_ZERO   0xC0000094   
+  整数除法的除数是0时引发该异常。
+  3.5EXCEPTION_SINGLE_STEP   0x80000004    
+  标志寄存器的TF位为1时，每执行一条指令就会引发该异常。主要用于单步调试。
+  4.1 SEH链
+  SEH以链的形式存在。第一个异常处理中未处理相关异常，它就会被传递到下一个异常处理器，直到得到处理。SEH是由_EXCEPTION_REGISTRATION_RECORD结构体组成的链表
+  #+begin_src c++
+  ntdll!_EXCEPTION_REGISTRATION_RECORD
+   +0x000 Next             : Ptr32 _EXCEPTION_REGISTRATION_RECORD
+   +0x004 Handler          : Ptr32 _EXCEPTION_DISPOSITION 
+}
+  #+end_src
+  Next成员指向下一个_EXCEPTION_REGISTRATION_RECORD结构体指针，handler成员是异常处理函数（异常处理器）。若Next成员的值为FFFFFFFF，则表示它是链表最后一个结点
+<a href="./../resources/_gen/images/749281_ZVFWN44W33SUD5W.jpg" title="./../resources/_gen/images/749281_ZVFWN44W33SUD5W.jpg">./../resources/_gen/images/749281_ZVFWN44W33SUD5W.jpg</a>\\
+发生异常的时候会按照(A)->(B)->(C)的顺序依次传递，直到由异常处理器处理
+  4.2异常处理函数定义
+  #+begin_src c++
+  EXCEPTION_DISPOSITION __cdecl _except_handler (
+  EXCEPTION_RECORD      *pRecord,
+  EXCEPTION_REGISTRATION_RECORD *pFrame,
+  CONTEXT        *pContext,
+  PVOID          pValue
+);
+  #+end_src
+  由系统调用，是一个回调函数，第一个参数是一个指向EXCEPTION_RECORD结构体的指针
+  #+begin_src c++
+  typedef struct _EXCEPTION_RECORD {
+    DWORD ExceptionCode;   //异常代码
+    DWORD ExceptionFlags;
+    struct _EXCEPTION_RECORD *ExceptionRecord;
+    PVOID ExceptionAddress;   //异常发生地址
+    DWORD NumberParameters;
+    ULONG_PTR ExceptionInformation[EXCEPTION_MAXIMUM_PARAMETERS];
+} EXCEPTION_RECORD;
+  #+end_src
+  异常处理函数的第三个参数是指向CONTEXT结构体的指针，CONTEXT结构体的定义如下，   CONTEXT结构体用来备份CPU的值。 
+<s</p>
+
+  </div>
+
+  
+  
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">RT</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">0001-01-01</span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
 
 
+  
+  
+</article>
 
 
 
 
   
-  
-  
 
   
   
+    <div class="post bg-white">
+      <script src="https://utteranc.es/client.js"
+            repo= "chenjiajun1207/commentSave"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+      </script>
+    </div>
+  
 
   
-  
 
   
-  
 
   
-  
 
-
-
-
+    
 
         </div>
       </div>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Archive - 人生苦短,只争朝夕</title>
+  <title> - 人生苦短,只争朝夕</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -23,7 +23,8 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="RT" />
-  <meta name="description" content="Hugo theme jane example site." />
+  <meta name="description" content="转载自 正文 https://bbs.pediy.com/thread-249348.htm 代码段没法发了，因为里面有别人的东西（发了之后避免不了一些不法分子会利用，所以这里只分享处理检测流程和思路） 目前整体已经完善好了" />
+
   <meta name="keywords" content="Hugo, theme, jane" />
 
 
@@ -34,8 +35,7 @@
 <meta name="generator" content="Hugo 0.55.6" />
 
 
-<link rel="canonical" href="https://chenjiajun1207.github.io/posts/" />
-<link href="%7balternate%20%7bRSS%20application/rss&#43;xml%20%20index%20alternate%20%20false%20false%20true%20false%20false%200%7d%20/posts/index.xml%20https://chenjiajun1207.github.io/posts/index.xml%7d" rel="alternate" type="application/rss+xml" title="人生苦短,只争朝夕" />
+<link rel="canonical" href="https://chenjiajun1207.github.io/posts/anticheatthree/" />
 
 
 
@@ -57,18 +57,25 @@
 
 
 
-<meta property="og:title" content="Posts" />
-<meta property="og:description" content="Hugo theme jane example site." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://chenjiajun1207.github.io/posts/" />
+<meta property="og:title" content="" />
+<meta property="og:description" content="转载自 正文 https://bbs.pediy.com/thread-249348.htm 代码段没法发了，因为里面有别人的东西（发了之后避免不了一些不法分子会利用，所以这里只分享处理检测流程和思路） 目前整体已经完善好了" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chenjiajun1207.github.io/posts/anticheatthree/" />
 
 
-<meta itemprop="name" content="Posts">
-<meta itemprop="description" content="Hugo theme jane example site.">
+<meta itemprop="name" content="">
+<meta itemprop="description" content="转载自 正文 https://bbs.pediy.com/thread-249348.htm 代码段没法发了，因为里面有别人的东西（发了之后避免不了一些不法分子会利用，所以这里只分享处理检测流程和思路） 目前整体已经完善好了">
 
+
+
+<meta itemprop="wordCount" content="624">
+
+
+
+<meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Posts"/>
-<meta name="twitter:description" content="Hugo theme jane example site."/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="转载自 正文 https://bbs.pediy.com/thread-249348.htm 代码段没法发了，因为里面有别人的东西（发了之后避免不了一些不法分子会利用，所以这里只分享处理检测流程和思路） 目前整体已经完善好了"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -277,38 +284,118 @@
     <main id="main" class="main bg-llight">
       <div class="content-wrapper">
         <div id="content" class="content container">
-          
-<section id="archive" class="archive">
-    <div class="archive-title">
-      <span class="archive-post-counter">
-          19 posts In Total
-      </span>
-    </div></section>
+          <article class="post bg-white">
+  
+  <header class="post-header">
+    <h1 class="post-title"></h1>
+    
+    <div class="post-meta">
+      <time datetime="0001-01-01" class="post-time">
+        0001-01-01
+      </time>
+    </div>
+  </header>
+
+  
+  
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Table of Contents</h2>
+  <div class="post-toc-content">
+    
+  </div>
+</div>
+
+  
+  <div class="post-content">
+      <h1 id="转载自">转载自</h1>
+
+<h1 id="正文">正文</h1>
+
+<p>https://bbs.pediy.com/thread-249348.htm
+代码段没法发了，因为里面有别人的东西（发了之后避免不了一些不法分子会利用，所以这里只分享处理检测流程和思路）
+目前整体已经完善好了，写这个帖子不是教大家怎样去过检测写外挂，而是教大家一些好的思路
+核心代码执行流程</p>
+
+<p><a href="./../resources/_gen/images/773537_RAQZDR5XER968YT.png" title="./../resources/_gen/images/773537_RAQZDR5XER968YT.png">./../resources/_gen/images/773537_RAQZDR5XER968YT.png</a>\\</p>
+
+<p>1.过机器码: 目前2种办法，一种替换DLL，另一种是让返回值随机，因为我总调试游戏
+我直接替换了DLL因为有时候进游戏没加载我忘记加载我的DLL，就完蛋了，如果不商业的话，建议用替换DLL方法，放到Game目录即可，DLL在附件中</p>
+
+<p>2.处理游戏检测CALL，例如释放技能，走路，等等，已经定位了几个重要的检测CALL，处理后发现还有很多检测CALL，但是不知道再检测什么东西，所以全盘了，如果出问题再注释，也方便，这个在第一篇说过了，这里不再细说</p>
+
+<p>3.处理GameRpcs的CRC，处理CRC的思路也很多，这里我用的是转移大法，然后再创建一个线程循环清除GameRpcs记录的数据信息</p>
+
+<p>VOID 清除记录()
+{
+    DWORD 计次变量 = 0;</p>
+
+<p>while (GameRpcsBase)
+    {
+        Sleep(10000);
+        RtlCopyMemory(LPVOID(GameRpcsBase + 0x1713A4), &计次变量, sizeof(DWORD));//时间计时
+        RtlCopyMemory(LPVOID(GameRpcsBase + 0x17141C), &计次变量, sizeof(DWORD));//鼠标计次
+        RtlCopyMemory(LPVOID(GameRpcsBase + 0x171424), &计次变量, sizeof(DWORD));//键盘计次
+        计次变量++;
+    }
+}</p>
+
+<p>TCJ（可以不清Buffer，直接改Buffer指向一片干净的内存区域）
+监视TCJ读了哪块内存，HOOK，如果当前读内存的地址 大于 你要保护的模块地址 或 小于 你要保护的模块地址 + 模块大小，则清空他的Buffer</p>
+
+<p><a href="./../resources/_gen/images/773537_FM6G9UZG9BDU5PM.png" title="./../resources/_gen/images/773537_FM6G9UZG9BDU5PM.png">./../resources/_gen/images/773537_FM6G9UZG9BDU5PM.png</a>\\
+<a href="./../resources/_gen/images/773537_8ARV4MU47ZMBT3X.png" title="./../resources/_gen/images/773537_8ARV4MU47ZMBT3X.png">./../resources/_gen/images/773537_8ARV4MU47ZMBT3X.png</a>\\
+<a href="./../resources/_gen/images/773537_QQBQGQAARDDN7A9.jpg" title="./../resources/_gen/images/773537_QQBQGQAARDDN7A9.jpg">./../resources/_gen/images/773537_QQBQGQAARDDN7A9.jpg</a>\\</p>
+
+  </div>
+
+  
+  
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">RT</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">0001-01-01</span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
 
 
+  
+  
+</article>
 
 
 
 
   
-  
-  
 
   
   
+    <div class="post bg-white">
+      <script src="https://utteranc.es/client.js"
+            repo= "chenjiajun1207/commentSave"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+      </script>
+    </div>
+  
 
   
-  
 
   
-  
 
   
-  
 
-
-
-
+    
 
         </div>
       </div>

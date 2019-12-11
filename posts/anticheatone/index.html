@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Archive - 人生苦短,只争朝夕</title>
+  <title> - 人生苦短,只争朝夕</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -23,7 +23,8 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="RT" />
-  <meta name="description" content="Hugo theme jane example site." />
+  <meta name="description" content="转载自 简介 注入姿势 处理检测CALL https://bbs.pediy.com/thread-249303.htm 1.稳定注入姿势 2.处理TenRpcs检测CLL 3.处理TCJ 4.探测GameRpcs 笔者最近迷上LOL" />
+
   <meta name="keywords" content="Hugo, theme, jane" />
 
 
@@ -34,8 +35,7 @@
 <meta name="generator" content="Hugo 0.55.6" />
 
 
-<link rel="canonical" href="https://chenjiajun1207.github.io/posts/" />
-<link href="%7balternate%20%7bRSS%20application/rss&#43;xml%20%20index%20alternate%20%20false%20false%20true%20false%20false%200%7d%20/posts/index.xml%20https://chenjiajun1207.github.io/posts/index.xml%7d" rel="alternate" type="application/rss+xml" title="人生苦短,只争朝夕" />
+<link rel="canonical" href="https://chenjiajun1207.github.io/posts/anticheatone/" />
 
 
 
@@ -57,18 +57,25 @@
 
 
 
-<meta property="og:title" content="Posts" />
-<meta property="og:description" content="Hugo theme jane example site." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://chenjiajun1207.github.io/posts/" />
+<meta property="og:title" content="" />
+<meta property="og:description" content="转载自 简介 注入姿势 处理检测CALL https://bbs.pediy.com/thread-249303.htm 1.稳定注入姿势 2.处理TenRpcs检测CLL 3.处理TCJ 4.探测GameRpcs 笔者最近迷上LOL" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chenjiajun1207.github.io/posts/anticheatone/" />
 
 
-<meta itemprop="name" content="Posts">
-<meta itemprop="description" content="Hugo theme jane example site.">
+<meta itemprop="name" content="">
+<meta itemprop="description" content="转载自 简介 注入姿势 处理检测CALL https://bbs.pediy.com/thread-249303.htm 1.稳定注入姿势 2.处理TenRpcs检测CLL 3.处理TCJ 4.探测GameRpcs 笔者最近迷上LOL">
 
+
+
+<meta itemprop="wordCount" content="1647">
+
+
+
+<meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Posts"/>
-<meta name="twitter:description" content="Hugo theme jane example site."/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="转载自 简介 注入姿势 处理检测CALL https://bbs.pediy.com/thread-249303.htm 1.稳定注入姿势 2.处理TenRpcs检测CLL 3.处理TCJ 4.探测GameRpcs 笔者最近迷上LOL"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -277,38 +284,176 @@
     <main id="main" class="main bg-llight">
       <div class="content-wrapper">
         <div id="content" class="content container">
-          
-<section id="archive" class="archive">
-    <div class="archive-title">
-      <span class="archive-post-counter">
-          19 posts In Total
-      </span>
-    </div></section>
+          <article class="post bg-white">
+  
+  <header class="post-header">
+    <h1 class="post-title"></h1>
+    
+    <div class="post-meta">
+      <time datetime="0001-01-01" class="post-time">
+        0001-01-01
+      </time>
+    </div>
+  </header>
+
+  
+  
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Table of Contents</h2>
+  <div class="post-toc-content">
+    
+  </div>
+</div>
+
+  
+  <div class="post-content">
+      <h1 id="转载自">转载自</h1>
+
+<h1 id="简介">简介</h1>
+
+<h1 id="注入姿势">注入姿势</h1>
+
+<h1 id="处理检测call">处理检测CALL</h1>
+
+<ul>
+https://bbs.pediy.com/thread-249303.htm
+<li>1.稳定注入姿势</li>
+<li>2.处理TenRpcs检测CLL</li>
+<li>3.处理TCJ</li>
+<li>4.探测GameRpcs</li>
+笔者最近迷上LOL，中低分段总是有脚本，被虐的很惨
+然后笔者去市场上买来几款外挂，配合防封，然后小逆了一下，发现市场上的防封软件大多是通对游戏 
+LoadLibraryExW 挂钩子，让某些检测模块不加载，在这种情况下，阻断了通讯，这样可以稳定的玩游戏5局左右，
+之后就会封7天或者三年，如果处理了TenRpcs里的检测CALL（技能释放一类的）就是7天，如果没有处理就是3年，
+然后经过笔者多处咨询，发现市面上没有能稳超过10把的防封，于是笔者想看看TP到底是什么手段检测的，于是我与LOL迂回了半月之久，
+废话不多说，进入正题
+笔者采用 MDL内存映射形式向游戏进程写入了我的DLLShellCode ，用 NtCreateThreadEx 创建远程线程，游戏未发现，目前这个注入姿势是稳定的
+笔者在游戏主模块处发现游戏挂了70个钩子指向TenRpcs.dll，不解释，盘他
+</ul>
+
+<p>BOOL RecoveryCode(ULONG32 地址, BYTE* 字节)
+{
+    BYTE 判断 = { NULL };
+    DWORD 基址 = 0x400000;
+    DWORD 修改前的页面保护属性 = NULL;</p>
+
+<p>RtlCopyMemory(&判断, LPVOID(基址 + 地址), 1);</p>
+
+<p>if (判断 != 0xE8)
+    {
+        全局变量::当前大区未开放检测数++;
+        return FALSE;
+    }</p>
+
+<p>if (VirtualProtect(LPVOID(基址 + 地址), 5, PAGE_EXECUTE_READWRITE, &修改前的页面保护属性))
+    {
+        RtlCopyMemory(LPVOID(基址 + 地址), 字节, 5);
+        if (VirtualProtect(LPVOID(基址 + 地址), 5, PAGE_EXECUTE, &修改前的页面保护属性))
+        {
+            全局变量::处理检测成功次数++; //std::cout << "√ " << hex << 基址 + 地址 << std::endl;
+            return TRUE;
+        }
+    }</p>
+
+<p>全局变量::处理检测失败次数++; //std::cout << "X " << hex << GetLastError() << std::endl;</p>
+
+<p>return FALSE;
+}</p>
+
+<p>VOID 处理检测()
+{
+    LPVOID 内存地址 = NULL;
+    DWORD 函数地址 = NULL;
+    DWORD 模块句柄 = NULL;
+    DWORD 修改前的页面保护属性 = NULL;</p>
+
+<p>do 
+    {
+        窗口句柄::游戏窗口句柄 = FindWindow("RiotWindowClass", NULL);
+    } while (!窗口句柄::游戏窗口句柄);</p>
+
+<p>///此处过检测代码由于危害腾讯安全给告知于19.02.05 21:30分删除此部分代码</p>
+
+<p>string Message = "处理失败 " + to_string(全局变量::处理检测失败次数) + " 个检测点\n成功处理 " + to_string(全局变量::处理检测成功次数) + " 个检测点\n当前大区未开放的检测点有 " + to_string(全局变量::当前大区未开放检测数) + " 个\n\n是否继续游戏???";</p>
+
+<p>if (MessageBox(窗口句柄::游戏窗口句柄, Message.c_str(), "", MB_ICONQUESTION | MB_YESNO | MB_TOPMOST) != IDYES)
+        exit(0);
+}</p>
+
+<p>到这里的时候，笔者进行了游戏，发现封三年，于是笔者不开挂，只干检测一样被封三年，说明了什么</p>
+
+<p>对！没错 CRC！不得不过 TP 检测系统的CRC有漏洞，过CRC代码如下，你会惊呆的</p>
+
+<p>VirtualProtect(LPVOID(0x401000), 0x1028000, PAGE_EXECUTE, &修改前的页面保护属性)</p>
+
+<p>哈哈，就是这么简单！这个为什么！咱就不多解释了，不是傻瓜都看得懂原理，我直接贴代码通俗易懂！</p>
+
+<p>通过以上小操作后，单挂我自己的防封没有三年了，然后开始下一项工作，TCJ！</p>
+
+<p>TCJ是干嘛的？在这里我科普一下，他会 EnumWindowProc 枚举你所有窗口，OpenProcess ReadFile... 太多了</p>
+
+<p>总是TCJ负责一些外部检测以及内部检测，包括你注入的DLL文件，MD5哈希，窗口标题，类名，PE头，等等 .. 太多了</p>
+
+<p>所以，想要完全达到防封状态，只干掉检测CALL还不行，必须要处理TCJ</p>
+
+<p>于是我模仿了市场外挂 向 LoadLibraryExW 挂钩子，让TCJ在加载列表里消失，游戏不加载TCJ了，进入游戏爽</p>
+
+<p>但是没爽多久5分钟后游戏弹出错误窗口，强制关闭，于是笔者调试跟踪到执行退出函数的点，发现在GameRpcs里，哇，还有这个东西，我都没注意！</p>
+
+<p>于是分析了一下，这个GameRpcs非常不起眼，但是他起到重要的作用，他负责与TCJ和TenRpcs通讯！如果其中有一个模块有异常，他就会强制关闭游戏（本地命令）不是来自服务器的断开链接！而且通过笔者的CE遍历，遍历到了GameRpcs还会收集对局信息，包括当前玩家按下执行右键命令次数，玩家按下技能右键次数，等等信息，大家可以通过CE去搜索增加的值就可以，说到这里，我感觉这个检测系统好强大，收集这些数据是这是要人工分析吗??</p>
+
+<p>笔者后续再写是怎么过的GameRpcs，先去看春晚了，大家新年快乐！</p>
+
+  </div>
+
+  
+  
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">RT</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">0001-01-01</span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
 
 
+  
+  
+</article>
 
 
 
 
   
-  
-  
 
   
   
+    <div class="post bg-white">
+      <script src="https://utteranc.es/client.js"
+            repo= "chenjiajun1207/commentSave"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+      </script>
+    </div>
+  
 
   
-  
 
   
-  
 
   
-  
 
-
-
-
+    
 
         </div>
       </div>
