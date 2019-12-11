@@ -6,10 +6,34 @@
     <description>Recent content on 人生苦短,只争朝夕</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 08 Jul 2019 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 11 Dec 2019 00:00:00 +0800</lastBuildDate>
     
         <atom:link href="https://chenjiajun1207.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Scheduling In Go</title>
+      <link>https://chenjiajun1207.github.io/post/scheduling_in_go/</link>
+      <pubDate>Wed, 11 Dec 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://chenjiajun1207.github.io/post/scheduling_in_go/</guid>
+      
+        <description>
+
+&lt;!-- more --&gt;
+
+&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
+
+&lt;p&gt;这里分享几个关于go调度的文章&lt;/p&gt;
+
+&lt;h2 id=&#34;地址&#34;&gt;地址&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part1.html&#34;&gt;https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part1.html&lt;/a&gt;
+&lt;a href=&#34;https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part2.html&#34;&gt;https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part2.html&lt;/a&gt;
+&lt;a href=&#34;https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part3.html&#34;&gt;https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part3.html&lt;/a&gt;&lt;/p&gt;
+</description>
+      
+    </item>
     
     <item>
       <title>转载一篇关于cpu如何运作的文章</title>
@@ -2512,18 +2536,6 @@ DLL转ShellCode用010Editor即可\\
 笔者检查了一下，他的导入全都是外挂检测相关，如果要一个一个去处理，那我的工作量太大了，没有半个月一个月弄不完
 然后又想有没有什么简单的方法，想想想了一晚上，最后想出了一个办法，预知结果如何，下次分解，今天先讲到这里
 &lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>&#34;About&#34;</title>
-      <link>https://chenjiajun1207.github.io/posts/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://chenjiajun1207.github.io/posts/about/</guid>
-      
-        <description>&lt;h1 id=&#34;人生苦短-只争朝夕-浮生若梦-为欢几何&#34;&gt;人生苦短,只争朝夕,浮生若梦,为欢几何&lt;/h1&gt;
 </description>
       
     </item>

@@ -62,7 +62,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://chenjiajun1207.github.io/" />
 
-<meta property="og:updated_time" content="2019-07-08T00:00:00&#43;08:00"/>
+<meta property="og:updated_time" content="2019-12-11T00:00:00&#43;08:00"/>
 
 <meta itemprop="name" content="人生苦短,只争朝夕">
 <meta itemprop="description" content="Hugo theme jane example site.">
@@ -287,6 +287,40 @@
   <header class="post-header">
     <h1 class="post-title">
       
+      <a class="post-link" href="/post/rwlockandrecursive/">读写锁(RWLock),递归锁(reentrant)和互斥锁(mutex)</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2018-10-25" class="post-time">
+        2018-10-25
+      </time>
+      <div class="post-category">
+          <a href="https://chenjiajun1207.github.io/categories/golang/"> golang </a>
+          
+        </div>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      简介 这里介绍下我对于3种锁的使用观点 个人观点 个人观点尽量使用互斥锁,因为递归锁和读写锁的复杂度,下面举出几种错误例子 递归锁 #include &quot;../Mutex.h&quot; #include &quot;../Thread.h&quot; #include &lt;vector&gt; #include &lt;stdio.h&gt; using
+    </div>
+    <div class="read-more">
+      <a href="/post/rwlockandrecursive/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+    
+      <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
       <a class="post-link" href="/post/float64/">Golang float</a>
     </h1>
     
@@ -345,40 +379,6 @@
     </div>
     <div class="read-more">
       <a href="/post/mgoandsession/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-    
-      <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/mgo/">go-mgo/mgo入门</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2018-10-08" class="post-time">
-        2018-10-08
-      </time>
-      <div class="post-category">
-          <a href="https://chenjiajun1207.github.io/categories/golang/"> golang </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      简介 在游戏服务器开发这一块,nosql越来越流行,今天就来开一篇关于如何使用go-mgo/mgo的文章 源码 https://github.com/go-mgo/mgo 使用Select方法和struc
-    </div>
-    <div class="read-more">
-      <a href="/post/mgo/" class="read-more-link">Read more</a>
     </div>
     
   </div>

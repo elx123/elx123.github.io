@@ -92,6 +92,15 @@
     </item>
     
     <item>
+      <title>Scheduling In Go</title>
+      <link>https://chenjiajun1207.github.io/posts/scheduling_in_go/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://chenjiajun1207.github.io/posts/scheduling_in_go/</guid>
+      <description>简介 地址 这里分享几个关于go调度的文章 https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part1.html https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part2.html https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part3.html</description>
+    </item>
+    
+    <item>
       <title>Tcp分包</title>
       <link>https://chenjiajun1207.github.io/posts/tcp_subcontracting/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
