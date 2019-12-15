@@ -56,6 +56,15 @@
     </item>
     
     <item>
+      <title>Excel学习</title>
+      <link>https://chenjiajun1207.github.io/posts/excellearning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://chenjiajun1207.github.io/posts/excellearning/</guid>
+      <description>简介 通过百度网盘的形式在国内观看 总揽 Excel Finance Class 01: Intro To Excel 2007 &amp; 2010(excel 金融课程01 视频地址(国外) 国内地址(百度网盘) 配套练习地址(已存百度网盘) 外网 ex</description>
+    </item>
+    
+    <item>
       <title>Golang Sort</title>
       <link>https://chenjiajun1207.github.io/posts/golang_sort/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -89,15 +98,6 @@
       
       <guid>https://chenjiajun1207.github.io/posts/sysbench/</guid>
       <description>sysbench 源码地址 部分参数涵义(github) events warmup-time percentile luajit-cmd 什么是JIT db-ps-mode tables table_size fileio模块 以vultr上vps以测试例子 sysbench是mysql的</description>
-    </item>
-    
-    <item>
-      <title>Scheduling In Go</title>
-      <link>https://chenjiajun1207.github.io/posts/scheduling_in_go/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://chenjiajun1207.github.io/posts/scheduling_in_go/</guid>
-      <description>简介 地址 这里分享几个关于go调度的文章 https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part1.html https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part2.html https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part3.html</description>
     </item>
     
     <item>
@@ -173,21 +173,21 @@
     </item>
     
     <item>
+      <title>记录下golang架构学习历程</title>
+      <link>https://chenjiajun1207.github.io/posts/scheduling_in_go/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://chenjiajun1207.github.io/posts/scheduling_in_go/</guid>
+      <description>简介 scheduling-in-go 这里分享几个关于go调度的文章 https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part1.html https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part2.html https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part3.html</description>
+    </item>
+    
+    <item>
       <title>读写锁(RWLock),递归锁(reentrant)和互斥锁(mutex)</title>
       <link>https://chenjiajun1207.github.io/posts/rwlockandrecursive/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://chenjiajun1207.github.io/posts/rwlockandrecursive/</guid>
       <description>简介 个人观点 递归锁 这里介绍下我对于3种锁的使用观点 个人观点尽量使用互斥锁,因为递归锁和读写锁的复杂度,下面举出几种错误例子 #include &amp;quot;../Mutex.h&amp;quot; #include &amp;quot;../Thread.h&amp;quot; #include &amp;lt;vector&amp;gt; #include &amp;lt;stdio.h&amp;gt; using</description>
-    </item>
-    
-    <item>
-      <title>转载一篇关于cpu如何运作的文章</title>
-      <link>https://chenjiajun1207.github.io/posts/cpu/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://chenjiajun1207.github.io/posts/cpu/</guid>
-      <description>地址 https://hackernoon.com/how-does-a-cpu-work-af3488d182a2</description>
     </item>
     
   </channel>

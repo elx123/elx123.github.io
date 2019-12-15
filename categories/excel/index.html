@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>记录下golang架构学习历程 - 人生苦短,只争朝夕</title>
+  <title>excel · 人生苦短,只争朝夕</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -23,8 +23,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="RT" />
-  <meta name="description" content="简介 scheduling-in-go 这里分享几个关于go调度的文章 https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part1.html https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part2.html https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part3.html" />
-
+  <meta name="description" content="Hugo theme jane example site." />
   <meta name="keywords" content="Hugo, theme, jane" />
 
 
@@ -35,7 +34,8 @@
 <meta name="generator" content="Hugo 0.55.6" />
 
 
-<link rel="canonical" href="https://chenjiajun1207.github.io/posts/scheduling_in_go/" />
+<link rel="canonical" href="https://chenjiajun1207.github.io/categories/excel/" />
+<link href="%7balternate%20%7bRSS%20application/rss&#43;xml%20%20index%20alternate%20%20false%20false%20true%20false%20false%200%7d%20/categories/excel/index.xml%20https://chenjiajun1207.github.io/categories/excel/index.xml%7d" rel="alternate" type="application/rss+xml" title="人生苦短,只争朝夕" />
 
 
 
@@ -57,25 +57,19 @@
 
 
 
-<meta property="og:title" content="记录下golang架构学习历程" />
-<meta property="og:description" content="简介 scheduling-in-go 这里分享几个关于go调度的文章 https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part1.html https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part2.html https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part3.html" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://chenjiajun1207.github.io/posts/scheduling_in_go/" />
+<meta property="og:title" content="excel" />
+<meta property="og:description" content="Hugo theme jane example site." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://chenjiajun1207.github.io/categories/excel/" />
 
+<meta property="og:updated_time" content="2019-12-15T00:00:00&#43;08:00"/>
 
-<meta itemprop="name" content="记录下golang架构学习历程">
-<meta itemprop="description" content="简介 scheduling-in-go 这里分享几个关于go调度的文章 https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part1.html https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part2.html https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part3.html">
+<meta itemprop="name" content="excel">
+<meta itemprop="description" content="Hugo theme jane example site.">
 
-
-
-<meta itemprop="wordCount" content="21">
-
-
-
-<meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="记录下golang架构学习历程"/>
-<meta name="twitter:description" content="简介 scheduling-in-go 这里分享几个关于go调度的文章 https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part1.html https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part2.html https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part3.html"/>
+<meta name="twitter:title" content="excel"/>
+<meta name="twitter:description" content="Hugo theme jane example site."/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -284,88 +278,55 @@
     <main id="main" class="main bg-llight">
       <div class="content-wrapper">
         <div id="content" class="content container">
-          <article class="post bg-white">
+          
+
+<section id="archive" class="archive">
   
-  <header class="post-header">
-    <h1 class="post-title">记录下golang架构学习历程</h1>
     
-    <div class="post-meta">
-      <time datetime="0001-01-01" class="post-time">
-        0001-01-01
+      <div class="archive-title category">
+        <h2 class="archive-name">Category: excel</h2>
+      </div>
+    
+  
+
+  
+    <div class="archive-post">
+      <time datetime="2019-12-15" class="archive-post-time">
+        2019-12-15
       </time>
-    </div>
-  </header>
-
-  
-  
-<div class="post-toc" id="post-toc">
-  <h2 class="post-toc-title">Table of Contents</h2>
-  <div class="post-toc-content">
-    
-  </div>
-</div>
-
-  
-  <div class="post-content">
-      <h1 id="简介">简介</h1>
-
-<h1 id="scheduling-in-go">scheduling-in-go</h1>
-
-<p>这里分享几个关于go调度的文章
-https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part1.html
-https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part2.html
-https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part3.html</p>
-
-  </div>
-
-  
-  
-<div class="post-copyright">
-  <p class="copyright-item">
-    <span class="item-title">Author</span>
-    <span class="item-content">RT</span>
-  </p>
-  <p class="copyright-item">
-    <span class="item-title">LastMod</span>
-    <span class="item-content">0001-01-01</span>
-  </p>
-  
-  <p class="copyright-item">
-    <span class="item-title">License</span>
-    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
-  </p>
-</div>
-
-
-  
-  
-</article>
-
-
-
-
-  
-
-  
-  
-    <div class="post bg-white">
-      <script src="https://utteranc.es/client.js"
-            repo= "chenjiajun1207/commentSave"
-            issue-term="pathname"
-            theme="github-light"
-            crossorigin="anonymous"
-            async>
-      </script>
+      <span class="archive-post-title">
+        <a href="/post/excellearning/" class="archive-post-link">
+          Excel学习
+        </a>
+      </span>
     </div>
   
+</section>
 
+
+
+
+
+
+  
+  
   
 
   
-
   
 
-    
+  
+  
+
+  
+  
+
+  
+  
+
+
+
+
 
         </div>
       </div>

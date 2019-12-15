@@ -3,13 +3,44 @@
   
   <url>
     <loc>https://chenjiajun1207.github.io/categories/</loc>
-    <lastmod>2019-12-11T09:57:13+08:00</lastmod>
+    <lastmod>2019-12-15T08:19:35+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>https://chenjiajun1207.github.io/post/excellearning/</loc>
+    <lastmod>2019-12-15T08:19:35+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://chenjiajun1207.github.io/post/</loc>
-    <lastmod>2019-12-11T09:57:13+08:00</lastmod>
+    <lastmod>2019-12-15T08:19:35+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://chenjiajun1207.github.io/tags/</loc>
+    <lastmod>2019-12-15T08:19:35+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://chenjiajun1207.github.io/tags/excel/</loc>
+    <lastmod>2019-12-15T08:19:35+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://chenjiajun1207.github.io/categories/excel/</loc>
+    <lastmod>2019-12-15T08:19:35+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://chenjiajun1207.github.io/</loc>
+    <lastmod>2019-12-15T08:19:35+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -21,12 +52,6 @@
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/tags/</loc>
-    <lastmod>2019-12-11T09:57:13+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://chenjiajun1207.github.io/tags/golang/</loc>
     <lastmod>2019-12-11T09:57:13+08:00</lastmod>
     <priority>0</priority>
@@ -34,12 +59,6 @@
   
   <url>
     <loc>https://chenjiajun1207.github.io/categories/golang/</loc>
-    <lastmod>2019-12-11T09:57:13+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://chenjiajun1207.github.io/</loc>
     <lastmod>2019-12-11T09:57:13+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -240,6 +259,12 @@
   </url>
   
   <url>
+    <loc>https://chenjiajun1207.github.io/posts/excellearning/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://chenjiajun1207.github.io/posts/golang_sort/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -266,12 +291,6 @@
   <url>
     <loc>https://chenjiajun1207.github.io/posts/</loc>
     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://chenjiajun1207.github.io/posts/scheduling_in_go/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
   </url>
   
   <url>
@@ -318,6 +337,12 @@
   
   <url>
     <loc>https://chenjiajun1207.github.io/posts/recommendbook/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://chenjiajun1207.github.io/posts/scheduling_in_go/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
