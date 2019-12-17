@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>self on 人生苦短,只争朝夕</title>
+    <link>https://elx123.github.io/tags/self/</link>
+    <description>Recent content in self on 人生苦短,只争朝夕</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 17 Dec 2019 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://elx123.github.io/tags/self/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>工作3年经验总结</title>
+      <link>https://elx123.github.io/post/%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Tue, 17 Dec 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://elx123.github.io/post/%E6%80%BB%E7%BB%93/</guid>
+      <description>简介 记录下自己在it行业工作3年的经验 内容 不要老想着去什么什么公司就能增涨技术,增涨经验,如今互联网如此发达,只要有时间有一台电脑,没有什么</description>
+    </item>
+    
+  </channel>
+</rss>

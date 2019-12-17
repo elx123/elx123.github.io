@@ -164,6 +164,15 @@
     </item>
     
     <item>
+      <title>工作3年经验总结</title>
+      <link>https://elx123.github.io/posts/%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elx123.github.io/posts/%E6%80%BB%E7%BB%93/</guid>
+      <description>简介 内容 记录下自己在it行业工作3年的经验 不要老想着去什么什么公司就能增涨技术,增涨经验,如今互联网如此发达,只要有时间有一台电脑,没有什么</description>
+    </item>
+    
+    <item>
       <title>推荐几本数据库相关的书籍</title>
       <link>https://elx123.github.io/posts/recommendbook/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -179,15 +188,6 @@
       
       <guid>https://elx123.github.io/posts/scheduling_in_go/</guid>
       <description>简介 scheduling-in-go 这里分享几个关于go调度的文章 https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part1.html \\ https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part2.html \\ https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part3.html \\</description>
-    </item>
-    
-    <item>
-      <title>读写锁(RWLock),递归锁(reentrant)和互斥锁(mutex)</title>
-      <link>https://elx123.github.io/posts/rwlockandrecursive/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://elx123.github.io/posts/rwlockandrecursive/</guid>
-      <description>简介 个人观点 递归锁 这里介绍下我对于3种锁的使用观点 个人观点尽量使用互斥锁,因为递归锁和读写锁的复杂度,下面举出几种错误例子 #include &amp;quot;../Mutex.h&amp;quot; #include &amp;quot;../Thread.h&amp;quot; #include &amp;lt;vector&amp;gt; #include &amp;lt;stdio.h&amp;gt; using</description>
     </item>
     
   </channel>
