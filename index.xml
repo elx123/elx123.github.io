@@ -57,7 +57,7 @@ yi6s&lt;/p&gt;
     </item>
     
     <item>
-      <title>Scheduling In Go</title>
+      <title>记录下golang架构学习历程</title>
       <link>https://chenjiajun1207.github.io/post/scheduling_in_go/</link>
       <pubDate>Wed, 11 Dec 2019 00:00:00 +0800</pubDate>
       
@@ -71,11 +71,11 @@ yi6s&lt;/p&gt;
 
 &lt;p&gt;这里分享几个关于go调度的文章&lt;/p&gt;
 
-&lt;h2 id=&#34;地址&#34;&gt;地址&lt;/h2&gt;
+&lt;h2 id=&#34;scheduling-in-go&#34;&gt;scheduling-in-go&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part1.html&#34;&gt;https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part1.html&lt;/a&gt;
-&lt;a href=&#34;https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part2.html&#34;&gt;https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part2.html&lt;/a&gt;
-&lt;a href=&#34;https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part3.html&#34;&gt;https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part3.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part1.html&#34;&gt;https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part1.html&lt;/a&gt; &lt;br /&gt;
+&lt;a href=&#34;https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part2.html&#34;&gt;https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part2.html&lt;/a&gt; &lt;br /&gt;
+&lt;a href=&#34;https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part3.html&#34;&gt;https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part3.html&lt;/a&gt; &lt;br /&gt;&lt;/p&gt;
 </description>
       
     </item>
@@ -246,7 +246,7 @@ func main() {
 
 &lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/butterfly5211314/article/details/83589945&#34;&gt;https://blog.csdn.net/butterfly5211314/article/details/83589945&lt;/a&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.csdn.net/butterfly5211314/article/details/83589945&#34;&gt;https://blog.csdn.net/butterfly5211314/article/details/83589945&lt;/a&gt; &lt;br /&gt;
 &lt;a href=&#34;https://blog.csdn.net/u012050154/article/details/82379385&#34;&gt;https://blog.csdn.net/u012050154/article/details/82379385&lt;/a&gt;&lt;/p&gt;
 </description>
       
@@ -353,8 +353,8 @@ func RandomWeightedSelect(games []Game, totalWeight int) (Game, error) {
 
 &lt;h2 id=&#34;参考连接&#34;&gt;参考连接&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://www.cnblogs.com/UnGeek/p/5917995.html&#34;&gt;https://www.cnblogs.com/UnGeek/p/5917995.html&lt;/a&gt;
-&lt;a href=&#34;https://medium.com/@peterkellyonline/weighted-random-selection-3ff222917eb6&#34;&gt;https://medium.com/@peterkellyonline/weighted-random-selection-3ff222917eb6&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.cnblogs.com/UnGeek/p/5917995.html&#34;&gt;https://www.cnblogs.com/UnGeek/p/5917995.html&lt;/a&gt; &lt;br /&gt;
+&lt;a href=&#34;https://medium.com/@peterkellyonline/weighted-random-selection-3ff222917eb6&#34;&gt;https://medium.com/@peterkellyonline/weighted-random-selection-3ff222917eb6&lt;/a&gt; &lt;br /&gt;&lt;/p&gt;
 </description>
       
     </item>
