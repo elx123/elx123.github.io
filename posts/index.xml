@@ -2,191 +2,191 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on 人生苦短,只争朝夕</title>
-    <link>https://chenjiajun1207.github.io/posts/</link>
+    <link>https://elx123.github.io/posts/</link>
     <description>Recent content in Posts on 人生苦短,只争朝夕</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     
-	<atom:link href="https://chenjiajun1207.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://elx123.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title></title>
-      <link>https://chenjiajun1207.github.io/posts/seh/</link>
+      <link>https://elx123.github.io/posts/seh/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://chenjiajun1207.github.io/posts/seh/</guid>
+      <guid>https://elx123.github.io/posts/seh/</guid>
       <description>SEH OS异常处理的办法 异常 SEH详细说明 SEH是window操作系统默认的异常处理机制，逆向分析中，SEH除了基本的异常处理功能外，还大量用于</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://chenjiajun1207.github.io/posts/anticheatone/</link>
+      <link>https://elx123.github.io/posts/anticheatone/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://chenjiajun1207.github.io/posts/anticheatone/</guid>
+      <guid>https://elx123.github.io/posts/anticheatone/</guid>
       <description>转载自 简介 注入姿势 处理检测CALL https://bbs.pediy.com/thread-249303.htm 1.稳定注入姿势 2.处理TenRpcs检测CLL 3.处理TCJ 4.探测GameRpcs 笔者最近迷上LOL</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://chenjiajun1207.github.io/posts/anticheatthree/</link>
+      <link>https://elx123.github.io/posts/anticheatthree/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://chenjiajun1207.github.io/posts/anticheatthree/</guid>
+      <guid>https://elx123.github.io/posts/anticheatthree/</guid>
       <description>转载自 正文 https://bbs.pediy.com/thread-249348.htm 代码段没法发了，因为里面有别人的东西（发了之后避免不了一些不法分子会利用，所以这里只分享处理检测流程和思路） 目前整体已经完善好了</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://chenjiajun1207.github.io/posts/anticheattwo/</link>
+      <link>https://elx123.github.io/posts/anticheattwo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://chenjiajun1207.github.io/posts/anticheattwo/</guid>
+      <guid>https://elx123.github.io/posts/anticheattwo/</guid>
       <description>转载自 正文 https://bbs.pediy.com/thread-249309.htm 回顾一下前文提到的东西 游戏主要检测分为5大块 1.CALL检测 -由TenRpcs负责 2.文件及内存检测 - 由TCJ负责 3.客户行为游</description>
     </item>
     
     <item>
       <title>&#34;About&#34;</title>
-      <link>https://chenjiajun1207.github.io/posts/about/</link>
+      <link>https://elx123.github.io/posts/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://chenjiajun1207.github.io/posts/about/</guid>
+      <guid>https://elx123.github.io/posts/about/</guid>
       <description>人生苦短,只争朝夕,浮生若梦,为欢几何</description>
     </item>
     
     <item>
       <title>Excel学习</title>
-      <link>https://chenjiajun1207.github.io/posts/excellearning/</link>
+      <link>https://elx123.github.io/posts/excellearning/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://chenjiajun1207.github.io/posts/excellearning/</guid>
+      <guid>https://elx123.github.io/posts/excellearning/</guid>
       <description>简介 通过百度网盘的形式在国内观看 目录 Excel Finance Class 01: Intro To Excel 2007 &amp; 2010(excel 金融课程01 视频地址(国外) 国内地址(百度网盘) 配套练习地址(已存百度网盘) 外网 ex</description>
     </item>
     
     <item>
       <title>Golang Sort</title>
-      <link>https://chenjiajun1207.github.io/posts/golang_sort/</link>
+      <link>https://elx123.github.io/posts/golang_sort/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://chenjiajun1207.github.io/posts/golang_sort/</guid>
+      <guid>https://elx123.github.io/posts/golang_sort/</guid>
       <description>简介 示例 在实际项目中用到对结构按结构体中的某个字段进行排序，记录下使用心得 首先定义数据结构，为了能清楚说明问题，只给两个字段。 type User struct { Name string Score</description>
     </item>
     
     <item>
       <title>Golang float</title>
-      <link>https://chenjiajun1207.github.io/posts/float64/</link>
+      <link>https://elx123.github.io/posts/float64/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://chenjiajun1207.github.io/posts/float64/</guid>
+      <guid>https://elx123.github.io/posts/float64/</guid>
       <description>简介 两个浮点数相加减，可能不准确 相减 最近在工作遇到float的精度问题,记录下解决思路 浮点数数据格式有许多种,IEEE754标准的浮点数与I</description>
     </item>
     
     <item>
       <title>Golang位运算符的溢出情况</title>
-      <link>https://chenjiajun1207.github.io/posts/golang_/</link>
+      <link>https://elx123.github.io/posts/golang_/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://chenjiajun1207.github.io/posts/golang_/</guid>
+      <guid>https://elx123.github.io/posts/golang_/</guid>
       <description>简介 介绍 直接表现为 反例 在编码过程中,经常会遇到使用逻辑运算符的情况,其中对于溢出操作需要特别小心 编译型语言，编译器的静态求值是自然的。 必须使</description>
     </item>
     
     <item>
       <title>MySQL Benchmark Tool</title>
-      <link>https://chenjiajun1207.github.io/posts/sysbench/</link>
+      <link>https://elx123.github.io/posts/sysbench/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://chenjiajun1207.github.io/posts/sysbench/</guid>
+      <guid>https://elx123.github.io/posts/sysbench/</guid>
       <description>sysbench 源码地址 部分参数涵义(github) events warmup-time percentile luajit-cmd 什么是JIT db-ps-mode tables table_size fileio模块 以vultr上vps以测试例子 sysbench是mysql的</description>
     </item>
     
     <item>
       <title>Tcp分包</title>
-      <link>https://chenjiajun1207.github.io/posts/tcp_subcontracting/</link>
+      <link>https://elx123.github.io/posts/tcp_subcontracting/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://chenjiajun1207.github.io/posts/tcp_subcontracting/</guid>
+      <guid>https://elx123.github.io/posts/tcp_subcontracting/</guid>
       <description>简介 问题描述 解法一(peek方式) 如今的游戏服务器框架都会涉及到Tcp分包,今天记录下自己的心得 Tcp长连接,通过分包解决粘包问题 大体思路:</description>
     </item>
     
     <item>
       <title>Weighted Random Selection</title>
-      <link>https://chenjiajun1207.github.io/posts/weightsort/</link>
+      <link>https://elx123.github.io/posts/weightsort/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://chenjiajun1207.github.io/posts/weightsort/</guid>
+      <guid>https://elx123.github.io/posts/weightsort/</guid>
       <description>简介 问题描述 解决思路 伪码 最近在项目中遇到了加密权重算法,记录下使用心得 Given a list of items where each item has a weight (integer value), select a random item from the list based on that weight. The key requirement — items with a higher weight value are</description>
     </item>
     
     <item>
       <title>[转载]Golang Json库源码</title>
-      <link>https://chenjiajun1207.github.io/posts/golang_json/</link>
+      <link>https://elx123.github.io/posts/golang_json/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://chenjiajun1207.github.io/posts/golang_json/</guid>
+      <guid>https://elx123.github.io/posts/golang_json/</guid>
       <description>简介 介绍 基本规则 最近发现一篇关于golang原生Json库的文章,转载过来\\ https://zhuanlan.zhihu.com/p/37165706 encoding/json库的意义相对其他语言来说在Gola</description>
     </item>
     
     <item>
       <title>[转载]mgo 的 session 与连接池</title>
-      <link>https://chenjiajun1207.github.io/posts/mgoandsession/</link>
+      <link>https://elx123.github.io/posts/mgoandsession/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://chenjiajun1207.github.io/posts/mgoandsession/</guid>
+      <guid>https://elx123.github.io/posts/mgoandsession/</guid>
       <description>简介 介绍 简单的使用 最近发现一篇关于mgo连接池很有价值的文章,转载过来\\ https://cardinfolink.github.io/2017/05/17/mgo-session/ mgo是由Golang编写的开源mongodb驱动。由于mong</description>
     </item>
     
     <item>
       <title>go-mgo/mgo入门</title>
-      <link>https://chenjiajun1207.github.io/posts/mgo/</link>
+      <link>https://elx123.github.io/posts/mgo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://chenjiajun1207.github.io/posts/mgo/</guid>
+      <guid>https://elx123.github.io/posts/mgo/</guid>
       <description>简介 源码 使用Select方法和struct区别 假如我们要在xxxx表中只取出Value字段 使用select 在游戏服务器开发这一块,nosql</description>
     </item>
     
     <item>
       <title>go包管理器</title>
-      <link>https://chenjiajun1207.github.io/posts/package/</link>
+      <link>https://elx123.github.io/posts/package/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://chenjiajun1207.github.io/posts/package/</guid>
+      <guid>https://elx123.github.io/posts/package/</guid>
       <description>简介 问题描述 使用心得 glide glide.yaml和glide.lock 如何管理local包 Glide can handle private packages using the repo property. The packages that need manual building.... vendor/ 分别记录下glide和d</description>
     </item>
     
     <item>
       <title>优先队列</title>
-      <link>https://chenjiajun1207.github.io/posts/priorityqueue/</link>
+      <link>https://elx123.github.io/posts/priorityqueue/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://chenjiajun1207.github.io/posts/priorityqueue/</guid>
+      <guid>https://elx123.github.io/posts/priorityqueue/</guid>
       <description>简介 实现方式 堆 实现 最近在多个框架中遇到优先队列,在这里记录下原理 目前只知道顺序数组可以用来作为heap底层结构,以实现优先队列 // An Item is something we manage</description>
     </item>
     
     <item>
       <title>推荐几本数据库相关的书籍</title>
-      <link>https://chenjiajun1207.github.io/posts/recommendbook/</link>
+      <link>https://elx123.github.io/posts/recommendbook/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://chenjiajun1207.github.io/posts/recommendbook/</guid>
+      <guid>https://elx123.github.io/posts/recommendbook/</guid>
       <description>简介 sql nosql mongodb 推荐几本数据库方面的书籍,不包括数据库设计,只关心如何在业务层面更好的使用数据库同时兼顾性能 mongodb比较灵活,sql那一套建</description>
     </item>
     
     <item>
       <title>记录下golang架构学习历程</title>
-      <link>https://chenjiajun1207.github.io/posts/scheduling_in_go/</link>
+      <link>https://elx123.github.io/posts/scheduling_in_go/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://chenjiajun1207.github.io/posts/scheduling_in_go/</guid>
+      <guid>https://elx123.github.io/posts/scheduling_in_go/</guid>
       <description>简介 scheduling-in-go 这里分享几个关于go调度的文章 https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part1.html \\ https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part2.html \\ https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part3.html \\</description>
     </item>
     
     <item>
       <title>读写锁(RWLock),递归锁(reentrant)和互斥锁(mutex)</title>
-      <link>https://chenjiajun1207.github.io/posts/rwlockandrecursive/</link>
+      <link>https://elx123.github.io/posts/rwlockandrecursive/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://chenjiajun1207.github.io/posts/rwlockandrecursive/</guid>
+      <guid>https://elx123.github.io/posts/rwlockandrecursive/</guid>
       <description>简介 个人观点 递归锁 这里介绍下我对于3种锁的使用观点 个人观点尽量使用互斥锁,因为递归锁和读写锁的复杂度,下面举出几种错误例子 #include &amp;quot;../Mutex.h&amp;quot; #include &amp;quot;../Thread.h&amp;quot; #include &amp;lt;vector&amp;gt; #include &amp;lt;stdio.h&amp;gt; using</description>
     </item>
     

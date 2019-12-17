@@ -1,360 +1,360 @@
-<?xml-stylesheet type="text/xsl" href="https://chenjiajun1207.github.io/sitemap.xsl"?>
+<?xml-stylesheet type="text/xsl" href="https://elx123.github.io/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://chenjiajun1207.github.io/categories/</loc>
+    <loc>https://elx123.github.io/categories/</loc>
     <lastmod>2019-12-17T13:42:14+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/post/excellearning/</loc>
+    <loc>https://elx123.github.io/post/excellearning/</loc>
     <lastmod>2019-12-15T08:23:30+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/post/</loc>
+    <loc>https://elx123.github.io/post/</loc>
     <lastmod>2019-12-17T13:42:14+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/tags/</loc>
+    <loc>https://elx123.github.io/tags/</loc>
     <lastmod>2019-12-17T13:42:14+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/categories/excel/</loc>
+    <loc>https://elx123.github.io/categories/excel/</loc>
     <lastmod>2019-12-15T08:23:30+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/tags/excel/</loc>
+    <loc>https://elx123.github.io/tags/excel/</loc>
     <lastmod>2019-12-15T08:23:30+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/</loc>
+    <loc>https://elx123.github.io/</loc>
     <lastmod>2019-12-17T13:42:14+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/categories/golang/</loc>
+    <loc>https://elx123.github.io/categories/golang/</loc>
     <lastmod>2019-12-17T13:42:14+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/tags/golang/</loc>
+    <loc>https://elx123.github.io/tags/golang/</loc>
     <lastmod>2019-12-17T13:42:14+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/post/scheduling_in_go/</loc>
+    <loc>https://elx123.github.io/post/scheduling_in_go/</loc>
     <lastmod>2019-12-17T13:37:11+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/categories/cpu/</loc>
+    <loc>https://elx123.github.io/categories/cpu/</loc>
     <lastmod>2019-07-08T17:27:30+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/tags/cpu/</loc>
+    <loc>https://elx123.github.io/tags/cpu/</loc>
     <lastmod>2019-07-08T17:27:30+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/post/cpu/</loc>
+    <loc>https://elx123.github.io/post/cpu/</loc>
     <lastmod>2019-07-08T17:27:30+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/about/</loc>
+    <loc>https://elx123.github.io/about/</loc>
     <lastmod>2019-05-29T17:11:53+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/post/golang_sort/</loc>
+    <loc>https://elx123.github.io/post/golang_sort/</loc>
     <lastmod>2019-12-17T13:40:04+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/post/weightsort/</loc>
+    <loc>https://elx123.github.io/post/weightsort/</loc>
     <lastmod>2019-12-17T13:42:14+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/categories/algorithm/</loc>
+    <loc>https://elx123.github.io/categories/algorithm/</loc>
     <lastmod>2019-12-17T13:42:14+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/tags/algorithm/</loc>
+    <loc>https://elx123.github.io/tags/algorithm/</loc>
     <lastmod>2019-12-17T13:42:14+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/post/golang_/</loc>
+    <loc>https://elx123.github.io/post/golang_/</loc>
     <lastmod>2019-05-29T17:04:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/post/golang_json/</loc>
+    <loc>https://elx123.github.io/post/golang_json/</loc>
     <lastmod>2019-05-29T17:04:36+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/categories/tcp/</loc>
+    <loc>https://elx123.github.io/categories/tcp/</loc>
     <lastmod>2019-05-29T17:05:19+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/tags/tcp/</loc>
+    <loc>https://elx123.github.io/tags/tcp/</loc>
     <lastmod>2019-05-29T17:05:19+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/post/tcp_subcontracting/</loc>
+    <loc>https://elx123.github.io/post/tcp_subcontracting/</loc>
     <lastmod>2019-05-29T17:05:19+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/post/package/</loc>
+    <loc>https://elx123.github.io/post/package/</loc>
     <lastmod>2019-05-29T17:04:55+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/post/priorityqueue/</loc>
+    <loc>https://elx123.github.io/post/priorityqueue/</loc>
     <lastmod>2019-05-29T17:05:04+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/post/rwlockandrecursive/</loc>
+    <loc>https://elx123.github.io/post/rwlockandrecursive/</loc>
     <lastmod>2019-05-29T17:05:11+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/post/float64/</loc>
+    <loc>https://elx123.github.io/post/float64/</loc>
     <lastmod>2019-05-29T17:04:30+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/post/mgoandsession/</loc>
+    <loc>https://elx123.github.io/post/mgoandsession/</loc>
     <lastmod>2019-05-29T17:04:47+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/post/mgo/</loc>
+    <loc>https://elx123.github.io/post/mgo/</loc>
     <lastmod>2019-05-29T17:04:50+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/categories/sql/</loc>
+    <loc>https://elx123.github.io/categories/sql/</loc>
     <lastmod>2019-05-29T17:05:07+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/tags/sql/</loc>
+    <loc>https://elx123.github.io/tags/sql/</loc>
     <lastmod>2019-05-29T17:05:07+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/post/recommendbook/</loc>
+    <loc>https://elx123.github.io/post/recommendbook/</loc>
     <lastmod>2019-05-29T17:05:07+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/post/sysbench/</loc>
+    <loc>https://elx123.github.io/post/sysbench/</loc>
     <lastmod>2019-05-29T17:05:15+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/categories/mysql/</loc>
+    <loc>https://elx123.github.io/categories/mysql/</loc>
     <lastmod>2019-05-29T17:05:15+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/tags/mysql/</loc>
+    <loc>https://elx123.github.io/tags/mysql/</loc>
     <lastmod>2019-05-29T17:05:15+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/posts/seh/</loc>
+    <loc>https://elx123.github.io/posts/seh/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/posts/anticheatone/</loc>
+    <loc>https://elx123.github.io/posts/anticheatone/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/posts/anticheatthree/</loc>
+    <loc>https://elx123.github.io/posts/anticheatthree/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/posts/anticheattwo/</loc>
+    <loc>https://elx123.github.io/posts/anticheattwo/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/posts/about/</loc>
+    <loc>https://elx123.github.io/posts/about/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/posts/excellearning/</loc>
+    <loc>https://elx123.github.io/posts/excellearning/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/posts/golang_sort/</loc>
+    <loc>https://elx123.github.io/posts/golang_sort/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/posts/float64/</loc>
+    <loc>https://elx123.github.io/posts/float64/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/posts/golang_/</loc>
+    <loc>https://elx123.github.io/posts/golang_/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/posts/sysbench/</loc>
+    <loc>https://elx123.github.io/posts/sysbench/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/posts/</loc>
+    <loc>https://elx123.github.io/posts/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/posts/tcp_subcontracting/</loc>
+    <loc>https://elx123.github.io/posts/tcp_subcontracting/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/posts/weightsort/</loc>
+    <loc>https://elx123.github.io/posts/weightsort/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/posts/golang_json/</loc>
+    <loc>https://elx123.github.io/posts/golang_json/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/posts/mgoandsession/</loc>
+    <loc>https://elx123.github.io/posts/mgoandsession/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/posts/mgo/</loc>
+    <loc>https://elx123.github.io/posts/mgo/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/posts/package/</loc>
+    <loc>https://elx123.github.io/posts/package/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/posts/priorityqueue/</loc>
+    <loc>https://elx123.github.io/posts/priorityqueue/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/posts/recommendbook/</loc>
+    <loc>https://elx123.github.io/posts/recommendbook/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/posts/scheduling_in_go/</loc>
+    <loc>https://elx123.github.io/posts/scheduling_in_go/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/posts/rwlockandrecursive/</loc>
+    <loc>https://elx123.github.io/posts/rwlockandrecursive/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://chenjiajun1207.github.io/posts/cpu/</loc>
+    <loc>https://elx123.github.io/posts/cpu/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

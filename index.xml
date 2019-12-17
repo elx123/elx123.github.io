@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>人生苦短,只争朝夕</title>
-    <link>https://chenjiajun1207.github.io/</link>
+    <link>https://elx123.github.io/</link>
     <description>Recent content on 人生苦短,只争朝夕</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sun, 15 Dec 2019 00:00:00 +0800</lastBuildDate>
     
-        <atom:link href="https://chenjiajun1207.github.io/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://elx123.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Excel学习</title>
-      <link>https://chenjiajun1207.github.io/post/excellearning/</link>
+      <link>https://elx123.github.io/post/excellearning/</link>
       <pubDate>Sun, 15 Dec 2019 00:00:00 +0800</pubDate>
       
-      <guid>https://chenjiajun1207.github.io/post/excellearning/</guid>
+      <guid>https://elx123.github.io/post/excellearning/</guid>
       
         <description>
 
@@ -58,10 +58,10 @@ yi6s&lt;/p&gt;
     
     <item>
       <title>记录下golang架构学习历程</title>
-      <link>https://chenjiajun1207.github.io/post/scheduling_in_go/</link>
+      <link>https://elx123.github.io/post/scheduling_in_go/</link>
       <pubDate>Wed, 11 Dec 2019 00:00:00 +0800</pubDate>
       
-      <guid>https://chenjiajun1207.github.io/post/scheduling_in_go/</guid>
+      <guid>https://elx123.github.io/post/scheduling_in_go/</guid>
       
         <description>
 
@@ -82,10 +82,10 @@ yi6s&lt;/p&gt;
     
     <item>
       <title>转载一篇关于cpu如何运作的文章</title>
-      <link>https://chenjiajun1207.github.io/post/cpu/</link>
+      <link>https://elx123.github.io/post/cpu/</link>
       <pubDate>Mon, 08 Jul 2019 00:00:00 +0800</pubDate>
       
-      <guid>https://chenjiajun1207.github.io/post/cpu/</guid>
+      <guid>https://elx123.github.io/post/cpu/</guid>
       
         <description>
 
@@ -100,10 +100,10 @@ yi6s&lt;/p&gt;
     
     <item>
       <title>关于</title>
-      <link>https://chenjiajun1207.github.io/about/</link>
+      <link>https://elx123.github.io/about/</link>
       <pubDate>Wed, 29 May 2019 00:00:00 +0800</pubDate>
       
-      <guid>https://chenjiajun1207.github.io/about/</guid>
+      <guid>https://elx123.github.io/about/</guid>
       
         <description>
 
@@ -114,10 +114,10 @@ yi6s&lt;/p&gt;
     
     <item>
       <title>Golang Sort</title>
-      <link>https://chenjiajun1207.github.io/post/golang_sort/</link>
+      <link>https://elx123.github.io/post/golang_sort/</link>
       <pubDate>Mon, 14 Jan 2019 00:00:00 +0800</pubDate>
       
-      <guid>https://chenjiajun1207.github.io/post/golang_sort/</guid>
+      <guid>https://elx123.github.io/post/golang_sort/</guid>
       
         <description>
 
@@ -254,10 +254,10 @@ func main() {
     
     <item>
       <title>Weighted Random Selection</title>
-      <link>https://chenjiajun1207.github.io/post/weightsort/</link>
+      <link>https://elx123.github.io/post/weightsort/</link>
       <pubDate>Mon, 14 Jan 2019 00:00:00 +0800</pubDate>
       
-      <guid>https://chenjiajun1207.github.io/post/weightsort/</guid>
+      <guid>https://elx123.github.io/post/weightsort/</guid>
       
         <description>
 
@@ -361,10 +361,10 @@ func RandomWeightedSelect(games []Game, totalWeight int) (Game, error) {
     
     <item>
       <title>Golang位运算符的溢出情况</title>
-      <link>https://chenjiajun1207.github.io/post/golang_/</link>
+      <link>https://elx123.github.io/post/golang_/</link>
       <pubDate>Sun, 23 Dec 2018 00:00:00 +0800</pubDate>
       
-      <guid>https://chenjiajun1207.github.io/post/golang_/</guid>
+      <guid>https://elx123.github.io/post/golang_/</guid>
       
         <description>
 
@@ -494,10 +494,10 @@ func main() {
     
     <item>
       <title>[转载]Golang Json库源码</title>
-      <link>https://chenjiajun1207.github.io/post/golang_json/</link>
+      <link>https://elx123.github.io/post/golang_json/</link>
       <pubDate>Sun, 23 Dec 2018 00:00:00 +0800</pubDate>
       
-      <guid>https://chenjiajun1207.github.io/post/golang_json/</guid>
+      <guid>https://elx123.github.io/post/golang_json/</guid>
       
         <description>
 
@@ -1085,10 +1085,10 @@ type Value struct {
     
     <item>
       <title>Tcp分包</title>
-      <link>https://chenjiajun1207.github.io/post/tcp_subcontracting/</link>
+      <link>https://elx123.github.io/post/tcp_subcontracting/</link>
       <pubDate>Thu, 25 Oct 2018 00:00:00 +0800</pubDate>
       
-      <guid>https://chenjiajun1207.github.io/post/tcp_subcontracting/</guid>
+      <guid>https://elx123.github.io/post/tcp_subcontracting/</guid>
       
         <description>
 
@@ -1214,10 +1214,10 @@ type Value struct {
     
     <item>
       <title>go包管理器</title>
-      <link>https://chenjiajun1207.github.io/post/package/</link>
+      <link>https://elx123.github.io/post/package/</link>
       <pubDate>Thu, 25 Oct 2018 00:00:00 +0800</pubDate>
       
-      <guid>https://chenjiajun1207.github.io/post/package/</guid>
+      <guid>https://elx123.github.io/post/package/</guid>
       
         <description>
 
@@ -1289,10 +1289,10 @@ access your private packages check them into the app.&lt;/p&gt;
     
     <item>
       <title>优先队列</title>
-      <link>https://chenjiajun1207.github.io/post/priorityqueue/</link>
+      <link>https://elx123.github.io/post/priorityqueue/</link>
       <pubDate>Thu, 25 Oct 2018 00:00:00 +0800</pubDate>
       
-      <guid>https://chenjiajun1207.github.io/post/priorityqueue/</guid>
+      <guid>https://elx123.github.io/post/priorityqueue/</guid>
       
         <description>
 
@@ -1416,10 +1416,10 @@ func (pq *PriorityQueue) update(item *Item, value string, priority int) {
     
     <item>
       <title>读写锁(RWLock),递归锁(reentrant)和互斥锁(mutex)</title>
-      <link>https://chenjiajun1207.github.io/post/rwlockandrecursive/</link>
+      <link>https://elx123.github.io/post/rwlockandrecursive/</link>
       <pubDate>Thu, 25 Oct 2018 00:00:00 +0800</pubDate>
       
-      <guid>https://chenjiajun1207.github.io/post/rwlockandrecursive/</guid>
+      <guid>https://elx123.github.io/post/rwlockandrecursive/</guid>
       
         <description>
 
@@ -1517,10 +1517,10 @@ int main()
     
     <item>
       <title>Golang float</title>
-      <link>https://chenjiajun1207.github.io/post/float64/</link>
+      <link>https://elx123.github.io/post/float64/</link>
       <pubDate>Sun, 14 Oct 2018 00:00:00 +0800</pubDate>
       
-      <guid>https://chenjiajun1207.github.io/post/float64/</guid>
+      <guid>https://elx123.github.io/post/float64/</guid>
       
         <description>
 
@@ -1571,10 +1571,10 @@ fmt.Println(a + 0.7) //output: 1.2999999999999998var a
     
     <item>
       <title>[转载]mgo 的 session 与连接池</title>
-      <link>https://chenjiajun1207.github.io/post/mgoandsession/</link>
+      <link>https://elx123.github.io/post/mgoandsession/</link>
       <pubDate>Mon, 08 Oct 2018 00:00:00 +0800</pubDate>
       
-      <guid>https://chenjiajun1207.github.io/post/mgoandsession/</guid>
+      <guid>https://elx123.github.io/post/mgoandsession/</guid>
       
         <description>
 
@@ -1817,10 +1817,10 @@ The maximum number of milliseconds that a connection can remain idle in the pool
     
     <item>
       <title>go-mgo/mgo入门</title>
-      <link>https://chenjiajun1207.github.io/post/mgo/</link>
+      <link>https://elx123.github.io/post/mgo/</link>
       <pubDate>Mon, 08 Oct 2018 00:00:00 +0800</pubDate>
       
-      <guid>https://chenjiajun1207.github.io/post/mgo/</guid>
+      <guid>https://elx123.github.io/post/mgo/</guid>
       
         <description>
 
@@ -1884,10 +1884,10 @@ c.Log(profit)
     
     <item>
       <title>推荐几本数据库相关的书籍</title>
-      <link>https://chenjiajun1207.github.io/post/recommendbook/</link>
+      <link>https://elx123.github.io/post/recommendbook/</link>
       <pubDate>Mon, 08 Oct 2018 00:00:00 +0800</pubDate>
       
-      <guid>https://chenjiajun1207.github.io/post/recommendbook/</guid>
+      <guid>https://elx123.github.io/post/recommendbook/</guid>
       
         <description>
 
@@ -1913,10 +1913,10 @@ nosql相关建模书籍&lt;/p&gt;
     
     <item>
       <title>MySQL Benchmark Tool</title>
-      <link>https://chenjiajun1207.github.io/post/sysbench/</link>
+      <link>https://elx123.github.io/post/sysbench/</link>
       <pubDate>Mon, 24 Sep 2018 00:00:00 +0800</pubDate>
       
-      <guid>https://chenjiajun1207.github.io/post/sysbench/</guid>
+      <guid>https://elx123.github.io/post/sysbench/</guid>
       
         <description>
 
@@ -2199,10 +2199,10 @@ Threads fairness:
     
     <item>
       <title></title>
-      <link>https://chenjiajun1207.github.io/posts/seh/</link>
+      <link>https://elx123.github.io/posts/seh/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://chenjiajun1207.github.io/posts/seh/</guid>
+      <guid>https://elx123.github.io/posts/seh/</guid>
       
         <description>&lt;h1 id=&#34;seh&#34;&gt;SEH&lt;/h1&gt;
 
@@ -2295,10 +2295,10 @@ EXCEPTION_STACK_OVERFLOW                   0xC00000FD     栈溢出时引发该�
     
     <item>
       <title></title>
-      <link>https://chenjiajun1207.github.io/posts/anticheatone/</link>
+      <link>https://elx123.github.io/posts/anticheatone/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://chenjiajun1207.github.io/posts/anticheatone/</guid>
+      <guid>https://elx123.github.io/posts/anticheatone/</guid>
       
         <description>&lt;h1 id=&#34;转载自&#34;&gt;转载自&lt;/h1&gt;
 
@@ -2402,10 +2402,10 @@ LoadLibraryExW 挂钩子，让某些检测模块不加载，在这种情况下�
     
     <item>
       <title></title>
-      <link>https://chenjiajun1207.github.io/posts/anticheatthree/</link>
+      <link>https://elx123.github.io/posts/anticheatthree/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://chenjiajun1207.github.io/posts/anticheatthree/</guid>
+      <guid>https://elx123.github.io/posts/anticheatthree/</guid>
       
         <description>&lt;h1 id=&#34;转载自&#34;&gt;转载自&lt;/h1&gt;
 

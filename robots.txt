@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://chenjiajun1207.github.io/sitemap.xml
+Sitemap: https://elx123.github.io/sitemap.xml

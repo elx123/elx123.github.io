@@ -2,75 +2,75 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on 人生苦短,只争朝夕</title>
-    <link>https://chenjiajun1207.github.io/categories/</link>
+    <link>https://elx123.github.io/categories/</link>
     <description>Recent content in Categories on 人生苦短,只争朝夕</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sun, 15 Dec 2019 00:00:00 +0800</lastBuildDate>
     
-	<atom:link href="https://chenjiajun1207.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://elx123.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>excel</title>
-      <link>https://chenjiajun1207.github.io/categories/excel/</link>
+      <link>https://elx123.github.io/categories/excel/</link>
       <pubDate>Sun, 15 Dec 2019 00:00:00 +0800</pubDate>
       
-      <guid>https://chenjiajun1207.github.io/categories/excel/</guid>
+      <guid>https://elx123.github.io/categories/excel/</guid>
       <description></description>
     </item>
     
     <item>
       <title>golang</title>
-      <link>https://chenjiajun1207.github.io/categories/golang/</link>
+      <link>https://elx123.github.io/categories/golang/</link>
       <pubDate>Wed, 11 Dec 2019 00:00:00 +0800</pubDate>
       
-      <guid>https://chenjiajun1207.github.io/categories/golang/</guid>
+      <guid>https://elx123.github.io/categories/golang/</guid>
       <description></description>
     </item>
     
     <item>
       <title>cpu</title>
-      <link>https://chenjiajun1207.github.io/categories/cpu/</link>
+      <link>https://elx123.github.io/categories/cpu/</link>
       <pubDate>Mon, 08 Jul 2019 00:00:00 +0800</pubDate>
       
-      <guid>https://chenjiajun1207.github.io/categories/cpu/</guid>
+      <guid>https://elx123.github.io/categories/cpu/</guid>
       <description></description>
     </item>
     
     <item>
       <title>algorithm</title>
-      <link>https://chenjiajun1207.github.io/categories/algorithm/</link>
+      <link>https://elx123.github.io/categories/algorithm/</link>
       <pubDate>Mon, 14 Jan 2019 00:00:00 +0800</pubDate>
       
-      <guid>https://chenjiajun1207.github.io/categories/algorithm/</guid>
+      <guid>https://elx123.github.io/categories/algorithm/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Tcp</title>
-      <link>https://chenjiajun1207.github.io/categories/tcp/</link>
+      <link>https://elx123.github.io/categories/tcp/</link>
       <pubDate>Thu, 25 Oct 2018 00:00:00 +0800</pubDate>
       
-      <guid>https://chenjiajun1207.github.io/categories/tcp/</guid>
+      <guid>https://elx123.github.io/categories/tcp/</guid>
       <description></description>
     </item>
     
     <item>
       <title>sql</title>
-      <link>https://chenjiajun1207.github.io/categories/sql/</link>
+      <link>https://elx123.github.io/categories/sql/</link>
       <pubDate>Mon, 08 Oct 2018 00:00:00 +0800</pubDate>
       
-      <guid>https://chenjiajun1207.github.io/categories/sql/</guid>
+      <guid>https://elx123.github.io/categories/sql/</guid>
       <description></description>
     </item>
     
     <item>
       <title>mysql</title>
-      <link>https://chenjiajun1207.github.io/categories/mysql/</link>
+      <link>https://elx123.github.io/categories/mysql/</link>
       <pubDate>Mon, 24 Sep 2018 00:00:00 +0800</pubDate>
       
-      <guid>https://chenjiajun1207.github.io/categories/mysql/</guid>
+      <guid>https://elx123.github.io/categories/mysql/</guid>
       <description></description>
     </item>
     
