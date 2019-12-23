@@ -20,13 +20,13 @@
   </url>
   
   <url>
-    <loc>https://elx123.github.io/tags/accountant/</loc>
+    <loc>https://elx123.github.io/categories/accountant/</loc>
     <lastmod>2019-12-18T08:51:45+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://elx123.github.io/categories/accountant/</loc>
+    <loc>https://elx123.github.io/tags/accountant/</loc>
     <lastmod>2019-12-18T08:51:45+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -45,32 +45,13 @@
   </url>
   
   <url>
-    <loc>https://elx123.github.io/post/excellearning/</loc>
-    <lastmod>2019-12-15T08:23:30+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/tags/excel/</loc>
-    <lastmod>2019-12-15T08:23:30+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/categories/excel/</loc>
-    <lastmod>2019-12-15T08:23:30+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/tags/golang/</loc>
+    <loc>https://elx123.github.io/categories/golang/</loc>
     <lastmod>2019-12-17T13:42:14+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://elx123.github.io/categories/golang/</loc>
+    <loc>https://elx123.github.io/tags/golang/</loc>
     <lastmod>2019-12-17T13:42:14+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -83,13 +64,13 @@
   </url>
   
   <url>
-    <loc>https://elx123.github.io/tags/cpu/</loc>
+    <loc>https://elx123.github.io/categories/cpu/</loc>
     <lastmod>2019-07-08T17:27:30+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://elx123.github.io/categories/cpu/</loc>
+    <loc>https://elx123.github.io/tags/cpu/</loc>
     <lastmod>2019-07-08T17:27:30+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -123,13 +104,13 @@
   </url>
   
   <url>
-    <loc>https://elx123.github.io/tags/algorithm/</loc>
+    <loc>https://elx123.github.io/categories/algorithm/</loc>
     <lastmod>2019-12-17T13:42:14+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://elx123.github.io/categories/algorithm/</loc>
+    <loc>https://elx123.github.io/tags/algorithm/</loc>
     <lastmod>2019-12-17T13:42:14+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -149,13 +130,13 @@
   </url>
   
   <url>
-    <loc>https://elx123.github.io/tags/tcp/</loc>
+    <loc>https://elx123.github.io/categories/tcp/</loc>
     <lastmod>2019-05-29T17:05:19+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://elx123.github.io/categories/tcp/</loc>
+    <loc>https://elx123.github.io/tags/tcp/</loc>
     <lastmod>2019-05-29T17:05:19+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -210,13 +191,13 @@
   </url>
   
   <url>
-    <loc>https://elx123.github.io/tags/sql/</loc>
+    <loc>https://elx123.github.io/categories/sql/</loc>
     <lastmod>2019-05-29T17:05:07+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://elx123.github.io/categories/sql/</loc>
+    <loc>https://elx123.github.io/tags/sql/</loc>
     <lastmod>2019-05-29T17:05:07+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -236,13 +217,13 @@
   </url>
   
   <url>
-    <loc>https://elx123.github.io/tags/mysql/</loc>
+    <loc>https://elx123.github.io/categories/mysql/</loc>
     <lastmod>2019-05-29T17:05:15+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://elx123.github.io/categories/mysql/</loc>
+    <loc>https://elx123.github.io/tags/mysql/</loc>
     <lastmod>2019-05-29T17:05:15+08:00</lastmod>
     <priority>0</priority>
   </url>

@@ -97,51 +97,6 @@ you will go far.&lt;br /&gt;&lt;/p&gt;
     </item>
     
     <item>
-      <title>Excel学习</title>
-      <link>https://elx123.github.io/post/excellearning/</link>
-      <pubDate>Sun, 15 Dec 2019 00:00:00 +0800</pubDate>
-      
-      <guid>https://elx123.github.io/post/excellearning/</guid>
-      
-        <description>
-
-&lt;!-- more --&gt;
-
-&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
-
-&lt;p&gt;excel学习进度总结&lt;/p&gt;
-
-&lt;h2 id=&#34;通过百度网盘的形式在国内观看&#34;&gt;通过百度网盘的形式在国内观看&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://pan.baidu.com/s/1QB4DAawv3-Kxk4WM29TFUA&#34;&gt;https://pan.baidu.com/s/1QB4DAawv3-Kxk4WM29TFUA&lt;/a&gt;
-密码yi6s&lt;/p&gt;
-
-&lt;h2 id=&#34;目录&#34;&gt;目录&lt;/h2&gt;
-
-&lt;h3 id=&#34;excel-finance-class-01-intro-to-excel-2007-and-2010--excel-金融课程01-介绍excel2007-2010&#34;&gt;Excel Finance Class 01: Intro To Excel 2007 &amp;amp; 2010(excel 金融课程01 : 介绍excel2007 2010)&lt;/h3&gt;
-
-&lt;h4 id=&#34;视频地址--国外&#34;&gt;视频地址(国外)&lt;/h4&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=qeWOy4Q-1n8&amp;amp;list=PL90E1F26C7B85E78F&amp;amp;index=2&amp;amp;t=0s&#34;&gt;https://www.youtube.com/watch?v=qeWOy4Q-1n8&amp;amp;list=PL90E1F26C7B85E78F&amp;amp;index=2&amp;amp;t=0s&lt;/a&gt;&lt;/p&gt;
-
-&lt;h4 id=&#34;国内地址--百度网盘&#34;&gt;国内地址(百度网盘)&lt;/h4&gt;
-
-&lt;p&gt;20191215文件夹
-&lt;a href=&#34;https://pan.baidu.com/s/1QB4DAawv3-Kxk4WM29TFUA&#34;&gt;https://pan.baidu.com/s/1QB4DAawv3-Kxk4WM29TFUA&lt;/a&gt;
-yi6s&lt;/p&gt;
-
-&lt;h4 id=&#34;配套练习地址--已存百度网盘&#34;&gt;配套练习地址(已存百度网盘)&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;外网&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://people.highline.edu/mgirvin/ExcelIsFun.htm&#34;&gt;https://people.highline.edu/mgirvin/ExcelIsFun.htm&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
       <title>记录下golang架构学习历程</title>
       <link>https://elx123.github.io/post/scheduling_in_go/</link>
       <pubDate>Wed, 11 Dec 2019 00:00:00 +0800</pubDate>
@@ -2481,6 +2436,55 @@ LoadLibraryExW 挂钩子，让某些检测模块不加载，在这种情况下�
 &lt;p&gt;于是分析了一下，这个GameRpcs非常不起眼，但是他起到重要的作用，他负责与TCJ和TenRpcs通讯！如果其中有一个模块有异常，他就会强制关闭游戏（本地命令）不是来自服务器的断开链接！而且通过笔者的CE遍历，遍历到了GameRpcs还会收集对局信息，包括当前玩家按下执行右键命令次数，玩家按下技能右键次数，等等信息，大家可以通过CE去搜索增加的值就可以，说到这里，我感觉这个检测系统好强大，收集这些数据是这是要人工分析吗??&lt;/p&gt;
 
 &lt;p&gt;笔者后续再写是怎么过的GameRpcs，先去看春晚了，大家新年快乐！&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://elx123.github.io/posts/anticheatthree/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elx123.github.io/posts/anticheatthree/</guid>
+      
+        <description>&lt;h1 id=&#34;转载自&#34;&gt;转载自&lt;/h1&gt;
+
+&lt;h1 id=&#34;正文&#34;&gt;正文&lt;/h1&gt;
+
+&lt;p&gt;https://bbs.pediy.com/thread-249348.htm
+代码段没法发了，因为里面有别人的东西（发了之后避免不了一些不法分子会利用，所以这里只分享处理检测流程和思路）
+目前整体已经完善好了，写这个帖子不是教大家怎样去过检测写外挂，而是教大家一些好的思路
+核心代码执行流程&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;./../resources/_gen/images/773537_RAQZDR5XER968YT.png&#34; title=&#34;./../resources/_gen/images/773537_RAQZDR5XER968YT.png&#34;&gt;./../resources/_gen/images/773537_RAQZDR5XER968YT.png&lt;/a&gt;\\&lt;/p&gt;
+
+&lt;p&gt;1.过机器码: 目前2种办法，一种替换DLL，另一种是让返回值随机，因为我总调试游戏
+我直接替换了DLL因为有时候进游戏没加载我忘记加载我的DLL，就完蛋了，如果不商业的话，建议用替换DLL方法，放到Game目录即可，DLL在附件中&lt;/p&gt;
+
+&lt;p&gt;2.处理游戏检测CALL，例如释放技能，走路，等等，已经定位了几个重要的检测CALL，处理后发现还有很多检测CALL，但是不知道再检测什么东西，所以全盘了，如果出问题再注释，也方便，这个在第一篇说过了，这里不再细说&lt;/p&gt;
+
+&lt;p&gt;3.处理GameRpcs的CRC，处理CRC的思路也很多，这里我用的是转移大法，然后再创建一个线程循环清除GameRpcs记录的数据信息&lt;/p&gt;
+
+&lt;p&gt;VOID 清除记录()
+{
+    DWORD 计次变量 = 0;&lt;/p&gt;
+
+&lt;p&gt;while (GameRpcsBase)
+    {
+        Sleep(10000);
+        RtlCopyMemory(LPVOID(GameRpcsBase + 0x1713A4), &amp;计次变量, sizeof(DWORD));//时间计时
+        RtlCopyMemory(LPVOID(GameRpcsBase + 0x17141C), &amp;计次变量, sizeof(DWORD));//鼠标计次
+        RtlCopyMemory(LPVOID(GameRpcsBase + 0x171424), &amp;计次变量, sizeof(DWORD));//键盘计次
+        计次变量++;
+    }
+}&lt;/p&gt;
+
+&lt;p&gt;TCJ（可以不清Buffer，直接改Buffer指向一片干净的内存区域）
+监视TCJ读了哪块内存，HOOK，如果当前读内存的地址 大于 你要保护的模块地址 或 小于 你要保护的模块地址 + 模块大小，则清空他的Buffer&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;./../resources/_gen/images/773537_FM6G9UZG9BDU5PM.png&#34; title=&#34;./../resources/_gen/images/773537_FM6G9UZG9BDU5PM.png&#34;&gt;./../resources/_gen/images/773537_FM6G9UZG9BDU5PM.png&lt;/a&gt;\\
+&lt;a href=&#34;./../resources/_gen/images/773537_8ARV4MU47ZMBT3X.png&#34; title=&#34;./../resources/_gen/images/773537_8ARV4MU47ZMBT3X.png&#34;&gt;./../resources/_gen/images/773537_8ARV4MU47ZMBT3X.png&lt;/a&gt;\\
+&lt;a href=&#34;./../resources/_gen/images/773537_QQBQGQAARDDN7A9.jpg&#34; title=&#34;./../resources/_gen/images/773537_QQBQGQAARDDN7A9.jpg&#34;&gt;./../resources/_gen/images/773537_QQBQGQAARDDN7A9.jpg&lt;/a&gt;\\&lt;/p&gt;
 </description>
       
     </item>
