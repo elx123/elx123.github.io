@@ -21,15 +21,6 @@
     </item>
     
     <item>
-      <title>记录下golang架构学习历程</title>
-      <link>https://elx123.github.io/post/scheduling_in_go/</link>
-      <pubDate>Wed, 11 Dec 2019 00:00:00 +0800</pubDate>
-      
-      <guid>https://elx123.github.io/post/scheduling_in_go/</guid>
-      <description>简介 这里分享几个关于go调度的文章 scheduling-in-go https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part1.html https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part2.html https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part3.html</description>
-    </item>
-    
-    <item>
       <title>转载一篇关于cpu如何运作的文章</title>
       <link>https://elx123.github.io/post/cpu/</link>
       <pubDate>Mon, 08 Jul 2019 00:00:00 +0800</pubDate>
