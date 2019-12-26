@@ -3,37 +3,44 @@
   
   <url>
     <loc>https://elx123.github.io/categories/</loc>
-    <lastmod>2019-12-17T13:42:14+08:00</lastmod>
+    <lastmod>2019-12-26T14:36:48+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://elx123.github.io/post/</loc>
-    <lastmod>2019-12-17T13:42:14+08:00</lastmod>
+    <lastmod>2019-12-26T14:36:48+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://elx123.github.io/tags/</loc>
-    <lastmod>2019-12-17T13:42:14+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/tags/golang/</loc>
-    <lastmod>2019-12-17T13:42:14+08:00</lastmod>
+    <lastmod>2019-12-26T14:36:48+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://elx123.github.io/categories/golang/</loc>
-    <lastmod>2019-12-17T13:42:14+08:00</lastmod>
+    <lastmod>2019-12-26T14:36:48+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>https://elx123.github.io/tags/golang/</loc>
+    <lastmod>2019-12-26T14:36:48+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://elx123.github.io/post/golangrelearning/</loc>
+    <lastmod>2019-12-26T14:36:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://elx123.github.io/</loc>
-    <lastmod>2019-12-17T13:42:14+08:00</lastmod>
+    <lastmod>2019-12-26T14:36:48+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -45,13 +52,13 @@
   </url>
   
   <url>
-    <loc>https://elx123.github.io/tags/cpu/</loc>
+    <loc>https://elx123.github.io/categories/cpu/</loc>
     <lastmod>2019-07-08T17:27:30+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://elx123.github.io/categories/cpu/</loc>
+    <loc>https://elx123.github.io/tags/cpu/</loc>
     <lastmod>2019-07-08T17:27:30+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -85,13 +92,13 @@
   </url>
   
   <url>
-    <loc>https://elx123.github.io/tags/algorithm/</loc>
+    <loc>https://elx123.github.io/categories/algorithm/</loc>
     <lastmod>2019-12-17T13:42:14+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://elx123.github.io/categories/algorithm/</loc>
+    <loc>https://elx123.github.io/tags/algorithm/</loc>
     <lastmod>2019-12-17T13:42:14+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -111,13 +118,13 @@
   </url>
   
   <url>
-    <loc>https://elx123.github.io/tags/tcp/</loc>
+    <loc>https://elx123.github.io/categories/tcp/</loc>
     <lastmod>2019-05-29T17:05:19+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://elx123.github.io/categories/tcp/</loc>
+    <loc>https://elx123.github.io/tags/tcp/</loc>
     <lastmod>2019-05-29T17:05:19+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -172,13 +179,13 @@
   </url>
   
   <url>
-    <loc>https://elx123.github.io/tags/sql/</loc>
+    <loc>https://elx123.github.io/categories/sql/</loc>
     <lastmod>2019-05-29T17:05:07+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://elx123.github.io/categories/sql/</loc>
+    <loc>https://elx123.github.io/tags/sql/</loc>
     <lastmod>2019-05-29T17:05:07+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -198,13 +205,13 @@
   </url>
   
   <url>
-    <loc>https://elx123.github.io/tags/mysql/</loc>
+    <loc>https://elx123.github.io/categories/mysql/</loc>
     <lastmod>2019-05-29T17:05:15+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://elx123.github.io/categories/mysql/</loc>
+    <loc>https://elx123.github.io/tags/mysql/</loc>
     <lastmod>2019-05-29T17:05:15+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -305,6 +312,12 @@
   </url>
   
   <url>
+    <loc>https://elx123.github.io/posts/golangrelearning/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://elx123.github.io/posts/package/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -330,12 +343,6 @@
   
   <url>
     <loc>https://elx123.github.io/posts/recommendbook/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/posts/scheduling_in_go/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

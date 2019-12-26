@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>golang学习总结</title>
+      <link>https://elx123.github.io/post/golangrelearning/</link>
+      <pubDate>Wed, 11 Dec 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://elx123.github.io/post/golangrelearning/</guid>
+      <description>简介 自从去年开始使用golang以后,陆陆续续在不断学习(包括操作系统和其他方面),这里总结与分享下 重要的资料和知识 首先我认为最有效的学习视</description>
+    </item>
+    
+    <item>
       <title>记录下golang架构学习历程</title>
       <link>https://elx123.github.io/post/scheduling_in_go/</link>
       <pubDate>Wed, 11 Dec 2019 00:00:00 +0800</pubDate>
