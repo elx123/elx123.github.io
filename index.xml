@@ -55,11 +55,11 @@
 
 &lt;h2 id=&#34;containers-and-go&#34;&gt;Containers and Go&lt;/h2&gt;
 
-&lt;h3 id=&#34;a-id-org65d2fdb-a&#34;&gt;&lt;a id=&#34;org65d2fdb&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;how-to-containerize-your-go-code&#34;&gt;How to containerize your go code&lt;/h3&gt;
 
 &lt;p&gt;完全看过了&lt;/p&gt;
 
-&lt;h3 id=&#34;a-id-org8b5ecb8-a&#34;&gt;&lt;a id=&#34;org8b5ecb8&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;building-containers-from-scratch-with-go&#34;&gt;Building Containers from Scratch with Go&lt;/h3&gt;
 
 &lt;p&gt;看到了Root Filesystems and Chroot with Go这一节&lt;/p&gt;
 
@@ -70,7 +70,7 @@
 
 &lt;h2 id=&#34;docker&#34;&gt;docker&lt;/h2&gt;
 
-&lt;h3 id=&#34;a-id-org08b9fb7-a&#34;&gt;&lt;a id=&#34;org08b9fb7&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;docker-for-the-absolute-beginner-hands-on&#34;&gt;Docker for the Absolute Beginner - Hands-On&lt;/h3&gt;
 
 &lt;h4 id=&#34;有字幕的地址&#34;&gt;有字幕的地址&lt;/h4&gt;
 
@@ -99,8 +99,8 @@ MongoDB - The Complete Developer’s Guide&lt;/p&gt;
 
 &lt;h3 id=&#34;sql&#34;&gt;sql&lt;/h3&gt;
 
-&lt;p&gt;&lt;a id=&#34;org745b903&#34;&gt;&lt;/a&gt;
-&lt;a id=&#34;orgfc60a47&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a id=&#34;orgf3dcea5&#34;&gt;&lt;/a&gt;
+&lt;a id=&#34;orgb956f60&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 </description>
       
     </item>
