@@ -48,6 +48,59 @@
 &lt;h2 id=&#34;mongodb学习视频&#34;&gt;mongodb学习视频&lt;/h2&gt;
 
 &lt;p&gt;MongoDB - The Complete Developer’s Guide&lt;/p&gt;
+
+&lt;h2 id=&#34;分布式&#34;&gt;分布式&lt;/h2&gt;
+
+&lt;p&gt;Distributed Systems in One Lesson&lt;/p&gt;
+
+&lt;h2 id=&#34;containers-and-go&#34;&gt;Containers and Go&lt;/h2&gt;
+
+&lt;h3 id=&#34;a-id-org65d2fdb-a&#34;&gt;&lt;a id=&#34;org65d2fdb&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;完全看过了&lt;/p&gt;
+
+&lt;h3 id=&#34;a-id-org8b5ecb8-a&#34;&gt;&lt;a id=&#34;org8b5ecb8&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;看到了Root Filesystems and Chroot with Go这一节&lt;/p&gt;
+
+&lt;h3 id=&#34;linux-namespace&#34;&gt;linux namespace&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Linux%5Fnamespaces&#34;&gt;https://en.wikipedia.org/wiki/Linux%5Fnamespaces&lt;/a&gt;
+&lt;a href=&#34;https://www.youtube.com/watch?v=0kJPa-1FuoI&#34;&gt;https://www.youtube.com/watch?v=0kJPa-1FuoI&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;docker&#34;&gt;docker&lt;/h2&gt;
+
+&lt;h3 id=&#34;a-id-org08b9fb7-a&#34;&gt;&lt;a id=&#34;org08b9fb7&#34;&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;h4 id=&#34;有字幕的地址&#34;&gt;有字幕的地址&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=zJ6WbK9zFpI&amp;amp;list=PLdi8LUz88yFX1aY1Lv1oRJJ7bzbduKdAN&amp;amp;index=2&amp;amp;t=0s&#34;&gt;https://www.youtube.com/watch?v=zJ6WbK9zFpI&amp;amp;list=PLdi8LUz88yFX1aY1Lv1oRJJ7bzbduKdAN&amp;amp;index=2&amp;amp;t=0s&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;重要的一章是介绍了docker的架构&#34;&gt;重要的一章是介绍了docker的架构&lt;/h4&gt;
+
+&lt;p&gt;docker container share the underlying kernel,详见视频第二集&lt;/p&gt;
+
+&lt;h4 id=&#34;the-main-purpose-of-docker-is-to-package-and-container-as-applications&#34;&gt;the main purpose of docker is to package and container as applications&lt;/h4&gt;
+
+&lt;p&gt;and to ship them and to run them anywhere any times as many times as you want&lt;/p&gt;
+
+&lt;h2 id=&#34;要看的视频&#34;&gt;要看的视频&lt;/h2&gt;
+
+&lt;p&gt;Docker for the Absolute Beginner - Hands-On
+&lt;a href=&#34;https://kodekloud.com/courses/docker-for-the-absolute-beginner-hands-on/lectures/4554680&#34;&gt;https://kodekloud.com/courses/docker-for-the-absolute-beginner-hands-on/lectures/4554680&lt;/a&gt;
+&lt;a href=&#34;https://www.youtube.com/watch?v=zJ6WbK9zFpI&#34;&gt;https://www.youtube.com/watch?v=zJ6WbK9zFpI&lt;/a&gt;
+&lt;a href=&#34;https://www.kodekloud.com/p/docker-labs&#34;&gt;https://www.kodekloud.com/p/docker-labs&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Kubernetes for Absolute Beginners - Hands-on
+Kubernetes Course from a DevOps guru (Kubernetes + Docker)
+Kubernetes Fundamentals
+Kubernetes in Action
+MongoDB - The Complete Developer’s Guide&lt;/p&gt;
+
+&lt;h3 id=&#34;sql&#34;&gt;sql&lt;/h3&gt;
+
+&lt;p&gt;&lt;a id=&#34;org745b903&#34;&gt;&lt;/a&gt;
+&lt;a id=&#34;orgfc60a47&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 </description>
       
     </item>
