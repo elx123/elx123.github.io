@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 人生苦短,只争朝夕</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 18 Dec 2019 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 25 Feb 2020 00:00:00 +0800</lastBuildDate>
     
 	<atom:link href="https://elx123.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>学习总结</title>
+      <link>https://elx123.github.io/post/golangrelearning/</link>
+      <pubDate>Tue, 25 Feb 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://elx123.github.io/post/golangrelearning/</guid>
+      <description>简介 自从去年开始使用golang以后,陆陆续续在不断学习(包括操作系统和其他方面),这里总结与分享下 重要的资料和知识 首先我认为最有效的学习视</description>
+    </item>
     
     <item>
       <title>如何成为一个优秀的会计</title>
@@ -18,15 +27,6 @@
       
       <guid>https://elx123.github.io/post/accountant/</guid>
       <description>正文 I wouldn&amp;rsquo;t strive to being a good accountant &amp;ndash; you need to learn how to become a great accountant. Certifications and educational background are important but those aspects aren&amp;rsquo;t going to be the reason why you graduate from accountant to senior accountant to manager, etc. I&amp;rsquo;m a specialist in financial statement preparation, so that&amp;rsquo;s what I&amp;rsquo;m going to speak to. Here are three areas that I find are</description>
-    </item>
-    
-    <item>
-      <title>golang学习总结</title>
-      <link>https://elx123.github.io/post/golangrelearning/</link>
-      <pubDate>Wed, 11 Dec 2019 00:00:00 +0800</pubDate>
-      
-      <guid>https://elx123.github.io/post/golangrelearning/</guid>
-      <description>简介 自从去年开始使用golang以后,陆陆续续在不断学习(包括操作系统和其他方面),这里总结与分享下 重要的资料和知识 首先我认为最有效的学习视</description>
     </item>
     
     <item>

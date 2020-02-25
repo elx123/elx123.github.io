@@ -3,20 +3,45 @@
   
   <url>
     <loc>https://elx123.github.io/categories/</loc>
-    <lastmod>2020-02-25T18:28:05+08:00</lastmod>
+    <lastmod>2020-02-25T18:29:58+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://elx123.github.io/post/</loc>
-    <lastmod>2020-02-25T18:28:05+08:00</lastmod>
+    <lastmod>2020-02-25T18:29:58+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://elx123.github.io/tags/</loc>
-    <lastmod>2020-02-25T18:28:05+08:00</lastmod>
+    <lastmod>2020-02-25T18:29:58+08:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://elx123.github.io/tags/golang/</loc>
+    <lastmod>2020-02-25T18:29:58+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://elx123.github.io/categories/golang/</loc>
+    <lastmod>2020-02-25T18:29:58+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://elx123.github.io/</loc>
+    <lastmod>2020-02-25T18:29:58+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://elx123.github.io/post/golangrelearning/</loc>
+    <lastmod>2020-02-25T18:29:58+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -32,33 +57,8 @@
   </url>
   
   <url>
-    <loc>https://elx123.github.io/</loc>
-    <lastmod>2020-02-25T18:28:05+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://elx123.github.io/post/accountant/</loc>
     <lastmod>2019-12-18T08:51:45+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/tags/golang/</loc>
-    <lastmod>2020-02-25T18:28:05+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/categories/golang/</loc>
-    <lastmod>2020-02-25T18:28:05+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/post/golangrelearning/</loc>
-    <lastmod>2020-02-25T18:28:05+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -324,12 +324,6 @@
   </url>
   
   <url>
-    <loc>https://elx123.github.io/posts/golangrelearning/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://elx123.github.io/posts/package/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -342,7 +336,7 @@
   </url>
   
   <url>
-    <loc>https://elx123.github.io/posts/accountant/</loc>
+    <loc>https://elx123.github.io/posts/golangrelearning/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
