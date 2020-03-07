@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>人生苦短,只争朝夕</title>
+  <title>redis/go-redis入门 - 人生苦短,只争朝夕</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -22,8 +22,9 @@
 
 <meta name="mobile-web-app-capable" content="yes">
 
-<meta name="author" content="RT" />
-  <meta name="description" content="Hugo theme jane example site." />
+<meta name="author" content="alx" />
+  <meta name="description" content="简介 最近开始研究redis 资料 视频课程Rapid redis golang下驱动https://github.com/go-redis/redis red" />
+
   <meta name="keywords" content="Hugo, theme, jane" />
 
 
@@ -34,8 +35,7 @@
 <meta name="generator" content="Hugo 0.55.6" />
 
 
-<link rel="canonical" href="https://elx123.github.io/" />
-<link href="%7balternate%20%7bRSS%20application/rss&#43;xml%20%20index%20alternate%20%20false%20false%20true%20false%20false%200%7d%20/index.xml%20https://elx123.github.io/index.xml%7d" rel="alternate" type="application/rss+xml" title="人生苦短,只争朝夕" />
+<link rel="canonical" href="https://elx123.github.io/post/redis/" />
 
 
 
@@ -57,19 +57,27 @@
 
 
 
-<meta property="og:title" content="人生苦短,只争朝夕" />
-<meta property="og:description" content="Hugo theme jane example site." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://elx123.github.io/" />
+<meta property="og:title" content="redis/go-redis入门" />
+<meta property="og:description" content="简介 最近开始研究redis 资料 视频课程Rapid redis golang下驱动https://github.com/go-redis/redis red" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://elx123.github.io/post/redis/" />
+<meta property="article:published_time" content="2020-03-08T00:00:00&#43;08:00"/>
+<meta property="article:modified_time" content="2020-03-08T04:06:43&#43;08:00"/>
 
-<meta property="og:updated_time" content="2020-03-08T00:00:00&#43;08:00"/>
+<meta itemprop="name" content="redis/go-redis入门">
+<meta itemprop="description" content="简介 最近开始研究redis 资料 视频课程Rapid redis golang下驱动https://github.com/go-redis/redis red">
 
-<meta itemprop="name" content="人生苦短,只争朝夕">
-<meta itemprop="description" content="Hugo theme jane example site.">
 
+<meta itemprop="datePublished" content="2020-03-08T00:00:00&#43;08:00" />
+<meta itemprop="dateModified" content="2020-03-08T04:06:43&#43;08:00" />
+<meta itemprop="wordCount" content="369">
+
+
+
+<meta itemprop="keywords" content="redis,golang," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="人生苦短,只争朝夕"/>
-<meta name="twitter:description" content="Hugo theme jane example site."/>
+<meta name="twitter:title" content="redis/go-redis入门"/>
+<meta name="twitter:description" content="简介 最近开始研究redis 资料 视频课程Rapid redis golang下驱动https://github.com/go-redis/redis red"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -213,7 +221,7 @@
   <ul id="menu" class="menu">
     
     
-        <li class="menu-item active">
+        <li class="menu-item">
         
           
           
@@ -278,172 +286,361 @@
     <main id="main" class="main bg-llight">
       <div class="content-wrapper">
         <div id="content" class="content container">
-          
-  <section id="posts" class="posts">
+          <article class="post bg-white">
     
-    
-    
-      <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
+    <header class="post-header">
+      <h1 class="post-title">redis/go-redis入门</h1>
       
-      <a class="post-link" href="/post/golang_json/">[转载]Golang Json库源码</a>
-    </h1>
+      <div class="post-meta">
+        <time datetime="2020-03-08" class="post-time">
+          2020-03-08
+        </time>
+        <div class="post-category">
+            <a href="https://elx123.github.io/categories/redis/"> redis </a>
+            <a href="https://elx123.github.io/categories/golang/"> golang </a>
+            
+          </div>
+        
+
+        
+        
+
+        
+        
+      </div>
+    </header>
+
     
-    <div class="post-meta">
-      <time datetime="2018-12-23" class="post-time">
-        2018-12-23
-      </time>
-      <div class="post-category">
-          <a href="https://elx123.github.io/categories/golang/"> golang </a>
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Table of Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#简介">简介</a></li>
+<li><a href="#资料">资料</a></li>
+<li><a href="#redis基础结构认识">redis基础结构认识</a>
+<ul>
+<li><a href="#key-value">key-value</a></li>
+<li><a href="#hashtable">hashTable</a>
+<ul>
+<li><a href="#hset">hset</a></li>
+<li><a href="#hget">hget</a></li>
+<li><a href="#hmset">hmset</a></li>
+<li><a href="#hgetall">hgetall</a></li>
+</ul></li>
+<li><a href="#list">list</a>
+<ul>
+<li><a href="#lpush">lpush</a></li>
+<li><a href="#rpush">rpush</a></li>
+<li><a href="#lrange-names-1-3">lrange names 1 3</a></li>
+<li><a href="#lpop">lpop</a></li>
+<li><a href="#llen">llen</a></li>
+<li><a href="#ltrim">ltrim</a></li>
+</ul></li>
+<li><a href="#set">set</a>
+<ul>
+<li><a href="#sadd">sadd</a></li>
+<li><a href="#sunion-boys-girls--并集">sunion boys girls(并集)</a></li>
+<li><a href="#sinter-boys-girls--交接">sinter boys girls(交接)</a></li>
+<li><a href="#sdiff-boys-girls">sdiff boys girls</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#golang下基础应用">golang下基础应用</a>
+<ul>
+<li><a href="#key-value-1">key-value</a>
+<ul>
+<li><a href="#set-1">set</a></li>
+<li><a href="#get">get</a></li>
+<li><a href="#del">del</a></li>
+<li><a href="#timetolive">timeToLive</a></li>
+</ul></li>
+<li><a href="#hash">Hash</a>
+<ul>
+<li><a href="#hset-1">hset</a></li>
+<li><a href="#hget-1">hget</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#list-1">List</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      
+
+<!-- more -->
+
+<h2 id="简介">简介</h2>
+
+<p>最近开始研究redis</p>
+
+<h2 id="资料">资料</h2>
+
+<p>视频课程Rapid redis <br />
+golang下驱动<a href="https://github.com/go-redis/redis">https://github.com/go-redis/redis</a></p>
+
+<h2 id="redis基础结构认识">redis基础结构认识</h2>
+
+<p>基本的概念详见Rapid redis课程complex keys <br />
+<a href="http://redisdoc.com/hash/index.html">http://redisdoc.com/hash/index.html</a>  <br /></p>
+
+<h3 id="key-value">key-value</h3>
+
+<p>首先是string类型
+例如</p>
+
+<pre><code class="language-bash">set test test
+</code></pre>
+
+<p>目前理解的是可以存binary safe strings</p>
+
+<h3 id="hashtable">hashTable</h3>
+
+<p>key: <br />
+    key1:value1 <br />
+    key2:value2 <br />
+    key3:value3 <br />
+a dictionary accessed by the top-level key <br /></p>
+
+<h4 id="hset">hset</h4>
+
+<pre><code class="language-bash">hset persons 123 Scott
+
+hset persons 234 John
+</code></pre>
+
+<h4 id="hget">hget</h4>
+
+<pre><code class="language-bash">hget persons 123
+
+hget persons 234
+
+hget persons 123 234
+</code></pre>
+
+<h4 id="hmset">hmset</h4>
+
+<pre><code class="language-bash">hmset persons 123 Jill 234 Bren
+</code></pre>
+
+<h4 id="hgetall">hgetall</h4>
+
+<pre><code class="language-bash">redis&gt; hgetall persons 123 234
+</code></pre>
+
+<h3 id="list">list</h3>
+
+<h4 id="lpush">lpush</h4>
+
+<pre><code class="language-bash">lpush names Scott
+</code></pre>
+
+<h4 id="rpush">rpush</h4>
+
+<pre><code class="language-bash">rpush names James
+</code></pre>
+
+<h4 id="lrange-names-1-3">lrange names 1 3</h4>
+
+<p>注意下标是从0开始的</p>
+
+<pre><code class="language-nil">lrange names 1 3
+</code></pre>
+
+<h4 id="lpop">lpop</h4>
+
+<pre><code class="language-bash">lpop names
+</code></pre>
+
+<h4 id="llen">llen</h4>
+
+<pre><code class="language-bash">llen names
+</code></pre>
+
+<h4 id="ltrim">ltrim</h4>
+
+<pre><code class="language-bash">ltrim names 1 2
+</code></pre>
+
+<h3 id="set">set</h3>
+
+<p>no duplicates,unordered
+set operations (insersection union)</p>
+
+<h4 id="sadd">sadd</h4>
+
+<pre><code class="language-bash">sadd boys John
+
+sadd boys Scott
+
+sadd boys Jess
+
+sadd girls Kim
+
+sadd girls Brenda
+
+sadd girls Jess
+</code></pre>
+
+<h4 id="sunion-boys-girls--并集">sunion boys girls(并集)</h4>
+
+<h4 id="sinter-boys-girls--交接">sinter boys girls(交接)</h4>
+
+<h4 id="sdiff-boys-girls">sdiff boys girls</h4>
+
+<p><a href="https://www.runoob.com/redis/sets-sdiff.html">https://www.runoob.com/redis/sets-sdiff.html</a></p>
+
+<h2 id="golang下基础应用">golang下基础应用</h2>
+
+<h3 id="key-value-1">key-value</h3>
+
+<h4 id="set-1">set</h4>
+
+<pre><code class="language-golang">err := client.Set(&quot;person:123&quot;, &quot;Scott&quot;, 0).Err()
+if err != nil {
+        panic(err)
+}
+</code></pre>
+
+<h4 id="get">get</h4>
+
+<pre><code class="language-golang">cmd := client.Get(&quot;person:123&quot;)
+result := cmd.String()
+fmt.Println(result)
+</code></pre>
+
+<h4 id="del">del</h4>
+
+<pre><code class="language-go">cmd := client.Del(&quot;list&quot;)
+   err := cmd.Err()
+   if err != nil {
+           return
+   }
+   fmt.Println(cmd.String())
+</code></pre>
+
+<h4 id="timetolive">timeToLive</h4>
+
+<pre><code class="language-golang">err := client.Set(&quot;person:123&quot;, &quot;Scott&quot;, 10*time.Second).Err()
+if err != nil {
+        panic(err)
+}
+</code></pre>
+
+<h3 id="hash">Hash</h3>
+
+<h4 id="hset-1">hset</h4>
+
+<pre><code class="language-go">err := client.HSet(&quot;persons&quot;, &quot;123&quot;, &quot;Scott&quot;).Err()
+if err != nil {
+        panic(err)
+}
+</code></pre>
+
+<h4 id="hget-1">hget</h4>
+
+<pre><code class="language-go">cmd := client.HGet(&quot;persons&quot;, &quot;123&quot;)
+result := cmd.String()
+fmt.Println(result)
+</code></pre>
+
+<h2 id="list-1">List</h2>
+
+<ul>
+<li><p>lpush</p>
+
+<pre><code class="language-go">cmd := client.LPush(&quot;names&quot;, &quot;John&quot;)
+result := cmd.String()
+fmt.Println(result)
+</code></pre></li>
+</ul>
+
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">alx</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">2020-03-08</span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          <a href="https://elx123.github.io/tags/redis/">redis</a>
+          <a href="https://elx123.github.io/tags/golang/">golang</a>
           
         </div>
+
       
-      
-      
+      <nav class="post-nav">
+        
+        
+          <a class="next" href="/post/golangrelearning/">
+            <span class="next-text nav-default">学习总结</span>
+            <span class="prev-text nav-mobile">Next</span>
+            
+            <i class="iconfont">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+</svg>
+
+            </i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+    <div class="post bg-white">
+      <script src="https://utteranc.es/client.js"
+            repo= "elx123/commentSave"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+      </script>
     </div>
-  </header>
   
-  <div class="post-content">
-    
-    <div class="post-summary">
-      简介 最近发现一篇关于golang原生Json库的文章,转载过来 https://zhuanlan.zhihu.com/p/37165706 介绍 encoding/json库的意义相对其他语言来说在Golang中尤其重
-    </div>
-    <div class="read-more">
-      <a href="/post/golang_json/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
+
+  
+
+  
+
+  
 
     
-      <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/tcp_subcontracting/">Tcp分包</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2018-10-25" class="post-time">
-        2018-10-25
-      </time>
-      <div class="post-category">
-          <a href="https://elx123.github.io/categories/golang/"> golang </a>
-          <a href="https://elx123.github.io/categories/tcp/"> Tcp </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      简介 如今的游戏服务器框架都会涉及到Tcp分包,今天记录下自己的心得 问题描述 Tcp长连接,通过分包解决粘包问题 解法一(peek方式) 大体思路:
-    </div>
-    <div class="read-more">
-      <a href="/post/tcp_subcontracting/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-    
-      <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/package/">go包管理器</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2018-10-25" class="post-time">
-        2018-10-25
-      </time>
-      <div class="post-category">
-          <a href="https://elx123.github.io/categories/golang/"> golang </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      简介 分别记录下glide和dep的使用心得 问题描述 如果公司存在多个版本库,那么控制第三方包的版本能有效降低风险 使用心得 glide glide.yaml
-    </div>
-    <div class="read-more">
-      <a href="/post/package/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-    
-  </section>
-
-  
-  
-
-
-
-  
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-  <nav class="pagination">
-    <ul>
-      
-      <li >
-        <a href="/">1</a>
-      </li>
-      
-      <li >
-        <a href="/page/2/">2</a>
-      </li>
-      
-      <li  class="active" >
-        <a href="/page/3/">3</a>
-      </li>
-      
-      <li >
-        <a href="/page/4/">4</a>
-      </li>
-      
-      <li >
-        <a href="/page/5/">5</a>
-      </li>
-      
-      <li >
-        <a href="/page/6/">6</a>
-      </li>
-      
-    </ul>
-  </nav>
-
-  
-  
-
-
-
-
 
         </div>
       </div>
