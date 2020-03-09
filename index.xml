@@ -6,10 +6,51 @@
     <description>Recent content on 人生苦短,只争朝夕</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 08 Mar 2020 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 10 Mar 2020 00:00:00 +0800</lastBuildDate>
     
         <atom:link href="https://elx123.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>windows内核以及驱动</title>
+      <link>https://elx123.github.io/post/windows/</link>
+      <pubDate>Tue, 10 Mar 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://elx123.github.io/post/windows/</guid>
+      
+        <description>
+
+&lt;!-- more --&gt;
+
+&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
+
+&lt;p&gt;之前一段时间一直在研究windows相关的技术(驱动,kernel mode debug,user mode debug) &lt;br /&gt;
+接下来一段时间我会慢慢记录下之前一些书籍和资料&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>gpc learning</title>
+      <link>https://elx123.github.io/post/rpclearning/</link>
+      <pubDate>Sun, 08 Mar 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://elx123.github.io/post/rpclearning/</guid>
+      
+        <description>
+
+&lt;!-- more --&gt;
+
+&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
+
+&lt;p&gt;grpc 学习记录&lt;/p&gt;
+
+&lt;h2 id=&#34;学习视频&#34;&gt;学习视频&lt;/h2&gt;
+
+&lt;p&gt;Master Class: Build Modern API and Microservices&lt;/p&gt;
+</description>
+      
+    </item>
     
     <item>
       <title>redis/go-redis入门</title>
@@ -2526,162 +2567,6 @@ EXCEPTION_STACK_OVERFLOW                   0xC00000FD     栈溢出时引发该�
   #+end_src
   异常处理函数的第三个参数是指向CONTEXT结构体的指针，CONTEXT结构体的定义如下，   CONTEXT结构体用来备份CPU的值。 
 &lt;s&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://elx123.github.io/posts/anticheatone/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://elx123.github.io/posts/anticheatone/</guid>
-      
-        <description>&lt;h1 id=&#34;转载自&#34;&gt;转载自&lt;/h1&gt;
-
-&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
-
-&lt;h1 id=&#34;注入姿势&#34;&gt;注入姿势&lt;/h1&gt;
-
-&lt;h1 id=&#34;处理检测call&#34;&gt;处理检测CALL&lt;/h1&gt;
-
-&lt;ul&gt;
-https://bbs.pediy.com/thread-249303.htm
-&lt;li&gt;1.稳定注入姿势&lt;/li&gt;
-&lt;li&gt;2.处理TenRpcs检测CLL&lt;/li&gt;
-&lt;li&gt;3.处理TCJ&lt;/li&gt;
-&lt;li&gt;4.探测GameRpcs&lt;/li&gt;
-笔者最近迷上LOL，中低分段总是有脚本，被虐的很惨
-然后笔者去市场上买来几款外挂，配合防封，然后小逆了一下，发现市场上的防封软件大多是通对游戏 
-LoadLibraryExW 挂钩子，让某些检测模块不加载，在这种情况下，阻断了通讯，这样可以稳定的玩游戏5局左右，
-之后就会封7天或者三年，如果处理了TenRpcs里的检测CALL（技能释放一类的）就是7天，如果没有处理就是3年，
-然后经过笔者多处咨询，发现市面上没有能稳超过10把的防封，于是笔者想看看TP到底是什么手段检测的，于是我与LOL迂回了半月之久，
-废话不多说，进入正题
-笔者采用 MDL内存映射形式向游戏进程写入了我的DLLShellCode ，用 NtCreateThreadEx 创建远程线程，游戏未发现，目前这个注入姿势是稳定的
-笔者在游戏主模块处发现游戏挂了70个钩子指向TenRpcs.dll，不解释，盘他
-&lt;/ul&gt;
-
-&lt;p&gt;BOOL RecoveryCode(ULONG32 地址, BYTE* 字节)
-{
-    BYTE 判断 = { NULL };
-    DWORD 基址 = 0x400000;
-    DWORD 修改前的页面保护属性 = NULL;&lt;/p&gt;
-
-&lt;p&gt;RtlCopyMemory(&amp;判断, LPVOID(基址 + 地址), 1);&lt;/p&gt;
-
-&lt;p&gt;if (判断 != 0xE8)
-    {
-        全局变量::当前大区未开放检测数++;
-        return FALSE;
-    }&lt;/p&gt;
-
-&lt;p&gt;if (VirtualProtect(LPVOID(基址 + 地址), 5, PAGE_EXECUTE_READWRITE, &amp;修改前的页面保护属性))
-    {
-        RtlCopyMemory(LPVOID(基址 + 地址), 字节, 5);
-        if (VirtualProtect(LPVOID(基址 + 地址), 5, PAGE_EXECUTE, &amp;修改前的页面保护属性))
-        {
-            全局变量::处理检测成功次数++; //std::cout &lt;&lt; &#34;√ &#34; &lt;&lt; hex &lt;&lt; 基址 + 地址 &lt;&lt; std::endl;
-            return TRUE;
-        }
-    }&lt;/p&gt;
-
-&lt;p&gt;全局变量::处理检测失败次数++; //std::cout &lt;&lt; &#34;X &#34; &lt;&lt; hex &lt;&lt; GetLastError() &lt;&lt; std::endl;&lt;/p&gt;
-
-&lt;p&gt;return FALSE;
-}&lt;/p&gt;
-
-&lt;p&gt;VOID 处理检测()
-{
-    LPVOID 内存地址 = NULL;
-    DWORD 函数地址 = NULL;
-    DWORD 模块句柄 = NULL;
-    DWORD 修改前的页面保护属性 = NULL;&lt;/p&gt;
-
-&lt;p&gt;do 
-    {
-        窗口句柄::游戏窗口句柄 = FindWindow(&#34;RiotWindowClass&#34;, NULL);
-    } while (!窗口句柄::游戏窗口句柄);&lt;/p&gt;
-
-&lt;p&gt;///此处过检测代码由于危害腾讯安全给告知于19.02.05 21:30分删除此部分代码&lt;/p&gt;
-
-&lt;p&gt;string Message = &#34;处理失败 &#34; + to_string(全局变量::处理检测失败次数) + &#34; 个检测点\n成功处理 &#34; + to_string(全局变量::处理检测成功次数) + &#34; 个检测点\n当前大区未开放的检测点有 &#34; + to_string(全局变量::当前大区未开放检测数) + &#34; 个\n\n是否继续游戏???&#34;;&lt;/p&gt;
-
-&lt;p&gt;if (MessageBox(窗口句柄::游戏窗口句柄, Message.c_str(), &#34;&#34;, MB_ICONQUESTION | MB_YESNO | MB_TOPMOST) != IDYES)
-        exit(0);
-}&lt;/p&gt;
-
-&lt;p&gt;到这里的时候，笔者进行了游戏，发现封三年，于是笔者不开挂，只干检测一样被封三年，说明了什么&lt;/p&gt;
-
-&lt;p&gt;对！没错 CRC！不得不过 TP 检测系统的CRC有漏洞，过CRC代码如下，你会惊呆的&lt;/p&gt;
-
-&lt;p&gt;VirtualProtect(LPVOID(0x401000), 0x1028000, PAGE_EXECUTE, &amp;修改前的页面保护属性)&lt;/p&gt;
-
-&lt;p&gt;哈哈，就是这么简单！这个为什么！咱就不多解释了，不是傻瓜都看得懂原理，我直接贴代码通俗易懂！&lt;/p&gt;
-
-&lt;p&gt;通过以上小操作后，单挂我自己的防封没有三年了，然后开始下一项工作，TCJ！&lt;/p&gt;
-
-&lt;p&gt;TCJ是干嘛的？在这里我科普一下，他会 EnumWindowProc 枚举你所有窗口，OpenProcess ReadFile... 太多了&lt;/p&gt;
-
-&lt;p&gt;总是TCJ负责一些外部检测以及内部检测，包括你注入的DLL文件，MD5哈希，窗口标题，类名，PE头，等等 .. 太多了&lt;/p&gt;
-
-&lt;p&gt;所以，想要完全达到防封状态，只干掉检测CALL还不行，必须要处理TCJ&lt;/p&gt;
-
-&lt;p&gt;于是我模仿了市场外挂 向 LoadLibraryExW 挂钩子，让TCJ在加载列表里消失，游戏不加载TCJ了，进入游戏爽&lt;/p&gt;
-
-&lt;p&gt;但是没爽多久5分钟后游戏弹出错误窗口，强制关闭，于是笔者调试跟踪到执行退出函数的点，发现在GameRpcs里，哇，还有这个东西，我都没注意！&lt;/p&gt;
-
-&lt;p&gt;于是分析了一下，这个GameRpcs非常不起眼，但是他起到重要的作用，他负责与TCJ和TenRpcs通讯！如果其中有一个模块有异常，他就会强制关闭游戏（本地命令）不是来自服务器的断开链接！而且通过笔者的CE遍历，遍历到了GameRpcs还会收集对局信息，包括当前玩家按下执行右键命令次数，玩家按下技能右键次数，等等信息，大家可以通过CE去搜索增加的值就可以，说到这里，我感觉这个检测系统好强大，收集这些数据是这是要人工分析吗??&lt;/p&gt;
-
-&lt;p&gt;笔者后续再写是怎么过的GameRpcs，先去看春晚了，大家新年快乐！&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://elx123.github.io/posts/anticheatthree/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://elx123.github.io/posts/anticheatthree/</guid>
-      
-        <description>&lt;h1 id=&#34;转载自&#34;&gt;转载自&lt;/h1&gt;
-
-&lt;h1 id=&#34;正文&#34;&gt;正文&lt;/h1&gt;
-
-&lt;p&gt;https://bbs.pediy.com/thread-249348.htm
-代码段没法发了，因为里面有别人的东西（发了之后避免不了一些不法分子会利用，所以这里只分享处理检测流程和思路）
-目前整体已经完善好了，写这个帖子不是教大家怎样去过检测写外挂，而是教大家一些好的思路
-核心代码执行流程&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;./../resources/_gen/images/773537_RAQZDR5XER968YT.png&#34; title=&#34;./../resources/_gen/images/773537_RAQZDR5XER968YT.png&#34;&gt;./../resources/_gen/images/773537_RAQZDR5XER968YT.png&lt;/a&gt;\\&lt;/p&gt;
-
-&lt;p&gt;1.过机器码: 目前2种办法，一种替换DLL，另一种是让返回值随机，因为我总调试游戏
-我直接替换了DLL因为有时候进游戏没加载我忘记加载我的DLL，就完蛋了，如果不商业的话，建议用替换DLL方法，放到Game目录即可，DLL在附件中&lt;/p&gt;
-
-&lt;p&gt;2.处理游戏检测CALL，例如释放技能，走路，等等，已经定位了几个重要的检测CALL，处理后发现还有很多检测CALL，但是不知道再检测什么东西，所以全盘了，如果出问题再注释，也方便，这个在第一篇说过了，这里不再细说&lt;/p&gt;
-
-&lt;p&gt;3.处理GameRpcs的CRC，处理CRC的思路也很多，这里我用的是转移大法，然后再创建一个线程循环清除GameRpcs记录的数据信息&lt;/p&gt;
-
-&lt;p&gt;VOID 清除记录()
-{
-    DWORD 计次变量 = 0;&lt;/p&gt;
-
-&lt;p&gt;while (GameRpcsBase)
-    {
-        Sleep(10000);
-        RtlCopyMemory(LPVOID(GameRpcsBase + 0x1713A4), &amp;计次变量, sizeof(DWORD));//时间计时
-        RtlCopyMemory(LPVOID(GameRpcsBase + 0x17141C), &amp;计次变量, sizeof(DWORD));//鼠标计次
-        RtlCopyMemory(LPVOID(GameRpcsBase + 0x171424), &amp;计次变量, sizeof(DWORD));//键盘计次
-        计次变量++;
-    }
-}&lt;/p&gt;
-
-&lt;p&gt;TCJ（可以不清Buffer，直接改Buffer指向一片干净的内存区域）
-监视TCJ读了哪块内存，HOOK，如果当前读内存的地址 大于 你要保护的模块地址 或 小于 你要保护的模块地址 + 模块大小，则清空他的Buffer&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;./../resources/_gen/images/773537_FM6G9UZG9BDU5PM.png&#34; title=&#34;./../resources/_gen/images/773537_FM6G9UZG9BDU5PM.png&#34;&gt;./../resources/_gen/images/773537_FM6G9UZG9BDU5PM.png&lt;/a&gt;\\
-&lt;a href=&#34;./../resources/_gen/images/773537_8ARV4MU47ZMBT3X.png&#34; title=&#34;./../resources/_gen/images/773537_8ARV4MU47ZMBT3X.png&#34;&gt;./../resources/_gen/images/773537_8ARV4MU47ZMBT3X.png&lt;/a&gt;\\
-&lt;a href=&#34;./../resources/_gen/images/773537_QQBQGQAARDDN7A9.jpg&#34; title=&#34;./../resources/_gen/images/773537_QQBQGQAARDDN7A9.jpg&#34;&gt;./../resources/_gen/images/773537_QQBQGQAARDDN7A9.jpg&lt;/a&gt;\\&lt;/p&gt;
 </description>
       
     </item>

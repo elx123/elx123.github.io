@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>人生苦短,只争朝夕</title>
+  <title>windows内核以及驱动 - 人生苦短,只争朝夕</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -23,7 +23,8 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="RT" />
-  <meta name="description" content="Hugo theme jane example site." />
+  <meta name="description" content="简介 之前一段时间一直在研究windows相关的技术(驱动,kernel mode debug,user mode debug) \\ 接下来一段时间我会慢慢记录下之前一些书籍和资料" />
+
   <meta name="keywords" content="Hugo, theme, jane" />
 
 
@@ -34,8 +35,7 @@
 <meta name="generator" content="Hugo 0.55.6" />
 
 
-<link rel="canonical" href="https://elx123.github.io/" />
-<link href="%7balternate%20%7bRSS%20application/rss&#43;xml%20%20index%20alternate%20%20false%20false%20true%20false%20false%200%7d%20/index.xml%20https://elx123.github.io/index.xml%7d" rel="alternate" type="application/rss+xml" title="人生苦短,只争朝夕" />
+<link rel="canonical" href="https://elx123.github.io/posts/windows/" />
 
 
 
@@ -57,19 +57,25 @@
 
 
 
-<meta property="og:title" content="人生苦短,只争朝夕" />
-<meta property="og:description" content="Hugo theme jane example site." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://elx123.github.io/" />
+<meta property="og:title" content="windows内核以及驱动" />
+<meta property="og:description" content="简介 之前一段时间一直在研究windows相关的技术(驱动,kernel mode debug,user mode debug) \\ 接下来一段时间我会慢慢记录下之前一些书籍和资料" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://elx123.github.io/posts/windows/" />
 
-<meta property="og:updated_time" content="2020-03-10T00:00:00&#43;08:00"/>
 
-<meta itemprop="name" content="人生苦短,只争朝夕">
-<meta itemprop="description" content="Hugo theme jane example site.">
+<meta itemprop="name" content="windows内核以及驱动">
+<meta itemprop="description" content="简介 之前一段时间一直在研究windows相关的技术(驱动,kernel mode debug,user mode debug) \\ 接下来一段时间我会慢慢记录下之前一些书籍和资料">
 
+
+
+<meta itemprop="wordCount" content="63">
+
+
+
+<meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="人生苦短,只争朝夕"/>
-<meta name="twitter:description" content="Hugo theme jane example site."/>
+<meta name="twitter:title" content="windows内核以及驱动"/>
+<meta name="twitter:description" content="简介 之前一段时间一直在研究windows相关的技术(驱动,kernel mode debug,user mode debug) \\ 接下来一段时间我会慢慢记录下之前一些书籍和资料"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -213,7 +219,7 @@
   <ul id="menu" class="menu">
     
     
-        <li class="menu-item active">
+        <li class="menu-item">
         
           
           
@@ -278,171 +284,84 @@
     <main id="main" class="main bg-llight">
       <div class="content-wrapper">
         <div id="content" class="content container">
-          
-  <section id="posts" class="posts">
-    
-    
-    
-      <article class="post bg-white">
+          <article class="post bg-white">
+  
   <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/golangrelearning/">学习总结</a>
-    </h1>
+    <h1 class="post-title">windows内核以及驱动</h1>
     
     <div class="post-meta">
-      <time datetime="2020-02-25" class="post-time">
-        2020-02-25
+      <time datetime="0001-01-01" class="post-time">
+        0001-01-01
       </time>
-      <div class="post-category">
-          <a href="https://elx123.github.io/categories/golang/"> golang </a>
-          
-        </div>
-      
-      
-      
     </div>
   </header>
+
   
-  <div class="post-content">
-    
-    <div class="post-summary">
-      简介 自从去年开始使用golang以后,陆陆续续在不断学习(包括操作系统和其他方面),这里总结与分享下 重要的资料和知识 首先我认为最有效的学习视
-    </div>
-    <div class="read-more">
-      <a href="/post/golangrelearning/" class="read-more-link">Read more</a>
-    </div>
+  
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Table of Contents</h2>
+  <div class="post-toc-content">
     
   </div>
-</article>
+</div>
 
-    
-      <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/cpu/">转载一篇关于cpu如何运作的文章</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2019-07-08" class="post-time">
-        2019-07-08
-      </time>
-      <div class="post-category">
-          <a href="https://elx123.github.io/categories/cpu/"> cpu </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
   
   <div class="post-content">
-    
-    <div class="post-summary">
-      地址 https://hackernoon.com/how-does-a-cpu-work-af3488d182a2
-    </div>
-    <div class="read-more">
-      <a href="/post/cpu/" class="read-more-link">Read more</a>
-    </div>
-    
+      <h1 id="简介">简介</h1>
+
+<p>之前一段时间一直在研究windows相关的技术(驱动,kernel mode debug,user mode debug) \\
+接下来一段时间我会慢慢记录下之前一些书籍和资料</p>
+
   </div>
+
+  
+  
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">RT</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">0001-01-01</span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+
+  
+  
 </article>
 
-    
-      <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/golang_sort/">Golang Sort</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2019-01-14" class="post-time">
-        2019-01-14
-      </time>
-      <div class="post-category">
-          <a href="https://elx123.github.io/categories/golang/"> golang </a>
-          
-        </div>
-      
-      
-      
+
+
+
+  
+
+  
+  
+    <div class="post bg-white">
+      <script src="https://utteranc.es/client.js"
+            repo= "elx123/commentSave"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+      </script>
     </div>
-  </header>
   
-  <div class="post-content">
-    
-    <div class="post-summary">
-      简介 在实际项目中用到对结构按结构体中的某个字段进行排序，记录下使用心得 示例 首先定义数据结构，为了能清楚说明问题，只给两个字段。 type User struct { Name string Score
-    </div>
-    <div class="read-more">
-      <a href="/post/golang_sort/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
+
+  
+
+  
+
+  
 
     
-  </section>
-
-  
-  
-
-
-
-  
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-  <nav class="pagination">
-    <ul>
-      
-      <li >
-        <a href="/">1</a>
-      </li>
-      
-      <li  class="active" >
-        <a href="/page/2/">2</a>
-      </li>
-      
-      <li >
-        <a href="/page/3/">3</a>
-      </li>
-      
-      <li >
-        <a href="/page/4/">4</a>
-      </li>
-      
-      <li >
-        <a href="/page/5/">5</a>
-      </li>
-      
-      <li >
-        <a href="/page/6/">6</a>
-      </li>
-      
-    </ul>
-  </nav>
-
-  
-  
-
-
-
-
 
         </div>
       </div>

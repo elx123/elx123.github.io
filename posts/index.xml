@@ -155,6 +155,15 @@
     </item>
     
     <item>
+      <title>gpc learning</title>
+      <link>https://elx123.github.io/posts/rpclearning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elx123.github.io/posts/rpclearning/</guid>
+      <description>简介 学习视频 grpc 学习记录 Master Class: Build Modern API and Microservices</description>
+    </item>
+    
+    <item>
       <title>redis/go-redis入门</title>
       <link>https://elx123.github.io/posts/redis/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -164,30 +173,21 @@
     </item>
     
     <item>
+      <title>windows内核以及驱动</title>
+      <link>https://elx123.github.io/posts/windows/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://elx123.github.io/posts/windows/</guid>
+      <description>简介 之前一段时间一直在研究windows相关的技术(驱动,kernel mode debug,user mode debug) \\ 接下来一段时间我会慢慢记录下之前一些书籍和资料</description>
+    </item>
+    
+    <item>
       <title>优先队列</title>
       <link>https://elx123.github.io/posts/priorityqueue/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://elx123.github.io/posts/priorityqueue/</guid>
       <description>简介 实现方式 堆 实现 最近在多个框架中遇到优先队列,在这里记录下原理 目前只知道顺序数组可以用来作为heap底层结构,以实现优先队列 // An Item is something we manage</description>
-    </item>
-    
-    <item>
-      <title>学习总结</title>
-      <link>https://elx123.github.io/posts/golangrelearning/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://elx123.github.io/posts/golangrelearning/</guid>
-      <description>简介 首先我认为最有效的学习视频 配套的学习资料 scheduling-in-go go walthrough a few packages mongodb学习视频 分布式 Containers and Go How to containerize your go code Building Containers from Scratch with Go linux namespace docker Docker for the Absolute Beginner - Hands-On 有字幕</description>
-    </item>
-    
-    <item>
-      <title>工作3年经验总结</title>
-      <link>https://elx123.github.io/posts/%E6%80%BB%E7%BB%93/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://elx123.github.io/posts/%E6%80%BB%E7%BB%93/</guid>
-      <description>简介 内容 记录下自己在it行业工作3年的经验 不要老想着去什么什么公司就能增涨技术,增涨经验,如今互联网如此发达,只要有时间有一台电脑,没有什么</description>
     </item>
     
   </channel>

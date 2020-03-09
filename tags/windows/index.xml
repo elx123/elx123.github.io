@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>windows on 人生苦短,只争朝夕</title>
+    <link>https://elx123.github.io/tags/windows/</link>
+    <description>Recent content in windows on 人生苦短,只争朝夕</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 10 Mar 2020 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://elx123.github.io/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>windows内核以及驱动</title>
+      <link>https://elx123.github.io/post/windows/</link>
+      <pubDate>Tue, 10 Mar 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://elx123.github.io/post/windows/</guid>
+      <description>简介 之前一段时间一直在研究windows相关的技术(驱动,kernel mode debug,user mode debug) 接下来一段时间我会慢慢记录下之前一些书籍和资料</description>
+    </item>
+    
+  </channel>
+</rss>

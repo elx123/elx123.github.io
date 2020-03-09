@@ -6,10 +6,28 @@
     <description>Recent content in Posts on 人生苦短,只争朝夕</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 08 Mar 2020 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 10 Mar 2020 00:00:00 +0800</lastBuildDate>
     
 	<atom:link href="https://elx123.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>windows内核以及驱动</title>
+      <link>https://elx123.github.io/post/windows/</link>
+      <pubDate>Tue, 10 Mar 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://elx123.github.io/post/windows/</guid>
+      <description>简介 之前一段时间一直在研究windows相关的技术(驱动,kernel mode debug,user mode debug) 接下来一段时间我会慢慢记录下之前一些书籍和资料</description>
+    </item>
+    
+    <item>
+      <title>gpc learning</title>
+      <link>https://elx123.github.io/post/rpclearning/</link>
+      <pubDate>Sun, 08 Mar 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://elx123.github.io/post/rpclearning/</guid>
+      <description>简介 grpc 学习记录 学习视频 Master Class: Build Modern API and Microservices</description>
+    </item>
     
     <item>
       <title>redis/go-redis入门</title>

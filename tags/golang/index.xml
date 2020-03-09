@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>gpc learning</title>
+      <link>https://elx123.github.io/post/rpclearning/</link>
+      <pubDate>Sun, 08 Mar 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://elx123.github.io/post/rpclearning/</guid>
+      <description>简介 grpc 学习记录 学习视频 Master Class: Build Modern API and Microservices</description>
+    </item>
+    
+    <item>
       <title>redis/go-redis入门</title>
       <link>https://elx123.github.io/post/redis/</link>
       <pubDate>Sun, 08 Mar 2020 00:00:00 +0800</pubDate>
