@@ -31,6 +31,34 @@
     </item>
     
     <item>
+      <title>游戏服务器架构篇</title>
+      <link>https://elx123.github.io/post/game/</link>
+      <pubDate>Tue, 10 Mar 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://elx123.github.io/post/game/</guid>
+      
+        <description>
+
+&lt;!-- more --&gt;
+
+&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
+
+&lt;p&gt;github上有诸多开源的游戏服务器,这里开一篇研究下,以便日后使用 &lt;br /&gt;
+自己有过研究的有leaf,最近打算深入研究下pitaya&lt;/p&gt;
+
+&lt;h2 id=&#34;理论&#34;&gt;理论&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.infoq.cn/article/a-brief-history-of-the-game-server-architecture&#34;&gt;https://www.infoq.cn/article/a-brief-history-of-the-game-server-architecture&lt;/a&gt;
+&lt;a href=&#34;https://www.imooc.com/wenda/detail/460664&#34;&gt;https://www.imooc.com/wenda/detail/460664&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;总览&#34;&gt;总览&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://studygolang.com/topics/10363&#34;&gt;https://studygolang.com/topics/10363&lt;/a&gt;&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>gpc learning</title>
       <link>https://elx123.github.io/post/rpclearning/</link>
       <pubDate>Sun, 08 Mar 2020 00:00:00 +0800</pubDate>
@@ -264,8 +292,8 @@ fmt.Println(result)
 
 &lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
 
-&lt;p&gt;自从去年开始使用golang以后,陆陆续续在不断学习(包括操作系统和其他方面),这里总结与分享下
-重要的资料和知识&lt;/p&gt;
+&lt;p&gt;自从去年开始使用golang以后,陆陆续续在不断学习(包括操作系统和其他方面),这里总结与分享下重要的资料和知识 &lt;br /&gt;
+所有视频资料都在oreilly找的到&lt;/p&gt;
 
 &lt;h2 id=&#34;首先我认为最有效的学习视频&#34;&gt;首先我认为最有效的学习视频&lt;/h2&gt;
 
@@ -332,10 +360,19 @@ fmt.Println(result)
 
 &lt;p&gt;back-end web development using go&lt;/p&gt;
 
+&lt;h2 id=&#34;go-network&#34;&gt;go network&lt;/h2&gt;
+
+&lt;p&gt;Network programming with go&lt;/p&gt;
+
 &lt;h2 id=&#34;redis&#34;&gt;redis&lt;/h2&gt;
 
-&lt;p&gt;Rapid redis
-Learning Redis&lt;/p&gt;
+&lt;h3 id=&#34;rapid-redis&#34;&gt;Rapid redis&lt;/h3&gt;
+
+&lt;p&gt;基础命令&lt;/p&gt;
+
+&lt;h3 id=&#34;learning-redis&#34;&gt;Learning Redis&lt;/h3&gt;
+
+&lt;p&gt;基础应用&lt;/p&gt;
 
 &lt;h2 id=&#34;要看的视频&#34;&gt;要看的视频&lt;/h2&gt;
 
@@ -2471,102 +2508,6 @@ Threads fairness:
 &lt;h3 id=&#34;参考资料&#34;&gt;参考资料&lt;/h3&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://severalnines.com/blog/how-benchmark-performance-mysql-mariadb-using-sysbench&#34;&gt;https://severalnines.com/blog/how-benchmark-performance-mysql-mariadb-using-sysbench&lt;/a&gt;&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://elx123.github.io/posts/seh/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://elx123.github.io/posts/seh/</guid>
-      
-        <description>&lt;h1 id=&#34;seh&#34;&gt;SEH&lt;/h1&gt;
-
-&lt;h1 id=&#34;os异常处理的办法&#34;&gt;OS异常处理的办法&lt;/h1&gt;
-
-&lt;h1 id=&#34;异常&#34;&gt;异常&lt;/h1&gt;
-
-&lt;h1 id=&#34;seh详细说明&#34;&gt;SEH详细说明&lt;/h1&gt;
-
-&lt;p&gt;SEH是window操作系统默认的异常处理机制，逆向分析中，SEH除了基本的异常处理功能外，还大量用于反调试程序（这里SEH时保存在栈中的，漏洞利用的时候会用到）
-SEH是windows操作系统异常处理机制，在程序源代码中使用__try,__except,__finally关键字来具体实现。
-  2.1正常运行时候的异常处理方法
-     进程运行过程中若发生异常，OS会委托进程进行处理。若进程代码中存在具体的异常处理（如SEH异常处理器）代码，则能够顺利处理相关异常，程序继续运行，但如果进程内部没有具体实现SEH，那么相关异常就无法处理，OS就会启动默认的异常处理机制，终止进程运行
-  2.2 调试运行时的异常处理方法
-     被调试的进程内部发生异常，OS会首先把异常抛给调试进程处理。调器拥有被调试者的所有权限。被调试者内部发生的异常都由调试器处理。调试过程中的所有异常都先由调试器管理。被调试者发生异常时，调试器会停止运行，必须采取相应的措施来处理异常，完成后续的调试。遇到异常的时候的处理方法如下。
-     1）直接修改异常：代码、寄存器、内存
-     2）将异常泡杯被调试程序，使用od的shift+f7/f8/f9直接将异常抛还给被调试者
-     3）OS默认异常处理机制
-  操作系统中常见的异常
-     #+begin_src c++
-EXCEPTION_ACCESS_VIOLATION     0xC0000005     程序企图读写一个不可访问的地址时引发的异常。例如企图读取0地址处的内存。
-EXCEPTION_ARRAY_BOUNDS_EXCEEDED    0xC000008C     数组访问越界时引发的异常。
-EXCEPTION_BREAKPOINT                           0x80000003     触发断点时引发的异常。
-EXCEPTION_DATATYPE_MISALIGNMENT    0x80000002     程序读取一个未经对齐的数据时引发的异常。
-EXCEPTION_FLT_DENORMAL_OPERAND     0xC000008D     如果浮点数操作的操作数是非正常的，则引发该异常。所谓非正常，即它的值太小以至于不能用标准格式表示出来。
-EXCEPTION_FLT_DIVIDE_BY_ZERO                   0xC000008E     浮点数除法的除数是0时引发该异常。
-EXCEPTION_FLT_INEXACT_RESULT           0xC000008F     浮点数操作的结果不能精确表示成小数时引发该异常。
-EXCEPTION_FLT_INVALID_OPERATION            0xC0000090     该异常表示不包括在这个表内的其它浮点数异常。
-EXCEPTION_FLT_OVERFLOW                             0xC0000091     浮点数的指数超过所能表示的最大值时引发该异常。
-EXCEPTION_FLT_STACK_CHECK                  0xC0000092     进行浮点数运算时栈发生溢出或下溢时引发该异常。
-EXCEPTION_FLT_UNDERFLOW                    0xC0000093     浮点数的指数小于所能表示的最小值时引发该异常。
-EXCEPTION_ILLEGAL_INSTRUCTION          0xC000001D     程序企图执行一个无效的指令时引发该异常。
-EXCEPTION_IN_PAGE_ERROR                        0xC0000006     程序要访问的内存页不在物理内存中时引发的异常。
-EXCEPTION_INT_DIVIDE_BY_ZERO                   0xC0000094     整数除法的除数是0时引发该异常。
-EXCEPTION_INT_OVERFLOW                             0xC0000095     整数操作的结果溢出时引发该异常。
-EXCEPTION_INVALID_DISPOSITION                  0xC0000026     异常处理器返回一个无效的处理的时引发该异常。
-EXCEPTION_NONCONTINUABLE_EXCEPTION     0xC0000025     发生一个不可继续执行的异常时，如果程序继续执行，则会引发该异常。
-EXCEPTION_PRIV_INSTRUCTION                     0xC0000096     程序企图执行一条当前CPU模式不允许的指令时引发该异常。
-EXCEPTION_SINGLE_STEP                          0x80000004     标志寄存器的TF位为1时，每执行一条指令就会引发该异常。主要用于单步调试。
-EXCEPTION_STACK_OVERFLOW                   0xC00000FD     栈溢出时引发该异常。
-     #+end_src
-  调试的时候经常触发5中最具代表性的异常
-  3.1  EXCEPTION_ACCESS_VIOLATION     0xC0000005    
-  程序企图读写一个不可访问的地址时引发的异常（不存在，或者不具有访问权限）。例如企图读取0地址处的内存。
-  3.2EXCEPTION_BREAKPOINT  0x80000003  
-  触发断点时引发的异常。在运行的代码中设置断点以后，cpu尝试执行该处的指令时将触发队形的EXCEPTION_BREAKPOINT异常
-  INT3,设置断点对应的汇编指令为INT3,对应的机器指令为0xCC.灵活运用这个原理可以为程序运行带来很大的便利。比如使用hex editor打开PE文件，修改EP地址对应的文件偏移处的第一个字节为0xCC,然后运行该PE文件就会发生EXCEPTION_BREAKPOINT异常，经过OS的默认异常处理后会终止程序运行，若在操作系统的注册表中将默认调试器设置为OllyDbg，那么发生以上异常时OS会自动运行ollydbg调试器，附加发生异常的进程
-  3.3EXCEPTION_ILLEGAL_INSTRUCTION  0xC000001D 
-  程序企图执行一个无效的指令时引发该异常。
-  3.4EXCEPTION_INT_DIVIDE_BY_ZERO   0xC0000094   
-  整数除法的除数是0时引发该异常。
-  3.5EXCEPTION_SINGLE_STEP   0x80000004    
-  标志寄存器的TF位为1时，每执行一条指令就会引发该异常。主要用于单步调试。
-  4.1 SEH链
-  SEH以链的形式存在。第一个异常处理中未处理相关异常，它就会被传递到下一个异常处理器，直到得到处理。SEH是由_EXCEPTION_REGISTRATION_RECORD结构体组成的链表
-  #+begin_src c++
-  ntdll!_EXCEPTION_REGISTRATION_RECORD
-   +0x000 Next             : Ptr32 _EXCEPTION_REGISTRATION_RECORD
-   +0x004 Handler          : Ptr32 _EXCEPTION_DISPOSITION 
-}
-  #+end_src
-  Next成员指向下一个_EXCEPTION_REGISTRATION_RECORD结构体指针，handler成员是异常处理函数（异常处理器）。若Next成员的值为FFFFFFFF，则表示它是链表最后一个结点
-&lt;a href=&#34;./../resources/_gen/images/749281_ZVFWN44W33SUD5W.jpg&#34; title=&#34;./../resources/_gen/images/749281_ZVFWN44W33SUD5W.jpg&#34;&gt;./../resources/_gen/images/749281_ZVFWN44W33SUD5W.jpg&lt;/a&gt;\\
-发生异常的时候会按照(A)-&gt;(B)-&gt;(C)的顺序依次传递，直到由异常处理器处理
-  4.2异常处理函数定义
-  #+begin_src c++
-  EXCEPTION_DISPOSITION __cdecl _except_handler (
-  EXCEPTION_RECORD      *pRecord,
-  EXCEPTION_REGISTRATION_RECORD *pFrame,
-  CONTEXT        *pContext,
-  PVOID          pValue
-);
-  #+end_src
-  由系统调用，是一个回调函数，第一个参数是一个指向EXCEPTION_RECORD结构体的指针
-  #+begin_src c++
-  typedef struct _EXCEPTION_RECORD {
-    DWORD ExceptionCode;   //异常代码
-    DWORD ExceptionFlags;
-    struct _EXCEPTION_RECORD *ExceptionRecord;
-    PVOID ExceptionAddress;   //异常发生地址
-    DWORD NumberParameters;
-    ULONG_PTR ExceptionInformation[EXCEPTION_MAXIMUM_PARAMETERS];
-} EXCEPTION_RECORD;
-  #+end_src
-  异常处理函数的第三个参数是指向CONTEXT结构体的指针，CONTEXT结构体的定义如下，   CONTEXT结构体用来备份CPU的值。 
-&lt;s&lt;/p&gt;
 </description>
       
     </item>

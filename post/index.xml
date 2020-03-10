@@ -21,6 +21,15 @@
     </item>
     
     <item>
+      <title>游戏服务器架构篇</title>
+      <link>https://elx123.github.io/post/game/</link>
+      <pubDate>Tue, 10 Mar 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://elx123.github.io/post/game/</guid>
+      <description>简介 github上有诸多开源的游戏服务器,这里开一篇研究下,以便日后使用 自己有过研究的有leaf,最近打算深入研究下pitaya 理论 https://www.infoq.cn/article/a-brief-history-of-the-game-server-architecture https://www.imooc.com/wenda/detail/460664 总览</description>
+    </item>
+    
+    <item>
       <title>gpc learning</title>
       <link>https://elx123.github.io/post/rpclearning/</link>
       <pubDate>Sun, 08 Mar 2020 00:00:00 +0800</pubDate>
@@ -44,7 +53,7 @@
       <pubDate>Tue, 25 Feb 2020 00:00:00 +0800</pubDate>
       
       <guid>https://elx123.github.io/post/golangrelearning/</guid>
-      <description>简介 自从去年开始使用golang以后,陆陆续续在不断学习(包括操作系统和其他方面),这里总结与分享下 重要的资料和知识 首先我认为最有效的学习视</description>
+      <description>简介 自从去年开始使用golang以后,陆陆续续在不断学习(包括操作系统和其他方面),这里总结与分享下重要的资料和知识 所有视频资料都在orei</description>
     </item>
     
     <item>

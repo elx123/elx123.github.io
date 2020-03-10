@@ -3,19 +3,31 @@
   
   <url>
     <loc>https://elx123.github.io/categories/</loc>
-    <lastmod>2020-03-10T01:04:01+08:00</lastmod>
+    <lastmod>2020-03-10T18:26:43+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://elx123.github.io/post/</loc>
-    <lastmod>2020-03-10T01:04:01+08:00</lastmod>
+    <lastmod>2020-03-10T18:26:43+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://elx123.github.io/tags/</loc>
-    <lastmod>2020-03-10T01:04:01+08:00</lastmod>
+    <lastmod>2020-03-10T18:26:43+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://elx123.github.io/categories/golang/</loc>
+    <lastmod>2020-03-10T18:26:43+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://elx123.github.io/tags/golang/</loc>
+    <lastmod>2020-03-10T18:26:43+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -40,20 +52,15 @@
   
   <url>
     <loc>https://elx123.github.io/</loc>
-    <lastmod>2020-03-10T01:04:01+08:00</lastmod>
+    <lastmod>2020-03-10T18:26:43+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://elx123.github.io/categories/golang/</loc>
-    <lastmod>2020-03-08T06:16:44+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/tags/golang/</loc>
-    <lastmod>2020-03-08T06:16:44+08:00</lastmod>
-    <priority>0</priority>
+    <loc>https://elx123.github.io/post/game/</loc>
+    <lastmod>2020-03-10T18:26:43+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -96,7 +103,7 @@
   
   <url>
     <loc>https://elx123.github.io/post/golangrelearning/</loc>
-    <lastmod>2020-03-06T02:46:47+08:00</lastmod>
+    <lastmod>2020-03-10T15:10:18+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -405,6 +412,12 @@
   
   <url>
     <loc>https://elx123.github.io/posts/recommendbook/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://elx123.github.io/posts/game/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
