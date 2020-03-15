@@ -6,7 +6,7 @@
     <description>Recent content on 人生苦短,只争朝夕</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 10 Mar 2020 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 15 Mar 2020 00:00:00 +0800</lastBuildDate>
     
         <atom:link href="https://elx123.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>windows内核以及驱动</title>
       <link>https://elx123.github.io/post/windows/</link>
-      <pubDate>Tue, 10 Mar 2020 00:00:00 +0800</pubDate>
+      <pubDate>Sun, 15 Mar 2020 00:00:00 +0800</pubDate>
       
       <guid>https://elx123.github.io/post/windows/</guid>
       
@@ -26,6 +26,16 @@
 
 &lt;p&gt;之前一段时间一直在研究windows相关的技术(驱动,kernel mode debug,user mode debug) &lt;br /&gt;
 接下来一段时间我会慢慢记录下之前一些书籍和资料&lt;/p&gt;
+
+&lt;h2 id=&#34;补上相关知识&#34;&gt;补上相关知识&lt;/h2&gt;
+
+&lt;h3 id=&#34;这本书是现代windows驱动开发必看的&#34;&gt;这本书是现代windows驱动开发必看的&lt;/h3&gt;
+
+&lt;p&gt;Windows Kernel Programming - Pavel Yosifovich&lt;/p&gt;
+
+&lt;h3 id=&#34;其他可以参考老外的黑客论坛&#34;&gt;其他可以参考老外的黑客论坛&lt;/h3&gt;
+
+&lt;p&gt;比如uc等等,因为BE等等反作弊软件,一般都有对应的驱动,而只有同样为驱动的外挂程序才能hack对应的程序,uc的学习氛围很好,很适合入门小白&lt;/p&gt;
 </description>
       
     </item>

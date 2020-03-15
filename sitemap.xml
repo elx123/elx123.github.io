@@ -3,19 +3,44 @@
   
   <url>
     <loc>https://elx123.github.io/categories/</loc>
-    <lastmod>2020-03-11T04:26:44+08:00</lastmod>
+    <lastmod>2020-03-15T23:21:44+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://elx123.github.io/post/</loc>
-    <lastmod>2020-03-11T04:26:44+08:00</lastmod>
+    <lastmod>2020-03-15T23:21:44+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://elx123.github.io/tags/</loc>
-    <lastmod>2020-03-11T04:26:44+08:00</lastmod>
+    <lastmod>2020-03-15T23:21:44+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://elx123.github.io/categories/windows/</loc>
+    <lastmod>2020-03-15T23:21:44+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://elx123.github.io/tags/windows/</loc>
+    <lastmod>2020-03-15T23:21:44+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://elx123.github.io/post/windows/</loc>
+    <lastmod>2020-03-15T23:21:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://elx123.github.io/</loc>
+    <lastmod>2020-03-15T23:21:44+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -27,31 +52,6 @@
   
   <url>
     <loc>https://elx123.github.io/tags/golang/</loc>
-    <lastmod>2020-03-11T04:26:44+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/categories/windows/</loc>
-    <lastmod>2020-03-10T01:04:01+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/tags/windows/</loc>
-    <lastmod>2020-03-10T01:04:01+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/post/windows/</loc>
-    <lastmod>2020-03-10T01:04:01+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/</loc>
     <lastmod>2020-03-11T04:26:44+08:00</lastmod>
     <priority>0</priority>
   </url>
