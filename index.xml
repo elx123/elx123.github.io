@@ -6,7 +6,7 @@
     <description>Recent content on 人生苦短,只争朝夕</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 16 Mar 2020 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 17 Mar 2020 00:00:00 +0800</lastBuildDate>
     
         <atom:link href="https://elx123.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>游戏服务器架构篇</title>
       <link>https://elx123.github.io/post/game/</link>
-      <pubDate>Mon, 16 Mar 2020 00:00:00 +0800</pubDate>
+      <pubDate>Tue, 17 Mar 2020 00:00:00 +0800</pubDate>
       
       <guid>https://elx123.github.io/post/game/</guid>
       
@@ -39,6 +39,10 @@
 &lt;h3 id=&#34;mock&#34;&gt;mock&lt;/h3&gt;
 
 &lt;p&gt;用来自动化测试interface{},和testing框架配置,可以更好的编写单元测试&lt;/p&gt;
+
+&lt;h4 id=&#34;但看源码很难理解这个包-也可能是自己的实力不够-附上一篇地址&#34;&gt;但看源码很难理解这个包,也可能是自己的实力不够,附上一篇地址&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://blog.codecentric.de/en/2017/08/gomock-tutorial/&#34;&gt;https://blog.codecentric.de/en/2017/08/gomock-tutorial/&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;viper&#34;&gt;Viper&lt;/h3&gt;
 

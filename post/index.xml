@@ -6,7 +6,7 @@
     <description>Recent content in Posts on 人生苦短,只争朝夕</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 16 Mar 2020 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 17 Mar 2020 00:00:00 +0800</lastBuildDate>
     
 	<atom:link href="https://elx123.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>游戏服务器架构篇</title>
       <link>https://elx123.github.io/post/game/</link>
-      <pubDate>Mon, 16 Mar 2020 00:00:00 +0800</pubDate>
+      <pubDate>Tue, 17 Mar 2020 00:00:00 +0800</pubDate>
       
       <guid>https://elx123.github.io/post/game/</guid>
       <description>简介 github上有诸多开源的游戏服务器,这里开一篇研究下,以便日后使用 自己有过研究的有leaf,最近打算深入研究下pitaya 理论 https://www.infoq.cn/article/a-brief-history-of-the-game-server-architecture https://www.imooc.com/wenda/detail/460664 pi</description>
