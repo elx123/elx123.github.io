@@ -47,6 +47,7 @@
 &lt;h3 id=&#34;viper&#34;&gt;Viper&lt;/h3&gt;
 
 &lt;p&gt;参考资料&lt;a href=&#34;https://mojotv.cn/2018/12/26/how-to-use-viper-configuration-in-golang&#34;&gt;https://mojotv.cn/2018/12/26/how-to-use-viper-configuration-in-golang&lt;/a&gt; &lt;br /&gt;
+&lt;a href=&#34;https://scene-si.org/2017/04/20/managing-configuration-with-viper/&#34;&gt;https://scene-si.org/2017/04/20/managing-configuration-with-viper/&lt;/a&gt; &lt;br /&gt;
 更好的配置文件第三方库,支持热更新,多种配置文件等功能&lt;/p&gt;
 
 &lt;h2 id=&#34;总览&#34;&gt;总览&lt;/h2&gt;
