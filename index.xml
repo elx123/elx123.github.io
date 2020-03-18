@@ -61,6 +61,10 @@
 
 &lt;p&gt;From zero to distributed traces—an OpenTracing tutorial&lt;/p&gt;
 
+&lt;h4 id=&#34;例子&#34;&gt;例子&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/jaegertracing/jaeger/tree/master/examples/hotrod&#34;&gt;https://github.com/jaegertracing/jaeger/tree/master/examples/hotrod&lt;/a&gt;&lt;/p&gt;
+
 &lt;h2 id=&#34;总览&#34;&gt;总览&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://studygolang.com/topics/10363&#34;&gt;https://studygolang.com/topics/10363&lt;/a&gt;&lt;/p&gt;
