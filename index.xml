@@ -50,6 +50,17 @@
 &lt;a href=&#34;https://scene-si.org/2017/04/20/managing-configuration-with-viper/&#34;&gt;https://scene-si.org/2017/04/20/managing-configuration-with-viper/&lt;/a&gt; &lt;br /&gt;
 更好的配置文件第三方库,支持热更新,多种配置文件等功能&lt;/p&gt;
 
+&lt;h3 id=&#34;leaky-bucket-algorithm&#34;&gt;leaky bucket algorithm&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=eyH600YU9dw&amp;amp;list=PLdi8LUz88yFU7vUOQAWcsUJWCtoRAJDFY&amp;amp;index=2&amp;amp;t=0s&#34;&gt;https://www.youtube.com/watch?v=eyH600YU9dw&amp;amp;list=PLdi8LUz88yFU7vUOQAWcsUJWCtoRAJDFY&amp;amp;index=2&amp;amp;t=0s&lt;/a&gt; &lt;br /&gt;
+&lt;a href=&#34;https://www.geeksforgeeks.org/leaky-bucket-algorithm/&#34;&gt;https://www.geeksforgeeks.org/leaky-bucket-algorithm/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;opentracing&#34;&gt;openTracing&lt;/h3&gt;
+
+&lt;h4 id=&#34;视频教程&#34;&gt;视频教程&lt;/h4&gt;
+
+&lt;p&gt;From zero to distributed traces—an OpenTracing tutorial&lt;/p&gt;
+
 &lt;h2 id=&#34;总览&#34;&gt;总览&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://studygolang.com/topics/10363&#34;&gt;https://studygolang.com/topics/10363&lt;/a&gt;&lt;/p&gt;
