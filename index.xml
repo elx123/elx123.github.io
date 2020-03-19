@@ -57,6 +57,9 @@
 
 &lt;h3 id=&#34;opentracing&#34;&gt;openTracing&lt;/h3&gt;
 
+&lt;p&gt;分布式系统下日志也是很大一块知识重点,
+这里重点推荐mastering distributed tracing这本书&lt;/p&gt;
+
 &lt;h4 id=&#34;视频教程&#34;&gt;视频教程&lt;/h4&gt;
 
 &lt;p&gt;From zero to distributed traces—an OpenTracing tutorial&lt;/p&gt;
