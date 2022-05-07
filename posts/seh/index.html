@@ -7,7 +7,7 @@
   
 
 <meta name="renderer" content="webkit" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes"/>
 
 <meta name="MobileOptimized" content="width"/>
 <meta name="HandheldFriendly" content="true"/>
@@ -23,7 +23,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="RT" />
-  <meta name="description" content="SEH OS异常处理的办法 异常 SEH详细说明 SEH是window操作系统默认的异常处理机制，逆向分析中，SEH除了基本的异常处理功能外，还大量用于" />
+  <meta name="description" content="SEH是window操作系统默认的异常处理机制，逆向分析中，SEH除了基本的异常处理功能外，还大量用于反调试程序（这里SEH时保存在栈中的，" />
 
   <meta name="keywords" content="Hugo, theme, jane" />
 
@@ -32,10 +32,12 @@
 
 
 
-<meta name="generator" content="Hugo 0.55.6" />
+<meta name="generator" content="Hugo 0.98.0" />
 
 
 <link rel="canonical" href="https://elx123.github.io/posts/seh/" />
+
+
 
 
 
@@ -51,31 +53,26 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.19ae5a432863a072ec64433bb1020bd6d3401129f87d6f2ad5af3bcfd84168a1.css" integrity="sha256-Ga5aQyhjoHLsZEM7sQIL1tNAESn4fW8q1a87z9hBaKE=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.b3a8813c06e6d785beba22bf8264e174fa2cb3a396b22f9ba24e2c00c18aaf7f.css" integrity="sha256-s6iBPAbm14W&#43;uiK/gmThdPoss6OWsi&#43;bok4sAMGKr38=" media="screen" crossorigin="anonymous">
 
 
 
 
 
 <meta property="og:title" content="" />
-<meta property="og:description" content="SEH OS异常处理的办法 异常 SEH详细说明 SEH是window操作系统默认的异常处理机制，逆向分析中，SEH除了基本的异常处理功能外，还大量用于" />
+<meta property="og:description" content="SEH是window操作系统默认的异常处理机制，逆向分析中，SEH除了基本的异常处理功能外，还大量用于反调试程序（这里SEH时保存在栈中的，" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://elx123.github.io/posts/seh/" />
+<meta property="og:url" content="https://elx123.github.io/posts/seh/" /><meta property="article:section" content="posts" />
+
 
 
 <meta itemprop="name" content="">
-<meta itemprop="description" content="SEH OS异常处理的办法 异常 SEH详细说明 SEH是window操作系统默认的异常处理机制，逆向分析中，SEH除了基本的异常处理功能外，还大量用于">
+<meta itemprop="description" content="SEH是window操作系统默认的异常处理机制，逆向分析中，SEH除了基本的异常处理功能外，还大量用于反调试程序（这里SEH时保存在栈中的，">
 
-
-
-<meta itemprop="wordCount" content="1924">
-
-
-
-<meta itemprop="keywords" content="" />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="wordCount" content="1920">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="SEH OS异常处理的办法 异常 SEH详细说明 SEH是window操作系统默认的异常处理机制，逆向分析中，SEH除了基本的异常处理功能外，还大量用于"/>
+<meta name="twitter:description" content="SEH是window操作系统默认的异常处理机制，逆向分析中，SEH除了基本的异常处理功能外，还大量用于反调试程序（这里SEH时保存在栈中的，"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -135,10 +132,45 @@
         
           
           
-            <a class="menu-item-link" href="https://elx123.github.io/about/">关于</a>
+            <a class="menu-item-link" href="https://elx123.github.io/about/">About</a>
           
         
+      </li><li class="mobile-menu-item">
+        
+          
+          <div class="mobile-menu-parent">
+            <span class="mobile-submenu-open"></span>
+            <a href="https://elx123.github.io/">
+              docs
+            </a>
+          </div>
+          <ul class="mobile-submenu-list">
+            
+              <li>
+                <a href="https://elx123.github.io/bk/jane-theme-preview/">Jane Theme Preview</a>
+              </li>
+            
+              <li>
+                <a href="https://elx123.github.io/post/shortcodes-preview/">Shortcodes Preview</a>
+              </li>
+            
+              <li>
+                <a href="https://elx123.github.io/post/image-preview/">Image Preview</a>
+              </li>
+            
+              <li>
+                <a href="https://elx123.github.io/post/syntax-highlighting/">Syntax Highlighting</a>
+              </li>
+            
+              <li>
+                <a href="https://elx123.github.io/post/math-preview/">Math Preview</a>
+              </li>
+            
+          </ul>
+        
       </li>
+    
+
     
   </ul>
 </nav>
@@ -206,6 +238,8 @@
 
   
 
+  
+
   <header id="header" class="header container">
     <div class="logo-wrapper">
   <a href="/" class="logo">
@@ -267,13 +301,49 @@
         
           
           
-            <a class="menu-item-link" href="https://elx123.github.io/about/">关于</a>
+            <a class="menu-item-link" href="https://elx123.github.io/about/">About</a>
           
 
         
 
       </li>
     
+        <li class="menu-item">
+        
+          
+          <a class="menu-item-link menu-parent" href="https://elx123.github.io/">docs</a>
+          <ul class="submenu">
+            
+              <li>
+                <a href="https://elx123.github.io/bk/jane-theme-preview/">Jane Theme Preview</a>
+              </li>
+            
+              <li>
+                <a href="https://elx123.github.io/post/shortcodes-preview/">Shortcodes Preview</a>
+              </li>
+            
+              <li>
+                <a href="https://elx123.github.io/post/image-preview/">Image Preview</a>
+              </li>
+            
+              <li>
+                <a href="https://elx123.github.io/post/syntax-highlighting/">Syntax Highlighting</a>
+              </li>
+            
+              <li>
+                <a href="https://elx123.github.io/post/math-preview/">Math Preview</a>
+              </li>
+            
+          </ul>
+
+        
+
+      </li>
+    
+
+    
+    
+
     
   </ul>
 </nav>
@@ -301,53 +371,76 @@
 <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Table of Contents</h2>
   <div class="post-toc-content">
-    
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#headline-1">SEH</a>
+</li>
+<li><a href="#headline-2">OS异常处理的办法</a>
+</li>
+<li><a href="#headline-3">异常</a>
+</li>
+<li><a href="#headline-4">SEH详细说明</a>
+</li>
+</ul>
+</nav>
   </div>
 </div>
 
   
   <div class="post-content">
-      <h1 id="seh">SEH</h1>
-
-<h1 id="os异常处理的办法">OS异常处理的办法</h1>
-
-<h1 id="异常">异常</h1>
-
-<h1 id="seh详细说明">SEH详细说明</h1>
-
-<p>SEH是window操作系统默认的异常处理机制，逆向分析中，SEH除了基本的异常处理功能外，还大量用于反调试程序（这里SEH时保存在栈中的，漏洞利用的时候会用到）
-SEH是windows操作系统异常处理机制，在程序源代码中使用__try,__except,__finally关键字来具体实现。
-  2.1正常运行时候的异常处理方法
+      
+<p>SEH是window操作系统默认的异常处理机制，逆向分析中，SEH除了基本的异常处理功能外，还大量用于反调试程序（这里SEH时保存在栈中的，漏洞利用的时候会用到）</p>
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+SEH
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>SEH是windows操作系统异常处理机制，在程序源代码中使用__try,__except,__finally关键字来具体实现。</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+OS异常处理的办法
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<p>2.1正常运行时候的异常处理方法
      进程运行过程中若发生异常，OS会委托进程进行处理。若进程代码中存在具体的异常处理（如SEH异常处理器）代码，则能够顺利处理相关异常，程序继续运行，但如果进程内部没有具体实现SEH，那么相关异常就无法处理，OS就会启动默认的异常处理机制，终止进程运行
   2.2 调试运行时的异常处理方法
      被调试的进程内部发生异常，OS会首先把异常抛给调试进程处理。调器拥有被调试者的所有权限。被调试者内部发生的异常都由调试器处理。调试过程中的所有异常都先由调试器管理。被调试者发生异常时，调试器会停止运行，必须采取相应的措施来处理异常，完成后续的调试。遇到异常的时候的处理方法如下。
      1）直接修改异常：代码、寄存器、内存
      2）将异常泡杯被调试程序，使用od的shift+f7/f8/f9直接将异常抛还给被调试者
-     3）OS默认异常处理机制
-  操作系统中常见的异常
-     #+begin_src c++
-EXCEPTION_ACCESS_VIOLATION     0xC0000005     程序企图读写一个不可访问的地址时引发的异常。例如企图读取0地址处的内存。
-EXCEPTION_ARRAY_BOUNDS_EXCEEDED    0xC000008C     数组访问越界时引发的异常。
-EXCEPTION_BREAKPOINT                           0x80000003     触发断点时引发的异常。
-EXCEPTION_DATATYPE_MISALIGNMENT    0x80000002     程序读取一个未经对齐的数据时引发的异常。
-EXCEPTION_FLT_DENORMAL_OPERAND     0xC000008D     如果浮点数操作的操作数是非正常的，则引发该异常。所谓非正常，即它的值太小以至于不能用标准格式表示出来。
-EXCEPTION_FLT_DIVIDE_BY_ZERO                   0xC000008E     浮点数除法的除数是0时引发该异常。
-EXCEPTION_FLT_INEXACT_RESULT           0xC000008F     浮点数操作的结果不能精确表示成小数时引发该异常。
-EXCEPTION_FLT_INVALID_OPERATION            0xC0000090     该异常表示不包括在这个表内的其它浮点数异常。
-EXCEPTION_FLT_OVERFLOW                             0xC0000091     浮点数的指数超过所能表示的最大值时引发该异常。
-EXCEPTION_FLT_STACK_CHECK                  0xC0000092     进行浮点数运算时栈发生溢出或下溢时引发该异常。
-EXCEPTION_FLT_UNDERFLOW                    0xC0000093     浮点数的指数小于所能表示的最小值时引发该异常。
-EXCEPTION_ILLEGAL_INSTRUCTION          0xC000001D     程序企图执行一个无效的指令时引发该异常。
-EXCEPTION_IN_PAGE_ERROR                        0xC0000006     程序要访问的内存页不在物理内存中时引发的异常。
-EXCEPTION_INT_DIVIDE_BY_ZERO                   0xC0000094     整数除法的除数是0时引发该异常。
-EXCEPTION_INT_OVERFLOW                             0xC0000095     整数操作的结果溢出时引发该异常。
-EXCEPTION_INVALID_DISPOSITION                  0xC0000026     异常处理器返回一个无效的处理的时引发该异常。
-EXCEPTION_NONCONTINUABLE_EXCEPTION     0xC0000025     发生一个不可继续执行的异常时，如果程序继续执行，则会引发该异常。
-EXCEPTION_PRIV_INSTRUCTION                     0xC0000096     程序企图执行一条当前CPU模式不允许的指令时引发该异常。
-EXCEPTION_SINGLE_STEP                          0x80000004     标志寄存器的TF位为1时，每执行一条指令就会引发该异常。主要用于单步调试。
-EXCEPTION_STACK_OVERFLOW                   0xC00000FD     栈溢出时引发该异常。
-     #+end_src
-  调试的时候经常触发5中最具代表性的异常
+     3）OS默认异常处理机制</p>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-2">
+<h2 id="headline-3">
+异常
+</h2>
+<div id="outline-text-headline-3" class="outline-text-2">
+<p>操作系统中常见的异常</p>
+<div class="src src-c++">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span>EXCEPTION_ACCESS_VIOLATION     <span style="color:#ae81ff">0xC0000005</span>     <span style="color:#960050;background-color:#1e0010">程序企图读写一个不可访问的地址时引发的异常。例如企图读取</span><span style="color:#ae81ff">0</span><span style="color:#960050;background-color:#1e0010">地址处的内存。</span>
+</span></span><span style="display:flex;"><span>EXCEPTION_ARRAY_BOUNDS_EXCEEDED    <span style="color:#ae81ff">0xC000008C</span>     <span style="color:#960050;background-color:#1e0010">数组访问越界时引发的异常。</span>
+</span></span><span style="display:flex;"><span>EXCEPTION_BREAKPOINT                           <span style="color:#ae81ff">0x80000003</span>     <span style="color:#960050;background-color:#1e0010">触发断点时引发的异常。</span>
+</span></span><span style="display:flex;"><span>EXCEPTION_DATATYPE_MISALIGNMENT    <span style="color:#ae81ff">0x80000002</span>     <span style="color:#960050;background-color:#1e0010">程序读取一个未经对齐的数据时引发的异常。</span>
+</span></span><span style="display:flex;"><span>EXCEPTION_FLT_DENORMAL_OPERAND     <span style="color:#ae81ff">0xC000008D</span>     <span style="color:#960050;background-color:#1e0010">如果浮点数操作的操作数是非正常的，则引发该异常。所谓非正常，即它的值太小以至于不能用标准格式表示出来。</span>
+</span></span><span style="display:flex;"><span>EXCEPTION_FLT_DIVIDE_BY_ZERO                   <span style="color:#ae81ff">0xC000008E</span>     <span style="color:#960050;background-color:#1e0010">浮点数除法的除数是</span><span style="color:#ae81ff">0</span><span style="color:#960050;background-color:#1e0010">时引发该异常。</span>
+</span></span><span style="display:flex;"><span>EXCEPTION_FLT_INEXACT_RESULT           <span style="color:#ae81ff">0xC000008F</span>     <span style="color:#960050;background-color:#1e0010">浮点数操作的结果不能精确表示成小数时引发该异常。</span>
+</span></span><span style="display:flex;"><span>EXCEPTION_FLT_INVALID_OPERATION            <span style="color:#ae81ff">0xC0000090</span>     <span style="color:#960050;background-color:#1e0010">该异常表示不包括在这个表内的其它浮点数异常。</span>
+</span></span><span style="display:flex;"><span>EXCEPTION_FLT_OVERFLOW                             <span style="color:#ae81ff">0xC0000091</span>     <span style="color:#960050;background-color:#1e0010">浮点数的指数超过所能表示的最大值时引发该异常。</span>
+</span></span><span style="display:flex;"><span>EXCEPTION_FLT_STACK_CHECK                  <span style="color:#ae81ff">0xC0000092</span>     <span style="color:#960050;background-color:#1e0010">进行浮点数运算时栈发生溢出或下溢时引发该异常。</span>
+</span></span><span style="display:flex;"><span>EXCEPTION_FLT_UNDERFLOW                    <span style="color:#ae81ff">0xC0000093</span>     <span style="color:#960050;background-color:#1e0010">浮点数的指数小于所能表示的最小值时引发该异常。</span>
+</span></span><span style="display:flex;"><span>EXCEPTION_ILLEGAL_INSTRUCTION          <span style="color:#ae81ff">0xC000001D</span>     <span style="color:#960050;background-color:#1e0010">程序企图执行一个无效的指令时引发该异常。</span>
+</span></span><span style="display:flex;"><span>EXCEPTION_IN_PAGE_ERROR                        <span style="color:#ae81ff">0xC0000006</span>     <span style="color:#960050;background-color:#1e0010">程序要访问的内存页不在物理内存中时引发的异常。</span>
+</span></span><span style="display:flex;"><span>EXCEPTION_INT_DIVIDE_BY_ZERO                   <span style="color:#ae81ff">0xC0000094</span>     <span style="color:#960050;background-color:#1e0010">整数除法的除数是</span><span style="color:#ae81ff">0</span><span style="color:#960050;background-color:#1e0010">时引发该异常。</span>
+</span></span><span style="display:flex;"><span>EXCEPTION_INT_OVERFLOW                             <span style="color:#ae81ff">0xC0000095</span>     <span style="color:#960050;background-color:#1e0010">整数操作的结果溢出时引发该异常。</span>
+</span></span><span style="display:flex;"><span>EXCEPTION_INVALID_DISPOSITION                  <span style="color:#ae81ff">0xC0000026</span>     <span style="color:#960050;background-color:#1e0010">异常处理器返回一个无效的处理的时引发该异常。</span>
+</span></span><span style="display:flex;"><span>EXCEPTION_NONCONTINUABLE_EXCEPTION     <span style="color:#ae81ff">0xC0000025</span>     <span style="color:#960050;background-color:#1e0010">发生一个不可继续执行的异常时，如果程序继续执行，则会引发该异常。</span>
+</span></span><span style="display:flex;"><span>EXCEPTION_PRIV_INSTRUCTION                     <span style="color:#ae81ff">0xC0000096</span>     <span style="color:#960050;background-color:#1e0010">程序企图执行一条当前</span>CPU模式不允许的指令时引发该异常<span style="color:#960050;background-color:#1e0010">。</span>
+</span></span><span style="display:flex;"><span>EXCEPTION_SINGLE_STEP                          <span style="color:#ae81ff">0x80000004</span>     <span style="color:#960050;background-color:#1e0010">标志寄存器的</span>TF位为1时<span style="color:#960050;background-color:#1e0010">，每执行一条指令就会引发该异常。主要用于单步调试。</span>
+</span></span><span style="display:flex;"><span>EXCEPTION_STACK_OVERFLOW                   <span style="color:#ae81ff">0xC00000FD</span>     <span style="color:#960050;background-color:#1e0010">栈溢出时引发该异常。</span></span></span></code></pre></div>
+</div>
+<p>调试的时候经常触发5中最具代表性的异常
   3.1  EXCEPTION_ACCESS_VIOLATION     0xC0000005    
   程序企图读写一个不可访问的地址时引发的异常（不存在，或者不具有访问权限）。例如企图读取0地址处的内存。
   3.2EXCEPTION_BREAKPOINT  0x80000003  
@@ -358,40 +451,49 @@ EXCEPTION_STACK_OVERFLOW                   0xC00000FD     栈溢出时引发该�
   3.4EXCEPTION_INT_DIVIDE_BY_ZERO   0xC0000094   
   整数除法的除数是0时引发该异常。
   3.5EXCEPTION_SINGLE_STEP   0x80000004    
-  标志寄存器的TF位为1时，每执行一条指令就会引发该异常。主要用于单步调试。
-  4.1 SEH链
-  SEH以链的形式存在。第一个异常处理中未处理相关异常，它就会被传递到下一个异常处理器，直到得到处理。SEH是由_EXCEPTION_REGISTRATION_RECORD结构体组成的链表
-  #+begin_src c++
-  ntdll!_EXCEPTION_REGISTRATION_RECORD
-   +0x000 Next             : Ptr32 _EXCEPTION_REGISTRATION_RECORD
-   +0x004 Handler          : Ptr32 _EXCEPTION_DISPOSITION 
-}
-  #+end_src
-  Next成员指向下一个_EXCEPTION_REGISTRATION_RECORD结构体指针，handler成员是异常处理函数（异常处理器）。若Next成员的值为FFFFFFFF，则表示它是链表最后一个结点
-<a href="./../resources/_gen/images/749281_ZVFWN44W33SUD5W.jpg" title="./../resources/_gen/images/749281_ZVFWN44W33SUD5W.jpg">./../resources/_gen/images/749281_ZVFWN44W33SUD5W.jpg</a>\\
-发生异常的时候会按照(A)->(B)->(C)的顺序依次传递，直到由异常处理器处理
-  4.2异常处理函数定义
-  #+begin_src c++
-  EXCEPTION_DISPOSITION __cdecl _except_handler (
-  EXCEPTION_RECORD      *pRecord,
-  EXCEPTION_REGISTRATION_RECORD *pFrame,
-  CONTEXT        *pContext,
-  PVOID          pValue
-);
-  #+end_src
-  由系统调用，是一个回调函数，第一个参数是一个指向EXCEPTION_RECORD结构体的指针
-  #+begin_src c++
-  typedef struct _EXCEPTION_RECORD {
-    DWORD ExceptionCode;   //异常代码
-    DWORD ExceptionFlags;
-    struct _EXCEPTION_RECORD *ExceptionRecord;
-    PVOID ExceptionAddress;   //异常发生地址
-    DWORD NumberParameters;
-    ULONG_PTR ExceptionInformation[EXCEPTION_MAXIMUM_PARAMETERS];
-} EXCEPTION_RECORD;
-  #+end_src
-  异常处理函数的第三个参数是指向CONTEXT结构体的指针，CONTEXT结构体的定义如下，   CONTEXT结构体用来备份CPU的值。 
-<s</p>
+  标志寄存器的TF位为1时，每执行一条指令就会引发该异常。主要用于单步调试。</p>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-2">
+<h2 id="headline-4">
+SEH详细说明
+</h2>
+<div id="outline-text-headline-4" class="outline-text-2">
+<p>4.1 SEH链
+  SEH以链的形式存在。第一个异常处理中未处理相关异常，它就会被传递到下一个异常处理器，直到得到处理。SEH是由_EXCEPTION_REGISTRATION_RECORD结构体组成的链表</p>
+<div class="src src-c++">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span>ntdll<span style="color:#f92672">!</span>_EXCEPTION_REGISTRATION_RECORD
+</span></span><span style="display:flex;"><span> <span style="color:#f92672">+</span><span style="color:#ae81ff">0x000</span> Next             : Ptr32 _EXCEPTION_REGISTRATION_RECORD
+</span></span><span style="display:flex;"><span> <span style="color:#f92672">+</span><span style="color:#ae81ff">0x004</span> Handler          : Ptr32 _EXCEPTION_DISPOSITION 
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+</div>
+<p>Next成员指向下一个_EXCEPTION_REGISTRATION_RECORD结构体指针，handler成员是异常处理函数（异常处理器）。若Next成员的值为FFFFFFFF，则表示它是链表最后一个结点
+<img src="./../resources/_gen/images/749281_ZVFWN44W33SUD5W.jpg" alt="./../resources/_gen/images/749281_ZVFWN44W33SUD5W.jpg" title="./../resources/_gen/images/749281_ZVFWN44W33SUD5W.jpg" /><br>
+发生异常的时候会按照(A)-&gt;(B)-&gt;(C)的顺序依次传递，直到由异常处理器处理
+  4.2异常处理函数定义</p>
+<div class="src src-c++">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span>EXCEPTION_DISPOSITION <span style="color:#66d9ef">__cdecl</span> <span style="color:#a6e22e">_except_handler</span> (
+</span></span><span style="display:flex;"><span>EXCEPTION_RECORD      <span style="color:#f92672">*</span>pRecord,
+</span></span><span style="display:flex;"><span>EXCEPTION_REGISTRATION_RECORD <span style="color:#f92672">*</span>pFrame,
+</span></span><span style="display:flex;"><span>CONTEXT        <span style="color:#f92672">*</span>pContext,
+</span></span><span style="display:flex;"><span>PVOID          pValue
+</span></span><span style="display:flex;"><span>);</span></span></code></pre></div>
+</div>
+<p>由系统调用，是一个回调函数，第一个参数是一个指向EXCEPTION_RECORD结构体的指针</p>
+<div class="src src-c++">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#66d9ef">typedef</span> <span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">_EXCEPTION_RECORD</span> {
+</span></span><span style="display:flex;"><span>  DWORD ExceptionCode;   <span style="color:#75715e">//异常代码
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  DWORD ExceptionFlags;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">_EXCEPTION_RECORD</span> <span style="color:#f92672">*</span>ExceptionRecord;
+</span></span><span style="display:flex;"><span>  PVOID ExceptionAddress;   <span style="color:#75715e">//异常发生地址
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  DWORD NumberParameters;
+</span></span><span style="display:flex;"><span>  ULONG_PTR ExceptionInformation[EXCEPTION_MAXIMUM_PARAMETERS];
+</span></span><span style="display:flex;"><span>} EXCEPTION_RECORD;</span></span></code></pre></div>
+</div>
+<p>异常处理函数的第三个参数是指向CONTEXT结构体的指针，CONTEXT结构体的定义如下，   CONTEXT结构体用来备份CPU的值。 
+&lt;s</p>
+</div>
+</div>
 
   </div>
 
@@ -404,7 +506,10 @@ EXCEPTION_STACK_OVERFLOW                   0xC00000FD     栈溢出时引发该�
   </p>
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
-    <span class="item-content">0001-01-01</span>
+    <span class="item-content">
+      0001-01-01
+      
+    </span>
   </p>
   
   <p class="copyright-item">
@@ -443,6 +548,8 @@ EXCEPTION_STACK_OVERFLOW                   0xC00000FD     栈溢出时引发该�
   
 
     
+
+  
 
         </div>
       </div>
@@ -722,11 +829,19 @@ EXCEPTION_STACK_OVERFLOW                   0xC00000FD     栈溢出时引发该�
 
 
 
+
+
+
+
+
+
   
     <script type="text/javascript" src="/js/load-photoswipe.js"></script>
     <script type="text/javascript" src="/lib/photoswipe/photoswipe.min.js"></script>
     <script type="text/javascript" src="/lib/photoswipe/photoswipe-ui-default.min.js"></script>
   
+
+
 
 
 

@@ -7,7 +7,7 @@
   
 
 <meta name="renderer" content="webkit" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes"/>
 
 <meta name="MobileOptimized" content="width"/>
 <meta name="HandheldFriendly" content="true"/>
@@ -23,7 +23,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="RT" />
-  <meta name="description" content="简介 个人观点 递归锁 这里介绍下我对于3种锁的使用观点 个人观点尽量使用互斥锁,因为递归锁和读写锁的复杂度,下面举出几种错误例子 #include &amp;quot;../Mutex.h&amp;quot; #include &amp;quot;../Thread.h&amp;quot; #include &amp;lt;vector&amp;gt; #include &amp;lt;stdio.h&amp;gt; using" />
+  <meta name="description" content="简介 这里介绍下我对于3种锁的使用观点 个人观点 个人观点尽量使用互斥锁,因为递归锁和读写锁的复杂度,下面举出几种错误例子 递归锁 #include &amp;#34;../Mutex.h&amp;#34;#include &amp;#34;../Thread.h&amp;#34;#include &amp;lt;vector&amp;gt;#include &amp;lt;stdio.h&amp;gt; using namespace muduo; class" />
 
   <meta name="keywords" content="Hugo, theme, jane" />
 
@@ -32,10 +32,12 @@
 
 
 
-<meta name="generator" content="Hugo 0.55.6" />
+<meta name="generator" content="Hugo 0.98.0" />
 
 
 <link rel="canonical" href="https://elx123.github.io/posts/rwlockandrecursive/" />
+
+
 
 
 
@@ -51,31 +53,26 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.19ae5a432863a072ec64433bb1020bd6d3401129f87d6f2ad5af3bcfd84168a1.css" integrity="sha256-Ga5aQyhjoHLsZEM7sQIL1tNAESn4fW8q1a87z9hBaKE=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.b3a8813c06e6d785beba22bf8264e174fa2cb3a396b22f9ba24e2c00c18aaf7f.css" integrity="sha256-s6iBPAbm14W&#43;uiK/gmThdPoss6OWsi&#43;bok4sAMGKr38=" media="screen" crossorigin="anonymous">
 
 
 
 
 
 <meta property="og:title" content="读写锁(RWLock),递归锁(reentrant)和互斥锁(mutex)" />
-<meta property="og:description" content="简介 个人观点 递归锁 这里介绍下我对于3种锁的使用观点 个人观点尽量使用互斥锁,因为递归锁和读写锁的复杂度,下面举出几种错误例子 #include &quot;../Mutex.h&quot; #include &quot;../Thread.h&quot; #include &lt;vector&gt; #include &lt;stdio.h&gt; using" />
+<meta property="og:description" content="简介 这里介绍下我对于3种锁的使用观点 个人观点 个人观点尽量使用互斥锁,因为递归锁和读写锁的复杂度,下面举出几种错误例子 递归锁 #include &#34;../Mutex.h&#34;#include &#34;../Thread.h&#34;#include &lt;vector&gt;#include &lt;stdio.h&gt; using namespace muduo; class" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://elx123.github.io/posts/rwlockandrecursive/" />
-
+<meta property="og:url" content="https://elx123.github.io/posts/rwlockandrecursive/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2018-10-25T00:00:00+00:00" />
+<meta property="article:modified_time" content="2018-10-25T00:00:00+00:00" />
 
 <meta itemprop="name" content="读写锁(RWLock),递归锁(reentrant)和互斥锁(mutex)">
-<meta itemprop="description" content="简介 个人观点 递归锁 这里介绍下我对于3种锁的使用观点 个人观点尽量使用互斥锁,因为递归锁和读写锁的复杂度,下面举出几种错误例子 #include &quot;../Mutex.h&quot; #include &quot;../Thread.h&quot; #include &lt;vector&gt; #include &lt;stdio.h&gt; using">
-
-
-
-<meta itemprop="wordCount" content="594">
-
-
-
-<meta itemprop="keywords" content="" />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="description" content="简介 这里介绍下我对于3种锁的使用观点 个人观点 个人观点尽量使用互斥锁,因为递归锁和读写锁的复杂度,下面举出几种错误例子 递归锁 #include &#34;../Mutex.h&#34;#include &#34;../Thread.h&#34;#include &lt;vector&gt;#include &lt;stdio.h&gt; using namespace muduo; class"><meta itemprop="datePublished" content="2018-10-25T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2018-10-25T00:00:00+00:00" />
+<meta itemprop="wordCount" content="605">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="读写锁(RWLock),递归锁(reentrant)和互斥锁(mutex)"/>
-<meta name="twitter:description" content="简介 个人观点 递归锁 这里介绍下我对于3种锁的使用观点 个人观点尽量使用互斥锁,因为递归锁和读写锁的复杂度,下面举出几种错误例子 #include &quot;../Mutex.h&quot; #include &quot;../Thread.h&quot; #include &lt;vector&gt; #include &lt;stdio.h&gt; using"/>
+<meta name="twitter:description" content="简介 这里介绍下我对于3种锁的使用观点 个人观点 个人观点尽量使用互斥锁,因为递归锁和读写锁的复杂度,下面举出几种错误例子 递归锁 #include &#34;../Mutex.h&#34;#include &#34;../Thread.h&#34;#include &lt;vector&gt;#include &lt;stdio.h&gt; using namespace muduo; class"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -135,10 +132,45 @@
         
           
           
-            <a class="menu-item-link" href="https://elx123.github.io/about/">关于</a>
+            <a class="menu-item-link" href="https://elx123.github.io/about/">About</a>
           
         
+      </li><li class="mobile-menu-item">
+        
+          
+          <div class="mobile-menu-parent">
+            <span class="mobile-submenu-open"></span>
+            <a href="https://elx123.github.io/">
+              docs
+            </a>
+          </div>
+          <ul class="mobile-submenu-list">
+            
+              <li>
+                <a href="https://elx123.github.io/bk/jane-theme-preview/">Jane Theme Preview</a>
+              </li>
+            
+              <li>
+                <a href="https://elx123.github.io/post/shortcodes-preview/">Shortcodes Preview</a>
+              </li>
+            
+              <li>
+                <a href="https://elx123.github.io/post/image-preview/">Image Preview</a>
+              </li>
+            
+              <li>
+                <a href="https://elx123.github.io/post/syntax-highlighting/">Syntax Highlighting</a>
+              </li>
+            
+              <li>
+                <a href="https://elx123.github.io/post/math-preview/">Math Preview</a>
+              </li>
+            
+          </ul>
+        
       </li>
+    
+
     
   </ul>
 </nav>
@@ -206,6 +238,8 @@
 
   
 
+  
+
   <header id="header" class="header container">
     <div class="logo-wrapper">
   <a href="/" class="logo">
@@ -267,13 +301,49 @@
         
           
           
-            <a class="menu-item-link" href="https://elx123.github.io/about/">关于</a>
+            <a class="menu-item-link" href="https://elx123.github.io/about/">About</a>
           
 
         
 
       </li>
     
+        <li class="menu-item">
+        
+          
+          <a class="menu-item-link menu-parent" href="https://elx123.github.io/">docs</a>
+          <ul class="submenu">
+            
+              <li>
+                <a href="https://elx123.github.io/bk/jane-theme-preview/">Jane Theme Preview</a>
+              </li>
+            
+              <li>
+                <a href="https://elx123.github.io/post/shortcodes-preview/">Shortcodes Preview</a>
+              </li>
+            
+              <li>
+                <a href="https://elx123.github.io/post/image-preview/">Image Preview</a>
+              </li>
+            
+              <li>
+                <a href="https://elx123.github.io/post/syntax-highlighting/">Syntax Highlighting</a>
+              </li>
+            
+              <li>
+                <a href="https://elx123.github.io/post/math-preview/">Math Preview</a>
+              </li>
+            
+          </ul>
+
+        
+
+      </li>
+    
+
+    
+    
+
     
   </ul>
 </nav>
@@ -290,8 +360,8 @@
     <h1 class="post-title">读写锁(RWLock),递归锁(reentrant)和互斥锁(mutex)</h1>
     
     <div class="post-meta">
-      <time datetime="0001-01-01" class="post-time">
-        0001-01-01
+      <time datetime="2018-10-25" class="post-time">
+        2018-10-25
       </time>
     </div>
   </header>
@@ -301,89 +371,149 @@
 <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Table of Contents</h2>
   <div class="post-toc-content">
-    
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#headline-1">简介</a>
+</li>
+<li><a href="#headline-2">个人观点</a>
+<ul>
+<li><a href="#headline-3">递归锁</a>
+</li>
+<li><a href="#headline-4">读写锁</a>
+</li>
+</ul>
+</li>
+<li><a href="#headline-5">总结</a>
+</li>
+<li><a href="#headline-6">参考资料</a>
+</li>
+</ul>
+</nav>
   </div>
 </div>
 
   
   <div class="post-content">
-      <h1 id="简介">简介</h1>
-
-<h1 id="个人观点">个人观点</h1>
-
-<h2 id="递归锁">递归锁</h2>
-
-<p>这里介绍下我对于3种锁的使用观点
-  个人观点尽量使用互斥锁,因为递归锁和读写锁的复杂度,下面举出几种错误例子</p>
-
-<pre><code class="language-C">#include &quot;../Mutex.h&quot;
-#include &quot;../Thread.h&quot;
-#include &lt;vector&gt;
-#include &lt;stdio.h&gt;
-
-using namespace muduo;
-
-class Foo
-{
- public:
-  void doit() const;
-};
-
-MutexLock mutex;
-std::vector&lt;Foo&gt; foos;
-
-void post(const Foo&amp; f)
-{
-  MutexLockGuard lock(mutex);
-  foos.push_back(f);
-}
-
-void traverse()
-{
-  MutexLockGuard lock(mutex);
-  for (std::vector&lt;Foo&gt;::const_iterator it = foos.begin();
-      it != foos.end(); ++it)
-  {
-    it-&gt;doit();
-  }
-}
-
-void Foo::doit() const
-{
-  Foo f;
-  post(f);
-}
-
-int main()
-{
-  Foo f;
-  post(f);
-  traverse();
-}
-</code></pre>
-
-<h2 id="读写锁">读写锁</h2>
-
-<h1 id="总结">总结</h1>
-
-<ol>
-这里doit()调用了post(),由于push_back()可能(但不总是)导致vector迭代器失效,程序偶尔会crash
-这时候就能体现 non-recursive 的优越性:把程序的逻辑错误暴露出来.
-<li>这里引用陈硕的几个观点 ::</li>
+      
+<!-- more -->
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+简介
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>这里介绍下我对于3种锁的使用观点</p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+个人观点
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<p>个人观点尽量使用互斥锁,因为递归锁和读写锁的复杂度,下面举出几种错误例子</p>
+<div id="outline-container-headline-3" class="outline-3">
+<h3 id="headline-3">
+递归锁
+</h3>
+<div id="outline-text-headline-3" class="outline-text-3">
+<div class="src src-c++">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;../Mutex.h&#34;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;../Thread.h&#34;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;vector&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> muduo;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Foo</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">void</span> doit() <span style="color:#66d9ef">const</span>;
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>MutexLock mutex;
+</span></span><span style="display:flex;"><span>std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span>Foo<span style="color:#f92672">&gt;</span> foos;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">post</span>(<span style="color:#66d9ef">const</span> Foo<span style="color:#f92672">&amp;</span> f)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  MutexLockGuard lock(mutex);
+</span></span><span style="display:flex;"><span>  foos.push_back(f);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">traverse</span>()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  MutexLockGuard lock(mutex);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">for</span> (std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span>Foo<span style="color:#f92672">&gt;::</span>const_iterator it <span style="color:#f92672">=</span> foos.begin();
+</span></span><span style="display:flex;"><span>      it <span style="color:#f92672">!=</span> foos.end(); <span style="color:#f92672">++</span>it)
+</span></span><span style="display:flex;"><span>  {
+</span></span><span style="display:flex;"><span>    it<span style="color:#f92672">-&gt;</span>doit();
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> Foo<span style="color:#f92672">::</span>doit() <span style="color:#66d9ef">const</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  Foo f;
+</span></span><span style="display:flex;"><span>  post(f);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  Foo f;
+</span></span><span style="display:flex;"><span>  post(f);
+</span></span><span style="display:flex;"><span>  traverse();
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+</div>
+<p>这里doit()调用了post(),由于push_back()可能(但不总是)导致vector迭代器失效,程序偶尔会crash
+这时候就能体现 non-recursive 的优越性:把程序的逻辑错误暴露出来.</p>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-3">
+<h3 id="headline-4">
+读写锁
+</h3>
+<div id="outline-text-headline-4" class="outline-text-3">
+<dl>
+<dt>
+这里引用陈硕的几个观点
+</dt>
+<dd>
+<ul>
 <li>从正确性方面来说,一种典型的易犯错误是在持有read lock的时候修改了共享数据.这通常发生在程序的维护阶段,为了新增功能,程序员不小心在原来read lock保护的函数中调用了会修改状态的函数.这种错误的后果跟无保护并发读写共享数据是一样的.</li>
 <li>从性能方面来说, 读写锁不见得比普通 mutex 更高效.无论如何read lock加锁的开销不会比mutex lock小,因为它要更新当前 reader 的数目.如果临界区很小,锁竞争不激烈,那么mutex往往会更快.</li>
-<li>再有JCP中(<<Java Concurrency in Practice>>)</li>
+</ul>
+</dd>
+<dt>
+?
+</dt>
+<dd>
+<p>再有JCP中(&lt;&lt;Java Concurrency in Practice&gt;&gt;)</p>
+<ul>
 <li>Read-write locks are a performance optimization designed to allow greater concurrency in certain situations. In practice, read-write locks can improve performance for frequently accessed read-mostly data structures on multiprocessor systems; under other conditions they perform slightly worse than exclusive locks due to their greater complexity.</li>
-可能,递归锁和读写锁在某些特定场合可以获得可观的提升,但是用对这2种锁,
-也需要相当的学习和实践,目前我的水平还不足以驾驭这2种锁,留待以后再学习
-</ol>
-
-<h1 id="参考资料">参考资料</h1>
-
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-5" class="outline-2">
+<h2 id="headline-5">
+总结
+</h2>
+<div id="outline-text-headline-5" class="outline-text-2">
+<p>可能,递归锁和读写锁在某些特定场合可以获得可观的提升,但是用对这2种锁,
+也需要相当的学习和实践,目前我的水平还不足以驾驭这2种锁,留待以后再学习</p>
+</div>
+</div>
+<div id="outline-container-headline-6" class="outline-2">
+<h2 id="headline-6">
+参考资料
+</h2>
+<div id="outline-text-headline-6" class="outline-text-2">
 <ul>
 <li>Linux多线程服务端编程</li>
 <li>Java concurrency in practice</li>
 </ul>
+</div>
+</div>
 
   </div>
 
@@ -396,7 +526,10 @@ int main()
   </p>
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
-    <span class="item-content">0001-01-01</span>
+    <span class="item-content">
+      2018-10-25
+      
+    </span>
   </p>
   
   <p class="copyright-item">
@@ -435,6 +568,8 @@ int main()
   
 
     
+
+  
 
         </div>
       </div>
@@ -714,11 +849,19 @@ int main()
 
 
 
+
+
+
+
+
+
   
     <script type="text/javascript" src="/js/load-photoswipe.js"></script>
     <script type="text/javascript" src="/lib/photoswipe/photoswipe.min.js"></script>
     <script type="text/javascript" src="/lib/photoswipe/photoswipe-ui-default.min.js"></script>
   
+
+
 
 
 

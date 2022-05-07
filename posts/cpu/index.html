@@ -7,7 +7,7 @@
   
 
 <meta name="renderer" content="webkit" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes"/>
 
 <meta name="MobileOptimized" content="width"/>
 <meta name="HandheldFriendly" content="true"/>
@@ -32,10 +32,12 @@
 
 
 
-<meta name="generator" content="Hugo 0.55.6" />
+<meta name="generator" content="Hugo 0.98.0" />
 
 
 <link rel="canonical" href="https://elx123.github.io/posts/cpu/" />
+
+
 
 
 
@@ -51,7 +53,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.19ae5a432863a072ec64433bb1020bd6d3401129f87d6f2ad5af3bcfd84168a1.css" integrity="sha256-Ga5aQyhjoHLsZEM7sQIL1tNAESn4fW8q1a87z9hBaKE=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.b3a8813c06e6d785beba22bf8264e174fa2cb3a396b22f9ba24e2c00c18aaf7f.css" integrity="sha256-s6iBPAbm14W&#43;uiK/gmThdPoss6OWsi&#43;bok4sAMGKr38=" media="screen" crossorigin="anonymous">
 
 
 
@@ -60,20 +62,15 @@
 <meta property="og:title" content="转载一篇关于cpu如何运作的文章" />
 <meta property="og:description" content="地址 https://hackernoon.com/how-does-a-cpu-work-af3488d182a2" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://elx123.github.io/posts/cpu/" />
+<meta property="og:url" content="https://elx123.github.io/posts/cpu/" /><meta property="article:section" content="posts" />
+
 
 
 <meta itemprop="name" content="转载一篇关于cpu如何运作的文章">
 <meta itemprop="description" content="地址 https://hackernoon.com/how-does-a-cpu-work-af3488d182a2">
 
-
-
 <meta itemprop="wordCount" content="3">
-
-
-
-<meta itemprop="keywords" content="" />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="转载一篇关于cpu如何运作的文章"/>
 <meta name="twitter:description" content="地址 https://hackernoon.com/how-does-a-cpu-work-af3488d182a2"/>
 
@@ -135,10 +132,45 @@
         
           
           
-            <a class="menu-item-link" href="https://elx123.github.io/about/">关于</a>
+            <a class="menu-item-link" href="https://elx123.github.io/about/">About</a>
           
         
+      </li><li class="mobile-menu-item">
+        
+          
+          <div class="mobile-menu-parent">
+            <span class="mobile-submenu-open"></span>
+            <a href="https://elx123.github.io/">
+              docs
+            </a>
+          </div>
+          <ul class="mobile-submenu-list">
+            
+              <li>
+                <a href="https://elx123.github.io/bk/jane-theme-preview/">Jane Theme Preview</a>
+              </li>
+            
+              <li>
+                <a href="https://elx123.github.io/post/shortcodes-preview/">Shortcodes Preview</a>
+              </li>
+            
+              <li>
+                <a href="https://elx123.github.io/post/image-preview/">Image Preview</a>
+              </li>
+            
+              <li>
+                <a href="https://elx123.github.io/post/syntax-highlighting/">Syntax Highlighting</a>
+              </li>
+            
+              <li>
+                <a href="https://elx123.github.io/post/math-preview/">Math Preview</a>
+              </li>
+            
+          </ul>
+        
       </li>
+    
+
     
   </ul>
 </nav>
@@ -206,6 +238,8 @@
 
   
 
+  
+
   <header id="header" class="header container">
     <div class="logo-wrapper">
   <a href="/" class="logo">
@@ -267,13 +301,49 @@
         
           
           
-            <a class="menu-item-link" href="https://elx123.github.io/about/">关于</a>
+            <a class="menu-item-link" href="https://elx123.github.io/about/">About</a>
           
 
         
 
       </li>
     
+        <li class="menu-item">
+        
+          
+          <a class="menu-item-link menu-parent" href="https://elx123.github.io/">docs</a>
+          <ul class="submenu">
+            
+              <li>
+                <a href="https://elx123.github.io/bk/jane-theme-preview/">Jane Theme Preview</a>
+              </li>
+            
+              <li>
+                <a href="https://elx123.github.io/post/shortcodes-preview/">Shortcodes Preview</a>
+              </li>
+            
+              <li>
+                <a href="https://elx123.github.io/post/image-preview/">Image Preview</a>
+              </li>
+            
+              <li>
+                <a href="https://elx123.github.io/post/syntax-highlighting/">Syntax Highlighting</a>
+              </li>
+            
+              <li>
+                <a href="https://elx123.github.io/post/math-preview/">Math Preview</a>
+              </li>
+            
+          </ul>
+
+        
+
+      </li>
+    
+
+    
+    
+
     
   </ul>
 </nav>
@@ -301,15 +371,27 @@
 <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Table of Contents</h2>
   <div class="post-toc-content">
-    
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#headline-1">地址</a>
+</li>
+</ul>
+</nav>
   </div>
 </div>
 
   
   <div class="post-content">
-      <h1 id="地址">地址</h1>
-
-<p>https://hackernoon.com/how-does-a-cpu-work-af3488d182a2</p>
+      
+<!-- more -->
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+地址
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p><a href="https://hackernoon.com/how-does-a-cpu-work-af3488d182a2">https://hackernoon.com/how-does-a-cpu-work-af3488d182a2</a></p>
+</div>
+</div>
 
   </div>
 
@@ -322,7 +404,10 @@
   </p>
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
-    <span class="item-content">0001-01-01</span>
+    <span class="item-content">
+      0001-01-01
+      
+    </span>
   </p>
   
   <p class="copyright-item">
@@ -361,6 +446,8 @@
   
 
     
+
+  
 
         </div>
       </div>
@@ -640,11 +727,19 @@
 
 
 
+
+
+
+
+
+
   
     <script type="text/javascript" src="/js/load-photoswipe.js"></script>
     <script type="text/javascript" src="/lib/photoswipe/photoswipe.min.js"></script>
     <script type="text/javascript" src="/lib/photoswipe/photoswipe-ui-default.min.js"></script>
   
+
+
 
 
 

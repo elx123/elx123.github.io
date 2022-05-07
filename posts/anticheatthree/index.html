@@ -7,7 +7,7 @@
   
 
 <meta name="renderer" content="webkit" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes"/>
 
 <meta name="MobileOptimized" content="width"/>
 <meta name="HandheldFriendly" content="true"/>
@@ -23,7 +23,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="RT" />
-  <meta name="description" content="转载自 正文 https://bbs.pediy.com/thread-249348.htm 代码段没法发了，因为里面有别人的东西（发了之后避免不了一些不法分子会利用，所以这里只分享处理检测流程和思路） 目前整体已经完善好了" />
+  <meta name="description" content="转载自 https://bbs.pediy.com/thread-249348.htm 正文 代码段没法发了，因为里面有别人的东西（发了之后避免不了一些不法分子会利用，所以这里只分享处理检测流程和思路） 目前整体已经完善好了" />
 
   <meta name="keywords" content="Hugo, theme, jane" />
 
@@ -32,10 +32,12 @@
 
 
 
-<meta name="generator" content="Hugo 0.55.6" />
+<meta name="generator" content="Hugo 0.98.0" />
 
 
 <link rel="canonical" href="https://elx123.github.io/posts/anticheatthree/" />
+
+
 
 
 
@@ -51,31 +53,26 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.19ae5a432863a072ec64433bb1020bd6d3401129f87d6f2ad5af3bcfd84168a1.css" integrity="sha256-Ga5aQyhjoHLsZEM7sQIL1tNAESn4fW8q1a87z9hBaKE=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.b3a8813c06e6d785beba22bf8264e174fa2cb3a396b22f9ba24e2c00c18aaf7f.css" integrity="sha256-s6iBPAbm14W&#43;uiK/gmThdPoss6OWsi&#43;bok4sAMGKr38=" media="screen" crossorigin="anonymous">
 
 
 
 
 
 <meta property="og:title" content="" />
-<meta property="og:description" content="转载自 正文 https://bbs.pediy.com/thread-249348.htm 代码段没法发了，因为里面有别人的东西（发了之后避免不了一些不法分子会利用，所以这里只分享处理检测流程和思路） 目前整体已经完善好了" />
+<meta property="og:description" content="转载自 https://bbs.pediy.com/thread-249348.htm 正文 代码段没法发了，因为里面有别人的东西（发了之后避免不了一些不法分子会利用，所以这里只分享处理检测流程和思路） 目前整体已经完善好了" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://elx123.github.io/posts/anticheatthree/" />
+<meta property="og:url" content="https://elx123.github.io/posts/anticheatthree/" /><meta property="article:section" content="posts" />
+
 
 
 <meta itemprop="name" content="">
-<meta itemprop="description" content="转载自 正文 https://bbs.pediy.com/thread-249348.htm 代码段没法发了，因为里面有别人的东西（发了之后避免不了一些不法分子会利用，所以这里只分享处理检测流程和思路） 目前整体已经完善好了">
+<meta itemprop="description" content="转载自 https://bbs.pediy.com/thread-249348.htm 正文 代码段没法发了，因为里面有别人的东西（发了之后避免不了一些不法分子会利用，所以这里只分享处理检测流程和思路） 目前整体已经完善好了">
 
-
-
-<meta itemprop="wordCount" content="624">
-
-
-
-<meta itemprop="keywords" content="" />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="wordCount" content="634">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content=""/>
-<meta name="twitter:description" content="转载自 正文 https://bbs.pediy.com/thread-249348.htm 代码段没法发了，因为里面有别人的东西（发了之后避免不了一些不法分子会利用，所以这里只分享处理检测流程和思路） 目前整体已经完善好了"/>
+<meta name="twitter:description" content="转载自 https://bbs.pediy.com/thread-249348.htm 正文 代码段没法发了，因为里面有别人的东西（发了之后避免不了一些不法分子会利用，所以这里只分享处理检测流程和思路） 目前整体已经完善好了"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -135,10 +132,45 @@
         
           
           
-            <a class="menu-item-link" href="https://elx123.github.io/about/">关于</a>
+            <a class="menu-item-link" href="https://elx123.github.io/about/">About</a>
           
         
+      </li><li class="mobile-menu-item">
+        
+          
+          <div class="mobile-menu-parent">
+            <span class="mobile-submenu-open"></span>
+            <a href="https://elx123.github.io/">
+              docs
+            </a>
+          </div>
+          <ul class="mobile-submenu-list">
+            
+              <li>
+                <a href="https://elx123.github.io/bk/jane-theme-preview/">Jane Theme Preview</a>
+              </li>
+            
+              <li>
+                <a href="https://elx123.github.io/post/shortcodes-preview/">Shortcodes Preview</a>
+              </li>
+            
+              <li>
+                <a href="https://elx123.github.io/post/image-preview/">Image Preview</a>
+              </li>
+            
+              <li>
+                <a href="https://elx123.github.io/post/syntax-highlighting/">Syntax Highlighting</a>
+              </li>
+            
+              <li>
+                <a href="https://elx123.github.io/post/math-preview/">Math Preview</a>
+              </li>
+            
+          </ul>
+        
       </li>
+    
+
     
   </ul>
 </nav>
@@ -206,6 +238,8 @@
 
   
 
+  
+
   <header id="header" class="header container">
     <div class="logo-wrapper">
   <a href="/" class="logo">
@@ -267,13 +301,49 @@
         
           
           
-            <a class="menu-item-link" href="https://elx123.github.io/about/">关于</a>
+            <a class="menu-item-link" href="https://elx123.github.io/about/">About</a>
           
 
         
 
       </li>
     
+        <li class="menu-item">
+        
+          
+          <a class="menu-item-link menu-parent" href="https://elx123.github.io/">docs</a>
+          <ul class="submenu">
+            
+              <li>
+                <a href="https://elx123.github.io/bk/jane-theme-preview/">Jane Theme Preview</a>
+              </li>
+            
+              <li>
+                <a href="https://elx123.github.io/post/shortcodes-preview/">Shortcodes Preview</a>
+              </li>
+            
+              <li>
+                <a href="https://elx123.github.io/post/image-preview/">Image Preview</a>
+              </li>
+            
+              <li>
+                <a href="https://elx123.github.io/post/syntax-highlighting/">Syntax Highlighting</a>
+              </li>
+            
+              <li>
+                <a href="https://elx123.github.io/post/math-preview/">Math Preview</a>
+              </li>
+            
+          </ul>
+
+        
+
+      </li>
+    
+
+    
+    
+
     
   </ul>
 </nav>
@@ -301,50 +371,70 @@
 <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Table of Contents</h2>
   <div class="post-toc-content">
-    
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#headline-1">转载自</a>
+</li>
+<li><a href="#headline-2">正文</a>
+</li>
+</ul>
+</nav>
   </div>
 </div>
 
   
   <div class="post-content">
-      <h1 id="转载自">转载自</h1>
-
-<h1 id="正文">正文</h1>
-
-<p>https://bbs.pediy.com/thread-249348.htm
-代码段没法发了，因为里面有别人的东西（发了之后避免不了一些不法分子会利用，所以这里只分享处理检测流程和思路）
+      
+<!-- more -->
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+转载自
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p><a href="https://bbs.pediy.com/thread-249348.htm">https://bbs.pediy.com/thread-249348.htm</a></p>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+正文
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<p>代码段没法发了，因为里面有别人的东西（发了之后避免不了一些不法分子会利用，所以这里只分享处理检测流程和思路）
 目前整体已经完善好了，写这个帖子不是教大家怎样去过检测写外挂，而是教大家一些好的思路
 核心代码执行流程</p>
-
-<p><a href="./../resources/_gen/images/773537_RAQZDR5XER968YT.png" title="./../resources/_gen/images/773537_RAQZDR5XER968YT.png">./../resources/_gen/images/773537_RAQZDR5XER968YT.png</a>\\</p>
-
-<p>1.过机器码: 目前2种办法，一种替换DLL，另一种是让返回值随机，因为我总调试游戏
+<p>
+<img src="./../resources/_gen/images/773537_RAQZDR5XER968YT.png" alt="./../resources/_gen/images/773537_RAQZDR5XER968YT.png" title="./../resources/_gen/images/773537_RAQZDR5XER968YT.png" />\\</p>
+<p>
+1.过机器码: 目前2种办法，一种替换DLL，另一种是让返回值随机，因为我总调试游戏
 我直接替换了DLL因为有时候进游戏没加载我忘记加载我的DLL，就完蛋了，如果不商业的话，建议用替换DLL方法，放到Game目录即可，DLL在附件中</p>
-
-<p>2.处理游戏检测CALL，例如释放技能，走路，等等，已经定位了几个重要的检测CALL，处理后发现还有很多检测CALL，但是不知道再检测什么东西，所以全盘了，如果出问题再注释，也方便，这个在第一篇说过了，这里不再细说</p>
-
-<p>3.处理GameRpcs的CRC，处理CRC的思路也很多，这里我用的是转移大法，然后再创建一个线程循环清除GameRpcs记录的数据信息</p>
-
-<p>VOID 清除记录()
-{
-    DWORD 计次变量 = 0;</p>
-
-<p>while (GameRpcsBase)
-    {
-        Sleep(10000);
-        RtlCopyMemory(LPVOID(GameRpcsBase + 0x1713A4), &计次变量, sizeof(DWORD));//时间计时
-        RtlCopyMemory(LPVOID(GameRpcsBase + 0x17141C), &计次变量, sizeof(DWORD));//鼠标计次
-        RtlCopyMemory(LPVOID(GameRpcsBase + 0x171424), &计次变量, sizeof(DWORD));//键盘计次
-        计次变量++;
-    }
-}</p>
-
-<p>TCJ（可以不清Buffer，直接改Buffer指向一片干净的内存区域）
+<p>
+2.处理游戏检测CALL，例如释放技能，走路，等等，已经定位了几个重要的检测CALL，处理后发现还有很多检测CALL，但是不知道再检测什么东西，所以全盘了，如果出问题再注释，也方便，这个在第一篇说过了，这里不再细说</p>
+<p>
+3.处理GameRpcs的CRC，处理CRC的思路也很多，这里我用的是转移大法，然后再创建一个线程循环清除GameRpcs记录的数据信息</p>
+<div class="src src-c++">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span>VOID <span style="color:#960050;background-color:#1e0010">清除记录</span>()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    DWORD <span style="color:#960050;background-color:#1e0010">计次变量</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> (GameRpcsBase)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        Sleep(<span style="color:#ae81ff">10000</span>);
+</span></span><span style="display:flex;"><span>        RtlCopyMemory(LPVOID(GameRpcsBase <span style="color:#f92672">+</span> <span style="color:#ae81ff">0x1713A4</span>), <span style="color:#f92672">&amp;</span><span style="color:#960050;background-color:#1e0010">计次变量</span>, <span style="color:#66d9ef">sizeof</span>(DWORD));<span style="color:#75715e">//时间计时
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        RtlCopyMemory(LPVOID(GameRpcsBase <span style="color:#f92672">+</span> <span style="color:#ae81ff">0x17141C</span>), <span style="color:#f92672">&amp;</span><span style="color:#960050;background-color:#1e0010">计次变量</span>, <span style="color:#66d9ef">sizeof</span>(DWORD));<span style="color:#75715e">//鼠标计次
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        RtlCopyMemory(LPVOID(GameRpcsBase <span style="color:#f92672">+</span> <span style="color:#ae81ff">0x171424</span>), <span style="color:#f92672">&amp;</span><span style="color:#960050;background-color:#1e0010">计次变量</span>, <span style="color:#66d9ef">sizeof</span>(DWORD));<span style="color:#75715e">//键盘计次
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#960050;background-color:#1e0010">计次变量</span><span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+</div>
+<p>
+TCJ（可以不清Buffer，直接改Buffer指向一片干净的内存区域）
 监视TCJ读了哪块内存，HOOK，如果当前读内存的地址 大于 你要保护的模块地址 或 小于 你要保护的模块地址 + 模块大小，则清空他的Buffer</p>
-
-<p><a href="./../resources/_gen/images/773537_FM6G9UZG9BDU5PM.png" title="./../resources/_gen/images/773537_FM6G9UZG9BDU5PM.png">./../resources/_gen/images/773537_FM6G9UZG9BDU5PM.png</a>\\
-<a href="./../resources/_gen/images/773537_8ARV4MU47ZMBT3X.png" title="./../resources/_gen/images/773537_8ARV4MU47ZMBT3X.png">./../resources/_gen/images/773537_8ARV4MU47ZMBT3X.png</a>\\
-<a href="./../resources/_gen/images/773537_QQBQGQAARDDN7A9.jpg" title="./../resources/_gen/images/773537_QQBQGQAARDDN7A9.jpg">./../resources/_gen/images/773537_QQBQGQAARDDN7A9.jpg</a>\\</p>
+<p>
+<img src="./../resources/_gen/images/773537_FM6G9UZG9BDU5PM.png" alt="./../resources/_gen/images/773537_FM6G9UZG9BDU5PM.png" title="./../resources/_gen/images/773537_FM6G9UZG9BDU5PM.png" /><br>
+<img src="./../resources/_gen/images/773537_8ARV4MU47ZMBT3X.png" alt="./../resources/_gen/images/773537_8ARV4MU47ZMBT3X.png" title="./../resources/_gen/images/773537_8ARV4MU47ZMBT3X.png" /><br>
+<img src="./../resources/_gen/images/773537_QQBQGQAARDDN7A9.jpg" alt="./../resources/_gen/images/773537_QQBQGQAARDDN7A9.jpg" title="./../resources/_gen/images/773537_QQBQGQAARDDN7A9.jpg" />\\</p>
+</div>
+</div>
 
   </div>
 
@@ -357,7 +447,10 @@
   </p>
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
-    <span class="item-content">0001-01-01</span>
+    <span class="item-content">
+      0001-01-01
+      
+    </span>
   </p>
   
   <p class="copyright-item">
@@ -396,6 +489,8 @@
   
 
     
+
+  
 
         </div>
       </div>
@@ -675,11 +770,19 @@
 
 
 
+
+
+
+
+
+
   
     <script type="text/javascript" src="/js/load-photoswipe.js"></script>
     <script type="text/javascript" src="/lib/photoswipe/photoswipe.min.js"></script>
     <script type="text/javascript" src="/lib/photoswipe/photoswipe-ui-default.min.js"></script>
   
+
+
 
 
 

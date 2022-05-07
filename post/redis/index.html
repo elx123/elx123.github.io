@@ -7,7 +7,7 @@
   
 
 <meta name="renderer" content="webkit" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes"/>
 
 <meta name="MobileOptimized" content="width"/>
 <meta name="HandheldFriendly" content="true"/>
@@ -32,10 +32,12 @@
 
 
 
-<meta name="generator" content="Hugo 0.55.6" />
+<meta name="generator" content="Hugo 0.98.0" />
 
 
 <link rel="canonical" href="https://elx123.github.io/post/redis/" />
+
+
 
 
 
@@ -51,7 +53,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.19ae5a432863a072ec64433bb1020bd6d3401129f87d6f2ad5af3bcfd84168a1.css" integrity="sha256-Ga5aQyhjoHLsZEM7sQIL1tNAESn4fW8q1a87z9hBaKE=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.b3a8813c06e6d785beba22bf8264e174fa2cb3a396b22f9ba24e2c00c18aaf7f.css" integrity="sha256-s6iBPAbm14W&#43;uiK/gmThdPoss6OWsi&#43;bok4sAMGKr38=" media="screen" crossorigin="anonymous">
 
 
 
@@ -60,22 +62,15 @@
 <meta property="og:title" content="redis/go-redis入门" />
 <meta property="og:description" content="简介 最近开始研究redis 资料 视频课程Rapid redis golang下驱动https://github.com/go-redis/redis red" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://elx123.github.io/post/redis/" />
-<meta property="article:published_time" content="2020-03-08T00:00:00&#43;08:00"/>
-<meta property="article:modified_time" content="2020-03-08T04:06:43&#43;08:00"/>
+<meta property="og:url" content="https://elx123.github.io/post/redis/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2020-03-08T00:00:00+08:00" />
+<meta property="article:modified_time" content="2020-03-08T04:06:43+08:00" />
 
 <meta itemprop="name" content="redis/go-redis入门">
-<meta itemprop="description" content="简介 最近开始研究redis 资料 视频课程Rapid redis golang下驱动https://github.com/go-redis/redis red">
-
-
-<meta itemprop="datePublished" content="2020-03-08T00:00:00&#43;08:00" />
-<meta itemprop="dateModified" content="2020-03-08T04:06:43&#43;08:00" />
-<meta itemprop="wordCount" content="369">
-
-
-
-<meta itemprop="keywords" content="redis,golang," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="description" content="简介 最近开始研究redis 资料 视频课程Rapid redis golang下驱动https://github.com/go-redis/redis red"><meta itemprop="datePublished" content="2020-03-08T00:00:00+08:00" />
+<meta itemprop="dateModified" content="2020-03-08T04:06:43+08:00" />
+<meta itemprop="wordCount" content="371">
+<meta itemprop="keywords" content="redis,golang," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="redis/go-redis入门"/>
 <meta name="twitter:description" content="简介 最近开始研究redis 资料 视频课程Rapid redis golang下驱动https://github.com/go-redis/redis red"/>
 
@@ -137,10 +132,45 @@
         
           
           
-            <a class="menu-item-link" href="https://elx123.github.io/about/">关于</a>
+            <a class="menu-item-link" href="https://elx123.github.io/about/">About</a>
           
         
+      </li><li class="mobile-menu-item">
+        
+          
+          <div class="mobile-menu-parent">
+            <span class="mobile-submenu-open"></span>
+            <a href="https://elx123.github.io/">
+              docs
+            </a>
+          </div>
+          <ul class="mobile-submenu-list">
+            
+              <li>
+                <a href="https://elx123.github.io/bk/jane-theme-preview/">Jane Theme Preview</a>
+              </li>
+            
+              <li>
+                <a href="https://elx123.github.io/post/shortcodes-preview/">Shortcodes Preview</a>
+              </li>
+            
+              <li>
+                <a href="https://elx123.github.io/post/image-preview/">Image Preview</a>
+              </li>
+            
+              <li>
+                <a href="https://elx123.github.io/post/syntax-highlighting/">Syntax Highlighting</a>
+              </li>
+            
+              <li>
+                <a href="https://elx123.github.io/post/math-preview/">Math Preview</a>
+              </li>
+            
+          </ul>
+        
       </li>
+    
+
     
   </ul>
 </nav>
@@ -208,6 +238,8 @@
 
   
 
+  
+
   <header id="header" class="header container">
     <div class="logo-wrapper">
   <a href="/" class="logo">
@@ -269,13 +301,49 @@
         
           
           
-            <a class="menu-item-link" href="https://elx123.github.io/about/">关于</a>
+            <a class="menu-item-link" href="https://elx123.github.io/about/">About</a>
           
 
         
 
       </li>
     
+        <li class="menu-item">
+        
+          
+          <a class="menu-item-link menu-parent" href="https://elx123.github.io/">docs</a>
+          <ul class="submenu">
+            
+              <li>
+                <a href="https://elx123.github.io/bk/jane-theme-preview/">Jane Theme Preview</a>
+              </li>
+            
+              <li>
+                <a href="https://elx123.github.io/post/shortcodes-preview/">Shortcodes Preview</a>
+              </li>
+            
+              <li>
+                <a href="https://elx123.github.io/post/image-preview/">Image Preview</a>
+              </li>
+            
+              <li>
+                <a href="https://elx123.github.io/post/syntax-highlighting/">Syntax Highlighting</a>
+              </li>
+            
+              <li>
+                <a href="https://elx123.github.io/post/math-preview/">Math Preview</a>
+              </li>
+            
+          </ul>
+
+        
+
+      </li>
+    
+
+    
+    
+
     
   </ul>
 </nav>
@@ -316,250 +384,141 @@
   <h2 class="post-toc-title">Table of Contents</h2>
   <div class="post-toc-content">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#简介">简介</a></li>
-<li><a href="#资料">资料</a></li>
-<li><a href="#redis基础结构认识">redis基础结构认识</a>
-<ul>
-<li><a href="#key-value">key-value</a></li>
-<li><a href="#hashtable">hashTable</a>
-<ul>
-<li><a href="#hset">hset</a></li>
-<li><a href="#hget">hget</a></li>
-<li><a href="#hmset">hmset</a></li>
-<li><a href="#hgetall">hgetall</a></li>
-</ul></li>
-<li><a href="#list">list</a>
-<ul>
-<li><a href="#lpush">lpush</a></li>
-<li><a href="#rpush">rpush</a></li>
-<li><a href="#lrange-names-1-3">lrange names 1 3</a></li>
-<li><a href="#lpop">lpop</a></li>
-<li><a href="#llen">llen</a></li>
-<li><a href="#ltrim">ltrim</a></li>
-</ul></li>
-<li><a href="#set">set</a>
-<ul>
-<li><a href="#sadd">sadd</a></li>
-<li><a href="#sunion-boys-girls--并集">sunion boys girls(并集)</a></li>
-<li><a href="#sinter-boys-girls--交接">sinter boys girls(交接)</a></li>
-<li><a href="#sdiff-boys-girls">sdiff boys girls</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#golang下基础应用">golang下基础应用</a>
-<ul>
-<li><a href="#key-value-1">key-value</a>
-<ul>
-<li><a href="#set-1">set</a></li>
-<li><a href="#get">get</a></li>
-<li><a href="#del">del</a></li>
-<li><a href="#timetolive">timeToLive</a></li>
-</ul></li>
-<li><a href="#hash">Hash</a>
-<ul>
-<li><a href="#hset-1">hset</a></li>
-<li><a href="#hget-1">hget</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#list-1">List</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#简介">简介</a></li>
+    <li><a href="#资料">资料</a></li>
+    <li><a href="#redis基础结构认识">redis基础结构认识</a>
+      <ul>
+        <li><a href="#key-value">key-value</a></li>
+        <li><a href="#hashtable">hashTable</a></li>
+        <li><a href="#list">list</a></li>
+        <li><a href="#set">set</a></li>
+      </ul>
+    </li>
+    <li><a href="#golang下基础应用">golang下基础应用</a>
+      <ul>
+        <li><a href="#key-value">key-value</a></li>
+        <li><a href="#hash">Hash</a></li>
+      </ul>
+    </li>
+    <li><a href="#list">List</a></li>
+  </ul>
 </nav>
   </div>
 </div>
 
     
     <div class="post-content">
-      
-
-<!-- more -->
-
+      <!-- raw HTML omitted -->
 <h2 id="简介">简介</h2>
-
 <p>最近开始研究redis</p>
-
 <h2 id="资料">资料</h2>
-
-<p>视频课程Rapid redis <br />
+<p>视频课程Rapid redis <!-- raw HTML omitted -->
 golang下驱动<a href="https://github.com/go-redis/redis">https://github.com/go-redis/redis</a></p>
-
 <h2 id="redis基础结构认识">redis基础结构认识</h2>
-
-<p>基本的概念详见Rapid redis课程complex keys <br />
-<a href="http://redisdoc.com/hash/index.html">http://redisdoc.com/hash/index.html</a>  <br /></p>
-
+<p>基本的概念详见Rapid redis课程complex keys <!-- raw HTML omitted -->
+<a href="http://redisdoc.com/hash/index.html">http://redisdoc.com/hash/index.html</a>  <!-- raw HTML omitted --></p>
 <h3 id="key-value">key-value</h3>
-
 <p>首先是string类型
 例如</p>
-
-<pre><code class="language-bash">set test test
-</code></pre>
-
-<p>目前理解的是可以存binary safe strings</p>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>set test test
+</span></span></code></pre></div><p>目前理解的是可以存binary safe strings</p>
 <h3 id="hashtable">hashTable</h3>
-
-<p>key: <br />
-    key1:value1 <br />
-    key2:value2 <br />
-    key3:value3 <br />
-a dictionary accessed by the top-level key <br /></p>
-
+<p>key: <!-- raw HTML omitted -->
+key1:value1 <!-- raw HTML omitted -->
+key2:value2 <!-- raw HTML omitted -->
+key3:value3 <!-- raw HTML omitted -->
+a dictionary accessed by the top-level key <!-- raw HTML omitted --></p>
 <h4 id="hset">hset</h4>
-
-<pre><code class="language-bash">hset persons 123 Scott
-
-hset persons 234 John
-</code></pre>
-
-<h4 id="hget">hget</h4>
-
-<pre><code class="language-bash">hget persons 123
-
-hget persons 234
-
-hget persons 123 234
-</code></pre>
-
-<h4 id="hmset">hmset</h4>
-
-<pre><code class="language-bash">hmset persons 123 Jill 234 Bren
-</code></pre>
-
-<h4 id="hgetall">hgetall</h4>
-
-<pre><code class="language-bash">redis&gt; hgetall persons 123 234
-</code></pre>
-
-<h3 id="list">list</h3>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hset persons <span style="color:#ae81ff">123</span> Scott
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>hset persons <span style="color:#ae81ff">234</span> John
+</span></span></code></pre></div><h4 id="hget">hget</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hget persons <span style="color:#ae81ff">123</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>hget persons <span style="color:#ae81ff">234</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>hget persons <span style="color:#ae81ff">123</span> <span style="color:#ae81ff">234</span>
+</span></span></code></pre></div><h4 id="hmset">hmset</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hmset persons <span style="color:#ae81ff">123</span> Jill <span style="color:#ae81ff">234</span> Bren
+</span></span></code></pre></div><h4 id="hgetall">hgetall</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>redis&gt; hgetall persons <span style="color:#ae81ff">123</span> <span style="color:#ae81ff">234</span>
+</span></span></code></pre></div><h3 id="list">list</h3>
 <h4 id="lpush">lpush</h4>
-
-<pre><code class="language-bash">lpush names Scott
-</code></pre>
-
-<h4 id="rpush">rpush</h4>
-
-<pre><code class="language-bash">rpush names James
-</code></pre>
-
-<h4 id="lrange-names-1-3">lrange names 1 3</h4>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>lpush names Scott
+</span></span></code></pre></div><h4 id="rpush">rpush</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rpush names James
+</span></span></code></pre></div><h4 id="lrange-names-1-3">lrange names 1 3</h4>
 <p>注意下标是从0开始的</p>
-
-<pre><code class="language-nil">lrange names 1 3
-</code></pre>
-
-<h4 id="lpop">lpop</h4>
-
-<pre><code class="language-bash">lpop names
-</code></pre>
-
-<h4 id="llen">llen</h4>
-
-<pre><code class="language-bash">llen names
-</code></pre>
-
-<h4 id="ltrim">ltrim</h4>
-
-<pre><code class="language-bash">ltrim names 1 2
-</code></pre>
-
-<h3 id="set">set</h3>
-
+<pre tabindex="0"><code class="language-nil" data-lang="nil">lrange names 1 3
+</code></pre><h4 id="lpop">lpop</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>lpop names
+</span></span></code></pre></div><h4 id="llen">llen</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>llen names
+</span></span></code></pre></div><h4 id="ltrim">ltrim</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ltrim names <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span>
+</span></span></code></pre></div><h3 id="set">set</h3>
 <p>no duplicates,unordered
 set operations (insersection union)</p>
-
 <h4 id="sadd">sadd</h4>
-
-<pre><code class="language-bash">sadd boys John
-
-sadd boys Scott
-
-sadd boys Jess
-
-sadd girls Kim
-
-sadd girls Brenda
-
-sadd girls Jess
-</code></pre>
-
-<h4 id="sunion-boys-girls--并集">sunion boys girls(并集)</h4>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sadd boys John
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sadd boys Scott
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sadd boys Jess
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sadd girls Kim
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sadd girls Brenda
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sadd girls Jess
+</span></span></code></pre></div><h4 id="sunion-boys-girls--并集">sunion boys girls(并集)</h4>
 <h4 id="sinter-boys-girls--交接">sinter boys girls(交接)</h4>
-
 <h4 id="sdiff-boys-girls">sdiff boys girls</h4>
-
 <p><a href="https://www.runoob.com/redis/sets-sdiff.html">https://www.runoob.com/redis/sets-sdiff.html</a></p>
-
 <h2 id="golang下基础应用">golang下基础应用</h2>
-
-<h3 id="key-value-1">key-value</h3>
-
-<h4 id="set-1">set</h4>
-
-<pre><code class="language-golang">err := client.Set(&quot;person:123&quot;, &quot;Scott&quot;, 0).Err()
-if err != nil {
-        panic(err)
-}
-</code></pre>
-
-<h4 id="get">get</h4>
-
-<pre><code class="language-golang">cmd := client.Get(&quot;person:123&quot;)
-result := cmd.String()
-fmt.Println(result)
-</code></pre>
-
-<h4 id="del">del</h4>
-
-<pre><code class="language-go">cmd := client.Del(&quot;list&quot;)
-   err := cmd.Err()
-   if err != nil {
-           return
-   }
-   fmt.Println(cmd.String())
-</code></pre>
-
-<h4 id="timetolive">timeToLive</h4>
-
-<pre><code class="language-golang">err := client.Set(&quot;person:123&quot;, &quot;Scott&quot;, 10*time.Second).Err()
-if err != nil {
-        panic(err)
-}
-</code></pre>
-
-<h3 id="hash">Hash</h3>
-
-<h4 id="hset-1">hset</h4>
-
-<pre><code class="language-go">err := client.HSet(&quot;persons&quot;, &quot;123&quot;, &quot;Scott&quot;).Err()
-if err != nil {
-        panic(err)
-}
-</code></pre>
-
-<h4 id="hget-1">hget</h4>
-
-<pre><code class="language-go">cmd := client.HGet(&quot;persons&quot;, &quot;123&quot;)
-result := cmd.String()
-fmt.Println(result)
-</code></pre>
-
-<h2 id="list-1">List</h2>
-
+<h3 id="key-value">key-value</h3>
+<h4 id="set">set</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span><span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">client</span>.<span style="color:#a6e22e">Set</span>(<span style="color:#e6db74">&#34;person:123&#34;</span>, <span style="color:#e6db74">&#34;Scott&#34;</span>, <span style="color:#ae81ff">0</span>).<span style="color:#a6e22e">Err</span>()
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>        panic(<span style="color:#a6e22e">err</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="get">get</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span><span style="color:#a6e22e">cmd</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">client</span>.<span style="color:#a6e22e">Get</span>(<span style="color:#e6db74">&#34;person:123&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">result</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">cmd</span>.<span style="color:#a6e22e">String</span>()
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">result</span>)
+</span></span></code></pre></div><h4 id="del">del</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">cmd</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">client</span>.<span style="color:#a6e22e">Del</span>(<span style="color:#e6db74">&#34;list&#34;</span>)
+</span></span><span style="display:flex;"><span>   <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">cmd</span>.<span style="color:#a6e22e">Err</span>()
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>           <span style="color:#66d9ef">return</span>
+</span></span><span style="display:flex;"><span>   }
+</span></span><span style="display:flex;"><span>   <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">cmd</span>.<span style="color:#a6e22e">String</span>())
+</span></span></code></pre></div><h4 id="timetolive">timeToLive</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-golang" data-lang="golang"><span style="display:flex;"><span><span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">client</span>.<span style="color:#a6e22e">Set</span>(<span style="color:#e6db74">&#34;person:123&#34;</span>, <span style="color:#e6db74">&#34;Scott&#34;</span>, <span style="color:#ae81ff">10</span><span style="color:#f92672">*</span><span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Second</span>).<span style="color:#a6e22e">Err</span>()
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>        panic(<span style="color:#a6e22e">err</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="hash">Hash</h3>
+<h4 id="hset">hset</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">client</span>.<span style="color:#a6e22e">HSet</span>(<span style="color:#e6db74">&#34;persons&#34;</span>, <span style="color:#e6db74">&#34;123&#34;</span>, <span style="color:#e6db74">&#34;Scott&#34;</span>).<span style="color:#a6e22e">Err</span>()
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>        panic(<span style="color:#a6e22e">err</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="hget">hget</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">cmd</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">client</span>.<span style="color:#a6e22e">HGet</span>(<span style="color:#e6db74">&#34;persons&#34;</span>, <span style="color:#e6db74">&#34;123&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">result</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">cmd</span>.<span style="color:#a6e22e">String</span>()
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">result</span>)
+</span></span></code></pre></div><h2 id="list">List</h2>
 <ul>
-<li><p>lpush</p>
-
-<pre><code class="language-go">cmd := client.LPush(&quot;names&quot;, &quot;John&quot;)
+<li>lpush</li>
+</ul>
+<pre><code>```go
+cmd := client.LPush(&quot;names&quot;, &quot;John&quot;)
 result := cmd.String()
 fmt.Println(result)
-</code></pre></li>
-</ul>
+```
+</code></pre>
 
     </div>
 
@@ -572,7 +531,10 @@ fmt.Println(result)
   </p>
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
-    <span class="item-content">2020-03-08</span>
+    <span class="item-content">
+      2020-03-08
+      
+    </span>
   </p>
   
   <p class="copyright-item">
@@ -654,6 +616,8 @@ fmt.Println(result)
   
 
     
+
+  
 
         </div>
       </div>
@@ -933,11 +897,19 @@ fmt.Println(result)
 
 
 
+
+
+
+
+
+
   
     <script type="text/javascript" src="/js/load-photoswipe.js"></script>
     <script type="text/javascript" src="/lib/photoswipe/photoswipe.min.js"></script>
     <script type="text/javascript" src="/lib/photoswipe/photoswipe-ui-default.min.js"></script>
   
+
+
 
 
 

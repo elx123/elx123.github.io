@@ -7,7 +7,7 @@
   
 
 <meta name="renderer" content="webkit" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes"/>
 
 <meta name="MobileOptimized" content="width"/>
 <meta name="HandheldFriendly" content="true"/>
@@ -23,7 +23,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="RT" />
-  <meta name="description" content="sysbench 源码地址 部分参数涵义(github) events warmup-time percentile luajit-cmd 什么是JIT db-ps-mode tables table_size fileio模块 以vultr上vps以测试例子 sysbench是mysql的" />
+  <meta name="description" content="sysbench sysbench是mysql的一款性能测试工具,最近试着使用了一下,感觉不错,并记录下流程 源码地址 https://github.com/akopytov/sysbench 部分参数涵义(github) events Limit for total number" />
 
   <meta name="keywords" content="Hugo, theme, jane" />
 
@@ -32,10 +32,12 @@
 
 
 
-<meta name="generator" content="Hugo 0.55.6" />
+<meta name="generator" content="Hugo 0.98.0" />
 
 
 <link rel="canonical" href="https://elx123.github.io/posts/sysbench/" />
+
+
 
 
 
@@ -51,31 +53,26 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.19ae5a432863a072ec64433bb1020bd6d3401129f87d6f2ad5af3bcfd84168a1.css" integrity="sha256-Ga5aQyhjoHLsZEM7sQIL1tNAESn4fW8q1a87z9hBaKE=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.b3a8813c06e6d785beba22bf8264e174fa2cb3a396b22f9ba24e2c00c18aaf7f.css" integrity="sha256-s6iBPAbm14W&#43;uiK/gmThdPoss6OWsi&#43;bok4sAMGKr38=" media="screen" crossorigin="anonymous">
 
 
 
 
 
 <meta property="og:title" content="MySQL Benchmark Tool" />
-<meta property="og:description" content="sysbench 源码地址 部分参数涵义(github) events warmup-time percentile luajit-cmd 什么是JIT db-ps-mode tables table_size fileio模块 以vultr上vps以测试例子 sysbench是mysql的" />
+<meta property="og:description" content="sysbench sysbench是mysql的一款性能测试工具,最近试着使用了一下,感觉不错,并记录下流程 源码地址 https://github.com/akopytov/sysbench 部分参数涵义(github) events Limit for total number" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://elx123.github.io/posts/sysbench/" />
-
+<meta property="og:url" content="https://elx123.github.io/posts/sysbench/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2018-09-24T00:00:00+00:00" />
+<meta property="article:modified_time" content="2018-09-24T00:00:00+00:00" />
 
 <meta itemprop="name" content="MySQL Benchmark Tool">
-<meta itemprop="description" content="sysbench 源码地址 部分参数涵义(github) events warmup-time percentile luajit-cmd 什么是JIT db-ps-mode tables table_size fileio模块 以vultr上vps以测试例子 sysbench是mysql的">
-
-
-
-<meta itemprop="wordCount" content="1194">
-
-
-
-<meta itemprop="keywords" content="" />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="description" content="sysbench sysbench是mysql的一款性能测试工具,最近试着使用了一下,感觉不错,并记录下流程 源码地址 https://github.com/akopytov/sysbench 部分参数涵义(github) events Limit for total number"><meta itemprop="datePublished" content="2018-09-24T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2018-09-24T00:00:00+00:00" />
+<meta itemprop="wordCount" content="1188">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="MySQL Benchmark Tool"/>
-<meta name="twitter:description" content="sysbench 源码地址 部分参数涵义(github) events warmup-time percentile luajit-cmd 什么是JIT db-ps-mode tables table_size fileio模块 以vultr上vps以测试例子 sysbench是mysql的"/>
+<meta name="twitter:description" content="sysbench sysbench是mysql的一款性能测试工具,最近试着使用了一下,感觉不错,并记录下流程 源码地址 https://github.com/akopytov/sysbench 部分参数涵义(github) events Limit for total number"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -135,10 +132,45 @@
         
           
           
-            <a class="menu-item-link" href="https://elx123.github.io/about/">关于</a>
+            <a class="menu-item-link" href="https://elx123.github.io/about/">About</a>
           
         
+      </li><li class="mobile-menu-item">
+        
+          
+          <div class="mobile-menu-parent">
+            <span class="mobile-submenu-open"></span>
+            <a href="https://elx123.github.io/">
+              docs
+            </a>
+          </div>
+          <ul class="mobile-submenu-list">
+            
+              <li>
+                <a href="https://elx123.github.io/bk/jane-theme-preview/">Jane Theme Preview</a>
+              </li>
+            
+              <li>
+                <a href="https://elx123.github.io/post/shortcodes-preview/">Shortcodes Preview</a>
+              </li>
+            
+              <li>
+                <a href="https://elx123.github.io/post/image-preview/">Image Preview</a>
+              </li>
+            
+              <li>
+                <a href="https://elx123.github.io/post/syntax-highlighting/">Syntax Highlighting</a>
+              </li>
+            
+              <li>
+                <a href="https://elx123.github.io/post/math-preview/">Math Preview</a>
+              </li>
+            
+          </ul>
+        
       </li>
+    
+
     
   </ul>
 </nav>
@@ -206,6 +238,8 @@
 
   
 
+  
+
   <header id="header" class="header container">
     <div class="logo-wrapper">
   <a href="/" class="logo">
@@ -267,13 +301,49 @@
         
           
           
-            <a class="menu-item-link" href="https://elx123.github.io/about/">关于</a>
+            <a class="menu-item-link" href="https://elx123.github.io/about/">About</a>
           
 
         
 
       </li>
     
+        <li class="menu-item">
+        
+          
+          <a class="menu-item-link menu-parent" href="https://elx123.github.io/">docs</a>
+          <ul class="submenu">
+            
+              <li>
+                <a href="https://elx123.github.io/bk/jane-theme-preview/">Jane Theme Preview</a>
+              </li>
+            
+              <li>
+                <a href="https://elx123.github.io/post/shortcodes-preview/">Shortcodes Preview</a>
+              </li>
+            
+              <li>
+                <a href="https://elx123.github.io/post/image-preview/">Image Preview</a>
+              </li>
+            
+              <li>
+                <a href="https://elx123.github.io/post/syntax-highlighting/">Syntax Highlighting</a>
+              </li>
+            
+              <li>
+                <a href="https://elx123.github.io/post/math-preview/">Math Preview</a>
+              </li>
+            
+          </ul>
+
+        
+
+      </li>
+    
+
+    
+    
+
     
   </ul>
 </nav>
@@ -290,8 +360,8 @@
     <h1 class="post-title">MySQL Benchmark Tool</h1>
     
     <div class="post-meta">
-      <time datetime="0001-01-01" class="post-time">
-        0001-01-01
+      <time datetime="2018-09-24" class="post-time">
+        2018-09-24
       </time>
     </div>
   </header>
@@ -301,249 +371,426 @@
 <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Table of Contents</h2>
   <div class="post-toc-content">
-    
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#headline-1">sysbench</a>
+<ul>
+<li><a href="#headline-2">源码地址</a>
+</li>
+<li><a href="#headline-3">部分参数涵义(github)</a>
+<ul>
+<li><a href="#headline-4">events</a>
+</li>
+<li><a href="#headline-5">warmup-time</a>
+</li>
+<li><a href="#headline-6">percentile</a>
+</li>
+<li><a href="#headline-7">luajit-cmd</a>
+<ul>
+<li><a href="#headline-8">什么是JIT</a>
+</li>
+</ul>
+</li>
+<li><a href="#headline-9">db-ps-mode</a>
+</li>
+<li><a href="#headline-10">tables</a>
+</li>
+<li><a href="#headline-11">table_size</a>
+</li>
+</ul>
+</li>
+<li><a href="#headline-12">fileio模块</a>
+</li>
+<li><a href="#headline-13">以vultr上vps以测试例子</a>
+</li>
+<li><a href="#headline-14">以本地虚拟机测试为例</a>
+</li>
+<li><a href="#headline-15">oltp模块</a>
+<ul>
+<li><a href="#headline-16">oltp只读测试</a>
+<ul>
+<li><a href="#headline-17">文件准备</a>
+</li>
+<li><a href="#headline-18">实际测试数据(机械硬盘)</a>
+</li>
+</ul>
+</li>
+<li><a href="#headline-19">oltp读写混合测试</a>
+</li>
+<li><a href="#headline-20">准备测试文件</a>
+</li>
+<li><a href="#headline-21">测试</a>
+</li>
+</ul>
+</li>
+<li><a href="#headline-22">参考资料</a>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
   </div>
 </div>
 
   
   <div class="post-content">
-      <h1 id="sysbench">sysbench</h1>
-
-<h2 id="源码地址">源码地址</h2>
-
-<h2 id="部分参数涵义-github">部分参数涵义(github)</h2>
-
-<h4 id="events">events</h4>
-
-<h4 id="warmup-time">warmup-time</h4>
-
-<h4 id="percentile">percentile</h4>
-
-<h4 id="luajit-cmd">luajit-cmd</h4>
-
-<h5 id="什么是jit">什么是JIT</h5>
-
-<h4 id="db-ps-mode">db-ps-mode</h4>
-
-<h4 id="tables">tables</h4>
-
-<h4 id="table-size">table_size</h4>
-
-<h2 id="fileio模块">fileio模块</h2>
-
-<h2 id="以vultr上vps以测试例子">以vultr上vps以测试例子</h2>
-
-<p>sysbench是mysql的一款性能测试工具,最近试着使用了一下,感觉不错,并记录下流程
-https://github.com/akopytov/sysbench
-Limit for total number of requests. 0 (the default) means no limit
-忽略启动时间,然后统计
-采用95% percentile用来测量execution times(执行时间) for all processed requests
-https://blog.csdn.net/ecidevilin/article/details/78630176 \\
+      
+<!-- more -->
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+sysbench
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>sysbench是mysql的一款性能测试工具,最近试着使用了一下,感觉不错,并记录下流程</p>
+<div id="outline-container-headline-2" class="outline-3">
+<h3 id="headline-2">
+源码地址
+</h3>
+<div id="outline-text-headline-2" class="outline-text-3">
+<p><a href="https://github.com/akopytov/sysbench">https://github.com/akopytov/sysbench</a></p>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-3">
+<h3 id="headline-3">
+部分参数涵义(github)
+</h3>
+<div id="outline-text-headline-3" class="outline-text-3">
+<div id="outline-container-headline-4" class="outline-5">
+<h5 id="headline-4">
+events
+</h5>
+<div id="outline-text-headline-4" class="outline-text-5">
+<p>Limit for total number of requests. 0 (the default) means no limit</p>
+</div>
+</div>
+<div id="outline-container-headline-5" class="outline-5">
+<h5 id="headline-5">
+warmup-time
+</h5>
+<div id="outline-text-headline-5" class="outline-text-5">
+<p>忽略启动时间,然后统计</p>
+</div>
+</div>
+<div id="outline-container-headline-6" class="outline-5">
+<h5 id="headline-6">
+percentile
+</h5>
+<div id="outline-text-headline-6" class="outline-text-5">
+<p>采用95% percentile用来测量execution times(执行时间) for all processed requests</p>
+</div>
+</div>
+<div id="outline-container-headline-7" class="outline-5">
+<h5 id="headline-7">
+luajit-cmd
+</h5>
+<div id="outline-text-headline-7" class="outline-text-5">
+<div id="outline-container-headline-8" class="outline-6">
+<h6 id="headline-8">
+什么是JIT
+</h6>
+<div id="outline-text-headline-8" class="outline-text-6">
+<p><a href="https://blog.csdn.net/ecidevilin/article/details/78630176">https://blog.csdn.net/ecidevilin/article/details/78630176</a> <br>
 JIT = Just In Time即时编译，是动态编译的一种形式，是一种优化虚拟机运行的技术。 
 程序运行通常有两种方式，一种是静态编译，一种是动态解释，即时编译混合了这二者。Java和.Net/mono中都使用了这种技术。 
-然而IOS中禁止使用（不是针对JIT，而是所有的动态编译都不支持）！
-The MySQL database supports prepared statements. 
+然而IOS中禁止使用（不是针对JIT，而是所有的动态编译都不支持）！</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-9" class="outline-5">
+<h5 id="headline-9">
+db-ps-mode
+</h5>
+<div id="outline-text-headline-9" class="outline-text-5">
+<p>The MySQL database supports prepared statements. 
 A prepared statement or a parameterized statement is used to execute the same statement repeatedly with high efficiency.
-The prepared statement execution consists of two stages: prepare and execute.
-Number of tables
-Number of rows per table
-    以前的写法可能是--test=fileio,现在--test已经舍弃,变成fileio,--max-time=300变成--time=300,--max-requests=0变成--events=0
-准备测试文件</p>
-
-<p>sysbench fileio --file-total-size=10G prepare</p>
-
+The prepared statement execution consists of two stages: prepare and execute.</p>
+</div>
+</div>
+<div id="outline-container-headline-10" class="outline-5">
+<h5 id="headline-10">
+tables
+</h5>
+<div id="outline-text-headline-10" class="outline-text-5">
+<p>Number of tables</p>
+</div>
+</div>
+<div id="outline-container-headline-11" class="outline-5">
+<h5 id="headline-11">
+table_size
+</h5>
+<div id="outline-text-headline-11" class="outline-text-5">
+<p>Number of rows per table</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-12" class="outline-3">
+<h3 id="headline-12">
+fileio模块
+</h3>
+<div id="outline-text-headline-12" class="outline-text-3">
+<p>以前的写法可能是–test=fileio,现在–test已经舍弃,变成fileio,–max-time=300变成–time=300,–max-requests=0变成–events=0</p>
+</div>
+</div>
+<div id="outline-container-headline-13" class="outline-3">
+<h3 id="headline-13">
+以vultr上vps以测试例子
+</h3>
+<div id="outline-text-headline-13" class="outline-text-3">
+<p>准备测试文件</p>
+<div class="src src-bash">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sysbench fileio --file-total-size<span style="color:#f92672">=</span>10G prepare</span></span></code></pre></div>
+</div>
 <p>测试磁盘读写性能</p>
-
-<p>nohup sysbench fileio --file-total-size=10G --file-test-mode=rndrw --time=300 --events=0 run > temp.log &</p>
-
-<p>sysbench 1.0.15 (using bundled LuaJIT 2.1.0-beta2)</p>
-
-<p>Running the test with following options:
-Number of threads: 1
-Initializing random number generator from current time</p>
-
-<p>Extra file open flags: (none)
-128 files, 80MiB each
-10GiB total file size
-Block size 16KiB
-Number of IO requests: 0
-Read/Write ratio for combined random IO test: 1.50
-Periodic FSYNC enabled, calling fsync() each 100 requests.
-Calling fsync() at the end of test, Enabled.
-Using synchronous I/O mode
-Doing random r/w test
-Initializing worker threads...</p>
-
-<p>Threads started!</p>
-
-<p>File operationsn:
-    reads/s:                      1662.89
-    writes/s:                     1108.59
-    fsyncs/s:                     3547.93</p>
-
-<p>Throughput:
-    read, MiB/s:                  25.98
-    written, MiB/s:               17.32</p>
-
-<p>General statistics:
-    total time:                          300.0155s
-    total number of events:              1895821</p>
-
-<p>Latency (ms):
-         min:                                    0.00
-         avg:                                    0.16
-         max:                                   31.18
-         95th percentile:                        0.42
-         sum:                               297920.06</p>
-
-<p>Threads fairness:
-    events (avg/stddev):           1895821.0000/0.00
-    execution time (avg/stddev):   297.9201/0.00</p>
-
-<h2 id="以本地虚拟机测试为例">以本地虚拟机测试为例</h2>
-
-<p>sysbench 1.0.15 (using bundled LuaJIT 2.1.0-beta2)</p>
-
-<p>Running the test with following options:
-Number of threads: 1
-Initializing random number generator from current time</p>
-
-<p>Extra file open flags: (none)
-128 files, 80MiB each
-10GiB total file size
-Block size 16KiB
-Number of IO requests: 0
-Read/Write ratio for combined random IO test: 1.50
-Periodic FSYNC enabled, calling fsync() each 100 requests.
-Calling fsync() at the end of test, Enabled.
-Using synchronous I/O mode
-Doing random r/w test
-Initializing worker threads...</p>
-
-<p>Threads started!</p>
-
-<p>File operations:
-    reads/s:                      58.63
-    writes/s:                     39.09
-    fsyncs/s:                     125.32</p>
-
-<p>Throughput:
-    read, MiB/s:                  0.92
-    written, MiB/s:               0.61</p>
-
-<p>General statistics:
-    total time:                          300.8602s
-    total number of events:              66977</p>
-
-<p>Latency (ms):
-         min:                                    0.00
-         avg:                                    4.48
-         max:                                   66.62
-         95th percentile:                       13.46
-         sum:                               299812.67</p>
-
-<p>Threads fairness:
-    events (avg/stddev):           66977.0000/0.00
-    execution time (avg/stddev):   299.8127/0.00</p>
-
-<h2 id="oltp模块">oltp模块</h2>
-
-<h4 id="oltp只读测试">oltp只读测试</h4>
-
-<h5 id="文件准备">文件准备</h5>
-
-<p>sysbench /usr/share/sysbench/oltp_read_only.lua --threads=4 --mysql-host=127.0.0.1 --mysql-user=root --mysql-password=my-secret-pw --mysql-port=3306 --tables=10 --table-size=1000000 prepare</p>
-
-<p>sysbench  /usr/share/sysbench/oltp_read_only.lua --threads=4 --events=0 --time=300 --mysql-host=192.168.1.250 --mysql-user=root --mysql-password=my-secret-pw --mysql-port=3306 --tables=10 --table-size=1000000 --range_selects=off --db-ps-mode=disable --report-interval=1 run</p>
-
-<h5 id="实际测试数据-机械硬盘">实际测试数据(机械硬盘)</h5>
-
+<div class="src src-bash">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nohup sysbench fileio --file-total-size<span style="color:#f92672">=</span>10G --file-test-mode<span style="color:#f92672">=</span>rndrw --time<span style="color:#f92672">=</span><span style="color:#ae81ff">300</span> --events<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span> run &gt; temp.log &amp;</span></span></code></pre></div>
+</div>
+<div class="src src-bash">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sysbench 1.0.15 <span style="color:#f92672">(</span>using bundled LuaJIT 2.1.0-beta2<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Running the test with following options:
+</span></span><span style="display:flex;"><span>Number of threads: <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>Initializing random number generator from current time
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Extra file open flags: <span style="color:#f92672">(</span>none<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">128</span> files, 80MiB each
+</span></span><span style="display:flex;"><span>10GiB total file size
+</span></span><span style="display:flex;"><span>Block size 16KiB
+</span></span><span style="display:flex;"><span>Number of IO requests: <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>Read/Write ratio <span style="color:#66d9ef">for</span> combined random IO test: 1.50
+</span></span><span style="display:flex;"><span>Periodic FSYNC enabled, calling fsync<span style="color:#f92672">()</span> each <span style="color:#ae81ff">100</span> requests.
+</span></span><span style="display:flex;"><span>Calling fsync<span style="color:#f92672">()</span> at the end of test, Enabled.
+</span></span><span style="display:flex;"><span>Using synchronous I/O mode
+</span></span><span style="display:flex;"><span>Doing random r/w test
+</span></span><span style="display:flex;"><span>Initializing worker threads...
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Threads started!
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>File operationsn:
+</span></span><span style="display:flex;"><span>    reads/s:                      1662.89
+</span></span><span style="display:flex;"><span>    writes/s:                     1108.59
+</span></span><span style="display:flex;"><span>    fsyncs/s:                     3547.93
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Throughput:
+</span></span><span style="display:flex;"><span>    read, MiB/s:                  25.98
+</span></span><span style="display:flex;"><span>    written, MiB/s:               17.32
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>General statistics:
+</span></span><span style="display:flex;"><span>    total time:                          300.0155s
+</span></span><span style="display:flex;"><span>    total number of events:              <span style="color:#ae81ff">1895821</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Latency <span style="color:#f92672">(</span>ms<span style="color:#f92672">)</span>:
+</span></span><span style="display:flex;"><span>         min:                                    0.00
+</span></span><span style="display:flex;"><span>         avg:                                    0.16
+</span></span><span style="display:flex;"><span>         max:                                   31.18
+</span></span><span style="display:flex;"><span>         95th percentile:                        0.42
+</span></span><span style="display:flex;"><span>         sum:                               297920.06
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Threads fairness:
+</span></span><span style="display:flex;"><span>    events <span style="color:#f92672">(</span>avg/stddev<span style="color:#f92672">)</span>:           1895821.0000/0.00
+</span></span><span style="display:flex;"><span>    execution time <span style="color:#f92672">(</span>avg/stddev<span style="color:#f92672">)</span>:   297.9201/0.00</span></span></code></pre></div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-14" class="outline-3">
+<h3 id="headline-14">
+以本地虚拟机测试为例
+</h3>
+<div id="outline-text-headline-14" class="outline-text-3">
+<div class="src src-bash">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sysbench 1.0.15 <span style="color:#f92672">(</span>using bundled LuaJIT 2.1.0-beta2<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Running the test with following options:
+</span></span><span style="display:flex;"><span>Number of threads: <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>Initializing random number generator from current time
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Extra file open flags: <span style="color:#f92672">(</span>none<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">128</span> files, 80MiB each
+</span></span><span style="display:flex;"><span>10GiB total file size
+</span></span><span style="display:flex;"><span>Block size 16KiB
+</span></span><span style="display:flex;"><span>Number of IO requests: <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>Read/Write ratio <span style="color:#66d9ef">for</span> combined random IO test: 1.50
+</span></span><span style="display:flex;"><span>Periodic FSYNC enabled, calling fsync<span style="color:#f92672">()</span> each <span style="color:#ae81ff">100</span> requests.
+</span></span><span style="display:flex;"><span>Calling fsync<span style="color:#f92672">()</span> at the end of test, Enabled.
+</span></span><span style="display:flex;"><span>Using synchronous I/O mode
+</span></span><span style="display:flex;"><span>Doing random r/w test
+</span></span><span style="display:flex;"><span>Initializing worker threads...
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Threads started!
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>File operations:
+</span></span><span style="display:flex;"><span>    reads/s:                      58.63
+</span></span><span style="display:flex;"><span>    writes/s:                     39.09
+</span></span><span style="display:flex;"><span>    fsyncs/s:                     125.32
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Throughput:
+</span></span><span style="display:flex;"><span>    read, MiB/s:                  0.92
+</span></span><span style="display:flex;"><span>    written, MiB/s:               0.61
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>General statistics:
+</span></span><span style="display:flex;"><span>    total time:                          300.8602s
+</span></span><span style="display:flex;"><span>    total number of events:              <span style="color:#ae81ff">66977</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Latency <span style="color:#f92672">(</span>ms<span style="color:#f92672">)</span>:
+</span></span><span style="display:flex;"><span>         min:                                    0.00
+</span></span><span style="display:flex;"><span>         avg:                                    4.48
+</span></span><span style="display:flex;"><span>         max:                                   66.62
+</span></span><span style="display:flex;"><span>         95th percentile:                       13.46
+</span></span><span style="display:flex;"><span>         sum:                               299812.67
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Threads fairness:
+</span></span><span style="display:flex;"><span>    events <span style="color:#f92672">(</span>avg/stddev<span style="color:#f92672">)</span>:           66977.0000/0.00
+</span></span><span style="display:flex;"><span>    execution time <span style="color:#f92672">(</span>avg/stddev<span style="color:#f92672">)</span>:   299.8127/0.00</span></span></code></pre></div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-15" class="outline-3">
+<h3 id="headline-15">
+oltp模块
+</h3>
+<div id="outline-text-headline-15" class="outline-text-3">
+<div id="outline-container-headline-16" class="outline-5">
+<h5 id="headline-16">
+oltp只读测试
+</h5>
+<div id="outline-text-headline-16" class="outline-text-5">
+<div id="outline-container-headline-17" class="outline-6">
+<h6 id="headline-17">
+文件准备
+</h6>
+<div id="outline-text-headline-17" class="outline-text-6">
+<div class="src src-bash">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sysbench /usr/share/sysbench/oltp_read_only.lua --threads<span style="color:#f92672">=</span><span style="color:#ae81ff">4</span> --mysql-host<span style="color:#f92672">=</span>127.0.0.1 --mysql-user<span style="color:#f92672">=</span>root --mysql-password<span style="color:#f92672">=</span>my-secret-pw --mysql-port<span style="color:#f92672">=</span><span style="color:#ae81ff">3306</span> --tables<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span> --table-size<span style="color:#f92672">=</span><span style="color:#ae81ff">1000000</span> prepare</span></span></code></pre></div>
+</div>
+<div class="src src-bash">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sysbench  /usr/share/sysbench/oltp_read_only.lua --threads<span style="color:#f92672">=</span><span style="color:#ae81ff">4</span> --events<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span> --time<span style="color:#f92672">=</span><span style="color:#ae81ff">300</span> --mysql-host<span style="color:#f92672">=</span>192.168.1.250 --mysql-user<span style="color:#f92672">=</span>root --mysql-password<span style="color:#f92672">=</span>my-secret-pw --mysql-port<span style="color:#f92672">=</span><span style="color:#ae81ff">3306</span> --tables<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span> --table-size<span style="color:#f92672">=</span><span style="color:#ae81ff">1000000</span> --range_selects<span style="color:#f92672">=</span>off --db-ps-mode<span style="color:#f92672">=</span>disable --report-interval<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> run</span></span></code></pre></div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-18" class="outline-6">
+<h6 id="headline-18">
+实际测试数据(机械硬盘)
+</h6>
+<div id="outline-text-headline-18" class="outline-text-6">
 <p>一部分数据:</p>
-
-<p>[ 295s ] thds: 4 tps: 3264.47 qps: 39178.67 (r/w/o: 32649.73/0.00/6528.95) lat (ms,95%): 1.58 err/s: 0.00 reconn/s: 0.00
-[ 296s ] thds: 4 tps: 3197.48 qps: 38362.74 (r/w/o: 31967.78/0.00/6394.96) lat (ms,95%): 1.61 err/s: 0.00 reconn/s: 0.00
-[ 297s ] thds: 4 tps: 3225.32 qps: 38714.85 (r/w/o: 32264.21/0.00/6450.64) lat (ms,95%): 1.61 err/s: 0.00 reconn/s: 0.00
-[ 298s ] thds: 4 tps: 3231.27 qps: 38768.21 (r/w/o: 32305.68/0.00/6462.54) lat (ms,95%): 1.61 err/s: 0.00 reconn/s: 0.00
-[ 299s ] thds: 4 tps: 3195.45 qps: 38352.44 (r/w/o: 31961.53/0.00/6390.91) lat (ms,95%): 1.61 err/s: 0.00 reconn/s: 0.00
-[ 300s ] thds: 4 tps: 3204.74 qps: 38452.91 (r/w/o: 32043.43/0.00/6409.49) lat (ms,95%): 1.61 err/s: 0.00 reconn/s: 0.00</p>
-
+<div class="src src-bash">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">[</span> 295s <span style="color:#f92672">]</span> thds: <span style="color:#ae81ff">4</span> tps: 3264.47 qps: 39178.67 <span style="color:#f92672">(</span>r/w/o: 32649.73/0.00/6528.95<span style="color:#f92672">)</span> lat <span style="color:#f92672">(</span>ms,95%<span style="color:#f92672">)</span>: 1.58 err/s: 0.00 reconn/s: 0.00
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span> 296s <span style="color:#f92672">]</span> thds: <span style="color:#ae81ff">4</span> tps: 3197.48 qps: 38362.74 <span style="color:#f92672">(</span>r/w/o: 31967.78/0.00/6394.96<span style="color:#f92672">)</span> lat <span style="color:#f92672">(</span>ms,95%<span style="color:#f92672">)</span>: 1.61 err/s: 0.00 reconn/s: 0.00
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span> 297s <span style="color:#f92672">]</span> thds: <span style="color:#ae81ff">4</span> tps: 3225.32 qps: 38714.85 <span style="color:#f92672">(</span>r/w/o: 32264.21/0.00/6450.64<span style="color:#f92672">)</span> lat <span style="color:#f92672">(</span>ms,95%<span style="color:#f92672">)</span>: 1.61 err/s: 0.00 reconn/s: 0.00
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span> 298s <span style="color:#f92672">]</span> thds: <span style="color:#ae81ff">4</span> tps: 3231.27 qps: 38768.21 <span style="color:#f92672">(</span>r/w/o: 32305.68/0.00/6462.54<span style="color:#f92672">)</span> lat <span style="color:#f92672">(</span>ms,95%<span style="color:#f92672">)</span>: 1.61 err/s: 0.00 reconn/s: 0.00
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span> 299s <span style="color:#f92672">]</span> thds: <span style="color:#ae81ff">4</span> tps: 3195.45 qps: 38352.44 <span style="color:#f92672">(</span>r/w/o: 31961.53/0.00/6390.91<span style="color:#f92672">)</span> lat <span style="color:#f92672">(</span>ms,95%<span style="color:#f92672">)</span>: 1.61 err/s: 0.00 reconn/s: 0.00
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span> 300s <span style="color:#f92672">]</span> thds: <span style="color:#ae81ff">4</span> tps: 3204.74 qps: 38452.91 <span style="color:#f92672">(</span>r/w/o: 32043.43/0.00/6409.49<span style="color:#f92672">)</span> lat <span style="color:#f92672">(</span>ms,95%<span style="color:#f92672">)</span>: 1.61 err/s: 0.00 reconn/s: 0.00</span></span></code></pre></div>
+</div>
 <p>综合分析:</p>
-
-<p>SQL statistics:
-    queries performed:
-        read:                            6722290
-        write:                           0
-        other:                           1344458
-        total:                           8066748
-    transactions:                        672229 (2240.73 per sec.)
-    queries:                             8066748 (26888.77 per sec.)
-    ignored errors:                      0      (0.00 per sec.)
-    reconnects:                          0      (0.00 per sec.)</p>
-
-<p>General statistics:
-    total time:                          300.0029s
-    total number of events:              672229</p>
-
-<p>Latency (ms):
-         min:                                    1.06
-         avg:                                    1.78
-         max:                                   30.43
-         95th percentile:                        2.48
-         sum:                              1199029.80</p>
-
-<p>Threads fairness:
-    events (avg/stddev):           168057.2500/764.02
-    execution time (avg/stddev):   299.7574/0.00</p>
-
-<h4 id="oltp读写混合测试">oltp读写混合测试</h4>
-
-<h3 id="准备测试文件">准备测试文件</h3>
-
-<p>sysbench /usr/share/sysbench/oltp_read_write.lua --threads=4 --mysql-host=127.0.0.1 --mysql-user=root --mysql-password=my-secret-pw --mysql-port=3306 --tables=20 --table-size=1000000 prepare</p>
-
-<h3 id="测试">测试</h3>
-
-<p>sysbench /usr/share/sysbench/oltp_read_write.lua --threads=8 --events=0 --time=300 --mysql-host=127.0.0.1 --mysql-user=root --mysql-password=my-secret-pw --mysql-port=3306 --tables=20 --delete_inserts=10 --index_updates=10 --non_index_updates=10 --table-size=1000000 --db-ps-mode=disable --report-interval=1 run</p>
-
+<div class="src src-bash">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>SQL statistics:
+</span></span><span style="display:flex;"><span>    queries performed:
+</span></span><span style="display:flex;"><span>        read:                            <span style="color:#ae81ff">6722290</span>
+</span></span><span style="display:flex;"><span>        write:                           <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        other:                           <span style="color:#ae81ff">1344458</span>
+</span></span><span style="display:flex;"><span>        total:                           <span style="color:#ae81ff">8066748</span>
+</span></span><span style="display:flex;"><span>    transactions:                        <span style="color:#ae81ff">672229</span> <span style="color:#f92672">(</span>2240.73 per sec.<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    queries:                             <span style="color:#ae81ff">8066748</span> <span style="color:#f92672">(</span>26888.77 per sec.<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    ignored errors:                      <span style="color:#ae81ff">0</span>      <span style="color:#f92672">(</span>0.00 per sec.<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    reconnects:                          <span style="color:#ae81ff">0</span>      <span style="color:#f92672">(</span>0.00 per sec.<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>General statistics:
+</span></span><span style="display:flex;"><span>    total time:                          300.0029s
+</span></span><span style="display:flex;"><span>    total number of events:              <span style="color:#ae81ff">672229</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Latency <span style="color:#f92672">(</span>ms<span style="color:#f92672">)</span>:
+</span></span><span style="display:flex;"><span>         min:                                    1.06
+</span></span><span style="display:flex;"><span>         avg:                                    1.78
+</span></span><span style="display:flex;"><span>         max:                                   30.43
+</span></span><span style="display:flex;"><span>         95th percentile:                        2.48
+</span></span><span style="display:flex;"><span>         sum:                              1199029.80
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Threads fairness:
+</span></span><span style="display:flex;"><span>    events <span style="color:#f92672">(</span>avg/stddev<span style="color:#f92672">)</span>:           168057.2500/764.02
+</span></span><span style="display:flex;"><span>    execution time <span style="color:#f92672">(</span>avg/stddev<span style="color:#f92672">)</span>:   299.7574/0.00</span></span></code></pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-19" class="outline-5">
+<h5 id="headline-19">
+oltp读写混合测试
+</h5>
+</div>
+<div id="outline-container-headline-20" class="outline-4">
+<h4 id="headline-20">
+准备测试文件
+</h4>
+<div id="outline-text-headline-20" class="outline-text-4">
+<div class="src src-bash">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sysbench /usr/share/sysbench/oltp_read_write.lua --threads<span style="color:#f92672">=</span><span style="color:#ae81ff">4</span> --mysql-host<span style="color:#f92672">=</span>127.0.0.1 --mysql-user<span style="color:#f92672">=</span>root --mysql-password<span style="color:#f92672">=</span>my-secret-pw --mysql-port<span style="color:#f92672">=</span><span style="color:#ae81ff">3306</span> --tables<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span> --table-size<span style="color:#f92672">=</span><span style="color:#ae81ff">1000000</span> prepare</span></span></code></pre></div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-21" class="outline-4">
+<h4 id="headline-21">
+测试
+</h4>
+<div id="outline-text-headline-21" class="outline-text-4">
+<div class="src src-bash">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sysbench /usr/share/sysbench/oltp_read_write.lua --threads<span style="color:#f92672">=</span><span style="color:#ae81ff">8</span> --events<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span> --time<span style="color:#f92672">=</span><span style="color:#ae81ff">300</span> --mysql-host<span style="color:#f92672">=</span>127.0.0.1 --mysql-user<span style="color:#f92672">=</span>root --mysql-password<span style="color:#f92672">=</span>my-secret-pw --mysql-port<span style="color:#f92672">=</span><span style="color:#ae81ff">3306</span> --tables<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span> --delete_inserts<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span> --index_updates<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span> --non_index_updates<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span> --table-size<span style="color:#f92672">=</span><span style="color:#ae81ff">1000000</span> --db-ps-mode<span style="color:#f92672">=</span>disable --report-interval<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span> run</span></span></code></pre></div>
+</div>
 <p>部分数据:</p>
-
-<p>[ 297s ] thds: 16 tps: 8.00 qps: 431.91 (r/w/o: 108.98/306.94/16.00) lat (ms,95%): 2082.91 err/s: 0.00 reconn/s: 0.00
-[ 298s ] thds: 16 tps: 12.06 qps: 658.22 (r/w/o: 147.72/486.38/24.12) lat (ms,95%): 2320.55 err/s: 0.00 reconn/s: 0.00
-[ 299s ] thds: 16 tps: 15.00 qps: 878.05 (r/w/o: 229.01/619.04/30.00) lat (ms,95%): 2082.91 err/s: 0.00 reconn/s: 0.00
-[ 300s ] thds: 16 tps: 12.00 qps: 765.23 (r/w/o: 170.05/571.17/24.01) lat (ms,95%): 1479.41 err/s: 0.00 reconn/s: 0.00
-[ 301s ] thds: 15 tps: 14.92 qps: 310.40 (r/w/o: 35.82/259.66/14.92) lat (ms,95%): 1903.57 err/s: 0.00 reconn/s: 0.00</p>
-
+<div class="src src-bash">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">[</span> 297s <span style="color:#f92672">]</span> thds: <span style="color:#ae81ff">16</span> tps: 8.00 qps: 431.91 <span style="color:#f92672">(</span>r/w/o: 108.98/306.94/16.00<span style="color:#f92672">)</span> lat <span style="color:#f92672">(</span>ms,95%<span style="color:#f92672">)</span>: 2082.91 err/s: 0.00 reconn/s: 0.00
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span> 298s <span style="color:#f92672">]</span> thds: <span style="color:#ae81ff">16</span> tps: 12.06 qps: 658.22 <span style="color:#f92672">(</span>r/w/o: 147.72/486.38/24.12<span style="color:#f92672">)</span> lat <span style="color:#f92672">(</span>ms,95%<span style="color:#f92672">)</span>: 2320.55 err/s: 0.00 reconn/s: 0.00
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span> 299s <span style="color:#f92672">]</span> thds: <span style="color:#ae81ff">16</span> tps: 15.00 qps: 878.05 <span style="color:#f92672">(</span>r/w/o: 229.01/619.04/30.00<span style="color:#f92672">)</span> lat <span style="color:#f92672">(</span>ms,95%<span style="color:#f92672">)</span>: 2082.91 err/s: 0.00 reconn/s: 0.00
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span> 300s <span style="color:#f92672">]</span> thds: <span style="color:#ae81ff">16</span> tps: 12.00 qps: 765.23 <span style="color:#f92672">(</span>r/w/o: 170.05/571.17/24.01<span style="color:#f92672">)</span> lat <span style="color:#f92672">(</span>ms,95%<span style="color:#f92672">)</span>: 1479.41 err/s: 0.00 reconn/s: 0.00
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span> 301s <span style="color:#f92672">]</span> thds: <span style="color:#ae81ff">15</span> tps: 14.92 qps: 310.40 <span style="color:#f92672">(</span>r/w/o: 35.82/259.66/14.92<span style="color:#f92672">)</span> lat <span style="color:#f92672">(</span>ms,95%<span style="color:#f92672">)</span>: 1903.57 err/s: 0.00 reconn/s: 0.00</span></span></code></pre></div>
+</div>
 <p>综合数据:</p>
-
-<p>SQL statistics:
-    queries performed:
-        read:                            43162
-        write:                           123320
-        other:                           6166
-        total:                           172648
-    transactions:                        3083   (10.22 per sec.)
-    queries:                             172648 (572.25 per sec.)
-    ignored errors:                      0      (0.00 per sec.)
-    reconnects:                          0      (0.00 per sec.)</p>
-
-<p>General statistics:
-    total time:                          301.6946s
-    total number of events:              3083</p>
-
-<p>Latency (ms):
-         min:                                   39.06
-         avg:                                 1559.83
-         max:                                 5007.99
-         95th percentile:                     2880.27
-         sum:                              4808951.49</p>
-
-<p>Threads fairness:
-    events (avg/stddev):           192.6875/4.98
-    execution time (avg/stddev):   300.5595/0.37</p>
-
-<h2 id="参考资料">参考资料</h2>
-
-<p>https://severalnines.com/blog/how-benchmark-performance-mysql-mariadb-using-sysbench</p>
+<div class="src src-bash">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>SQL statistics:
+</span></span><span style="display:flex;"><span>    queries performed:
+</span></span><span style="display:flex;"><span>        read:                            <span style="color:#ae81ff">43162</span>
+</span></span><span style="display:flex;"><span>        write:                           <span style="color:#ae81ff">123320</span>
+</span></span><span style="display:flex;"><span>        other:                           <span style="color:#ae81ff">6166</span>
+</span></span><span style="display:flex;"><span>        total:                           <span style="color:#ae81ff">172648</span>
+</span></span><span style="display:flex;"><span>    transactions:                        <span style="color:#ae81ff">3083</span>   <span style="color:#f92672">(</span>10.22 per sec.<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    queries:                             <span style="color:#ae81ff">172648</span> <span style="color:#f92672">(</span>572.25 per sec.<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    ignored errors:                      <span style="color:#ae81ff">0</span>      <span style="color:#f92672">(</span>0.00 per sec.<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    reconnects:                          <span style="color:#ae81ff">0</span>      <span style="color:#f92672">(</span>0.00 per sec.<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>General statistics:
+</span></span><span style="display:flex;"><span>    total time:                          301.6946s
+</span></span><span style="display:flex;"><span>    total number of events:              <span style="color:#ae81ff">3083</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Latency <span style="color:#f92672">(</span>ms<span style="color:#f92672">)</span>:
+</span></span><span style="display:flex;"><span>         min:                                   39.06
+</span></span><span style="display:flex;"><span>         avg:                                 1559.83
+</span></span><span style="display:flex;"><span>         max:                                 5007.99
+</span></span><span style="display:flex;"><span>         95th percentile:                     2880.27
+</span></span><span style="display:flex;"><span>         sum:                              4808951.49
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Threads fairness:
+</span></span><span style="display:flex;"><span>    events <span style="color:#f92672">(</span>avg/stddev<span style="color:#f92672">)</span>:           192.6875/4.98
+</span></span><span style="display:flex;"><span>    execution time <span style="color:#f92672">(</span>avg/stddev<span style="color:#f92672">)</span>:   300.5595/0.37</span></span></code></pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-22" class="outline-3">
+<h3 id="headline-22">
+参考资料
+</h3>
+<div id="outline-text-headline-22" class="outline-text-3">
+<p><a href="https://severalnines.com/blog/how-benchmark-performance-mysql-mariadb-using-sysbench">https://severalnines.com/blog/how-benchmark-performance-mysql-mariadb-using-sysbench</a></p>
+</div>
+</div>
+</div>
+</div>
 
   </div>
 
@@ -556,7 +803,10 @@ Initializing worker threads...</p>
   </p>
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
-    <span class="item-content">0001-01-01</span>
+    <span class="item-content">
+      2018-09-24
+      
+    </span>
   </p>
   
   <p class="copyright-item">
@@ -595,6 +845,8 @@ Initializing worker threads...</p>
   
 
     
+
+  
 
         </div>
       </div>
@@ -874,11 +1126,19 @@ Initializing worker threads...</p>
 
 
 
+
+
+
+
+
+
   
     <script type="text/javascript" src="/js/load-photoswipe.js"></script>
     <script type="text/javascript" src="/lib/photoswipe/photoswipe.min.js"></script>
     <script type="text/javascript" src="/lib/photoswipe/photoswipe-ui-default.min.js"></script>
   
+
+
 
 
 
