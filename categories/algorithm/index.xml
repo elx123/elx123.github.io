@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>algorithm on HACKER</title>
-    <link>https://elx123.github.io/categories/algorithm/</link>
-    <description>Recent content in algorithm on HACKER</description>
+    <title>algorithm on Jane - A super concise theme for Hugo</title>
+    <link>http://localhost:1313/categories/algorithm/</link>
+    <description>Recent content in algorithm on Jane - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Mon, 14 Jan 2019 00:00:00 +0800</lastBuildDate><atom:link href="https://elx123.github.io/categories/algorithm/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Mon, 14 Jan 2019 00:00:00 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/algorithm/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Weighted Random Selection</title>
-      <link>https://elx123.github.io/post/weightsort/</link>
+      <link>http://localhost:1313/post/weightsort/</link>
       <pubDate>Mon, 14 Jan 2019 00:00:00 +0800</pubDate>
       
-      <guid>https://elx123.github.io/post/weightsort/</guid>
+      <guid>http://localhost:1313/post/weightsort/</guid>
       <description>简介 最近在项目中遇到了加密权重算法,记录下使用心得 问题描述 Given a list of items where each item has a weight (integer value), select a random item from the list based on that weight. The key requirement — items with a higher weight value are more likely to be returned. So</description>
     </item>
     
