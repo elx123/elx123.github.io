@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>mysql on Jane - A super concise theme for Hugo</title>
-    <link>http://localhost:1313/categories/mysql/</link>
+    <link>https://elx123.github.io/categories/mysql/</link>
     <description>Recent content in mysql on Jane - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 24 Sep 2018 00:00:00 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/mysql/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 24 Sep 2018 00:00:00 +0800</lastBuildDate><atom:link href="https://elx123.github.io/categories/mysql/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>MySQL Benchmark Tool</title>
-      <link>http://localhost:1313/post/sysbench/</link>
+      <link>https://elx123.github.io/post/sysbench/</link>
       <pubDate>Mon, 24 Sep 2018 00:00:00 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/sysbench/</guid>
+      <guid>https://elx123.github.io/post/sysbench/</guid>
       <description>sysbench sysbench是mysql的一款性能测试工具,最近试着使用了一下,感觉不错,并记录下流程 源码地址 https://github.com/akopytov/sysbench 部分参数涵义(github) events Limit for total number</description>
     </item>
     

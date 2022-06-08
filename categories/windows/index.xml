@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>windows on Jane - A super concise theme for Hugo</title>
-    <link>http://localhost:1313/categories/windows/</link>
+    <link>https://elx123.github.io/categories/windows/</link>
     <description>Recent content in windows on Jane - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 15 Mar 2020 00:00:00 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/windows/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 15 Mar 2020 00:00:00 +0800</lastBuildDate><atom:link href="https://elx123.github.io/categories/windows/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>windows内核以及驱动</title>
-      <link>http://localhost:1313/post/windows/</link>
+      <link>https://elx123.github.io/post/windows/</link>
       <pubDate>Sun, 15 Mar 2020 00:00:00 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/windows/</guid>
+      <guid>https://elx123.github.io/post/windows/</guid>
       <description>简介 之前一段时间一直在研究windows相关的技术(驱动,kernel mode debug,user mode debug) 接下来一段时间我会慢慢记录下之前一些书籍和资料 补上相关知识 这本</description>
     </item>
     
