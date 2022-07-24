@@ -69,7 +69,7 @@
       <pubDate>Sat, 03 Mar 2018 16:01:23 +0800</pubDate>
       
       <guid>https://elx123.github.io/post/shortcode-notice/</guid>
-      <description>normal use Note example: {{% notice note %}} A notice disclaimer {{% /notice %}} Result: You could custom title : {{% notice note 笔记 %}} A notice disclaimer {{% /notice %}} tip {{% notice tip %}} A tip disclaimer {{% /tip %}} info {{% notice info %}} A info disclaimer {{% /notice %}} warning {{% notice warning %}} A warning disclaimer {{% /notice %}}</description>
+      <description>normal use Note example: {{% notice note %}} A notice disclaimer {{% /notice %}} Result: note A notice disclaimer You could custom title : {{% notice note 笔记 %}} A notice disclaimer {{% /notice %}} 笔记 A notice disclaimer tip {{% notice tip %}} A tip disclaimer {{% /tip %}} tip A tip disclaimer info {{% notice info %}} A info disclaimer {{% /notice %}} info An information</description>
     </item>
     
     <item>

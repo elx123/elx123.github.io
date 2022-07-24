@@ -22,7 +22,7 @@
       <pubDate>Tue, 17 Mar 2020 00:00:00 +0800</pubDate>
       
       <guid>https://elx123.github.io/post/game/</guid>
-      <description>简介 github上有诸多开源的游戏服务器,这里开一篇研究下,以便日后使用 自己有过研究的有leaf,最近打算深入研究下pitaya 理论 https://www.infoq.cn/article/a-brief-history-of-the-game-server-architecture htt</description>
+      <description>简介 github上有诸多开源的游戏服务器,这里开一篇研究下,以便日后使用 自己有过研究的有leaf,最近打算深入研究下pitaya 理论 https://www.infoq.cn/article/a-brief-history-of-the-game-server-architecture https://www.imooc.com/wenda/detail/460664 pi</description>
     </item>
     
     <item>
@@ -103,7 +103,7 @@
       <pubDate>Sun, 23 Dec 2018 00:00:00 +0800</pubDate>
       
       <guid>https://elx123.github.io/post/golang_json/</guid>
-      <description>简介 最近发现一篇关于golang原生Json库的文章,转载过来https://zhuanlan.zhihu.com/p/37165706 介绍</description>
+      <description>简介 最近发现一篇关于golang原生Json库的文章,转载过来 https://zhuanlan.zhihu.com/p/37165706 介绍 encoding/json库的意义相对其他语言来说在Golang中尤其重</description>
     </item>
     
     <item>
@@ -157,7 +157,7 @@
       <pubDate>Sun, 14 Oct 2018 00:00:00 +0800</pubDate>
       
       <guid>https://elx123.github.io/post/float64/</guid>
-      <description>最近在工作遇到float的精度问题,记录下解决思路 简介 浮点数数据格式有许多种,IEEE754标准的浮点数与IBM格式浮点数用的比较多Go提供</description>
+      <description>最近在工作遇到float的精度问题,记录下解决思路 简介 浮点数数据格式有许多种,IEEE754标准的浮点数与IBM格式浮点数用的比较多 Go提供</description>
     </item>
     
     <item>
@@ -166,7 +166,7 @@
       <pubDate>Mon, 08 Oct 2018 00:00:00 +0800</pubDate>
       
       <guid>https://elx123.github.io/post/mgoandsession/</guid>
-      <description>简介 最近发现一篇关于mgo连接池很有价值的文章,转载过来https://cardinfolink.github.io/2017/05/17/</description>
+      <description>简介 最近发现一篇关于mgo连接池很有价值的文章,转载过来 https://cardinfolink.github.io/2017/05/17/mgo-session/ 介绍 mgo是由Golang编写的开源mongodb驱动。由于mongodb官方并没</description>
     </item>
     
     <item>

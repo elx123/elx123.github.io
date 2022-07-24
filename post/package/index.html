@@ -69,7 +69,7 @@
 <meta itemprop="name" content="go包管理器">
 <meta itemprop="description" content="简介 分别记录下glide和dep的使用心得 问题描述 如果公司存在多个版本库,那么控制第三方包的版本能有效降低风险 使用心得 glide glide.yaml"><meta itemprop="datePublished" content="2018-10-25T00:00:00+08:00" />
 <meta itemprop="dateModified" content="2019-05-29T17:04:55+08:00" />
-<meta itemprop="wordCount" content="492">
+<meta itemprop="wordCount" content="489">
 <meta itemprop="keywords" content="golang," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="go包管理器"/>
 <meta name="twitter:description" content="简介 分别记录下glide和dep的使用心得 问题描述 如果公司存在多个版本库,那么控制第三方包的版本能有效降低风险 使用心得 glide glide.yaml"/>
@@ -442,7 +442,7 @@
 
     
     <div class="post-content">
-      <!-- raw HTML omitted -->
+      <!-- more -->
 <h2 id="简介">简介</h2>
 <p>分别记录下glide和dep的使用心得</p>
 <h2 id="问题描述">问题描述</h2>
@@ -450,11 +450,11 @@
 <h2 id="使用心得">使用心得</h2>
 <h3 id="glide">glide</h3>
 <h4 id="glide-dot-yaml和glide-dot-lock">glide.yaml和glide.lock</h4>
-<p>通过glide.yaml管理第三方包,并使用glide.lock控制具体包的版本.<!-- raw HTML omitted -->
-lock 文件是一个比较通用的依赖关系持久化机制.在 NodeJs 的 yarn 、Rust 的 Cargo 以及 Ruby 的 Bundler 等工具上同样被使用。它会记录所有的依赖关系树，并且记录初始化时候拉取的具体版本。<!-- raw HTML omitted -->
+<p>通过glide.yaml管理第三方包,并使用glide.lock控制具体包的版本.<br />
+lock 文件是一个比较通用的依赖关系持久化机制.在 NodeJs 的 yarn 、Rust 的 Cargo 以及 Ruby 的 Bundler 等工具上同样被使用。它会记录所有的依赖关系树，并且记录初始化时候拉取的具体版本。<br />
 举个例子：即使两个人都只有一个相同内容的 glide.yaml 文件，但是他们未必拉取的版本是相同的。原因在于版本是可以取范围的：例如上面的: ~v0.11 。</p>
 <h4 id="如何管理local包">如何管理local包</h4>
-<p>glide官方是不支持将local包移进vendor的,作者推荐的解决办法: <!-- raw HTML omitted --></p>
+<p>glide官方是不支持将local包移进vendor的,作者推荐的解决办法: <br /></p>
 <h4 id="glide-can-handle-private-packages-using-the-repo-property-dot">Glide can handle private packages using the repo property.</h4>
 <p>See the glide.yaml file docs. You can specify a repo, such as <a href="mailto:git@git.example.com">git@git.example.com</a>/foo/bar.git.
 If you&rsquo;re using a build environment that does not know how to

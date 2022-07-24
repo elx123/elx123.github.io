@@ -23,7 +23,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="alx" />
-  <meta name="description" content="简介 最近发现一篇关于mgo连接池很有价值的文章,转载过来https://cardinfolink.github.io/2017/05/17/" />
+  <meta name="description" content="简介 最近发现一篇关于mgo连接池很有价值的文章,转载过来 https://cardinfolink.github.io/2017/05/17/mgo-session/ 介绍 mgo是由Golang编写的开源mongodb驱动。由于mongodb官方并没" />
 
   <meta name="keywords" content="Hugo, theme, jane" />
 
@@ -60,19 +60,19 @@
 
 
 <meta property="og:title" content="[转载]mgo 的 session 与连接池" />
-<meta property="og:description" content="简介 最近发现一篇关于mgo连接池很有价值的文章,转载过来https://cardinfolink.github.io/2017/05/17/" />
+<meta property="og:description" content="简介 最近发现一篇关于mgo连接池很有价值的文章,转载过来 https://cardinfolink.github.io/2017/05/17/mgo-session/ 介绍 mgo是由Golang编写的开源mongodb驱动。由于mongodb官方并没" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://elx123.github.io/post/mgoandsession/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2018-10-08T00:00:00+08:00" />
 <meta property="article:modified_time" content="2019-05-29T17:04:47+08:00" />
 
 <meta itemprop="name" content="[转载]mgo 的 session 与连接池">
-<meta itemprop="description" content="简介 最近发现一篇关于mgo连接池很有价值的文章,转载过来https://cardinfolink.github.io/2017/05/17/"><meta itemprop="datePublished" content="2018-10-08T00:00:00+08:00" />
+<meta itemprop="description" content="简介 最近发现一篇关于mgo连接池很有价值的文章,转载过来 https://cardinfolink.github.io/2017/05/17/mgo-session/ 介绍 mgo是由Golang编写的开源mongodb驱动。由于mongodb官方并没"><meta itemprop="datePublished" content="2018-10-08T00:00:00+08:00" />
 <meta itemprop="dateModified" content="2019-05-29T17:04:47+08:00" />
-<meta itemprop="wordCount" content="5829">
+<meta itemprop="wordCount" content="5776">
 <meta itemprop="keywords" content="golang," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="[转载]mgo 的 session 与连接池"/>
-<meta name="twitter:description" content="简介 最近发现一篇关于mgo连接池很有价值的文章,转载过来https://cardinfolink.github.io/2017/05/17/"/>
+<meta name="twitter:description" content="简介 最近发现一篇关于mgo连接池很有价值的文章,转载过来 https://cardinfolink.github.io/2017/05/17/mgo-session/ 介绍 mgo是由Golang编写的开源mongodb驱动。由于mongodb官方并没"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -450,13 +450,13 @@
 
     
     <div class="post-content">
-      <!-- raw HTML omitted -->
+      <!-- more -->
 <h2 id="简介">简介</h2>
-<p>最近发现一篇关于mgo连接池很有价值的文章,转载过来<!-- raw HTML omitted -->
+<p>最近发现一篇关于mgo连接池很有价值的文章,转载过来<br />
 <a href="https://cardinfolink.github.io/2017/05/17/mgo-session/">https://cardinfolink.github.io/2017/05/17/mgo-session/</a></p>
 <h2 id="介绍">介绍</h2>
 <p>mgo是由Golang编写的开源mongodb驱动。由于mongodb官方并没有开发Golang驱动，因此这款驱动被广泛使用。mongodb官网也推荐了这款开源驱动，并且作者在github也表示受到了mongodb官方的赞助。但由于作者的个人安排
-原因，该驱动的更新、bug修复、issue维护略微受到诟病。<!-- raw HTML omitted -->
+原因，该驱动的更新、bug修复、issue维护略微受到诟病。<br />
 mgo在功能方面还是比较完善的，api使用也方便。由于mongodb丰富的玩法，mgo代码庞大，其中大部分是与mongodb的协议代码。核心的处理连接和请求的结构，逻辑上还是比较清晰的。</p>
 <h2 id="简单的使用">简单的使用</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">dial</span>() {
@@ -488,14 +488,14 @@ mgo在功能方面还是比较完善的，api使用也方便。由于mongodb丰�
 </span></span><span style="display:flex;"><span>        <span style="color:#f92672">...</span>
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>这里列出了mgo.Session的五个私有成员变量，与Copy机制有关的是，m,slaveSocket,masterSocket。
-m是mgo.Session的并发锁，因此所有的Session实例都是线程安全的。<!-- raw HTML omitted -->
+m是mgo.Session的并发锁，因此所有的Session实例都是线程安全的。<br />
 slaveSocket,masterSocket代表了该Session到mongodb主节点和从节点的一个物理连接的缓存。
 而Session的策略总是优先使用缓存的连接。是否缓存连接，由consistency也就是该Session的模式决定。
 假设在并发程序中，使用同一个Session实例，不使用Copy，而该Session实例的模式又恰好会缓存连接，
 那么，所有的通过该Session实例的操作，都会通过同一条连接到达mongodb。虽然mongodb本身的网络模型
 是非阻塞通信，请求可以通过一条链路，非阻塞地处理；但经过比较简陋的性能测试，在mongodb3.0中，
 10条连接并发写比单条连接的效率高一倍（在mongodb3.4中基本没有差别）。所以，使用Session Copy的
-一个重要原因是，可以将请求并发地分散到多个连接中。<!-- raw HTML omitted -->
+一个重要原因是，可以将请求并发地分散到多个连接中。<br />
 以上只是效率问题，但第二个问题是致命的。mgo.Session缓存的一主一从连接，实例本身不负责维护。
 也就是说，当slaveSocket,masterSocket任意其一，连接断开，Session自己不会重置缓存，该Session
 的使用者如果不主动重置缓存，调用者得到的将永远是EOF。这种情况在主从切换时就会发生，在网络抖动
@@ -525,7 +525,7 @@ mongodb都会在mgo内部，对应一个mongoServer结构体的实例，一个�
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>其中，info代表了该实例对应的数据库服务器在集群中的信息——是否master，ReplicaSetName等。而两个Slice，就是传说中的连接池
 。unusedSockets存储当前空闲的连接，liveSockets存储当前活跃中的连接，Session缓存的连接就同时存放在liveSockets切片中，
-而临时Session获取到的连接就位于unusedSockets切片中。<!-- raw HTML omitted -->
+而临时Session获取到的连接就位于unusedSockets切片中。<br />
 每个mongoServer都会隶属于一个mongoCluster结构，相当于mgo在内部，模拟出了mongo数据库集群的模型。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">mongoCluster</span> <span style="color:#66d9ef">struct</span> {
 </span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">sync</span>.<span style="color:#a6e22e">RWMutex</span>
@@ -539,13 +539,13 @@ mongodb都会在mgo内部，对应一个mongoServer结构体的实例，一个�
 </span></span></code></pre></div><p>如定义所示，mongoCluster持有一系列mongoServer的实例，以主从结构分散到两个数组中。
 每个Session都会存储自己对应的，要操作的mongoCluster的引用。</p>
 <h2 id="长途跋涉的session">长途跋涉的Session</h2>
-<p>以下描述一个Copy出来的临时Session是如何获取到一个mongodb物理连接的。 <!-- raw HTML omitted -->
+<p>以下描述一个Copy出来的临时Session是如何获取到一个mongodb物理连接的。 <br />
 当临时Session被Copy出来，并且通过调用一系列api，将一次数据库操作设置到了Session内部后，此时万事俱备，
 只差连接。新生的Session首先会检查自己的缓存里是否有连接可用，初来乍到的他当然不知道自己是一个一无所有
 的光杆司令。由于mgo的实现，可怜的他还要去检查两次，一次使用读锁，一次使用写锁。作者的意图应该是期望在对
 同一个session并发操作时，能在第二次排他锁检查之前，恰巧缓存到一条连接，那么就可以减少一次对连接池的操作。
 但这次，这种好事没有发生在这个Session身上，“摸”了两次“口袋”反复确认以后，他终于还是发现自己身无分文。没有
-连接的他向组织求救，也就是这个session所要操作的mongodb集群，也就是所提到的mongoCluster结构。<!-- raw HTML omitted -->
+连接的他向组织求救，也就是这个session所要操作的mongodb集群，也就是所提到的mongoCluster结构。<br />
 “组织”问了这个Session一系列问题，其中最主要的是两个问题，一是”你要主库连接还是从库连接”，二是“你期望的连接池
 最大大小是多少”。第一个问题，Session很好回答，他首先看了看自己的模式，是必须到主库还是必须到从库，还是两者皆可
 看情况而定。再看了看自己手里的操作是读还是写，写操作当然不可能到从库去完成。第二个问题就有点强人所难，但是他不
@@ -554,12 +554,12 @@ mongodb都会在mgo内部，对应一个mongoServer结构体的实例，一个�
 获取到这个空闲的连接，高高兴兴的揣到兜里回家干活。但如果不巧，正好unusedSockets为空，那么掌柜会问另一个问题，
 你有没有超过这个家伙的期望的最大连接数。如果没有超过，那还好，作为伙计的mongoServer就干活了，他会跑到他负责的
 数据库服务器那里去申请一条全新的连接，亲手交到Session的手里。但如果这个伙计算了算，还去申请新连接的话，恐怕就超限了，
-那就Session同学对不起了您，您等吧。每100ms,伙计自旋一次，等着unusedSockets里出现可用的连接。<!-- raw HTML omitted -->
+那就Session同学对不起了您，您等吧。每100ms,伙计自旋一次，等着unusedSockets里出现可用的连接。<br />
 当然有人会问，那这么自旋下去，如果连接一直被其他Session占用，会不会就死循环了呢，答案是不会。这个伙计作为一个数据库
 服务器的管理员吧可以说，他自己也要常常去确认他负责的这个服务器是不是还活着。因此，伙计同学每15s会给服务器发一个ping命令。
 作为管理员，伙计可就不管什么连接池大小超不超的问题了，那是他们那些普通session要考虑的琐事。伙计同学要ping的时候，也去
 unusedSockets里看，如果有最好，就拿一个来用；没有的话，直接去问服务器要新的。ping完之后，新的连接就会被放入unusedSockets中。
-这样的话，自旋中的获取连接请求，就可以拿到连接了。<!-- raw HTML omitted -->
+这样的话，自旋中的获取连接请求，就可以拿到连接了。<br />
 经过摸口袋，找组织，问伙计，伙计再干点小活，临时Session终于拿到了梦寐以求的数据库物理连接，把他放到了自己的口袋里
 （当然有些模式的Session不会这么干）。心满意足地将自己手里的操作通过这条连接写了出去，等到数据库给了他想要的应答，
 他的生命也就结束了。通过Close方法，我们剥夺了他口袋里的得之不易的连接，放回到了对应mongoServer的unusedSockets中。
@@ -590,7 +590,7 @@ unusedSockets里看，如果有最好，就拿一个来用；没有的话，直�
 <h3 id="连接池上限与冲击数据库">连接池上限与冲击数据库</h3>
 <p>mgo对Session有一个poolLimit配置，也就是上文中所说的cluster问session的第二个问题——代表了对连接池连接数的上限限制。
 默认配置的连接数上限是4096，显然对生产环境来说太过大了。但这个配置我以为非常的鸡肋，属于设置也不好，不设置也不好；
-个人认为这是被mgo的并发模型所拖累了。<!-- raw HTML omitted -->
+个人认为这是被mgo的并发模型所拖累了。<br />
 假设高并发场景，若设置的连接池上限为4096，并发为10000，那么理论上，一瞬间，mgo可能会产生4096个到mongodb的物理连接，
 而剩下的六千的请求会自旋等待。4096个连接对mongodb来说，首先意味着4096 * 10M的内存消耗，如此高的连接会导致各种各样的问题。
 那么加入设置连接池上限为100，并发为10000，9900个等待的请求每次100个排队完成，对应用的效率又是不小的消耗。况且实际测试中，
@@ -603,10 +603,10 @@ poolLimit的设置也无法严格地限制住连接数。</p>
 这两种并发模型都存在问题。因此，最好的模型是M:N，有M个数据库操作需要完成，一次性取N个连接，分散到N个连接中完成，
 此后无论有多少批请求，都可以在N个连接中分散完成。第一可以规避连接池锁冲突，第二不会大规模产生真实连接，充分利用已建立的连接。</p>
 <h3 id="sessionpool">SessionPool</h3>
-<p>M:N的模型无法通过mgo原生支持完成，api也无法支持用户获取到物理连接。<!-- raw HTML omitted -->
+<p>M:N的模型无法通过mgo原生支持完成，api也无法支持用户获取到物理连接。<br />
 可以利用Session会缓存连接的特性，通过一些小技巧实现一个SessionPool。
 例如，有M个写操作，则可以一次性生成N个StrongSession，每个StrongSession自己会缓存一条masterSocket；
-于是，之后的写操作，可以以某种方式负载均衡到这N个由Strong模式的Session缓存的连接中。<!-- raw HTML omitted -->
+于是，之后的写操作，可以以某种方式负载均衡到这N个由Strong模式的Session缓存的连接中。<br />
 mgop简单实现了上述的StrongSessionPool，以轮询的方式负载。对从库连接的缓存以及动态负载还有待实现。
 实现SessionPool要特别注意的问题是刷新问题，缓存Session中的连接随时可能会失效，mgop的方式是遍历发送isMaster命令，
 第一确认连接存活，第二确认连接确实是到主库的。若发现问题，则马上重置缓存。</p>
@@ -624,7 +624,7 @@ mgop简单实现了上述的StrongSessionPool，以轮询的方式负载。对�
 </span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">lastTimeUsed</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Time</span>
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>每次有连接被重置到空闲池时，打一个时间戳。在轮询goroutine中每隔一段时间review空闲连接的空闲时长，
-当时长大于maxIdleTimeMS时，就释放连接，将空闲池的大小控制在minPoolSize。<!-- raw HTML omitted -->
+当时长大于maxIdleTimeMS时，就释放连接，将空闲池的大小控制在minPoolSize。<br />
 实现中，没有特地写设置函数，可以通过在mongo url中写入选项设置，
 如：mongodb://127.0.0.1?minPoolSize=0&amp;maxIdleTimeMS=3000，若maxIdleTimeMS不设置或为0，则默认为不进行释放</p>
 

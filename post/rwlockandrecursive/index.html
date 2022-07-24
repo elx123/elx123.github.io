@@ -442,7 +442,7 @@
 
     
     <div class="post-content">
-      <!-- raw HTML omitted -->
+      <!-- more -->
 <h2 id="简介">简介</h2>
 <p>这里介绍下我对于3种锁的使用观点</p>
 <h2 id="个人观点">个人观点</h2>
@@ -502,7 +502,7 @@
 <li>从性能方面来说, 读写锁不见得比普通 mutex 更高效.无论如何read lock加锁的开销不会比mutex lock小,因为它要更新当前 reader 的数目.如果临界区很小,锁竞争不激烈,那么mutex往往会更快.</li>
 </ul>
 </li>
-<li>再有JCP中(<!-- raw HTML omitted --><!-- raw HTML omitted -->)
+<li>再有JCP中(<a id="orgb0f9808"></a>)
 <ul>
 <li>Read-write locks are a performance optimization designed to allow greater concurrency in certain situations. In practice, read-write locks can improve performance for frequently accessed read-mostly data structures on multiprocessor systems; under other conditions they perform slightly worse than exclusive locks due to their greater complexity.</li>
 </ul>

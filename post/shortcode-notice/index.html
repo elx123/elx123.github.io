@@ -23,7 +23,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="RT" />
-  <meta name="description" content="normal use Note example: {{% notice note %}} A notice disclaimer {{% /notice %}} Result: You could custom title : {{% notice note 笔记 %}} A notice disclaimer {{% /notice %}} tip {{% notice tip %}} A tip disclaimer {{% /tip %}} info {{% notice info %}} A info disclaimer {{% /notice %}} warning {{% notice warning %}} A warning disclaimer {{% /notice %}}" />
+  <meta name="description" content="normal use Note example: {{% notice note %}} A notice disclaimer {{% /notice %}} Result: note A notice disclaimer You could custom title : {{% notice note 笔记 %}} A notice disclaimer {{% /notice %}} 笔记 A notice disclaimer tip {{% notice tip %}} A tip disclaimer {{% /tip %}} tip A tip disclaimer info {{% notice info %}} A info disclaimer {{% /notice %}} info An information" />
 
   <meta name="keywords" content="Hugo, theme, jane" />
 
@@ -60,19 +60,19 @@
 
 
 <meta property="og:title" content="Shortcodes Notice Preview" />
-<meta property="og:description" content="normal use Note example: {{% notice note %}} A notice disclaimer {{% /notice %}} Result: You could custom title : {{% notice note 笔记 %}} A notice disclaimer {{% /notice %}} tip {{% notice tip %}} A tip disclaimer {{% /tip %}} info {{% notice info %}} A info disclaimer {{% /notice %}} warning {{% notice warning %}} A warning disclaimer {{% /notice %}}" />
+<meta property="og:description" content="normal use Note example: {{% notice note %}} A notice disclaimer {{% /notice %}} Result: note A notice disclaimer You could custom title : {{% notice note 笔记 %}} A notice disclaimer {{% /notice %}} 笔记 A notice disclaimer tip {{% notice tip %}} A tip disclaimer {{% /tip %}} tip A tip disclaimer info {{% notice info %}} A info disclaimer {{% /notice %}} info An information" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://elx123.github.io/post/shortcode-notice/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2018-03-03T16:01:23+08:00" />
 <meta property="article:modified_time" content="2018-03-04T16:01:23+08:00" />
 
 <meta itemprop="name" content="Shortcodes Notice Preview">
-<meta itemprop="description" content="normal use Note example: {{% notice note %}} A notice disclaimer {{% /notice %}} Result: You could custom title : {{% notice note 笔记 %}} A notice disclaimer {{% /notice %}} tip {{% notice tip %}} A tip disclaimer {{% /tip %}} info {{% notice info %}} A info disclaimer {{% /notice %}} warning {{% notice warning %}} A warning disclaimer {{% /notice %}}"><meta itemprop="datePublished" content="2018-03-03T16:01:23+08:00" />
+<meta itemprop="description" content="normal use Note example: {{% notice note %}} A notice disclaimer {{% /notice %}} Result: note A notice disclaimer You could custom title : {{% notice note 笔记 %}} A notice disclaimer {{% /notice %}} 笔记 A notice disclaimer tip {{% notice tip %}} A tip disclaimer {{% /tip %}} tip A tip disclaimer info {{% notice info %}} A info disclaimer {{% /notice %}} info An information"><meta itemprop="datePublished" content="2018-03-03T16:01:23+08:00" />
 <meta itemprop="dateModified" content="2018-03-04T16:01:23+08:00" />
-<meta itemprop="wordCount" content="65">
+<meta itemprop="wordCount" content="86">
 <meta itemprop="keywords" content="preview,shortcodes,tag-6," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Shortcodes Notice Preview"/>
-<meta name="twitter:description" content="normal use Note example: {{% notice note %}} A notice disclaimer {{% /notice %}} Result: You could custom title : {{% notice note 笔记 %}} A notice disclaimer {{% /notice %}} tip {{% notice tip %}} A tip disclaimer {{% /tip %}} info {{% notice info %}} A info disclaimer {{% /notice %}} warning {{% notice warning %}} A warning disclaimer {{% /notice %}}"/>
+<meta name="twitter:description" content="normal use Note example: {{% notice note %}} A notice disclaimer {{% /notice %}} Result: note A notice disclaimer You could custom title : {{% notice note 笔记 %}} A notice disclaimer {{% /notice %}} 笔记 A notice disclaimer tip {{% notice tip %}} A tip disclaimer {{% /tip %}} tip A tip disclaimer info {{% notice info %}} A info disclaimer {{% /notice %}} info An information"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -445,27 +445,47 @@
 A notice disclaimer
 {{% /notice %}}
 </code></pre><p><strong>Result:</strong></p>
-<!-- raw HTML omitted -->
+<div class="shortcode-notice note">
+  <div class="shortcode-notice-title note">
+      note</div>
+  <div class="notice-content">A notice disclaimer</div>
+</div>
 <p>You could <strong>custom title</strong> :</p>
 <pre tabindex="0"><code class="language-shortcode" data-lang="shortcode">{{% notice note 笔记 %}}
 A notice disclaimer
 {{% /notice %}}
-</code></pre><!-- raw HTML omitted -->
+</code></pre><div class="shortcode-notice note">
+  <div class="shortcode-notice-title note">笔记
+    </div>
+  <div class="notice-content">A notice disclaimer</div>
+</div>
 <h2 id="tip">tip</h2>
 <pre tabindex="0"><code class="language-shortcode" data-lang="shortcode">{{% notice tip %}}
 A tip disclaimer
 {{% /tip %}}
-</code></pre><!-- raw HTML omitted -->
+</code></pre><div class="shortcode-notice tip">
+  <div class="shortcode-notice-title tip">
+      tip</div>
+  <div class="notice-content">A tip disclaimer</div>
+</div>
 <h2 id="info">info</h2>
 <pre tabindex="0"><code class="language-shortcode" data-lang="shortcode">{{% notice info %}}
 A info disclaimer
 {{% /notice %}}
-</code></pre><!-- raw HTML omitted -->
+</code></pre><div class="shortcode-notice info">
+  <div class="shortcode-notice-title info">
+      info</div>
+  <div class="notice-content">An information disclaimer</div>
+</div>
 <h2 id="warning">warning</h2>
 <pre tabindex="0"><code class="language-shortcode" data-lang="shortcode">{{% notice warning %}}
 A warning disclaimer
 {{% /notice %}}
-</code></pre><!-- raw HTML omitted -->
+</code></pre><div class="shortcode-notice warning">
+  <div class="shortcode-notice-title warning">
+      warning</div>
+  <div class="notice-content">An warning disclaimer</div>
+</div>
 
     </div>
 

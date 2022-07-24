@@ -23,7 +23,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="alx" />
-  <meta name="description" content="简介 最近发现一篇关于golang原生Json库的文章,转载过来https://zhuanlan.zhihu.com/p/37165706 介绍" />
+  <meta name="description" content="简介 最近发现一篇关于golang原生Json库的文章,转载过来 https://zhuanlan.zhihu.com/p/37165706 介绍 encoding/json库的意义相对其他语言来说在Golang中尤其重" />
 
   <meta name="keywords" content="Hugo, theme, jane" />
 
@@ -60,19 +60,19 @@
 
 
 <meta property="og:title" content="[转载]Golang Json库源码" />
-<meta property="og:description" content="简介 最近发现一篇关于golang原生Json库的文章,转载过来https://zhuanlan.zhihu.com/p/37165706 介绍" />
+<meta property="og:description" content="简介 最近发现一篇关于golang原生Json库的文章,转载过来 https://zhuanlan.zhihu.com/p/37165706 介绍 encoding/json库的意义相对其他语言来说在Golang中尤其重" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://elx123.github.io/post/golang_json/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2018-12-23T00:00:00+08:00" />
 <meta property="article:modified_time" content="2019-05-29T17:04:36+08:00" />
 
 <meta itemprop="name" content="[转载]Golang Json库源码">
-<meta itemprop="description" content="简介 最近发现一篇关于golang原生Json库的文章,转载过来https://zhuanlan.zhihu.com/p/37165706 介绍"><meta itemprop="datePublished" content="2018-12-23T00:00:00+08:00" />
+<meta itemprop="description" content="简介 最近发现一篇关于golang原生Json库的文章,转载过来 https://zhuanlan.zhihu.com/p/37165706 介绍 encoding/json库的意义相对其他语言来说在Golang中尤其重"><meta itemprop="datePublished" content="2018-12-23T00:00:00+08:00" />
 <meta itemprop="dateModified" content="2019-05-29T17:04:36+08:00" />
-<meta itemprop="wordCount" content="5148">
+<meta itemprop="wordCount" content="5105">
 <meta itemprop="keywords" content="golang," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="[转载]Golang Json库源码"/>
-<meta name="twitter:description" content="简介 最近发现一篇关于golang原生Json库的文章,转载过来https://zhuanlan.zhihu.com/p/37165706 介绍"/>
+<meta name="twitter:description" content="简介 最近发现一篇关于golang原生Json库的文章,转载过来 https://zhuanlan.zhihu.com/p/37165706 介绍 encoding/json库的意义相对其他语言来说在Golang中尤其重"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -442,9 +442,9 @@
 
     
     <div class="post-content">
-      <!-- raw HTML omitted -->
+      <!-- more -->
 <h2 id="简介">简介</h2>
-<p>最近发现一篇关于golang原生Json库的文章,转载过来<!-- raw HTML omitted -->
+<p>最近发现一篇关于golang原生Json库的文章,转载过来<br />
 <a href="https://zhuanlan.zhihu.com/p/37165706">https://zhuanlan.zhihu.com/p/37165706</a></p>
 <h2 id="介绍">介绍</h2>
 <p>encoding/json库的意义相对其他语言来说在Golang中尤其重要，因为它还扮演着struct转换器的角色，即对于字段列表存在公共子集的不同结构体之间进行转换（如果你不知道为什么要做这件事，这是另一个话题，需要单独讨论）。目前来看使用Marshal和Unmarshal方法是最优解（不要告诉我你要对字段进行one by one的赋值，虽然这种low逼方法有时候更加有效）。</p>
@@ -452,22 +452,22 @@
 <ul>
 <li>只有合法的json串才能解析（废话）</li>
 </ul>
-<p>key只能是string；<!-- raw HTML omitted -->
-map的形式必须是map[string]T，T是Go的基本类型；<!-- raw HTML omitted -->
-Channel, complex, function 不能进行编码；<!-- raw HTML omitted -->
-循环数据不支持；<!-- raw HTML omitted -->
+<p>key只能是string；<br />
+map的形式必须是map[string]T，T是Go的基本类型；<br />
+Channel, complex, function 不能进行编码；<br />
+循环数据不支持；<br />
 指针会被编码成指针的值，nil是null。</p>
 <ul>
 <li>只有可导出（exported）的字段才能解析</li>
 </ul>
-<p>即首字符大写的字段才能显示在json对象中，解析规则有如下顺序，例如一个key：Foo<!-- raw HTML omitted -->
-1.先找tag是Foo的<!-- raw HTML omitted -->
-2.找字段名是Foo的<!-- raw HTML omitted -->
-3.找FOO或者FoO等<!-- raw HTML omitted --></p>
+<p>即首字符大写的字段才能显示在json对象中，解析规则有如下顺序，例如一个key：Foo<br />
+1.先找tag是Foo的<br />
+2.找字段名是Foo的<br />
+3.找FOO或者FoO等<br /></p>
 <ul>
 <li>只能解码在目标对象存在的字段</li>
-<li>这个特性其实是很有用的，你可以设计一个大而全的兼容结构体，当你希望从里面挑选一些字段时就可以利用它；<!-- raw HTML omitted --></li>
-<li>这也意味着目标对象中unexported的字段不受Unmarshal的影响；<!-- raw HTML omitted --></li>
+<li>这个特性其实是很有用的，你可以设计一个大而全的兼容结构体，当你希望从里面挑选一些字段时就可以利用它；<br /></li>
+<li>这也意味着目标对象中unexported的字段不受Unmarshal的影响；<br /></li>
 <li>Unmarshal可以自动对对象内部的指针赋值</li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">//这个特性是指一个struct包含其他的引用类型的字段，你不需要先创建它
@@ -507,10 +507,10 @@ Channel, complex, function 不能进行编码；<!-- raw HTML omitted -->
 </span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">UnmarshalJSON</span>([]<span style="color:#66d9ef">byte</span>) <span style="color:#66d9ef">error</span>
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><ol>
-<li>Decoder / Encoder：解码输入流和编码json到输出流的对象<!-- raw HTML omitted --></li>
-<li>UnmarshalTypeError：最主要的错误类型，表示一个json值不能转化为特定的go类型的值，还提供了其他若干Error类型，不一一列举了。<!-- raw HTML omitted --></li>
-<li>Number：实际上是json的number类型的包装类，解析时提供对应方法取得值<!-- raw HTML omitted --></li>
-<li>RawMessage：保持原本的json对象。实现了Marshaler和Unmarshaler接口，用于延迟json的解码或者预计算json的编码。前面是注释的翻译，其实就是个[]byte，delay和预计算没理解什么意思，这个类型在encode和decode过程中也没有用到<!-- raw HTML omitted --></li>
+<li>Decoder / Encoder：解码输入流和编码json到输出流的对象<br /></li>
+<li>UnmarshalTypeError：最主要的错误类型，表示一个json值不能转化为特定的go类型的值，还提供了其他若干Error类型，不一一列举了。<br /></li>
+<li>Number：实际上是json的number类型的包装类，解析时提供对应方法取得值<br /></li>
+<li>RawMessage：保持原本的json对象。实现了Marshaler和Unmarshaler接口，用于延迟json的解码或者预计算json的编码。前面是注释的翻译，其实就是个[]byte，delay和预计算没理解什么意思，这个类型在encode和decode过程中也没有用到<br /></li>
 <li>重要方法</li>
 </ol>
 <p>其中最主要的就是Marshal和Unmarshal两个方法，有很多细节需要注意。</p>
@@ -518,11 +518,11 @@ Channel, complex, function 不能进行编码；<!-- raw HTML omitted -->
 <li>Marshal</li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">Marshal</span>(<span style="color:#a6e22e">v</span> <span style="color:#66d9ef">interface</span>{}) ([]<span style="color:#66d9ef">byte</span>, <span style="color:#66d9ef">error</span>) {
-</span></span></code></pre></div><p>Marshal函数返回v的json编码。<!-- raw HTML omitted --></p>
-<p>数组和切片类型的值编码为json数组，但[]byte编码为base64编码字符串；nil切片编码为null；结构体编码为json对象。每一个导出字段变成该对象的一个成员，除非：<!-- raw HTML omitted --></p>
+</span></span></code></pre></div><p>Marshal函数返回v的json编码。<br /></p>
+<p>数组和切片类型的值编码为json数组，但[]byte编码为base64编码字符串；nil切片编码为null；结构体编码为json对象。每一个导出字段变成该对象的一个成员，除非：<br /></p>
 <ol>
-<li>字段的标签是&quot;-&quot;<!-- raw HTML omitted --></li>
-<li>字段是空值，而其标签指定了omitempty //空值包括false、0、&quot;&quot;、nil指针、nil接口、长度为0的数组、切片、映射。（经我测试，空值是可以正常解析并显示的，tag里加上omitempty后就会被忽略掉）<!-- raw HTML omitted --></li>
+<li>字段的标签是&quot;-&quot;<br /></li>
+<li>字段是空值，而其标签指定了omitempty //空值包括false、0、&quot;&quot;、nil指针、nil接口、长度为0的数组、切片、映射。（经我测试，空值是可以正常解析并显示的，tag里加上omitempty后就会被忽略掉）<br /></li>
 </ol>
 <p>&ldquo;string&quot;选项标记一个字段在编码json时应编码为字符串。它只适用于字符串、浮点数、整数类型的字段。（这在对象转换过程中非常有用，避免了类型必须一致的尴尬，可动态调整目标对象，提高了灵活性）</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">id</span> <span style="color:#66d9ef">int64</span> <span style="color:#e6db74">`json:&#34;id,string&#34;`</span>
@@ -531,10 +531,10 @@ Channel, complex, function 不能进行编码；<!-- raw HTML omitted -->
 <li>Unmarshal</li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">Unmarshal</span>(<span style="color:#a6e22e">data</span> []<span style="color:#66d9ef">byte</span>, <span style="color:#a6e22e">v</span> <span style="color:#66d9ef">interface</span>{}) <span style="color:#66d9ef">error</span> {
-</span></span></code></pre></div><p>Unmarshal函数解析json编码的数据并将结果存入v指向的值。<!-- raw HTML omitted -->
-要将json数据解码写入一个指针，Unmarshal函数首先处理json数据是json字面值null的情况。此时，函数将指针设为nil；否则，函数将json数据解码写入指针指向的值；如果指针本身是nil，函数会先申请一个值并使指针指向它。<!-- raw HTML omitted -->
-要将json数据解码写入一个结构体，函数会匹配输入对象的键和Marshal使用的键（结构体字段名或者它的标签指定的键名），优先选择精确的匹配，但也接受大小写不敏感的匹配。<!-- raw HTML omitted -->
-JSON的null值解码为go的接口、指针、切片时会将它们设为nil<!-- raw HTML omitted --></p>
+</span></span></code></pre></div><p>Unmarshal函数解析json编码的数据并将结果存入v指向的值。<br />
+要将json数据解码写入一个指针，Unmarshal函数首先处理json数据是json字面值null的情况。此时，函数将指针设为nil；否则，函数将json数据解码写入指针指向的值；如果指针本身是nil，函数会先申请一个值并使指针指向它。<br />
+要将json数据解码写入一个结构体，函数会匹配输入对象的键和Marshal使用的键（结构体字段名或者它的标签指定的键名），优先选择精确的匹配，但也接受大小写不敏感的匹配。<br />
+JSON的null值解码为go的接口、指针、切片时会将它们设为nil<br /></p>
 <ul>
 <li>Compact：将json编码的src中无用的空白字符剔除后写入dst</li>
 </ul>
@@ -954,9 +954,9 @@ JSON的null值解码为go的接口、指针、切片时会将它们设为nil<!--
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Value</span> <span style="color:#66d9ef">struct</span> {
 </span></span></code></pre></div><p>总结一下上面几个方法中提出的重要概念：</p>
 <ol>
-<li>addressable：可寻址的，表示一个Value被分配了地址空间，即真实存在的，可以取到值也可以赋值；<!-- raw HTML omitted --></li>
-<li>unaddressable：反之，不可寻址，没分配内存，就是个nil，无法获取无法Set值。unaddressable的Value会导致转换的json中对应键的缺失，这也是为什么我们的项目中Unmarshal没有用标准库的原因。<!-- raw HTML omitted --></li>
-<li>zero value：0值，就是没值，反射包中提供的若干Value的方法都不可用。<!-- raw HTML omitted --></li>
+<li>addressable：可寻址的，表示一个Value被分配了地址空间，即真实存在的，可以取到值也可以赋值；<br /></li>
+<li>unaddressable：反之，不可寻址，没分配内存，就是个nil，无法获取无法Set值。unaddressable的Value会导致转换的json中对应键的缺失，这也是为什么我们的项目中Unmarshal没有用标准库的原因。<br /></li>
+<li>zero value：0值，就是没值，反射包中提供的若干Value的方法都不可用。<br /></li>
 </ol>
 <p>另外，通过源码也可以看出来，递归以及反射的大量使用导致转换的效率并不高，代码的质量很一般，为实现功能而写，没有经过精雕细琢（有人可能说你说不好你咋不写一个好的？老实说，我还真写不出来。。。）。有一些开源的三方lib在性能方面做了改进，可以参考。</p>
 

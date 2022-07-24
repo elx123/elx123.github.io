@@ -144,7 +144,7 @@ $$&lt;/p&gt;
 &lt;td&gt;&lt;code&gt;&amp;lt;del&amp;gt;&amp;lt;/del&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;!-- raw HTML omitted --&gt;Underline&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td&gt;&lt;u&gt;Underline&lt;/u&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;&amp;lt;u&amp;gt;underline&amp;lt;/u&amp;gt;&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;&lt;code&gt;&amp;lt;u&amp;gt;&amp;lt;/u&amp;gt;&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
@@ -234,14 +234,14 @@ $$&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;~~Mistaken text.~~&lt;/code&gt; becomes &lt;del&gt;Mistaken text.&lt;/del&gt;&lt;/p&gt;
 &lt;h2 id=&#34;underline&#34;&gt;Underline&lt;/h2&gt;
 &lt;p&gt;Underline is powered by raw HTML.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;&amp;lt;u&amp;gt;Underline&amp;lt;/u&amp;gt;&lt;/code&gt; becomes &lt;!-- raw HTML omitted --&gt;Underline&lt;!-- raw HTML omitted --&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;u&amp;gt;Underline&amp;lt;/u&amp;gt;&lt;/code&gt; becomes &lt;u&gt;Underline&lt;/u&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;emoji-happy&#34;&gt;Emoji :happy:&lt;/h2&gt;
 &lt;p&gt;Input emoji with syntax &lt;code&gt;😄&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;User can trigger auto-complete suggestions for emoji by pressing &lt;code&gt;ESC&lt;/code&gt; key, or trigger it automatically after enable it on preference panel. Also, input UTF8 emoji char directly from &lt;code&gt;Edit&lt;/code&gt; -&amp;gt; &lt;code&gt;Emoji &amp;amp; Symbols&lt;/code&gt; from menu bar is also supported.&lt;/p&gt;
 &lt;h2 id=&#34;inline-math&#34;&gt;Inline Math&lt;/h2&gt;
 &lt;p&gt;To use this feature, first, please enable it in &lt;code&gt;Preference&lt;/code&gt; Panel -&amp;gt; &lt;code&gt;Markdown&lt;/code&gt; Tab. Then use &lt;code&gt;$&lt;/code&gt; to wrap TeX command, for example: &lt;code&gt;$\lim_{x \to \infty} \exp(-x) = 0$&lt;/code&gt; will be rendered as LaTeX command.&lt;/p&gt;
 &lt;p&gt;To trigger inline preview for inline math: input “$”, then press &lt;code&gt;ESC&lt;/code&gt; key, then input TeX command, a preview tooltip will be visible like below:&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;img src=&#34;https://typora.io/img/inline-math.gif&#34; style=&#34;zoom:50%;&#34; /&gt;
 &lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr&gt;
 &lt;ol&gt;
@@ -371,8 +371,7 @@ go
 视频
 &lt;/h4&gt;
 &lt;div id=&#34;outline-text-headline-13&#34; class=&#34;outline-text-4&#34;&gt;
-&lt;p&gt;Ardan Labs Ultimate GO&lt;/p&gt;
-&lt;p&gt;
+&lt;p&gt;Ardan Labs Ultimate GO&lt;br&gt;
 Ardan Labs Ultimate Service by Jacob Walker&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -396,10 +395,8 @@ windows(部分)
 书籍
 &lt;/h4&gt;
 &lt;div id=&#34;outline-text-headline-16&#34; class=&#34;outline-text-4&#34;&gt;
-&lt;p&gt;Windows Kernel Programming Pavel Yosifovich&lt;/p&gt;
-&lt;p&gt;
-Windows 10 System Programming Pavel Yosifovich&lt;/p&gt;
-&lt;p&gt;
+&lt;p&gt;Windows Kernel Programming Pavel Yosifovich&lt;br&gt;
+Windows 10 System Programming Pavel Yosifovich&lt;br&gt;
 Windows 10 System Programming Part 2&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -408,10 +405,8 @@ Windows 10 System Programming Part 2&lt;/p&gt;
 视频
 &lt;/h4&gt;
 &lt;div id=&#34;outline-text-headline-17&#34; class=&#34;outline-text-4&#34;&gt;
-&lt;p&gt;Windows Presentation Foundation Masterclass&lt;/p&gt;
-&lt;p&gt;
-Unit Testing for C# Developers&lt;/p&gt;
-&lt;p&gt;
+&lt;p&gt;Windows Presentation Foundation Masterclass&lt;br&gt;
+Unit Testing for C# Developers&lt;br&gt;
 complete C# Programming Course Beginner to Expert&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -438,7 +433,7 @@ tls
       
       <guid>https://elx123.github.io/post/summarize/</guid>
       
-        <description>&lt;!-- raw HTML omitted --&gt;
+        <description>&lt;!-- more --&gt;
 &lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
 &lt;p&gt;最近休息了一段时间,总结下自己在这段时间看的资料和书籍&lt;/p&gt;
 &lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
@@ -458,19 +453,19 @@ tls
 &lt;p&gt;Learn Kubernetes in a Month of Lunches (Elton Stoneman)(阅读中)&lt;/p&gt;
 &lt;h3 id=&#34;go&#34;&gt;go&lt;/h3&gt;
 &lt;h4 id=&#34;视频&#34;&gt;视频&lt;/h4&gt;
-&lt;p&gt;Ardan Labs Ultimate GO&lt;/p&gt;
-&lt;p&gt;Ardan Labs Ultimate Service by Jacob Walker&lt;/p&gt;
+&lt;p&gt;Ardan Labs Ultimate GO&lt;br /&gt;
+Ardan Labs Ultimate Service by Jacob Walker&lt;/p&gt;
 &lt;h3 id=&#34;rest-api&#34;&gt;rest-api&lt;/h3&gt;
 &lt;p&gt;REST API Design,Eevelopment&amp;amp;Management&lt;/p&gt;
 &lt;h3 id=&#34;windows--部分&#34;&gt;windows(部分)&lt;/h3&gt;
 &lt;h4 id=&#34;书籍&#34;&gt;书籍&lt;/h4&gt;
-&lt;p&gt;Windows Kernel Programming Pavel Yosifovich&lt;/p&gt;
-&lt;p&gt;Windows 10 System Programming Pavel Yosifovich&lt;/p&gt;
-&lt;p&gt;Windows 10 System Programming Part 2&lt;/p&gt;
+&lt;p&gt;Windows Kernel Programming Pavel Yosifovich&lt;br /&gt;
+Windows 10 System Programming Pavel Yosifovich&lt;br /&gt;
+Windows 10 System Programming Part 2&lt;/p&gt;
 &lt;h4 id=&#34;视频&#34;&gt;视频&lt;/h4&gt;
-&lt;p&gt;Windows Presentation Foundation Masterclass&lt;/p&gt;
-&lt;p&gt;Unit Testing for C# Developers&lt;/p&gt;
-&lt;p&gt;complete C# Programming Course Beginner to Expert&lt;/p&gt;
+&lt;p&gt;Windows Presentation Foundation Masterclass&lt;br /&gt;
+Unit Testing for C# Developers&lt;br /&gt;
+complete C# Programming Course Beginner to Expert&lt;/p&gt;
 &lt;h3 id=&#34;tls&#34;&gt;tls&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.youtube.com/playlist?list=PLQnljOFTspQU3YDMRSMvzflh_qXoz9zfv&#34;&gt;https://www.youtube.com/playlist?list=PLQnljOFTspQU3YDMRSMvzflh_qXoz9zfv&lt;/a&gt;&lt;/p&gt;
 </description>
@@ -484,13 +479,13 @@ tls
       
       <guid>https://elx123.github.io/post/game/</guid>
       
-        <description>&lt;!-- raw HTML omitted --&gt;
+        <description>&lt;!-- more --&gt;
 &lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
-&lt;p&gt;github上有诸多开源的游戏服务器,这里开一篇研究下,以便日后使用 &lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;github上有诸多开源的游戏服务器,这里开一篇研究下,以便日后使用 &lt;br /&gt;
 自己有过研究的有leaf,最近打算深入研究下pitaya&lt;/p&gt;
 &lt;h2 id=&#34;理论&#34;&gt;理论&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.infoq.cn/article/a-brief-history-of-the-game-server-architecture&#34;&gt;https://www.infoq.cn/article/a-brief-history-of-the-game-server-architecture&lt;/a&gt; &lt;!-- raw HTML omitted --&gt;
-&lt;a href=&#34;https://www.imooc.com/wenda/detail/460664&#34;&gt;https://www.imooc.com/wenda/detail/460664&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.infoq.cn/article/a-brief-history-of-the-game-server-architecture&#34;&gt;https://www.infoq.cn/article/a-brief-history-of-the-game-server-architecture&lt;/a&gt; &lt;br /&gt;
+&lt;a href=&#34;https://www.imooc.com/wenda/detail/460664&#34;&gt;https://www.imooc.com/wenda/detail/460664&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;pitaya学习总结&#34;&gt;pitaya学习总结&lt;/h2&gt;
 &lt;p&gt;这里记录下在阅读pitaya过程中学习到的技术&lt;/p&gt;
 &lt;h3 id=&#34;mock&#34;&gt;mock&lt;/h3&gt;
@@ -498,11 +493,11 @@ tls
 &lt;h4 id=&#34;但看源码很难理解这个包-也可能是自己的实力不够-附上一篇地址&#34;&gt;但看源码很难理解这个包,也可能是自己的实力不够,附上一篇地址&lt;/h4&gt;
 &lt;p&gt;&lt;a href=&#34;https://blog.codecentric.de/en/2017/08/gomock-tutorial/&#34;&gt;https://blog.codecentric.de/en/2017/08/gomock-tutorial/&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;viper&#34;&gt;Viper&lt;/h3&gt;
-&lt;p&gt;参考资料&lt;a href=&#34;https://mojotv.cn/2018/12/26/how-to-use-viper-configuration-in-golang&#34;&gt;https://mojotv.cn/2018/12/26/how-to-use-viper-configuration-in-golang&lt;/a&gt; &lt;!-- raw HTML omitted --&gt;
-&lt;a href=&#34;https://scene-si.org/2017/04/20/managing-configuration-with-viper/&#34;&gt;https://scene-si.org/2017/04/20/managing-configuration-with-viper/&lt;/a&gt; &lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;参考资料&lt;a href=&#34;https://mojotv.cn/2018/12/26/how-to-use-viper-configuration-in-golang&#34;&gt;https://mojotv.cn/2018/12/26/how-to-use-viper-configuration-in-golang&lt;/a&gt; &lt;br /&gt;
+&lt;a href=&#34;https://scene-si.org/2017/04/20/managing-configuration-with-viper/&#34;&gt;https://scene-si.org/2017/04/20/managing-configuration-with-viper/&lt;/a&gt; &lt;br /&gt;
 更好的配置文件第三方库,支持热更新,多种配置文件等功能&lt;/p&gt;
 &lt;h3 id=&#34;leaky-bucket-algorithm&#34;&gt;leaky bucket algorithm&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=eyH600YU9dw&amp;amp;list=PLdi8LUz88yFU7vUOQAWcsUJWCtoRAJDFY&amp;amp;index=2&amp;amp;t=0s&#34;&gt;https://www.youtube.com/watch?v=eyH600YU9dw&amp;amp;list=PLdi8LUz88yFU7vUOQAWcsUJWCtoRAJDFY&amp;amp;index=2&amp;amp;t=0s&lt;/a&gt; &lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=eyH600YU9dw&amp;amp;list=PLdi8LUz88yFU7vUOQAWcsUJWCtoRAJDFY&amp;amp;index=2&amp;amp;t=0s&#34;&gt;https://www.youtube.com/watch?v=eyH600YU9dw&amp;amp;list=PLdi8LUz88yFU7vUOQAWcsUJWCtoRAJDFY&amp;amp;index=2&amp;amp;t=0s&lt;/a&gt; &lt;br /&gt;
 &lt;a href=&#34;https://www.geeksforgeeks.org/leaky-bucket-algorithm/&#34;&gt;https://www.geeksforgeeks.org/leaky-bucket-algorithm/&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;opentracing&#34;&gt;openTracing&lt;/h3&gt;
 &lt;p&gt;分布式系统下日志也是很大一块知识重点,
@@ -569,9 +564,9 @@ tls
       
       <guid>https://elx123.github.io/post/windows/</guid>
       
-        <description>&lt;!-- raw HTML omitted --&gt;
+        <description>&lt;!-- more --&gt;
 &lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
-&lt;p&gt;之前一段时间一直在研究windows相关的技术(驱动,kernel mode debug,user mode debug) &lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;之前一段时间一直在研究windows相关的技术(驱动,kernel mode debug,user mode debug) &lt;br /&gt;
 接下来一段时间我会慢慢记录下之前一些书籍和资料&lt;/p&gt;
 &lt;h2 id=&#34;补上相关知识&#34;&gt;补上相关知识&lt;/h2&gt;
 &lt;h3 id=&#34;这本书是现代windows驱动开发必看的&#34;&gt;这本书是现代windows驱动开发必看的&lt;/h3&gt;
@@ -961,7 +956,7 @@ lpush
       
       <guid>https://elx123.github.io/post/rpclearning/</guid>
       
-        <description>&lt;!-- raw HTML omitted --&gt;
+        <description>&lt;!-- more --&gt;
 &lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
 &lt;p&gt;grpc 学习记录&lt;/p&gt;
 &lt;h2 id=&#34;学习视频&#34;&gt;学习视频&lt;/h2&gt;
@@ -977,26 +972,26 @@ lpush
       
       <guid>https://elx123.github.io/post/redis/</guid>
       
-        <description>&lt;!-- raw HTML omitted --&gt;
+        <description>&lt;!-- more --&gt;
 &lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
 &lt;p&gt;最近开始研究redis&lt;/p&gt;
 &lt;h2 id=&#34;资料&#34;&gt;资料&lt;/h2&gt;
-&lt;p&gt;视频课程Rapid redis &lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;视频课程Rapid redis &lt;br /&gt;
 golang下驱动&lt;a href=&#34;https://github.com/go-redis/redis&#34;&gt;https://github.com/go-redis/redis&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;redis基础结构认识&#34;&gt;redis基础结构认识&lt;/h2&gt;
-&lt;p&gt;基本的概念详见Rapid redis课程complex keys &lt;!-- raw HTML omitted --&gt;
-&lt;a href=&#34;http://redisdoc.com/hash/index.html&#34;&gt;http://redisdoc.com/hash/index.html&lt;/a&gt;  &lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;基本的概念详见Rapid redis课程complex keys &lt;br /&gt;
+&lt;a href=&#34;http://redisdoc.com/hash/index.html&#34;&gt;http://redisdoc.com/hash/index.html&lt;/a&gt;  &lt;br /&gt;&lt;/p&gt;
 &lt;h3 id=&#34;key-value&#34;&gt;key-value&lt;/h3&gt;
 &lt;p&gt;首先是string类型
 例如&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;set test test
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;目前理解的是可以存binary safe strings&lt;/p&gt;
 &lt;h3 id=&#34;hashtable&#34;&gt;hashTable&lt;/h3&gt;
-&lt;p&gt;key: &lt;!-- raw HTML omitted --&gt;
-key1:value1 &lt;!-- raw HTML omitted --&gt;
-key2:value2 &lt;!-- raw HTML omitted --&gt;
-key3:value3 &lt;!-- raw HTML omitted --&gt;
-a dictionary accessed by the top-level key &lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;key: &lt;br /&gt;
+key1:value1 &lt;br /&gt;
+key2:value2 &lt;br /&gt;
+key3:value3 &lt;br /&gt;
+a dictionary accessed by the top-level key &lt;br /&gt;&lt;/p&gt;
 &lt;h4 id=&#34;hset&#34;&gt;hset&lt;/h4&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hset persons &lt;span style=&#34;color:#ae81ff&#34;&gt;123&lt;/span&gt; Scott
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
@@ -1313,18 +1308,18 @@ SQL Beginner to Guru: MySQL Edition - Master SQL with MySQL \\&lt;/p&gt;
       
       <guid>https://elx123.github.io/post/golangrelearning/</guid>
       
-        <description>&lt;!-- raw HTML omitted --&gt;
+        <description>&lt;!-- more --&gt;
 &lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
-&lt;p&gt;自从去年开始使用golang以后,陆陆续续在不断学习(包括操作系统和其他方面),这里总结与分享下重要的资料和知识 &lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;自从去年开始使用golang以后,陆陆续续在不断学习(包括操作系统和其他方面),这里总结与分享下重要的资料和知识 &lt;br /&gt;
 所有视频资料都在oreilly找的到&lt;/p&gt;
 &lt;h2 id=&#34;首先我认为最有效的学习视频&#34;&gt;首先我认为最有效的学习视频&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://education.ardanlabs.com/&#34;&gt;https://education.ardanlabs.com/&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;配套的学习资料&#34;&gt;配套的学习资料&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/ardanlabs/gotraining&#34;&gt;https://github.com/ardanlabs/gotraining&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;scheduling-in-go&#34;&gt;scheduling-in-go&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part1.html&#34;&gt;https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part1.html&lt;/a&gt; &lt;!-- raw HTML omitted --&gt;
-&lt;a href=&#34;https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part2.html&#34;&gt;https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part2.html&lt;/a&gt; &lt;!-- raw HTML omitted --&gt;
-&lt;a href=&#34;https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part3.html&#34;&gt;https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part3.html&lt;/a&gt; &lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part1.html&#34;&gt;https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part1.html&lt;/a&gt; &lt;br /&gt;
+&lt;a href=&#34;https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part2.html&#34;&gt;https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part2.html&lt;/a&gt; &lt;br /&gt;
+&lt;a href=&#34;https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part3.html&#34;&gt;https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part3.html&lt;/a&gt; &lt;br /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;go-walthrough-a-few-packages&#34;&gt;go walthrough a few packages&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://medium.com/go-walkthrough&#34;&gt;https://medium.com/go-walkthrough&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;mongodb学习视频&#34;&gt;mongodb学习视频&lt;/h2&gt;
@@ -1359,18 +1354,18 @@ SQL Beginner to Guru: MySQL Edition - Master SQL with MySQL \\&lt;/p&gt;
 &lt;h3 id=&#34;learning-redis&#34;&gt;Learning Redis&lt;/h3&gt;
 &lt;p&gt;基础应用&lt;/p&gt;
 &lt;h2 id=&#34;要看的视频&#34;&gt;要看的视频&lt;/h2&gt;
-&lt;p&gt;Docker for the Absolute Beginner - Hands-On &lt;!-- raw HTML omitted --&gt;
-&lt;a href=&#34;https://kodekloud.com/courses/docker-for-the-absolute-beginner-hands-on/lectures/4554680&#34;&gt;https://kodekloud.com/courses/docker-for-the-absolute-beginner-hands-on/lectures/4554680&lt;/a&gt; &lt;!-- raw HTML omitted --&gt;
-&lt;a href=&#34;https://www.youtube.com/watch?v=zJ6WbK9zFpI&#34;&gt;https://www.youtube.com/watch?v=zJ6WbK9zFpI&lt;/a&gt; &lt;!-- raw HTML omitted --&gt;
-&lt;a href=&#34;https://www.kodekloud.com/p/docker-labs&#34;&gt;https://www.kodekloud.com/p/docker-labs&lt;/a&gt; &lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-&lt;p&gt;Kubernetes for Absolute Beginners - Hands-on &lt;!-- raw HTML omitted --&gt;
-Kubernetes Course from a DevOps guru (Kubernetes + Docker) &lt;!-- raw HTML omitted --&gt;
-Kubernetes Fundamentals &lt;!-- raw HTML omitted --&gt;
-Kubernetes in Action &lt;!-- raw HTML omitted --&gt;
-MongoDB - The Complete Developer’s Guide &lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;Docker for the Absolute Beginner - Hands-On &lt;br /&gt;
+&lt;a href=&#34;https://kodekloud.com/courses/docker-for-the-absolute-beginner-hands-on/lectures/4554680&#34;&gt;https://kodekloud.com/courses/docker-for-the-absolute-beginner-hands-on/lectures/4554680&lt;/a&gt; &lt;br /&gt;
+&lt;a href=&#34;https://www.youtube.com/watch?v=zJ6WbK9zFpI&#34;&gt;https://www.youtube.com/watch?v=zJ6WbK9zFpI&lt;/a&gt; &lt;br /&gt;
+&lt;a href=&#34;https://www.kodekloud.com/p/docker-labs&#34;&gt;https://www.kodekloud.com/p/docker-labs&lt;/a&gt; &lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;Kubernetes for Absolute Beginners - Hands-on &lt;br /&gt;
+Kubernetes Course from a DevOps guru (Kubernetes + Docker) &lt;br /&gt;
+Kubernetes Fundamentals &lt;br /&gt;
+Kubernetes in Action &lt;br /&gt;
+MongoDB - The Complete Developer’s Guide &lt;br /&gt;&lt;/p&gt;
 &lt;h3 id=&#34;sql&#34;&gt;sql&lt;/h3&gt;
-&lt;p&gt;Learning SQL &lt;!-- raw HTML omitted --&gt;
-SQL Beginner to Guru: MySQL Edition - Master SQL with MySQL &lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;Learning SQL &lt;br /&gt;
+SQL Beginner to Guru: MySQL Edition - Master SQL with MySQL &lt;br /&gt;&lt;/p&gt;
 </description>
       
     </item>
@@ -1495,7 +1490,7 @@ yi6s&lt;/p&gt;
       
       <guid>https://elx123.github.io/post/cpu/</guid>
       
-        <description>&lt;!-- raw HTML omitted --&gt;
+        <description>&lt;!-- more --&gt;
 &lt;h2 id=&#34;地址&#34;&gt;地址&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://hackernoon.com/how-does-a-cpu-work-af3488d182a2&#34;&gt;https://hackernoon.com/how-does-a-cpu-work-af3488d182a2&lt;/a&gt;&lt;/p&gt;
 </description>

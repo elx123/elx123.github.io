@@ -440,7 +440,7 @@
 
     
     <div class="post-content">
-      <!-- raw HTML omitted -->
+      <!-- more -->
 <h2 id="简介">简介</h2>
 <p>如今的游戏服务器框架都会涉及到Tcp分包,今天记录下自己的心得</p>
 <h2 id="问题描述">问题描述</h2>
@@ -528,15 +528,15 @@
 </span></span></code></pre></div><h2 id="验证正确性">验证正确性</h2>
 <p>无论哪种解决方法,最终都为了处理以下几种情况</p>
 <ol>
-<li>数据分两次到达，第一次收到 2 个字节，不足消息的长度字段；<!-- raw HTML omitted --></li>
-<li>数据分两次到达，第一次收到 4 个字节，刚好够长度字段，但是没有 body；<!-- raw HTML omitted --></li>
-<li>数据分两次到达，第一次收到 8 个字节，长度完整，但 body 不完整；<!-- raw HTML omitted --></li>
-<li>数据分两次到达，第一次收到 9 个字节，长度完整，body 也完整；<!-- raw HTML omitted --></li>
-<li>数据分两次到达，第一次收到 10 个字节，第一条消息的长度完整、body 也完整，第二条消息长度不完整；<!-- raw HTML omitted --></li>
+<li>数据分两次到达，第一次收到 2 个字节，不足消息的长度字段；<br /></li>
+<li>数据分两次到达，第一次收到 4 个字节，刚好够长度字段，但是没有 body；<br /></li>
+<li>数据分两次到达，第一次收到 8 个字节，长度完整，但 body 不完整；<br /></li>
+<li>数据分两次到达，第一次收到 9 个字节，长度完整，body 也完整；<br /></li>
+<li>数据分两次到达，第一次收到 10 个字节，第一条消息的长度完整、body 也完整，第二条消息长度不完整；<br /></li>
 </ol>
 <p>同时还有buf的自适应性问题等等</p>
 <h2 id="参考资料">参考资料</h2>
-<p><a href="http://www.cppblog.com/Solstice/archive/2011/02/04/139718.html">http://www.cppblog.com/Solstice/archive/2011/02/04/139718.html</a> <!-- raw HTML omitted -->
+<p><a href="http://www.cppblog.com/Solstice/archive/2011/02/04/139718.html">http://www.cppblog.com/Solstice/archive/2011/02/04/139718.html</a> <br />
 <a href="http://feixiao.github.io/2016/05/08/bufio/">http://feixiao.github.io/2016/05/08/bufio/</a></p>
 
     </div>
