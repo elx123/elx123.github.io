@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Jane - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 17 Mar 2020 00:00:00 +0800</lastBuildDate><atom:link href="https://elx123.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 24 Jul 2022 00:00:00 +0800</lastBuildDate><atom:link href="https://elx123.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>学习资料记录</title>
+      <link>https://elx123.github.io/post/summarize/</link>
+      <pubDate>Sun, 24 Jul 2022 00:00:00 +0800</pubDate>
+      
+      <guid>https://elx123.github.io/post/summarize/</guid>
+      <description>简介 最近休息了一段时间,总结下自己在这段时间看的资料和书籍 概述 docker 视频 Docker for the Absolute Beginner - Hands On - DevOps 书籍 Learn Docker in a Month of Lunches-Manning Publications (2020) database 视频 Fundamentals of Database Engineering 书籍 Kubernetes 视频 Kubernetes for the</description>
+    </item>
+    
     <item>
       <title>游戏服务器架构篇</title>
       <link>https://elx123.github.io/post/game/</link>
@@ -176,15 +185,6 @@
       
       <guid>https://elx123.github.io/post/recommendbook/</guid>
       <description>简介 sql 推荐几本数据库方面的书籍,不包括数据库设计,只关心如何在业务层面更好的使用数据库同时兼顾性能 nosql mongodb mongodb比较灵活,sql那一套建</description>
-    </item>
-    
-    <item>
-      <title>MySQL Benchmark Tool</title>
-      <link>https://elx123.github.io/post/sysbench/</link>
-      <pubDate>Mon, 24 Sep 2018 00:00:00 +0800</pubDate>
-      
-      <guid>https://elx123.github.io/post/sysbench/</guid>
-      <description>sysbench sysbench是mysql的一款性能测试工具,最近试着使用了一下,感觉不错,并记录下流程 源码地址 https://github.com/akopytov/sysbench 部分参数涵义(github) events Limit for total number</description>
     </item>
     
   </channel>
