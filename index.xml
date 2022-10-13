@@ -6,7 +6,7 @@
     <description>Recent content on Jane - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 11 Oct 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 13 Oct 2022 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://elx123.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -276,7 +276,7 @@ $$&lt;/p&gt;
     <item>
       <title>后端学习资料</title>
       <link>https://elx123.github.io/posts/backendsummarize/</link>
-      <pubDate>Tue, 11 Oct 2022 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 13 Oct 2022 00:00:00 +0000</pubDate>
       
       <guid>https://elx123.github.io/posts/backendsummarize/</guid>
       
@@ -305,6 +305,11 @@ $$&lt;/p&gt;
 &lt;tr&gt;
 &lt;td&gt;docker&lt;/td&gt;
 &lt;td&gt;Docker for the Absolute Beginner - Hands On - DevOps&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;docker&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;td&gt;Learn Docker in a Month of Lunches-Manning Publications (2020)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -315,6 +320,11 @@ $$&lt;/p&gt;
 &lt;tr&gt;
 &lt;td&gt;Kubernetes&lt;/td&gt;
 &lt;td&gt;Kubernetes for the Absolute Beginners - Hands-on&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Kubernetes&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;td&gt;Learn Kubernetes in a Month of Lunches (Elton Stoneman)(阅读中)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -326,6 +336,21 @@ $$&lt;/p&gt;
 &lt;td&gt;golang&lt;/td&gt;
 &lt;td&gt;Ardan Labs Ultimate Service by Jacob Walker&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;golang&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Go for DevOps Learn how to use the Go language to automate servers (John Doak, David Justice)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;golang&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Distributed Services with Go Your Guide to Reliable, Scalable, and Maintainable Systems (Travis Jeffery)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;golang&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Learning Go An Idiomatic Approach to Real-World Go Programming (Jon Bodner)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;rest-api&lt;/td&gt;
@@ -345,6 +370,11 @@ $$&lt;/p&gt;
 &lt;tr&gt;
 &lt;td&gt;Terraform&lt;/td&gt;
 &lt;td&gt;HashiCorp Certified: Terraform Associate - Hands-On Labs&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Terraform&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;td&gt;Yevgeniy Brikman - Terraform_ Up &amp;amp; Running_ Writing Infrastructure as Code&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -368,7 +398,7 @@ $$&lt;/p&gt;
     <item>
       <title>后端学习资料</title>
       <link>https://elx123.github.io/post/backendsummarize/</link>
-      <pubDate>Tue, 11 Oct 2022 00:00:00 +0800</pubDate>
+      <pubDate>Thu, 13 Oct 2022 00:00:00 +0800</pubDate>
       
       <guid>https://elx123.github.io/post/backendsummarize/</guid>
       
@@ -388,6 +418,11 @@ $$&lt;/p&gt;
 &lt;tr&gt;
 &lt;td&gt;docker&lt;/td&gt;
 &lt;td&gt;Docker for the Absolute Beginner - Hands On - DevOps&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;docker&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;td&gt;Learn Docker in a Month of Lunches-Manning Publications (2020)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -398,6 +433,11 @@ $$&lt;/p&gt;
 &lt;tr&gt;
 &lt;td&gt;Kubernetes&lt;/td&gt;
 &lt;td&gt;Kubernetes for the Absolute Beginners - Hands-on&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Kubernetes&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;td&gt;Learn Kubernetes in a Month of Lunches (Elton Stoneman)(阅读中)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -409,6 +449,21 @@ $$&lt;/p&gt;
 &lt;td&gt;golang&lt;/td&gt;
 &lt;td&gt;Ardan Labs Ultimate Service by Jacob Walker&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;golang&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Go for DevOps Learn how to use the Go language to automate servers (John Doak, David Justice)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;golang&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Distributed Services with Go Your Guide to Reliable, Scalable, and Maintainable Systems (Travis Jeffery)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;golang&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Learning Go An Idiomatic Approach to Real-World Go Programming (Jon Bodner)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;rest-api&lt;/td&gt;
@@ -428,6 +483,11 @@ $$&lt;/p&gt;
 &lt;tr&gt;
 &lt;td&gt;Terraform&lt;/td&gt;
 &lt;td&gt;HashiCorp Certified: Terraform Associate - Hands-On Labs&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Terraform&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;td&gt;Yevgeniy Brikman - Terraform_ Up &amp;amp; Running_ Writing Infrastructure as Code&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
