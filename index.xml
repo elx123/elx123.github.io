@@ -6,7 +6,7 @@
     <description>Recent content on Jane - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 13 Oct 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 24 Oct 2022 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://elx123.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -276,7 +276,7 @@ $$&lt;/p&gt;
     <item>
       <title>后端学习资料</title>
       <link>https://elx123.github.io/posts/backendsummarize/</link>
-      <pubDate>Thu, 13 Oct 2022 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 24 Oct 2022 00:00:00 +0000</pubDate>
       
       <guid>https://elx123.github.io/posts/backendsummarize/</guid>
       
@@ -328,6 +328,11 @@ $$&lt;/p&gt;
 &lt;td&gt;Learn Kubernetes in a Month of Lunches (Elton Stoneman)(阅读中)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
+&lt;td&gt;Istio&lt;/td&gt;
+&lt;td&gt;istio-hands-on-for-kubernetes&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
 &lt;td&gt;golang&lt;/td&gt;
 &lt;td&gt;Ardan Labs Ultimate GO&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
@@ -364,7 +369,7 @@ $$&lt;/p&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;open telemetry&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=dfpGU9al_i4&#34;&gt;https://www.youtube.com/watch?v=dfpGU9al_i4&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://youtu.be/yQpyIrdxmQc?t=301&#34;&gt;https://youtu.be/yQpyIrdxmQc?t=301&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -398,7 +403,7 @@ $$&lt;/p&gt;
     <item>
       <title>后端学习资料</title>
       <link>https://elx123.github.io/post/backendsummarize/</link>
-      <pubDate>Thu, 13 Oct 2022 00:00:00 +0800</pubDate>
+      <pubDate>Mon, 24 Oct 2022 00:00:00 +0800</pubDate>
       
       <guid>https://elx123.github.io/post/backendsummarize/</guid>
       
@@ -441,6 +446,11 @@ $$&lt;/p&gt;
 &lt;td&gt;Learn Kubernetes in a Month of Lunches (Elton Stoneman)(阅读中)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
+&lt;td&gt;Istio&lt;/td&gt;
+&lt;td&gt;istio-hands-on-for-kubernetes&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
 &lt;td&gt;golang&lt;/td&gt;
 &lt;td&gt;Ardan Labs Ultimate GO&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
@@ -477,7 +487,7 @@ $$&lt;/p&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;open telemetry&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=dfpGU9al_i4&#34;&gt;https://www.youtube.com/watch?v=dfpGU9al_i4&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://youtu.be/yQpyIrdxmQc?t=301&#34;&gt;https://youtu.be/yQpyIrdxmQc?t=301&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
