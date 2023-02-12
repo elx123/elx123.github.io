@@ -6,7 +6,25 @@
     <description>Recent content in Posts on Jane - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 08 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://elx123.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://elx123.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>后端学习资料</title>
+      <link>https://elx123.github.io/posts/backendsummarize/</link>
+      <pubDate>Sun, 12 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://elx123.github.io/posts/backendsummarize/</guid>
+      <description>简介 第四次调整课程 k8s入门 视频 书籍 Kubernetes Kubernetes for the Absolute Beginners - Hands-on Kubernetes ArdanLabs - Intensive Kubernetes Kubernetes ArdanLabs - Introduction To KinD Kubernetes Learn Kubernetes in a Month of Lunches (Elton Stoneman) k8s进阶 视频 书籍 Kubernetes ArdanLabs - Intensive Kubernetes_ Advanced Concepts Kubernetes ArdanLabs - Deep Dive Into Kubernetes</description>
+    </item>
+    
+    <item>
+      <title>LifeFor30Years</title>
+      <link>https://elx123.github.io/posts/lifefor30years/</link>
+      <pubDate>Fri, 20 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://elx123.github.io/posts/lifefor30years/</guid>
+      <description>简介 过年后,自己也快奔三了,回顾自己前半生 感叹人生不易,父母都是底层,又不爱读书 也就自己能知道在成长的旅途中,自己有多难 在今天整个比拼智力的</description>
+    </item>
+    
     <item>
       <title>学习资料记录</title>
       <link>https://elx123.github.io/posts/summarize/</link>
@@ -167,24 +185,6 @@
       
       <guid>https://elx123.github.io/posts/mgoandsession/</guid>
       <description>简介 最近发现一篇关于mgo连接池很有价值的文章,转载过来 https://cardinfolink.github.io/2017/05/17/mgo-session/ 介绍 mgo是由Golang编写的开源mongodb驱动。由于mongodb官方并没</description>
-    </item>
-    
-    <item>
-      <title>go-mgo/mgo入门</title>
-      <link>https://elx123.github.io/posts/mgo/</link>
-      <pubDate>Mon, 08 Oct 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://elx123.github.io/posts/mgo/</guid>
-      <description>简介 在游戏服务器开发这一块,nosql越来越流行,今天就来开一篇关于如何使用go-mgo/mgo的文章 源码 https://github.com/go-mgo/mgo 使用Select方法和struc</description>
-    </item>
-    
-    <item>
-      <title>推荐几本数据库相关的书籍</title>
-      <link>https://elx123.github.io/posts/recommendbook/</link>
-      <pubDate>Mon, 08 Oct 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://elx123.github.io/posts/recommendbook/</guid>
-      <description>简介 sql 推荐几本数据库方面的书籍,不包括数据库设计,只关心如何在业务层面更好的使用数据库同时兼顾性能 &amp;lt;&amp;lt;Baron Schwartz, Peter Zaitsev, Vadim Tkachenko-High Performance MySQL, 3rd Edition_ Optimization, Backups, and Replication-O&amp;#39;Reilly Media (2012).pdf&amp;gt;&amp;gt; &amp;lt;&amp;lt;Clare Churcher-Beginning Database Design-Apress (2007).pdf&amp;gt;&amp;gt;</description>
     </item>
     
   </channel>

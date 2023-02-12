@@ -6,7 +6,7 @@
     <description>Recent content on Jane - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 22 Dec 2022 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 12 Feb 2023 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://elx123.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -275,14 +275,313 @@ $$&lt;/p&gt;
     
     <item>
       <title>后端学习资料</title>
+      <link>https://elx123.github.io/posts/backendsummarize/</link>
+      <pubDate>Sun, 12 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://elx123.github.io/posts/backendsummarize/</guid>
+      
+        <description>
+&lt;!-- more --&gt;
+&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-1&#34;&gt;
+简介
+&lt;/h2&gt;
+&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;p&gt;第四次调整课程&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-2&#34;&gt;
+k8s入门
+&lt;/h2&gt;
+&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;table&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;视频&lt;/td&gt;
+&lt;td&gt;书籍&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Kubernetes&lt;/td&gt;
+&lt;td&gt;Kubernetes for the Absolute Beginners - Hands-on&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Kubernetes&lt;/td&gt;
+&lt;td&gt;ArdanLabs - Intensive Kubernetes&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Kubernetes&lt;/td&gt;
+&lt;td&gt;ArdanLabs - Introduction To KinD&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Kubernetes&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Learn Kubernetes in a Month of Lunches (Elton Stoneman)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-3&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-3&#34;&gt;
+k8s进阶
+&lt;/h2&gt;
+&lt;div id=&#34;outline-text-headline-3&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;table&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;视频&lt;/td&gt;
+&lt;td&gt;书籍&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Kubernetes&lt;/td&gt;
+&lt;td&gt;ArdanLabs - Intensive Kubernetes_ Advanced Concepts&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Kubernetes&lt;/td&gt;
+&lt;td&gt;ArdanLabs - Deep Dive Into Kubernetes Networking with CNI&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Kubernetes&lt;/td&gt;
+&lt;td&gt;Certified Kubernetes Administrator (CKA) with Practice Tests&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Kubernetes&lt;/td&gt;
+&lt;td&gt;Certified Kubernetes Application Developer (CKAD)&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Istio&lt;/td&gt;
+&lt;td&gt;istio-hands-on-for-kubernetes&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-4&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-4&#34;&gt;
+prometheus
+&lt;/h2&gt;
+&lt;div id=&#34;outline-text-headline-4&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;p&gt;Prometheus Certified Associate (PCA) KodeKloud&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-5&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-5&#34;&gt;
+aws and eks
+&lt;/h2&gt;
+&lt;div id=&#34;outline-text-headline-5&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;table&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;视频&lt;/td&gt;
+&lt;td&gt;书籍&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;aws&lt;/td&gt;
+&lt;td&gt;Ultimate AWS Certified Solutions Architect Associate SAA-C03&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;eks&lt;/td&gt;
+&lt;td&gt;Amazon EKS Starter Docker on AWS EKS with Kubernetes&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-6&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-6&#34;&gt;
+database
+&lt;/h2&gt;
+&lt;div id=&#34;outline-text-headline-6&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;table&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;视频&lt;/td&gt;
+&lt;td&gt;书籍&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;database&lt;/td&gt;
+&lt;td&gt;Fundamentals of Database Engineering&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-7&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-7&#34;&gt;
+golang
+&lt;/h2&gt;
+&lt;div id=&#34;outline-text-headline-7&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;table&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;视频&lt;/td&gt;
+&lt;td&gt;书籍&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;golang&lt;/td&gt;
+&lt;td&gt;Ardan Labs Ultimate GO&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;golang&lt;/td&gt;
+&lt;td&gt;Ardan Labs Ultimate Service by Jacob Walker&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;golang&lt;/td&gt;
+&lt;td&gt;Ardanlabs - Ultimate Service 3.0&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-8&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-8&#34;&gt;
+rest-api
+&lt;/h2&gt;
+&lt;div id=&#34;outline-text-headline-8&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;table&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;视频&lt;/td&gt;
+&lt;td&gt;书籍&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;rest-api&lt;/td&gt;
+&lt;td&gt;REST API Design,Eevelopment&amp;amp;Management&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-9&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-9&#34;&gt;
+Terraform
+&lt;/h2&gt;
+&lt;div id=&#34;outline-text-headline-9&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;table&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;视频&lt;/td&gt;
+&lt;td&gt;书籍&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Terraform&lt;/td&gt;
+&lt;td&gt;HashiCorp Certified: Terraform Associate - Hands-On Labs&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Terraform&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Yevgeniy Brikman - Terraform_ Up &amp;amp; Running_ Writing Infrastructure as Code&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-10&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-10&#34;&gt;
+open telemetry
+&lt;/h2&gt;
+&lt;div id=&#34;outline-text-headline-10&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;table&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;视频&lt;/td&gt;
+&lt;td&gt;书籍&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;open telemetry&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://youtu.be/yQpyIrdxmQc?t=301&#34;&gt;https://youtu.be/yQpyIrdxmQc?t=301&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-11&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-11&#34;&gt;
+docker
+&lt;/h2&gt;
+&lt;div id=&#34;outline-text-headline-11&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;table&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;视频&lt;/td&gt;
+&lt;td&gt;书籍&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;docker&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Learn Docker in a Month of Lunches-Manning Publications (2020)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;docker&lt;/td&gt;
+&lt;td&gt;Docker for the Absolute Beginner - Hands On - DevOps&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-12&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-12&#34;&gt;
+tls
+&lt;/h2&gt;
+&lt;div id=&#34;outline-text-headline-12&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;table&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;视频&lt;/td&gt;
+&lt;td&gt;书籍&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;tls&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.youtube.com/playlist?list=PLQnljOFTspQU3YDMRSMvzflh_qXoz9zfv&#34;&gt;https://www.youtube.com/playlist?list=PLQnljOFTspQU3YDMRSMvzflh_qXoz9zfv&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>后端学习资料</title>
       <link>https://elx123.github.io/post/backendsummarize/</link>
-      <pubDate>Thu, 22 Dec 2022 00:00:00 +0800</pubDate>
+      <pubDate>Sun, 12 Feb 2023 00:00:00 +0800</pubDate>
       
       <guid>https://elx123.github.io/post/backendsummarize/</guid>
       
         <description>&lt;!-- more --&gt;
 &lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
-&lt;p&gt;第三次调整课程,近期重点聚焦k8s&lt;/p&gt;
+&lt;p&gt;第四次调整课程&lt;/p&gt;
 &lt;h2 id=&#34;k8s入门&#34;&gt;k8s入门&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -300,13 +599,18 @@ $$&lt;/p&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Kubernetes&lt;/td&gt;
+&lt;td&gt;ArdanLabs - Intensive Kubernetes&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
-&lt;td&gt;Learn Kubernetes in a Month of Lunches (Elton Stoneman)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;Kubernetes&lt;/td&gt;
-&lt;td&gt;ArdanLabs - Intensive Kubernetes&lt;/td&gt;
+&lt;td&gt;ArdanLabs - Introduction To KinD&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Kubernetes&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Learn Kubernetes in a Month of Lunches (Elton Stoneman)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -336,12 +640,19 @@ $$&lt;/p&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
+&lt;td&gt;Kubernetes&lt;/td&gt;
+&lt;td&gt;Certified Kubernetes Application Developer (CKAD)&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
 &lt;td&gt;Istio&lt;/td&gt;
 &lt;td&gt;istio-hands-on-for-kubernetes&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;h2 id=&#34;prometheus&#34;&gt;prometheus&lt;/h2&gt;
+&lt;p&gt;Prometheus Certified Associate (PCA) KodeKloud&lt;/p&gt;
 &lt;h2 id=&#34;aws-and-eks&#34;&gt;aws and eks&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -403,18 +714,8 @@ $$&lt;/p&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;golang&lt;/td&gt;
+&lt;td&gt;Ardanlabs - Ultimate Service 3.0&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
-&lt;td&gt;Go for DevOps Learn how to use the Go language to automate servers (John Doak, David Justice)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;golang&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;Distributed Services with Go Your Guide to Reliable, Scalable, and Maintainable Systems (Travis Jeffery)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;golang&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;Learning Go An Idiomatic Approach to Real-World Go Programming (Jon Bodner)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -513,6 +814,47 @@ $$&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>LifeFor30Years</title>
+      <link>https://elx123.github.io/posts/lifefor30years/</link>
+      <pubDate>Fri, 20 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://elx123.github.io/posts/lifefor30years/</guid>
+      
+        <description>
+&lt;!-- more --&gt;
+&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-1&#34;&gt;
+简介
+&lt;/h2&gt;
+&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;p&gt;过年后,自己也快奔三了,回顾自己前半生
+感叹人生不易,父母都是底层,又不爱读书
+也就自己能知道在成长的旅途中,自己有多难
+在今天整个比拼智力的社会,卑微的我只有不断学习
+才能不被挤下公交车
+想我初入大学,不过是一个空有热情的毛头小子
+谁又能体会到当年,想玩没条件,想读没环境的窘境
+其实很简单的道理,换乔布斯天天在你耳边唠叨
+和一群傻逼天天跟你唠叨,你选哪个&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-2&#34;&gt;
+&lt;span class=&#34;timestamp&#34;&gt;&amp;lt;2023-01-21 Sat&amp;gt;&lt;/span&gt;
+&lt;/h2&gt;
+&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;p&gt;我也不懂我活着是为了什么，父母是一本书都不读的
+只会刷刷手机的傻逼，
+我活着的目的是为了什么，
+传宗接待？
+笑话，你自己都挣不到钱，你要求子女去做？&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 </description>
       
     </item>
@@ -1722,170 +2064,6 @@ yi6s&lt;/p&gt;
 &lt;h2 id=&#34;地址&#34;&gt;地址&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://hackernoon.com/how-does-a-cpu-work-af3488d182a2&#34;&gt;https://hackernoon.com/how-does-a-cpu-work-af3488d182a2&lt;/a&gt;&lt;/p&gt;
 </description>
-      
-    </item>
-    
-    <item>
-      <title>&#34;About&#34;</title>
-      <link>https://elx123.github.io/posts/about/</link>
-      <pubDate>Wed, 29 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://elx123.github.io/posts/about/</guid>
-      
-        <description>
-&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-1&#34;&gt;
-人生苦短,只争朝夕,浮生若梦,为欢几何
-&lt;/h2&gt;
-&lt;/div&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Math Preview</title>
-      <link>https://elx123.github.io/post/math-preview/</link>
-      <pubDate>Mon, 04 Mar 2019 16:01:23 +0800</pubDate>
-      
-      <guid>https://elx123.github.io/post/math-preview/</guid>
-      
-        <description>&lt;p&gt;&lt;a href=&#34;https://www.intmath.com/cg5/katex-mathjax-comparison.php&#34;&gt;KaTeX and MathJax Comparison Demo, currently processed as KaTex&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;repeating-fractions&#34;&gt;Repeating fractions&lt;/h2&gt;
-&lt;p&gt;$$
-\frac{1}{\Bigl(\sqrt{\phi \sqrt{5}}-\phi\Bigr) e^{\frac25 \pi}} \equiv 1+\frac{e^{-2\pi}} {1+\frac{e^{-4\pi}} {1+\frac{e^{-6\pi}} {1+\frac{e^{-8\pi}} {1+\cdots} } } }
-$$&lt;/p&gt;
-&lt;h2 id=&#34;summation-notation&#34;&gt;Summation notation&lt;/h2&gt;
-&lt;p&gt;$$
-\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
-$$&lt;/p&gt;
-&lt;h2 id=&#34;sum-of-a-series&#34;&gt;Sum of a Series&lt;/h2&gt;
-&lt;p&gt;I broke up the next two examples into separate lines so it behaves better on a mobile phone. That&amp;rsquo;s why they include \displaystyle.&lt;/p&gt;
-&lt;p&gt;$$
-\displaystyle\sum_{i=1}^{k+1}i
-$$&lt;/p&gt;
-&lt;p&gt;$$
-\displaystyle= \left(\sum_{i=1}^{k}i\right) +(k+1)
-$$&lt;/p&gt;
-&lt;p&gt;$$
-\displaystyle= \frac{k(k+1)}{2}+k+1
-$$&lt;/p&gt;
-&lt;p&gt;$$
-\displaystyle= \frac{k(k+1)+2(k+1)}{2}
-$$&lt;/p&gt;
-&lt;p&gt;$$
-\displaystyle= \frac{(k+1)(k+2)}{2}
-$$&lt;/p&gt;
-&lt;p&gt;$$
-\displaystyle= \frac{(k+1)((k+1)+1)}{2}
-$$&lt;/p&gt;
-&lt;h2 id=&#34;product-notation&#34;&gt;Product notation&lt;/h2&gt;
-&lt;p&gt;$$
-\displaystyle 1 + \frac{q^2}{(1-q)}+\frac{q^6}{(1-q)(1-q^2)}+\cdots = \displaystyle \prod_{j=0}^{\infty}\frac{1}{(1-q^{5j+2})(1-q^{5j+3})}, \displaystyle\text{ for }\lvert q\rvert &amp;lt; 1.
-$$&lt;/p&gt;
-&lt;h2 id=&#34;inline-math&#34;&gt;Inline math&lt;/h2&gt;
-&lt;p&gt;And here is some in-line math: $$ k_{n+1} = n^2 + k_n^2 - k_{n-1} $$ , followed by some more text.&lt;/p&gt;
-&lt;h2 id=&#34;greek-letters&#34;&gt;Greek Letters&lt;/h2&gt;
-&lt;p&gt;$$
-\Gamma\ \Delta\ \Theta\ \Lambda\ \Xi\ \Pi\ \Sigma\ \Upsilon\ \Phi\ \Psi\ \Omega
-\alpha\ \beta\ \gamma\ \delta\ \epsilon\ \zeta\ \eta\ \theta\ \iota\ \kappa\ \lambda\ \mu\ \nu\ \xi \ \omicron\ \pi\ \rho\ \sigma\ \tau\ \upsilon\ \phi\ \chi\ \psi\ \omega\ \varepsilon\ \vartheta\ \varpi\ \varrho\ \varsigma\ \varphi
-$$&lt;/p&gt;
-&lt;h2 id=&#34;arrows&#34;&gt;Arrows&lt;/h2&gt;
-&lt;p&gt;$$
-\gets\ \to\ \leftarrow\ \rightarrow\ \uparrow\ \Uparrow\ \downarrow\ \Downarrow\ \updownarrow\ \Updownarrow
-$$&lt;/p&gt;
-&lt;p&gt;$$
-\Leftarrow\ \Rightarrow\ \leftrightarrow\ \Leftrightarrow\ \mapsto\ \hookleftarrow
-\leftharpoonup\ \leftharpoondown\ \rightleftharpoons\ \longleftarrow\ \Longleftarrow\ \longrightarrow
-$$&lt;/p&gt;
-&lt;p&gt;$$
-\Longrightarrow\ \longleftrightarrow\ \Longleftrightarrow\ \longmapsto\ \hookrightarrow\ \rightharpoonup
-$$&lt;/p&gt;
-&lt;p&gt;$$
-\rightharpoondown\ \leadsto\ \nearrow\ \searrow\ \swarrow\ \nwarrow
-$$&lt;/p&gt;
-&lt;h2 id=&#34;symbols&#34;&gt;Symbols&lt;/h2&gt;
-&lt;p&gt;$$
-\surd\ \barwedge\ \veebar\ \odot\ \oplus\ \otimes\ \oslash\ \circledcirc\ \boxdot\ \bigtriangleup
-$$&lt;/p&gt;
-&lt;p&gt;$$
-\bigtriangledown\ \dagger\ \diamond\ \star\ \triangleleft\ \triangleright\ \angle\ \infty\ \prime\ \triangle
-$$&lt;/p&gt;
-&lt;h2 id=&#34;calculus&#34;&gt;Calculus&lt;/h2&gt;
-&lt;p&gt;$$
-\int u \frac{dv}{dx},dx=uv-\int \frac{du}{dx}v,dx
-$$&lt;/p&gt;
-&lt;p&gt;$$
-f(x) = \int_{-\infty}^\infty \hat f(\xi),e^{2 \pi i \xi x}
-$$&lt;/p&gt;
-&lt;p&gt;$$
-\oint \vec{F} \cdot d\vec{s}=0
-$$&lt;/p&gt;
-&lt;h2 id=&#34;lorenz-equations&#34;&gt;Lorenz Equations&lt;/h2&gt;
-&lt;p&gt;$$
-\begin{aligned} \dot{x} &amp;amp; = \sigma(y-x) \ \dot{y} &amp;amp; = \rho x - y - xz \ \dot{z} &amp;amp; = -\beta z + xy \end{aligned}
-$$&lt;/p&gt;
-&lt;h2 id=&#34;cross-product&#34;&gt;Cross Product&lt;/h2&gt;
-&lt;p&gt;This works in KaTeX, but the separation of fractions in this environment is not so good.&lt;/p&gt;
-&lt;p&gt;$$
-\mathbf{V}_1 \times \mathbf{V}_2 = \begin{vmatrix} \mathbf{i} &amp;amp; \mathbf{j} &amp;amp; \mathbf{k} \ \frac{\partial X}{\partial u} &amp;amp; \frac{\partial Y}{\partial u} &amp;amp; 0 \ \frac{\partial X}{\partial v} &amp;amp; \frac{\partial Y}{\partial v} &amp;amp; 0 \end{vmatrix}
-$$&lt;/p&gt;
-&lt;p&gt;Here&amp;rsquo;s a workaround: make the fractions smaller with an extra class that targets the spans with &amp;ldquo;mfrac&amp;rdquo; class (makes no difference in the MathJax case):&lt;/p&gt;
-&lt;p&gt;$$
-\mathbf{V}_1 \times \mathbf{V}_2 = \begin{vmatrix} \mathbf{i} &amp;amp; \mathbf{j} &amp;amp; \mathbf{k} \ \frac{\partial X}{\partial u} &amp;amp; \frac{\partial Y}{\partial u} &amp;amp; 0 \ \frac{\partial X}{\partial v} &amp;amp; \frac{\partial Y}{\partial v} &amp;amp; 0 \end{vmatrix}
-$$&lt;/p&gt;
-&lt;h2 id=&#34;accents&#34;&gt;Accents&lt;/h2&gt;
-&lt;p&gt;$$
-\hat{x}\ \vec{x}\ \ddot{x}
-$$&lt;/p&gt;
-&lt;h2 id=&#34;stretchy-brackets&#34;&gt;Stretchy brackets&lt;/h2&gt;
-&lt;p&gt;$$
-\left(\frac{x^2}{y^3}\right)
-$$&lt;/p&gt;
-&lt;h2 id=&#34;evaluation-at-limits&#34;&gt;Evaluation at limits&lt;/h2&gt;
-&lt;p&gt;$$
-\left.\frac{x^3}{3}\right|_0^1
-$$&lt;/p&gt;
-&lt;h2 id=&#34;case-definitions&#34;&gt;Case definitions&lt;/h2&gt;
-&lt;p&gt;$$
-f(n) = \begin{cases} \frac{n}{2}, &amp;amp; \text{if } n\text{ is even} \ 3n+1, &amp;amp; \text{if } n\text{ is odd} \end{cases}
-$$&lt;/p&gt;
-&lt;h2 id=&#34;maxwells-equations&#34;&gt;Maxwell&amp;rsquo;s Equations&lt;/h2&gt;
-&lt;p&gt;$$
-\begin{aligned} \nabla \times \vec{\mathbf{B}} -, \frac1c, \frac{\partial\vec{\mathbf{E}}}{\partial t} &amp;amp; = \frac{4\pi}{c}\vec{\mathbf{j}} \ \nabla \cdot \vec{\mathbf{E}} &amp;amp; = 4 \pi \rho \ \nabla \times \vec{\mathbf{E}}, +, \frac1c, \frac{\partial\vec{\mathbf{B}}}{\partial t} &amp;amp; = \vec{\mathbf{0}} \ \nabla \cdot \vec{\mathbf{B}} &amp;amp; = 0 \end{aligned}
-$$&lt;/p&gt;
-&lt;p&gt;These equations are quite cramped. We can add vertical spacing using (for example) [1em] after each line break (\). as you can see here:&lt;/p&gt;
-&lt;p&gt;$$
-\begin{aligned} \nabla \times \vec{\mathbf{B}} -, \frac1c, \frac{\partial\vec{\mathbf{E}}}{\partial t} &amp;amp; = \frac{4\pi}{c}\vec{\mathbf{j}} \[1em] \nabla \cdot \vec{\mathbf{E}} &amp;amp; = 4 \pi \rho \[0.5em] \nabla \times \vec{\mathbf{E}}, +, \frac1c, \frac{\partial\vec{\mathbf{B}}}{\partial t} &amp;amp; = \vec{\mathbf{0}} \[1em] \nabla \cdot \vec{\mathbf{B}} &amp;amp; = 0 \end{aligned}
-$$&lt;/p&gt;
-&lt;h2 id=&#34;statistics&#34;&gt;Statistics&lt;/h2&gt;
-&lt;p&gt;Definition of combination:&lt;/p&gt;
-&lt;p&gt;$$
-\frac{n!}{k!(n-k)!} = {^n}C_k
-{n \choose k}
-$$&lt;/p&gt;
-&lt;h2 id=&#34;fractions-on-fractions&#34;&gt;Fractions on fractions&lt;/h2&gt;
-&lt;p&gt;$$
-\frac{\frac{1}{x}+\frac{1}{y}}{y-z}
-$$&lt;/p&gt;
-&lt;h2 id=&#34;n-th-root&#34;&gt;n-th root&lt;/h2&gt;
-&lt;p&gt;$$
-\sqrt[n]{1+x+x^2+x^3+\ldots}
-$$&lt;/p&gt;
-&lt;h2 id=&#34;matrices&#34;&gt;Matrices&lt;/h2&gt;
-&lt;p&gt;$$
-\begin{pmatrix} a_{11} &amp;amp; a_{12} &amp;amp; a_{13}\ a_{21} &amp;amp; a_{22} &amp;amp; a_{23}\ a_{31} &amp;amp; a_{32} &amp;amp; a_{33} \end{pmatrix}
-\begin{bmatrix} 0 &amp;amp; \cdots &amp;amp; 0 \ \vdots &amp;amp; \ddots &amp;amp; \vdots \ 0 &amp;amp; \cdots &amp;amp; 0 \end{bmatrix}
-$$&lt;/p&gt;
-&lt;h2 id=&#34;punctuation&#34;&gt;Punctuation&lt;/h2&gt;
-&lt;p&gt;$$
-f(x) = \sqrt{1+x} \quad (x \ge -1)
-f(x) \sim x^2 \quad (x\to\infty)
-$$&lt;/p&gt;
-&lt;p&gt;Now with punctuation:&lt;/p&gt;
-&lt;p&gt;$$
-f(x) = \sqrt{1+x}, \quad x \ge -1
-f(x) \sim x^2, \quad x\to\infty
-$$&lt;/p&gt;</description>
       
     </item>
     
