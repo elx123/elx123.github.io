@@ -6,7 +6,7 @@
     <description>Recent content on Jane - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 12 Feb 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 06 Apr 2023 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://elx123.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -274,9 +274,117 @@ $$&lt;/p&gt;
     </item>
     
     <item>
+      <title>2023-04-06近期总结</title>
+      <link>https://elx123.github.io/posts/2023-04-06/</link>
+      <pubDate>Thu, 06 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://elx123.github.io/posts/2023-04-06/</guid>
+      
+        <description>
+&lt;!-- more --&gt;
+&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-1&#34;&gt;
+简介
+&lt;/h2&gt;
+&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;p&gt;总结下近期的学习&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;详细学习PostgreSQL下的锁分析，涵盖table lock，row lock&lt;/li&gt;
+&lt;li&gt;学习了微服务的设计理念和架构&lt;/li&gt;
+&lt;li&gt;接触了pluralsight平台&lt;/li&gt;
+&lt;li&gt;开始学习vault和kafka&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-2&#34;&gt;
+相关网课
+&lt;/h2&gt;
+&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;p&gt;Microservices: The Big Picture By Antonio Goncalves &lt;br&gt;
+Hashicorp Certified Vault Associate: Getting Started pluralsight &lt;br&gt;
+Apache Kafka Series - Learn Apache Kafka for Beginners&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-3&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-3&#34;&gt;
+postgresql相关资料
+&lt;/h2&gt;
+&lt;div id=&#34;outline-text-headline-3&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://medium.com/@hnasr/postgres-locks-a-deep-dive-9fc158a5641c&#34;&gt;https://medium.com/@hnasr/postgres-locks-a-deep-dive-9fc158a5641c&lt;/a&gt;
+&lt;a href=&#34;https://www.youtube.com/watch?v=URwmzTeuHdk&amp;amp;ab_channel=HusseinNasser&#34;&gt;https://www.youtube.com/watch?v=URwmzTeuHdk&amp;amp;ab_channel=HusseinNasser&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>windows相关</title>
+      <link>https://elx123.github.io/posts/windows%E7%9B%B8%E5%85%B3/</link>
+      <pubDate>Thu, 06 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://elx123.github.io/posts/windows%E7%9B%B8%E5%85%B3/</guid>
+      
+        <description>
+&lt;!-- more --&gt;
+&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-1&#34;&gt;
+简介
+&lt;/h2&gt;
+&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;p&gt;总结下windows相关课程和资料&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-2&#34;&gt;
+概述
+&lt;/h2&gt;
+&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;table&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;视频&lt;/td&gt;
+&lt;td&gt;书籍&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;windows&lt;/td&gt;
+&lt;td&gt;Windows Presentation Foundation Masterclass&lt;/td&gt;
+&lt;td&gt;Windows Kernel Programming Pavel Yosifovich&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Unit Testing for C# Developers&lt;/td&gt;
+&lt;td&gt;Windows 10 System Programming Pavel Yosifovich&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;complete C# Programming Course Beginner to Expert&lt;/td&gt;
+&lt;td&gt;Windows 10 System Programming Part 2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Getting Started With Reverse Engineering By Josh Stroschein&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Windows 11 Internals Foundations By Pavel Yosifovich&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>后端学习资料</title>
       <link>https://elx123.github.io/posts/backendsummarize/</link>
-      <pubDate>Sun, 12 Feb 2023 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 06 Apr 2023 00:00:00 +0000</pubDate>
       
       <guid>https://elx123.github.io/posts/backendsummarize/</guid>
       
@@ -287,14 +395,33 @@ $$&lt;/p&gt;
 简介
 &lt;/h2&gt;
 &lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;
-&lt;p&gt;第四次调整课程&lt;/p&gt;
+&lt;p&gt;第五次次调整课程&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;
 &lt;h2 id=&#34;headline-2&#34;&gt;
-Ardanlabs系列
+Microservices
 &lt;/h2&gt;
 &lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;table&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
+&lt;td&gt;视频&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
+&lt;td&gt;Microservices: The Big Picture By Antonio Goncalves&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-3&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-3&#34;&gt;
+Ardanlabs系列
+&lt;/h2&gt;
+&lt;div id=&#34;outline-text-headline-3&#34; class=&#34;outline-text-2&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -341,11 +468,11 @@ Ardanlabs系列
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-3&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-3&#34;&gt;
+&lt;div id=&#34;outline-container-headline-4&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-4&#34;&gt;
 kodekloud
 &lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-3&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;div id=&#34;outline-text-headline-4&#34; class=&#34;outline-text-2&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -372,11 +499,11 @@ kodekloud
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-4&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-4&#34;&gt;
+&lt;div id=&#34;outline-container-headline-5&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-5&#34;&gt;
 k8s
 &lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-4&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;div id=&#34;outline-text-headline-5&#34; class=&#34;outline-text-2&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -403,11 +530,49 @@ k8s
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-5&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-5&#34;&gt;
+&lt;div id=&#34;outline-container-headline-6&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-6&#34;&gt;
+vault
+&lt;/h2&gt;
+&lt;div id=&#34;outline-text-headline-6&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;table&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
+&lt;td&gt;视频&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
+&lt;td&gt;Hashicorp Certified Vault Associate: Getting Started pluralsight&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-7&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-7&#34;&gt;
+kafka
+&lt;/h2&gt;
+&lt;div id=&#34;outline-text-headline-7&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;table&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
+&lt;td&gt;视频&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
+&lt;td&gt;Apache Kafka Series - Learn Apache Kafka for Beginners&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-8&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-8&#34;&gt;
 aws and eks
 &lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-5&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;div id=&#34;outline-text-headline-8&#34; class=&#34;outline-text-2&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -429,11 +594,11 @@ aws and eks
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-6&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-6&#34;&gt;
+&lt;div id=&#34;outline-container-headline-9&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-9&#34;&gt;
 database
 &lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-6&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;div id=&#34;outline-text-headline-9&#34; class=&#34;outline-text-2&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -450,11 +615,11 @@ database
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-7&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-7&#34;&gt;
+&lt;div id=&#34;outline-container-headline-10&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-10&#34;&gt;
 rest-api
 &lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-7&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;div id=&#34;outline-text-headline-10&#34; class=&#34;outline-text-2&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -471,11 +636,11 @@ rest-api
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-8&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-8&#34;&gt;
+&lt;div id=&#34;outline-container-headline-11&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-11&#34;&gt;
 Terraform
 &lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-8&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;div id=&#34;outline-text-headline-11&#34; class=&#34;outline-text-2&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -497,11 +662,11 @@ Terraform
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-9&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-9&#34;&gt;
+&lt;div id=&#34;outline-container-headline-12&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-12&#34;&gt;
 open telemetry
 &lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-9&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;div id=&#34;outline-text-headline-12&#34; class=&#34;outline-text-2&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -518,11 +683,11 @@ open telemetry
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-10&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-10&#34;&gt;
+&lt;div id=&#34;outline-container-headline-13&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-13&#34;&gt;
 docker
 &lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-10&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;div id=&#34;outline-text-headline-13&#34; class=&#34;outline-text-2&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -544,11 +709,11 @@ docker
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-11&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-11&#34;&gt;
+&lt;div id=&#34;outline-container-headline-14&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-14&#34;&gt;
 tls
 &lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-11&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;div id=&#34;outline-text-headline-14&#34; class=&#34;outline-text-2&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -570,15 +735,108 @@ tls
     </item>
     
     <item>
+      <title>2023-04-06近期总结</title>
+      <link>https://elx123.github.io/post/2023-04-06/</link>
+      <pubDate>Thu, 06 Apr 2023 00:00:00 +0800</pubDate>
+      
+      <guid>https://elx123.github.io/post/2023-04-06/</guid>
+      
+        <description>&lt;!-- more --&gt;
+&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
+&lt;p&gt;总结下近期的学习&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;详细学习PostgreSQL下的锁分析，涵盖table lock，row lock&lt;/li&gt;
+&lt;li&gt;学习了微服务的设计理念和架构&lt;/li&gt;
+&lt;li&gt;接触了pluralsight平台&lt;/li&gt;
+&lt;li&gt;开始学习vault和kafka&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;相关网课&#34;&gt;相关网课&lt;/h2&gt;
+&lt;p&gt;Microservices: The Big Picture By Antonio Goncalves &lt;br /&gt;
+Hashicorp Certified Vault Associate: Getting Started pluralsight &lt;br /&gt;
+Apache Kafka Series - Learn Apache Kafka for Beginners&lt;/p&gt;
+&lt;h2 id=&#34;postgresql相关资料&#34;&gt;postgresql相关资料&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://medium.com/@hnasr/postgres-locks-a-deep-dive-9fc158a5641c&#34;&gt;https://medium.com/@hnasr/postgres-locks-a-deep-dive-9fc158a5641c&lt;/a&gt;
+&lt;a href=&#34;https://www.youtube.com/watch?v=URwmzTeuHdk&amp;amp;ab_channel=HusseinNasser&#34;&gt;https://www.youtube.com/watch?v=URwmzTeuHdk&amp;amp;ab_channel=HusseinNasser&lt;/a&gt;&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>windows相关</title>
+      <link>https://elx123.github.io/post/windows%E7%9B%B8%E5%85%B3/</link>
+      <pubDate>Thu, 06 Apr 2023 00:00:00 +0800</pubDate>
+      
+      <guid>https://elx123.github.io/post/windows%E7%9B%B8%E5%85%B3/</guid>
+      
+        <description>&lt;!-- more --&gt;
+&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
+&lt;p&gt;总结下windows相关课程和资料&lt;/p&gt;
+&lt;h2 id=&#34;概述&#34;&gt;概述&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;视频&lt;/th&gt;
+&lt;th&gt;书籍&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;windows&lt;/td&gt;
+&lt;td&gt;Windows Presentation Foundation Masterclass&lt;/td&gt;
+&lt;td&gt;Windows Kernel Programming Pavel Yosifovich&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Unit Testing for C# Developers&lt;/td&gt;
+&lt;td&gt;Windows 10 System Programming Pavel Yosifovich&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;complete C# Programming Course Beginner to Expert&lt;/td&gt;
+&lt;td&gt;Windows 10 System Programming Part 2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Getting Started With Reverse Engineering By Josh Stroschein&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Windows 11 Internals Foundations By Pavel Yosifovich&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>后端学习资料</title>
       <link>https://elx123.github.io/post/backendsummarize/</link>
-      <pubDate>Sun, 12 Feb 2023 00:00:00 +0800</pubDate>
+      <pubDate>Thu, 06 Apr 2023 00:00:00 +0800</pubDate>
       
       <guid>https://elx123.github.io/post/backendsummarize/</guid>
       
         <description>&lt;!-- more --&gt;
 &lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
-&lt;p&gt;第四次调整课程&lt;/p&gt;
+&lt;p&gt;第五次次调整课程&lt;/p&gt;
+&lt;h2 id=&#34;microservices&#34;&gt;Microservices&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;视频&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Microservices: The Big Picture By Antonio Goncalves&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 &lt;h2 id=&#34;ardanlabs系列&#34;&gt;Ardanlabs系列&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -677,6 +935,36 @@ tls
 &lt;td&gt;Istio&lt;/td&gt;
 &lt;td&gt;istio-hands-on-for-kubernetes&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;vault&#34;&gt;vault&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;视频&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Hashicorp Certified Vault Associate: Getting Started pluralsight&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;kafka&#34;&gt;kafka&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;视频&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Apache Kafka Series - Learn Apache Kafka for Beginners&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -1867,202 +2155,6 @@ SQL Beginner to Guru: MySQL Edition - Master SQL with MySQL \\&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>学习总结</title>
-      <link>https://elx123.github.io/post/golangrelearning/</link>
-      <pubDate>Tue, 25 Feb 2020 00:00:00 +0800</pubDate>
-      
-      <guid>https://elx123.github.io/post/golangrelearning/</guid>
-      
-        <description>&lt;!-- more --&gt;
-&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
-&lt;p&gt;自从去年开始使用golang以后,陆陆续续在不断学习(包括操作系统和其他方面),这里总结与分享下重要的资料和知识 &lt;br /&gt;
-所有视频资料都在oreilly找的到&lt;/p&gt;
-&lt;h2 id=&#34;首先我认为最有效的学习视频&#34;&gt;首先我认为最有效的学习视频&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://education.ardanlabs.com/&#34;&gt;https://education.ardanlabs.com/&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;配套的学习资料&#34;&gt;配套的学习资料&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/ardanlabs/gotraining&#34;&gt;https://github.com/ardanlabs/gotraining&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;scheduling-in-go&#34;&gt;scheduling-in-go&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part1.html&#34;&gt;https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part1.html&lt;/a&gt; &lt;br /&gt;
-&lt;a href=&#34;https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part2.html&#34;&gt;https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part2.html&lt;/a&gt; &lt;br /&gt;
-&lt;a href=&#34;https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part3.html&#34;&gt;https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part3.html&lt;/a&gt; &lt;br /&gt;&lt;/p&gt;
-&lt;h2 id=&#34;go-walthrough-a-few-packages&#34;&gt;go walthrough a few packages&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://medium.com/go-walkthrough&#34;&gt;https://medium.com/go-walkthrough&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;mongodb学习视频&#34;&gt;mongodb学习视频&lt;/h2&gt;
-&lt;p&gt;MongoDB - The Complete Developer’s Guide&lt;/p&gt;
-&lt;h2 id=&#34;分布式&#34;&gt;分布式&lt;/h2&gt;
-&lt;p&gt;Distributed Systems in One Lesson&lt;/p&gt;
-&lt;h2 id=&#34;containers-and-go&#34;&gt;Containers and Go&lt;/h2&gt;
-&lt;h3 id=&#34;how-to-containerize-your-go-code&#34;&gt;How to containerize your go code&lt;/h3&gt;
-&lt;p&gt;完全看过了&lt;/p&gt;
-&lt;h3 id=&#34;building-containers-from-scratch-with-go&#34;&gt;Building Containers from Scratch with Go&lt;/h3&gt;
-&lt;p&gt;看到了Root Filesystems and Chroot with Go这一节&lt;/p&gt;
-&lt;h3 id=&#34;linux-namespace&#34;&gt;linux namespace&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Linux%5Fnamespaces&#34;&gt;https://en.wikipedia.org/wiki/Linux%5Fnamespaces&lt;/a&gt;
-&lt;a href=&#34;https://www.youtube.com/watch?v=0kJPa-1FuoI&#34;&gt;https://www.youtube.com/watch?v=0kJPa-1FuoI&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;docker&#34;&gt;docker&lt;/h2&gt;
-&lt;h3 id=&#34;docker-for-the-absolute-beginner-hands-on&#34;&gt;Docker for the Absolute Beginner - Hands-On&lt;/h3&gt;
-&lt;h4 id=&#34;有字幕的地址&#34;&gt;有字幕的地址&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=zJ6WbK9zFpI&amp;amp;list=PLdi8LUz88yFX1aY1Lv1oRJJ7bzbduKdAN&amp;amp;index=2&amp;amp;t=0s&#34;&gt;https://www.youtube.com/watch?v=zJ6WbK9zFpI&amp;amp;list=PLdi8LUz88yFX1aY1Lv1oRJJ7bzbduKdAN&amp;amp;index=2&amp;amp;t=0s&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&#34;重要的一章是介绍了docker的架构&#34;&gt;重要的一章是介绍了docker的架构&lt;/h4&gt;
-&lt;p&gt;docker container share the underlying kernel,详见视频第二集&lt;/p&gt;
-&lt;h4 id=&#34;the-main-purpose-of-docker-is-to-package-and-container-as-applications&#34;&gt;the main purpose of docker is to package and container as applications&lt;/h4&gt;
-&lt;p&gt;and to ship them and to run them anywhere any times as many times as you want&lt;/p&gt;
-&lt;h2 id=&#34;grpc&#34;&gt;gRPC&lt;/h2&gt;
-&lt;p&gt;gRPC [Golang] Master Class: Build Modern API and Microservices&lt;/p&gt;
-&lt;h2 id=&#34;web-go&#34;&gt;web go&lt;/h2&gt;
-&lt;p&gt;back-end web development using go&lt;/p&gt;
-&lt;h2 id=&#34;go-network&#34;&gt;go network&lt;/h2&gt;
-&lt;p&gt;Network programming with go&lt;/p&gt;
-&lt;h2 id=&#34;redis&#34;&gt;redis&lt;/h2&gt;
-&lt;h3 id=&#34;rapid-redis&#34;&gt;Rapid redis&lt;/h3&gt;
-&lt;p&gt;基础命令&lt;/p&gt;
-&lt;h3 id=&#34;learning-redis&#34;&gt;Learning Redis&lt;/h3&gt;
-&lt;p&gt;基础应用&lt;/p&gt;
-&lt;h2 id=&#34;要看的视频&#34;&gt;要看的视频&lt;/h2&gt;
-&lt;p&gt;Docker for the Absolute Beginner - Hands-On &lt;br /&gt;
-&lt;a href=&#34;https://kodekloud.com/courses/docker-for-the-absolute-beginner-hands-on/lectures/4554680&#34;&gt;https://kodekloud.com/courses/docker-for-the-absolute-beginner-hands-on/lectures/4554680&lt;/a&gt; &lt;br /&gt;
-&lt;a href=&#34;https://www.youtube.com/watch?v=zJ6WbK9zFpI&#34;&gt;https://www.youtube.com/watch?v=zJ6WbK9zFpI&lt;/a&gt; &lt;br /&gt;
-&lt;a href=&#34;https://www.kodekloud.com/p/docker-labs&#34;&gt;https://www.kodekloud.com/p/docker-labs&lt;/a&gt; &lt;br /&gt;&lt;/p&gt;
-&lt;p&gt;Kubernetes for Absolute Beginners - Hands-on &lt;br /&gt;
-Kubernetes Course from a DevOps guru (Kubernetes + Docker) &lt;br /&gt;
-Kubernetes Fundamentals &lt;br /&gt;
-Kubernetes in Action &lt;br /&gt;
-MongoDB - The Complete Developer’s Guide &lt;br /&gt;&lt;/p&gt;
-&lt;h3 id=&#34;sql&#34;&gt;sql&lt;/h3&gt;
-&lt;p&gt;Learning SQL &lt;br /&gt;
-SQL Beginner to Guru: MySQL Edition - Master SQL with MySQL &lt;br /&gt;&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>工作3年经验总结</title>
-      <link>https://elx123.github.io/posts/%E6%80%BB%E7%BB%93/</link>
-      <pubDate>Tue, 17 Dec 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://elx123.github.io/posts/%E6%80%BB%E7%BB%93/</guid>
-      
-        <description>
-&lt;!-- more --&gt;
-&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-1&#34;&gt;
-简介
-&lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;
-&lt;p&gt;记录下自己在it行业工作3年的经验&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-2&#34;&gt;
-内容
-&lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;
-&lt;p&gt;不要老想着去什么什么公司就能增涨技术,增涨经验,如今互联网如此发达,只要有时间有一台电脑,没有什么
-是学不会的,工作就是工作,工作最根本就是为了挣钱,你再卖力为公司付出,也不过是替公司打工,公司会不会
-回报你,还要看公司的脸色. &lt;br&gt;
-  学会技术挣钱的路有很多条,看看老外那么多黑客,靠自己的技术就能挣钱. &lt;br&gt;
-  所以我认为,找工作,分不同的阶段,但是首要考虑的还是有没有稳定舒适的生活环境,比如离家很近什么的,
-不要被那些所谓的噱头蒙骗,你要知道试用期如果不达标是会开除你的. &lt;br&gt;
-  公司再牛逼不过是简单的交易关系,你完成任务,它付钱给你 &lt;br&gt;
-  总之,作为it研发人员必须有自己的学习方式 \\&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Excel学习</title>
-      <link>https://elx123.github.io/posts/excellearning/</link>
-      <pubDate>Sun, 15 Dec 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://elx123.github.io/posts/excellearning/</guid>
-      
-        <description>
-&lt;!-- more --&gt;
-&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-1&#34;&gt;
-简介
-&lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;
-&lt;p&gt;excel学习进度总结&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-2&#34;&gt;
-通过百度网盘的形式在国内观看
-&lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;
-&lt;p&gt;&lt;a href=&#34;https://pan.baidu.com/s/1QB4DAawv3-Kxk4WM29TFUA&#34;&gt;https://pan.baidu.com/s/1QB4DAawv3-Kxk4WM29TFUA&lt;/a&gt;
-密码yi6s&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-3&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-3&#34;&gt;
-目录
-&lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-3&#34; class=&#34;outline-text-2&#34;&gt;
-&lt;div id=&#34;outline-container-headline-4&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-4&#34;&gt;
-Excel Finance Class 01: Intro To Excel 2007 &amp;amp; 2010(excel 金融课程01 : 介绍excel2007 2010)
-&lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-4&#34; class=&#34;outline-text-3&#34;&gt;
-&lt;div id=&#34;outline-container-headline-5&#34; class=&#34;outline-4&#34;&gt;
-&lt;h4 id=&#34;headline-5&#34;&gt;
-视频地址(国外)
-&lt;/h4&gt;
-&lt;div id=&#34;outline-text-headline-5&#34; class=&#34;outline-text-4&#34;&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=qeWOy4Q-1n8&amp;amp;list=PL90E1F26C7B85E78F&amp;amp;index=2&amp;amp;t=0s&#34;&gt;https://www.youtube.com/watch?v=qeWOy4Q-1n8&amp;amp;list=PL90E1F26C7B85E78F&amp;amp;index=2&amp;amp;t=0s&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-6&#34; class=&#34;outline-4&#34;&gt;
-&lt;h4 id=&#34;headline-6&#34;&gt;
-国内地址(百度网盘)
-&lt;/h4&gt;
-&lt;div id=&#34;outline-text-headline-6&#34; class=&#34;outline-text-4&#34;&gt;
-&lt;p&gt;20191215文件夹
-&lt;a href=&#34;https://pan.baidu.com/s/1QB4DAawv3-Kxk4WM29TFUA&#34;&gt;https://pan.baidu.com/s/1QB4DAawv3-Kxk4WM29TFUA&lt;/a&gt;
-yi6s&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-7&#34; class=&#34;outline-4&#34;&gt;
-&lt;h4 id=&#34;headline-7&#34;&gt;
-配套练习地址(已存百度网盘)
-&lt;/h4&gt;
-&lt;div id=&#34;outline-text-headline-7&#34; class=&#34;outline-text-4&#34;&gt;
-&lt;div id=&#34;outline-container-headline-8&#34; class=&#34;outline-5&#34;&gt;
-&lt;h5 id=&#34;headline-8&#34;&gt;
-外网
-&lt;/h5&gt;
-&lt;div id=&#34;outline-text-headline-8&#34; class=&#34;outline-text-5&#34;&gt;
-&lt;p&gt;&lt;a href=&#34;https://people.highline.edu/mgirvin/ExcelIsFun.htm&#34;&gt;https://people.highline.edu/mgirvin/ExcelIsFun.htm&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>转载一篇关于cpu如何运作的文章</title>
-      <link>https://elx123.github.io/post/cpu/</link>
-      <pubDate>Mon, 08 Jul 2019 00:00:00 +0800</pubDate>
-      
-      <guid>https://elx123.github.io/post/cpu/</guid>
-      
-        <description>&lt;!-- more --&gt;
-&lt;h2 id=&#34;地址&#34;&gt;地址&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://hackernoon.com/how-does-a-cpu-work-af3488d182a2&#34;&gt;https://hackernoon.com/how-does-a-cpu-work-af3488d182a2&lt;/a&gt;&lt;/p&gt;
 </description>
       
     </item>
