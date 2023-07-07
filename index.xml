@@ -6,7 +6,7 @@
     <description>Recent content on Jane - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 06 Apr 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 08 Jul 2023 00:00:00 +0800</lastBuildDate>
     
         <atom:link href="https://elx123.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -274,6 +274,49 @@ $$&lt;/p&gt;
     </item>
     
     <item>
+      <title>2023-07-08近期总结</title>
+      <link>https://elx123.github.io/post/2023-07-08/</link>
+      <pubDate>Sat, 08 Jul 2023 00:00:00 +0800</pubDate>
+      
+      <guid>https://elx123.github.io/post/2023-07-08/</guid>
+      
+        <description>&lt;!-- more --&gt;
+&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
+&lt;p&gt;总结下近期的学习,由于chatGPT4的帮助,极大地加速了学习速度&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;深入学习nakama&lt;/li&gt;
+&lt;li&gt;agones学习&lt;/li&gt;
+&lt;li&gt;CMU Intro to Database Systems&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;nakama&#34;&gt;nakama&lt;/h2&gt;
+&lt;p&gt;由于之前学习的socket.io编写游戏服务器,已经脱节目前的技术发展,因此才决定寻找golang下的游戏服务器,这才有了学习nakama的想法,
+学习过程参考官网和文档,以及chatGPT&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://heroiclabs.com/docs/nakama/concepts/&#34;&gt;https://heroiclabs.com/docs/nakama/concepts/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/elx123/nakama/tree/master&#34;&gt;https://github.com/elx123/nakama/tree/master&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在了解源码的基础上,同时了解为什么如此设计&lt;/p&gt;
+&lt;h3 id=&#34;相关源码&#34;&gt;相关源码&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/elx123/nakama/tree/master&#34;&gt;https://github.com/elx123/nakama/tree/master&lt;/a&gt;
+&lt;a href=&#34;https://github.com/elx123/my-nakama-project-template/tree/my-golang-version&#34;&gt;https://github.com/elx123/my-nakama-project-template/tree/my-golang-version&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;agones&#34;&gt;agones&lt;/h2&gt;
+&lt;p&gt;agones提供了一种基于k8s的扩展方案,适合对延迟非常敏感的大型游戏,比如FPS和RTS&lt;/p&gt;
+&lt;h3 id=&#34;相关文档&#34;&gt;相关文档&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://agones.dev/site/docs/&#34;&gt;https://agones.dev/site/docs/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://cloud.google.com/blog/products/containers-kubernetes/introducing-agones-open-source-multiplayer-dedicated-game-server-hosting-built-on-kubernetes&#34;&gt;https://cloud.google.com/blog/products/containers-kubernetes/introducing-agones-open-source-multiplayer-dedicated-game-server-hosting-built-on-kubernetes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://cloud.google.com/blog/products/containers-kubernetes/making-online-containerized-games-with-managed-services&#34;&gt;https://cloud.google.com/blog/products/containers-kubernetes/making-online-containerized-games-with-managed-services&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;cmu-intro-to-database-systems&#34;&gt;CMU Intro to Database Systems&lt;/h2&gt;
+&lt;p&gt;由于这门课程,内容庞大,所以还在学习中 &lt;br /&gt;
+对于后端人员来说,这门课程非常有用,详细介绍了数据库中的相关理论和知识,特别是当数量量上升以后,可以让后端人员操作人员有据可寻&lt;/p&gt;
+&lt;h3 id=&#34;视频地址&#34;&gt;视频地址&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/playlist?list=PLSE8ODhjZXjaKScG3l0nuOiDTTqpfnWFf&#34;&gt;https://www.youtube.com/playlist?list=PLSE8ODhjZXjaKScG3l0nuOiDTTqpfnWFf&lt;/a&gt;&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>2023-04-06近期总结</title>
       <link>https://elx123.github.io/posts/2023-04-06/</link>
       <pubDate>Thu, 06 Apr 2023 00:00:00 +0000</pubDate>
@@ -281,6 +324,7 @@ $$&lt;/p&gt;
       <guid>https://elx123.github.io/posts/2023-04-06/</guid>
       
         <description>
+&lt;p&gt;&lt;span class=&#34;timestamp&#34;&gt;&amp;lt;2023-07-08 Sat&amp;gt;&lt;/span&gt;&lt;/p&gt;
 &lt;!-- more --&gt;
 &lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;
 &lt;h2 id=&#34;headline-1&#34;&gt;
@@ -1944,221 +1988,6 @@ result := cmd.String()
 fmt.Println(result)
 ```
 &lt;/code&gt;&lt;/pre&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>学习总结</title>
-      <link>https://elx123.github.io/posts/golangrelearning/</link>
-      <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://elx123.github.io/posts/golangrelearning/</guid>
-      
-        <description>
-&lt;!-- more --&gt;
-&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-1&#34;&gt;
-简介
-&lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;
-&lt;p&gt;自从去年开始使用golang以后,陆陆续续在不断学习(包括操作系统和其他方面),这里总结与分享下重要的资料和知识 &lt;br&gt;
-所有视频资料都在oreilly找的到&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-2&#34;&gt;
-首先我认为最有效的学习视频
-&lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;
-&lt;p&gt;&lt;a href=&#34;https://education.ardanlabs.com/&#34;&gt;https://education.ardanlabs.com/&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-3&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-3&#34;&gt;
-配套的学习资料
-&lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-3&#34; class=&#34;outline-text-2&#34;&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/ardanlabs/gotraining&#34;&gt;https://github.com/ardanlabs/gotraining&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-4&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-4&#34;&gt;
-scheduling-in-go
-&lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-4&#34; class=&#34;outline-text-2&#34;&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part1.html&#34;&gt;https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part1.html&lt;/a&gt; &lt;br&gt;
-&lt;a href=&#34;https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part2.html&#34;&gt;https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part2.html&lt;/a&gt; &lt;br&gt;
-&lt;a href=&#34;https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part3.html&#34;&gt;https://www.ardanlabs.com/blog/2018/12/scheduling-in-go-part3.html&lt;/a&gt; \\&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-5&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-5&#34;&gt;
-go walthrough a few packages
-&lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-5&#34; class=&#34;outline-text-2&#34;&gt;
-&lt;p&gt;&lt;a href=&#34;https://medium.com/go-walkthrough&#34;&gt;https://medium.com/go-walkthrough&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-6&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-6&#34;&gt;
-mongodb学习视频
-&lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-6&#34; class=&#34;outline-text-2&#34;&gt;
-&lt;p&gt;MongoDB - The Complete Developer’s Guide&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-7&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-7&#34;&gt;
-分布式
-&lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-7&#34; class=&#34;outline-text-2&#34;&gt;
-&lt;p&gt;Distributed Systems in One Lesson&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-8&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-8&#34;&gt;
-Containers and Go
-&lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-8&#34; class=&#34;outline-text-2&#34;&gt;
-&lt;div id=&#34;outline-container-headline-9&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-9&#34;&gt;
-How to containerize your go code
-&lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-9&#34; class=&#34;outline-text-3&#34;&gt;
-&lt;p&gt;完全看过了&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-10&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-10&#34;&gt;
-Building Containers from Scratch with Go
-&lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-10&#34; class=&#34;outline-text-3&#34;&gt;
-&lt;p&gt;看到了Root Filesystems and Chroot with Go这一节&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-11&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-11&#34;&gt;
-linux namespace
-&lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-11&#34; class=&#34;outline-text-3&#34;&gt;
-&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Linux_namespaces&#34;&gt;https://en.wikipedia.org/wiki/Linux_namespaces&lt;/a&gt;
-&lt;a href=&#34;https://www.youtube.com/watch?v=0kJPa-1FuoI&#34;&gt;https://www.youtube.com/watch?v=0kJPa-1FuoI&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-12&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-12&#34;&gt;
-docker
-&lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-12&#34; class=&#34;outline-text-2&#34;&gt;
-&lt;div id=&#34;outline-container-headline-13&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-13&#34;&gt;
-Docker for the Absolute Beginner - Hands-On
-&lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-13&#34; class=&#34;outline-text-3&#34;&gt;
-&lt;div id=&#34;outline-container-headline-14&#34; class=&#34;outline-4&#34;&gt;
-&lt;h4 id=&#34;headline-14&#34;&gt;
-有字幕的地址
-&lt;/h4&gt;
-&lt;div id=&#34;outline-text-headline-14&#34; class=&#34;outline-text-4&#34;&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=zJ6WbK9zFpI&amp;amp;list=PLdi8LUz88yFX1aY1Lv1oRJJ7bzbduKdAN&amp;amp;index=2&amp;amp;t=0s&#34;&gt;https://www.youtube.com/watch?v=zJ6WbK9zFpI&amp;amp;list=PLdi8LUz88yFX1aY1Lv1oRJJ7bzbduKdAN&amp;amp;index=2&amp;amp;t=0s&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-15&#34; class=&#34;outline-4&#34;&gt;
-&lt;h4 id=&#34;headline-15&#34;&gt;
-重要的一章是介绍了docker的架构
-&lt;/h4&gt;
-&lt;div id=&#34;outline-text-headline-15&#34; class=&#34;outline-text-4&#34;&gt;
-&lt;p&gt;docker container share the underlying kernel,详见视频第二集&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-16&#34; class=&#34;outline-4&#34;&gt;
-&lt;h4 id=&#34;headline-16&#34;&gt;
-the main purpose of docker is to package and container as applications
-&lt;/h4&gt;
-&lt;div id=&#34;outline-text-headline-16&#34; class=&#34;outline-text-4&#34;&gt;
-&lt;p&gt;and to ship them and to run them anywhere any times as many times as you want&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-17&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-17&#34;&gt;
-gRPC 
-&lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-17&#34; class=&#34;outline-text-2&#34;&gt;
-&lt;p&gt;gRPC [Golang] Master Class: Build Modern API and Microservices&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-18&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-18&#34;&gt;
-web go
-&lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-18&#34; class=&#34;outline-text-2&#34;&gt;
-&lt;p&gt;back-end web development using go&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-19&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-19&#34;&gt;
-go network
-&lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-19&#34; class=&#34;outline-text-2&#34;&gt;
-&lt;p&gt;Network programming with go&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-20&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-20&#34;&gt;
-redis
-&lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-20&#34; class=&#34;outline-text-2&#34;&gt;
-&lt;div id=&#34;outline-container-headline-21&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-21&#34;&gt;
-Rapid redis
-&lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-21&#34; class=&#34;outline-text-3&#34;&gt;
-&lt;p&gt;基础命令&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-22&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-22&#34;&gt;
-Learning Redis
-&lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-22&#34; class=&#34;outline-text-3&#34;&gt;
-&lt;p&gt;基础应用&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-23&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-23&#34;&gt;
-要看的视频
-&lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-23&#34; class=&#34;outline-text-2&#34;&gt;
-&lt;p&gt;Docker for the Absolute Beginner - Hands-On &lt;br&gt;
-&lt;a href=&#34;https://kodekloud.com/courses/docker-for-the-absolute-beginner-hands-on/lectures/4554680&#34;&gt;https://kodekloud.com/courses/docker-for-the-absolute-beginner-hands-on/lectures/4554680&lt;/a&gt; &lt;br&gt;
-&lt;a href=&#34;https://www.youtube.com/watch?v=zJ6WbK9zFpI&#34;&gt;https://www.youtube.com/watch?v=zJ6WbK9zFpI&lt;/a&gt; &lt;br&gt;
-&lt;a href=&#34;https://www.kodekloud.com/p/docker-labs&#34;&gt;https://www.kodekloud.com/p/docker-labs&lt;/a&gt; \\&lt;/p&gt;
-&lt;p&gt;
-Kubernetes for Absolute Beginners - Hands-on &lt;br&gt;
-Kubernetes Course from a DevOps guru (Kubernetes + Docker) &lt;br&gt;
-Kubernetes Fundamentals &lt;br&gt;
-Kubernetes in Action &lt;br&gt;
-MongoDB - The Complete Developer’s Guide \\&lt;/p&gt;
-&lt;div id=&#34;outline-container-headline-24&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-24&#34;&gt;
-sql
-&lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-24&#34; class=&#34;outline-text-3&#34;&gt;
-&lt;p&gt;Learning SQL &lt;br&gt;
-SQL Beginner to Guru: MySQL Edition - Master SQL with MySQL \\&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
 </description>
       
     </item>

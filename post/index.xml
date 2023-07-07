@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Jane - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 06 Apr 2023 00:00:00 +0800</lastBuildDate><atom:link href="https://elx123.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 08 Jul 2023 00:00:00 +0800</lastBuildDate><atom:link href="https://elx123.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2023-07-08近期总结</title>
+      <link>https://elx123.github.io/post/2023-07-08/</link>
+      <pubDate>Sat, 08 Jul 2023 00:00:00 +0800</pubDate>
+      
+      <guid>https://elx123.github.io/post/2023-07-08/</guid>
+      <description>简介 总结下近期的学习,由于chatGPT4的帮助,极大地加速了学习速度 深入学习nakama agones学习 CMU Intro to Database Systems nakama 由于之前学习的sock</description>
+    </item>
+    
     <item>
       <title>2023-04-06近期总结</title>
       <link>https://elx123.github.io/post/2023-04-06/</link>
@@ -176,15 +185,6 @@
       
       <guid>https://elx123.github.io/post/rwlockandrecursive/</guid>
       <description>简介 这里介绍下我对于3种锁的使用观点 个人观点 个人观点尽量使用互斥锁,因为递归锁和读写锁的复杂度,下面举出几种错误例子 递归锁 #include &amp;#34;../Mutex.h&amp;#34;#include &amp;#34;../Thread.h&amp;#34;#include &amp;lt;vector&amp;gt;#include &amp;lt;stdio.h&amp;gt; using namespace muduo; class</description>
-    </item>
-    
-    <item>
-      <title>Golang float</title>
-      <link>https://elx123.github.io/post/float64/</link>
-      <pubDate>Sun, 14 Oct 2018 00:00:00 +0800</pubDate>
-      
-      <guid>https://elx123.github.io/post/float64/</guid>
-      <description>最近在工作遇到float的精度问题,记录下解决思路 简介 浮点数数据格式有许多种,IEEE754标准的浮点数与IBM格式浮点数用的比较多 Go提供</description>
     </item>
     
   </channel>
