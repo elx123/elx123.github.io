@@ -2,20 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://elx123.github.io/bk/jane-theme-preview.zh-cn/</loc>
-    <lastmod>2018-03-07T16:01:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/bk/jane-theme-preview/</loc>
-    <lastmod>2018-03-07T16:01:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://elx123.github.io/about/</loc>
     <lastmod>2017-08-28T21:41:52+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -23,835 +9,259 @@
   </url>
   
   <url>
-    <loc>https://elx123.github.io/post/2023-07-08/</loc>
-    <lastmod>2023-07-08T03:32:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/categories/</loc>
-    <lastmod>2023-07-08T03:32:23+08:00</lastmod>
+    <loc>https://elx123.github.io/post/2023-08-30/</loc>
+    <lastmod>2023-08-30T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://elx123.github.io/</loc>
-    <lastmod>2023-07-08T03:32:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/tags/learning/</loc>
-    <lastmod>2023-07-08T03:32:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/categories/learning/</loc>
-    <lastmod>2023-07-08T03:32:23+08:00</lastmod>
+    <lastmod>2023-08-30T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://elx123.github.io/post/</loc>
-    <lastmod>2023-07-08T03:32:23+08:00</lastmod>
+    <lastmod>2023-08-30T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://elx123.github.io/tags/</loc>
-    <lastmod>2023-07-08T03:32:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/posts/2023-04-06/</loc>
-    <lastmod>2023-04-06T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/posts/</loc>
-    <lastmod>2023-04-06T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/posts/windows%E7%9B%B8%E5%85%B3/</loc>
-    <lastmod>2023-04-06T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/posts/backendsummarize/</loc>
-    <lastmod>2023-04-06T00:00:00+00:00</lastmod>
+    <loc>https://elx123.github.io/post/2023-07-08/</loc>
+    <lastmod>2023-07-08T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://elx123.github.io/post/2023-04-06/</loc>
-    <lastmod>2023-04-06T10:24:57+08:00</lastmod>
+    <lastmod>2023-04-06T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://elx123.github.io/post/windows%E7%9B%B8%E5%85%B3/</loc>
-    <lastmod>2023-04-06T10:17:26+08:00</lastmod>
+    <lastmod>2023-04-06T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://elx123.github.io/post/backendsummarize/</loc>
-    <lastmod>2023-04-06T10:17:41+08:00</lastmod>
+    <lastmod>2023-04-06T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://elx123.github.io/posts/lifefor30years/</loc>
+    <loc>https://elx123.github.io/notpost/lifefor30years/</loc>
     <lastmod>2023-01-20T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://elx123.github.io/posts/summarize/</loc>
-    <lastmod>2022-08-08T00:00:00+00:00</lastmod>
+    <loc>https://elx123.github.io/notpost/</loc>
+    <lastmod>2023-01-20T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://elx123.github.io/post/summarize/</loc>
-    <lastmod>2022-08-26T05:25:34+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/tags/golang/</loc>
-    <lastmod>2020-03-20T00:57:15+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/categories/golang/</loc>
-    <lastmod>2020-03-20T00:57:15+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/post/game/</loc>
-    <lastmod>2020-03-20T00:57:15+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/posts/windows/</loc>
-    <lastmod>2020-03-15T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/tags/windows/</loc>
-    <lastmod>2020-03-15T23:21:44+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/categories/windows/</loc>
-    <lastmod>2020-03-15T23:21:44+08:00</lastmod>
+    <lastmod>2022-08-08T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://elx123.github.io/post/windows/</loc>
-    <lastmod>2020-03-15T23:21:44+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/posts/rpclearning/</loc>
-    <lastmod>2020-03-08T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/posts/redis/</loc>
-    <lastmod>2020-03-08T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://elx123.github.io/post/rpclearning/</loc>
-    <lastmod>2020-03-08T06:16:44+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/tags/redis/</loc>
-    <lastmod>2020-03-08T04:06:43+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/categories/redis/</loc>
-    <lastmod>2020-03-08T04:06:43+08:00</lastmod>
+    <lastmod>2020-03-08T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://elx123.github.io/post/redis/</loc>
-    <lastmod>2020-03-08T04:06:43+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/tags/rpc/</loc>
-    <lastmod>2020-03-08T06:16:44+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/categories/rpc/</loc>
-    <lastmod>2020-03-08T06:16:44+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/posts/golangrelearning/</loc>
-    <lastmod>2020-02-25T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-08T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://elx123.github.io/post/golangrelearning/</loc>
-    <lastmod>2020-03-10T15:10:18+08:00</lastmod>
+    <lastmod>2020-02-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://elx123.github.io/posts/%E6%80%BB%E7%BB%93/</loc>
+    <loc>https://elx123.github.io/notpost/%E5%B7%A5%E4%BD%9C3%E5%B9%B4%E7%BB%8F%E9%AA%8C%E6%80%BB%E7%BB%93/</loc>
     <lastmod>2019-12-17T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://elx123.github.io/posts/excellearning/</loc>
+    <loc>https://elx123.github.io/post/excellearning/</loc>
     <lastmod>2019-12-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://elx123.github.io/tags/cpu/</loc>
-    <lastmod>2019-07-08T17:27:30+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/categories/cpu/</loc>
-    <lastmod>2019-07-08T17:27:30+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/post/cpu/</loc>
-    <lastmod>2019-07-08T17:27:30+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/posts/about/</loc>
+    <loc>https://elx123.github.io/notpost/about/</loc>
     <lastmod>2019-05-29T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://elx123.github.io/categories/docs/</loc>
-    <lastmod>2019-03-05T16:01:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/categories/index/</loc>
-    <lastmod>2019-03-05T16:01:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/tags/math/</loc>
-    <lastmod>2019-03-05T16:01:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/categories/math/</loc>
-    <lastmod>2019-03-05T16:01:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/post/math-preview/</loc>
-    <lastmod>2019-03-05T16:01:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/tags/preview/</loc>
-    <lastmod>2019-03-05T16:01:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/tags/tag-6/</loc>
-    <lastmod>2019-03-05T16:01:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/posts/golang_sort/</loc>
-    <lastmod>2019-01-14T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/posts/weightsort/</loc>
-    <lastmod>2019-01-14T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/tags/algorithm/</loc>
-    <lastmod>2019-12-17T13:42:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/categories/algorithm/</loc>
-    <lastmod>2019-12-17T13:42:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://elx123.github.io/post/golang_sort/</loc>
-    <lastmod>2019-12-17T13:40:04+08:00</lastmod>
+    <lastmod>2019-01-14T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://elx123.github.io/post/weightsort/</loc>
-    <lastmod>2019-12-17T13:42:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/posts/golang_json/</loc>
-    <lastmod>2018-12-23T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/posts/golang_%3c%3c/</loc>
-    <lastmod>2018-12-23T00:00:00+00:00</lastmod>
+    <lastmod>2019-01-14T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://elx123.github.io/post/golang_json/</loc>
-    <lastmod>2019-05-29T17:04:36+08:00</lastmod>
+    <lastmod>2018-12-23T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://elx123.github.io/post/golang_%3c%3c/</loc>
-    <lastmod>2019-05-29T17:04:40+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/posts/package/</loc>
-    <lastmod>2018-10-25T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/posts/tcp_subcontracting/</loc>
-    <lastmod>2018-10-25T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/posts/priorityqueue/</loc>
-    <lastmod>2018-10-25T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/posts/rwlockandrecursive/</loc>
-    <lastmod>2018-10-25T00:00:00+00:00</lastmod>
+    <lastmod>2018-12-23T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://elx123.github.io/post/package/</loc>
-    <lastmod>2019-05-29T17:04:55+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/tags/tcp/</loc>
-    <lastmod>2019-05-29T17:05:19+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/categories/tcp/</loc>
-    <lastmod>2019-05-29T17:05:19+08:00</lastmod>
+    <lastmod>2018-10-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://elx123.github.io/post/tcp_subcontracting/</loc>
-    <lastmod>2019-05-29T17:05:19+08:00</lastmod>
+    <lastmod>2018-10-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://elx123.github.io/post/priorityqueue/</loc>
-    <lastmod>2019-05-29T17:05:04+08:00</lastmod>
+    <lastmod>2018-10-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://elx123.github.io/post/rwlockandrecursive/</loc>
-    <lastmod>2019-05-29T17:05:11+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/posts/float64/</loc>
-    <lastmod>2018-10-14T00:00:00+00:00</lastmod>
+    <lastmod>2018-10-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://elx123.github.io/post/float64/</loc>
-    <lastmod>2019-05-29T17:04:30+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/posts/mgoandsession/</loc>
-    <lastmod>2018-10-08T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/posts/mgo/</loc>
-    <lastmod>2018-10-08T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/posts/recommendbook/</loc>
-    <lastmod>2018-10-08T00:00:00+00:00</lastmod>
+    <lastmod>2018-10-14T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://elx123.github.io/post/mgoandsession/</loc>
-    <lastmod>2019-05-29T17:04:47+08:00</lastmod>
+    <lastmod>2018-10-08T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://elx123.github.io/post/mgo/</loc>
-    <lastmod>2019-05-29T17:04:50+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/tags/sql/</loc>
-    <lastmod>2019-05-29T17:05:07+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/categories/sql/</loc>
-    <lastmod>2019-05-29T17:05:07+08:00</lastmod>
+    <lastmod>2018-10-08T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://elx123.github.io/post/recommendbook/</loc>
-    <lastmod>2019-05-29T17:05:07+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/posts/sysbench/</loc>
-    <lastmod>2018-09-24T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/tags/mysql/</loc>
-    <lastmod>2019-05-29T17:05:15+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/categories/mysql/</loc>
-    <lastmod>2019-05-29T17:05:15+08:00</lastmod>
+    <lastmod>2018-10-08T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://elx123.github.io/post/sysbench/</loc>
-    <lastmod>2019-05-29T17:05:15+08:00</lastmod>
+    <lastmod>2018-09-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://elx123.github.io/bk/</loc>
-    <lastmod>2018-03-07T16:01:23+08:00</lastmod>
+    <loc>https://elx123.github.io/notpost/anticheatone/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://elx123.github.io/tags/shortcodes/</loc>
-    <lastmod>2018-03-07T16:01:23+08:00</lastmod>
+    <loc>https://elx123.github.io/notpost/anticheatthree/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://elx123.github.io/categories/shortcodes/</loc>
-    <lastmod>2018-03-07T16:01:23+08:00</lastmod>
+    <loc>https://elx123.github.io/notpost/anticheattwo/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://elx123.github.io/post/shortcodes-preview/</loc>
-    <lastmod>2018-03-05T16:01:23+08:00</lastmod>
+    <loc>https://elx123.github.io/notpost/seh/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://elx123.github.io/tags/image/</loc>
-    <lastmod>2018-03-04T16:01:23+08:00</lastmod>
+    <loc>https://elx123.github.io/categories/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://elx123.github.io/post/image-preview/</loc>
-    <lastmod>2018-03-04T16:01:23+08:00</lastmod>
+    <loc>https://elx123.github.io/tags/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://elx123.github.io/post/shortcode-notice/</loc>
-    <lastmod>2018-03-04T16:01:23+08:00</lastmod>
+    <loc>https://elx123.github.io/post/game/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://elx123.github.io/tags/tag-7/</loc>
-    <lastmod>2018-03-04T16:01:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/tags/footnote/</loc>
-    <lastmod>2018-03-01T16:01:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/post/doc-footnote-preview/</loc>
-    <lastmod>2018-03-01T16:01:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/tags/markdown/</loc>
-    <lastmod>2018-03-01T16:01:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/tags/tag-11/</loc>
-    <lastmod>2018-03-01T16:01:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/tags/english/</loc>
-    <lastmod>2017-08-31T15:43:48+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/categories/english/</loc>
-    <lastmod>2017-08-31T15:43:48+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/post/english-preview/</loc>
-    <lastmod>2017-08-31T15:43:48+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/tags/tag-2/</loc>
-    <lastmod>2017-08-31T15:43:48+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/categories/test/</loc>
-    <lastmod>2017-08-30T15:43:48+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/post/this-is-a-very-long-title/</loc>
-    <lastmod>2017-08-30T15:43:48+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/post/creating-a-new-theme/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/tags/development/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/categories/development/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/tags/go/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/tags/templates/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/tags/themes/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/post/goisforlovers/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/post/hugoisforlovers/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/tags/hugo/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/tags/jekyll/</loc>
-    <lastmod>2014-03-10T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/post/migrate-from-jekyll/</loc>
-    <lastmod>2014-03-10T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/tags/syntax-highlighting/</loc>
-    <lastmod>2017-08-30T16:01:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/categories/syntax-highlighting/</loc>
-    <lastmod>2017-08-30T16:01:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/post/syntax-highlighting/</loc>
-    <lastmod>2017-08-30T16:01:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/tags/tag-5/</loc>
-    <lastmod>2017-08-30T16:01:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/posts/anticheatone/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/posts/anticheatthree/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/posts/anticheattwo/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/posts/seh/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/posts/game/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://elx123.github.io/posts/cpu/</loc>
+    <loc>https://elx123.github.io/post/cpu/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

@@ -22,7 +22,7 @@
 
 <meta name="mobile-web-app-capable" content="yes">
 
-<meta name="author" content="alx" />
+<meta name="author" content="RT" />
   <meta name="description" content="简介 最近在多个框架中遇到优先队列,在这里记录下原理 实现方式 堆 目前只知道顺序数组可以用来作为heap底层结构,以实现优先队列 实现 // An Item is something we manage" />
 
   <meta name="keywords" content="Hugo, theme, jane" />
@@ -32,7 +32,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.98.0" />
+<meta name="generator" content="Hugo 0.117.0" />
 
 
 <link rel="canonical" href="https://elx123.github.io/post/priorityqueue/" />
@@ -53,7 +53,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.b3a8813c06e6d785beba22bf8264e174fa2cb3a396b22f9ba24e2c00c18aaf7f.css" integrity="sha256-s6iBPAbm14W&#43;uiK/gmThdPoss6OWsi&#43;bok4sAMGKr38=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.fa4b2b9f31b5c6d0b683db81157a9226e17b06e61911791ab547242a4a0556f2.css" integrity="sha256-&#43;ksrnzG1xtC2g9uBFXqSJuF7BuYZEXkatUckKkoFVvI=" media="screen" crossorigin="anonymous">
 
 
 
@@ -63,14 +63,13 @@
 <meta property="og:description" content="简介 最近在多个框架中遇到优先队列,在这里记录下原理 实现方式 堆 目前只知道顺序数组可以用来作为heap底层结构,以实现优先队列 实现 // An Item is something we manage" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://elx123.github.io/post/priorityqueue/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2018-10-25T00:00:00+08:00" />
-<meta property="article:modified_time" content="2019-05-29T17:05:04+08:00" />
-
+<meta property="article:published_time" content="2018-10-25T00:00:00+00:00" />
+<meta property="article:modified_time" content="2018-10-25T00:00:00+00:00" />
 <meta itemprop="name" content="优先队列">
-<meta itemprop="description" content="简介 最近在多个框架中遇到优先队列,在这里记录下原理 实现方式 堆 目前只知道顺序数组可以用来作为heap底层结构,以实现优先队列 实现 // An Item is something we manage"><meta itemprop="datePublished" content="2018-10-25T00:00:00+08:00" />
-<meta itemprop="dateModified" content="2019-05-29T17:05:04+08:00" />
+<meta itemprop="description" content="简介 最近在多个框架中遇到优先队列,在这里记录下原理 实现方式 堆 目前只知道顺序数组可以用来作为heap底层结构,以实现优先队列 实现 // An Item is something we manage"><meta itemprop="datePublished" content="2018-10-25T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2018-10-25T00:00:00+00:00" />
 <meta itemprop="wordCount" content="483">
-<meta itemprop="keywords" content="golang," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="优先队列"/>
 <meta name="twitter:description" content="简介 最近在多个框架中遇到优先队列,在这里记录下原理 实现方式 堆 目前只知道顺序数组可以用来作为heap底层结构,以实现优先队列 实现 // An Item is something we manage"/>
 
@@ -153,39 +152,6 @@
               </i>
             </a>
           
-        
-      </li><li class="mobile-menu-item">
-        
-          
-          <div class="mobile-menu-parent">
-            <span class="mobile-submenu-open"></span>
-            <a href="https://elx123.github.io/">
-              docs
-            </a>
-          </div>
-          <ul class="mobile-submenu-list">
-            
-              <li>
-                <a href="https://elx123.github.io/bk/jane-theme-preview/">Jane Theme Preview</a>
-              </li>
-            
-              <li>
-                <a href="https://elx123.github.io/post/shortcodes-preview/">Shortcodes Preview</a>
-              </li>
-            
-              <li>
-                <a href="https://elx123.github.io/post/image-preview/">Image Preview</a>
-              </li>
-            
-              <li>
-                <a href="https://elx123.github.io/post/syntax-highlighting/">Syntax Highlighting</a>
-              </li>
-            
-              <li>
-                <a href="https://elx123.github.io/post/math-preview/">Math Preview</a>
-              </li>
-            
-          </ul>
         
       </li>
     
@@ -350,38 +316,6 @@
 
       </li>
     
-        <li class="menu-item">
-        
-          
-          <a class="menu-item-link menu-parent" href="https://elx123.github.io/">docs</a>
-          <ul class="submenu">
-            
-              <li>
-                <a href="https://elx123.github.io/bk/jane-theme-preview/">Jane Theme Preview</a>
-              </li>
-            
-              <li>
-                <a href="https://elx123.github.io/post/shortcodes-preview/">Shortcodes Preview</a>
-              </li>
-            
-              <li>
-                <a href="https://elx123.github.io/post/image-preview/">Image Preview</a>
-              </li>
-            
-              <li>
-                <a href="https://elx123.github.io/post/syntax-highlighting/">Syntax Highlighting</a>
-              </li>
-            
-              <li>
-                <a href="https://elx123.github.io/post/math-preview/">Math Preview</a>
-              </li>
-            
-          </ul>
-
-        
-
-      </li>
-    
 
     
     
@@ -405,10 +339,7 @@
         <time datetime="2018-10-25" class="post-time">
           2018-10-25
         </time>
-        <div class="post-category">
-            <a href="https://elx123.github.io/categories/golang/"> golang </a>
-            
-          </div>
+        
         
 
         
@@ -425,35 +356,65 @@
   <h2 class="post-toc-title">Table of Contents</h2>
   <div class="post-toc-content">
     <nav id="TableOfContents">
-  <ul>
-    <li><a href="#简介">简介</a></li>
-    <li><a href="#实现方式">实现方式</a>
-      <ul>
-        <li><a href="#堆">堆</a></li>
-        <li><a href="#queue">Queue</a></li>
-      </ul>
-    </li>
-    <li><a href="#参考材料">参考材料</a></li>
-  </ul>
+<ul>
+<li><a href="#headline-1">简介</a>
+</li>
+<li><a href="#headline-2">实现方式</a>
+<ul>
+<li><a href="#headline-3">堆</a>
+<ul>
+<li><a href="#headline-4">实现</a>
+</li>
+<li><a href="#headline-5">使用例子</a>
+</li>
+</ul>
+</li>
+<li><a href="#headline-6">Queue</a>
+</li>
+</ul>
+</li>
+<li><a href="#headline-7">参考材料</a>
+</li>
+</ul>
 </nav>
   </div>
 </div>
 
     
     <div class="post-content">
-      <!-- more -->
-<h2 id="简介">简介</h2>
+      
+<!-- more -->
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+简介
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
 <p>最近在多个框架中遇到优先队列,在这里记录下原理</p>
-<h2 id="实现方式">实现方式</h2>
-<h3 id="堆">堆</h3>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+实现方式
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
+<div id="outline-container-headline-3" class="outline-3">
+<h3 id="headline-3">
+堆
+</h3>
+<div id="outline-text-headline-3" class="outline-text-3">
 <p>目前只知道顺序数组可以用来作为heap底层结构,以实现优先队列</p>
-<h4 id="实现">实现</h4>
+<div id="outline-container-headline-4" class="outline-4">
+<h4 id="headline-4">
+实现
+</h4>
+<div id="outline-text-headline-4" class="outline-text-4">
+<div class="src src-go">
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">// An Item is something we manage in a priority queue.
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Item</span> <span style="color:#66d9ef">struct</span> {
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">value</span>    <span style="color:#66d9ef">string</span> <span style="color:#75715e">// The value of the item; arbitrary.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">priority</span> <span style="color:#66d9ef">int</span>    <span style="color:#75715e">// The priority of the item in the queue.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">// The index is needed by update and is maintained by the heap.Interface methods.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">index</span> <span style="color:#66d9ef">int</span> <span style="color:#75715e">// The index of the item in the heap.
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">value</span>    <span style="color:#66d9ef">string</span> <span style="color:#75715e">// The value of the item; arbitrary.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">priority</span> <span style="color:#66d9ef">int</span>    <span style="color:#75715e">// The priority of the item in the queue.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">// The index is needed by update and is maintained by the heap.Interface methods.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">index</span> <span style="color:#66d9ef">int</span> <span style="color:#75715e">// The index of the item in the heap.
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">// A PriorityQueue implements heap.Interface and holds Items.
@@ -462,82 +423,109 @@
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">pq</span> <span style="color:#a6e22e">PriorityQueue</span>) <span style="color:#a6e22e">Len</span>() <span style="color:#66d9ef">int</span> { <span style="color:#66d9ef">return</span> len(<span style="color:#a6e22e">pq</span>) }
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">pq</span> <span style="color:#a6e22e">PriorityQueue</span>) <span style="color:#a6e22e">Less</span>(<span style="color:#a6e22e">i</span>, <span style="color:#a6e22e">j</span> <span style="color:#66d9ef">int</span>) <span style="color:#66d9ef">bool</span> {
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// We want Pop to give us the highest, not lowest, priority so we use greater than here.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">pq</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">priority</span> &gt; <span style="color:#a6e22e">pq</span>[<span style="color:#a6e22e">j</span>].<span style="color:#a6e22e">priority</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// We want Pop to give us the highest, not lowest, priority so we use greater than here.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">pq</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">priority</span> &gt; <span style="color:#a6e22e">pq</span>[<span style="color:#a6e22e">j</span>].<span style="color:#a6e22e">priority</span>
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">pq</span> <span style="color:#a6e22e">PriorityQueue</span>) <span style="color:#a6e22e">Swap</span>(<span style="color:#a6e22e">i</span>, <span style="color:#a6e22e">j</span> <span style="color:#66d9ef">int</span>) {
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">pq</span>[<span style="color:#a6e22e">i</span>], <span style="color:#a6e22e">pq</span>[<span style="color:#a6e22e">j</span>] = <span style="color:#a6e22e">pq</span>[<span style="color:#a6e22e">j</span>], <span style="color:#a6e22e">pq</span>[<span style="color:#a6e22e">i</span>]
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">pq</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">index</span> = <span style="color:#a6e22e">i</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">pq</span>[<span style="color:#a6e22e">j</span>].<span style="color:#a6e22e">index</span> = <span style="color:#a6e22e">j</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">pq</span>[<span style="color:#a6e22e">i</span>], <span style="color:#a6e22e">pq</span>[<span style="color:#a6e22e">j</span>] = <span style="color:#a6e22e">pq</span>[<span style="color:#a6e22e">j</span>], <span style="color:#a6e22e">pq</span>[<span style="color:#a6e22e">i</span>]
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">pq</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">index</span> = <span style="color:#a6e22e">i</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">pq</span>[<span style="color:#a6e22e">j</span>].<span style="color:#a6e22e">index</span> = <span style="color:#a6e22e">j</span>
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">pq</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">PriorityQueue</span>) <span style="color:#a6e22e">Push</span>(<span style="color:#a6e22e">x</span> <span style="color:#66d9ef">interface</span>{}) {
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">n</span> <span style="color:#f92672">:=</span> len(<span style="color:#f92672">*</span><span style="color:#a6e22e">pq</span>)
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">item</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">x</span>.(<span style="color:#f92672">*</span><span style="color:#a6e22e">Item</span>)
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">index</span> = <span style="color:#a6e22e">n</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">*</span><span style="color:#a6e22e">pq</span> = append(<span style="color:#f92672">*</span><span style="color:#a6e22e">pq</span>, <span style="color:#a6e22e">item</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">n</span> <span style="color:#f92672">:=</span> len(<span style="color:#f92672">*</span><span style="color:#a6e22e">pq</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">item</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">x</span>.(<span style="color:#f92672">*</span><span style="color:#a6e22e">Item</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">index</span> = <span style="color:#a6e22e">n</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">*</span><span style="color:#a6e22e">pq</span> = append(<span style="color:#f92672">*</span><span style="color:#a6e22e">pq</span>, <span style="color:#a6e22e">item</span>)
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">pq</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">PriorityQueue</span>) <span style="color:#a6e22e">Pop</span>() <span style="color:#66d9ef">interface</span>{} {
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">old</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">pq</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">n</span> <span style="color:#f92672">:=</span> len(<span style="color:#a6e22e">old</span>)
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">item</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">old</span>[<span style="color:#a6e22e">n</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">index</span> = <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#75715e">// for safety
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#f92672">*</span><span style="color:#a6e22e">pq</span> = <span style="color:#a6e22e">old</span>[<span style="color:#ae81ff">0</span> : <span style="color:#a6e22e">n</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">item</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">old</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">pq</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">n</span> <span style="color:#f92672">:=</span> len(<span style="color:#a6e22e">old</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">item</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">old</span>[<span style="color:#a6e22e">n</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">index</span> = <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#75715e">// for safety
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#f92672">*</span><span style="color:#a6e22e">pq</span> = <span style="color:#a6e22e">old</span>[<span style="color:#ae81ff">0</span> : <span style="color:#a6e22e">n</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">item</span>
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">// update modifies the priority and value of an Item in the queue.
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">pq</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">PriorityQueue</span>) <span style="color:#a6e22e">update</span>(<span style="color:#a6e22e">item</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">Item</span>, <span style="color:#a6e22e">value</span> <span style="color:#66d9ef">string</span>, <span style="color:#a6e22e">priority</span> <span style="color:#66d9ef">int</span>) {
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">value</span> = <span style="color:#a6e22e">value</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">priority</span> = <span style="color:#a6e22e">priority</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">heap</span>.<span style="color:#a6e22e">Fix</span>(<span style="color:#a6e22e">pq</span>, <span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">index</span>)
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>这里index是给sort.Interface的几个接口使用的,另外2个成员不言自明.</p>
-<h4 id="使用例子">使用例子</h4>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">value</span> = <span style="color:#a6e22e">value</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">priority</span> = <span style="color:#a6e22e">priority</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">heap</span>.<span style="color:#a6e22e">Fix</span>(<span style="color:#a6e22e">pq</span>, <span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">index</span>)
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+</div>
+<p>这里index是给sort.Interface的几个接口使用的,另外2个成员不言自明.</p>
+</div>
+</div>
+<div id="outline-container-headline-5" class="outline-4">
+<h4 id="headline-5">
+使用例子
+</h4>
+<div id="outline-text-headline-5" class="outline-text-4">
+<div class="src src-go">
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">// Some items and their priorities.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">items</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">int</span>{
-</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;banana&#34;</span>: <span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#34;apple&#34;</span>: <span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#34;pear&#34;</span>: <span style="color:#ae81ff">4</span>,
-</span></span><span style="display:flex;"><span>        }
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">items</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">int</span>{
+</span></span><span style="display:flex;"><span>		<span style="color:#e6db74">&#34;banana&#34;</span>: <span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#34;apple&#34;</span>: <span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#34;pear&#34;</span>: <span style="color:#ae81ff">4</span>,
+</span></span><span style="display:flex;"><span>	}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Create a priority queue, put the items in it, and
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">// establish the priority queue (heap) invariants.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">pq</span> <span style="color:#f92672">:=</span> make(<span style="color:#a6e22e">PriorityQueue</span>, len(<span style="color:#a6e22e">items</span>))
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">i</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">0</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">value</span>, <span style="color:#a6e22e">priority</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">items</span> {
-</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">pq</span>[<span style="color:#a6e22e">i</span>] = <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">Item</span>{
-</span></span><span style="display:flex;"><span>                        <span style="color:#a6e22e">value</span>:    <span style="color:#a6e22e">value</span>,
-</span></span><span style="display:flex;"><span>                        <span style="color:#a6e22e">priority</span>: <span style="color:#a6e22e">priority</span>,
-</span></span><span style="display:flex;"><span>                        <span style="color:#a6e22e">index</span>:    <span style="color:#a6e22e">i</span>,
-</span></span><span style="display:flex;"><span>                }
-</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">heap</span>.<span style="color:#a6e22e">Init</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">pq</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// Create a priority queue, put the items in it, and
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">// establish the priority queue (heap) invariants.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">pq</span> <span style="color:#f92672">:=</span> make(<span style="color:#a6e22e">PriorityQueue</span>, len(<span style="color:#a6e22e">items</span>))
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">i</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">value</span>, <span style="color:#a6e22e">priority</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">items</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">pq</span>[<span style="color:#a6e22e">i</span>] = <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">Item</span>{
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">value</span>:    <span style="color:#a6e22e">value</span>,
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">priority</span>: <span style="color:#a6e22e">priority</span>,
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">index</span>:    <span style="color:#a6e22e">i</span>,
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">heap</span>.<span style="color:#a6e22e">Init</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">pq</span>)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Insert a new item and then modify its priority.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">item</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">Item</span>{
-</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">value</span>:    <span style="color:#e6db74">&#34;orange&#34;</span>,
-</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">priority</span>: <span style="color:#ae81ff">1</span>,
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">item2</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">Item</span>{
-</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">value</span>:    <span style="color:#e6db74">&#34;ssss&#34;</span>,
-</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">priority</span>: <span style="color:#ae81ff">2</span>,
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">heap</span>.<span style="color:#a6e22e">Push</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">pq</span>, <span style="color:#a6e22e">item</span>)
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">heap</span>.<span style="color:#a6e22e">Push</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">pq</span>, <span style="color:#a6e22e">item2</span>)
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">pq</span>.<span style="color:#a6e22e">update</span>(<span style="color:#a6e22e">item</span>, <span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">value</span>, <span style="color:#ae81ff">5</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// Insert a new item and then modify its priority.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">item</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">Item</span>{
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">value</span>:    <span style="color:#e6db74">&#34;orange&#34;</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">priority</span>: <span style="color:#ae81ff">1</span>,
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">item2</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">Item</span>{
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">value</span>:    <span style="color:#e6db74">&#34;ssss&#34;</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">priority</span>: <span style="color:#ae81ff">2</span>,
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">heap</span>.<span style="color:#a6e22e">Push</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">pq</span>, <span style="color:#a6e22e">item</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">heap</span>.<span style="color:#a6e22e">Push</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">pq</span>, <span style="color:#a6e22e">item2</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">pq</span>.<span style="color:#a6e22e">update</span>(<span style="color:#a6e22e">item</span>, <span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">value</span>, <span style="color:#ae81ff">5</span>)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Take the items out; they arrive in decreasing priority order.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">pq</span>.<span style="color:#a6e22e">Len</span>() &gt; <span style="color:#ae81ff">0</span> {
-</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">item</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">heap</span>.<span style="color:#a6e22e">Pop</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">pq</span>).(<span style="color:#f92672">*</span><span style="color:#a6e22e">Item</span>)
-</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%.2d:%s &#34;</span>, <span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">priority</span>, <span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">value</span>)
-</span></span><span style="display:flex;"><span>        }
-</span></span></code></pre></div><p>通过调整Less,我们可以调整最大小堆,从而控制优先队列的排序规则</p>
-<h3 id="queue">Queue</h3>
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// Take the items out; they arrive in decreasing priority order.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">pq</span>.<span style="color:#a6e22e">Len</span>() &gt; <span style="color:#ae81ff">0</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">item</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">heap</span>.<span style="color:#a6e22e">Pop</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">pq</span>).(<span style="color:#f92672">*</span><span style="color:#a6e22e">Item</span>)
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;%.2d:%s &#34;</span>, <span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">priority</span>, <span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">value</span>)
+</span></span><span style="display:flex;"><span>	}</span></span></code></pre></div>
+</div>
+<p>通过调整Less,我们可以调整最大小堆,从而控制优先队列的排序规则</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-6" class="outline-3">
+<h3 id="headline-6">
+Queue
+</h3>
+<div id="outline-text-headline-6" class="outline-text-3">
 <p>未完待续</p>
-<h2 id="参考材料">参考材料</h2>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-7" class="outline-2">
+<h2 id="headline-7">
+参考材料
+</h2>
+<div id="outline-text-headline-7" class="outline-text-2">
 <p><a href="https://studygolang.com/articles/13173">https://studygolang.com/articles/13173</a></p>
+</div>
+</div>
 
     </div>
 
@@ -546,12 +534,12 @@
 <div class="post-copyright">
   <p class="copyright-item">
     <span class="item-title">Author</span>
-    <span class="item-content">alx</span>
+    <span class="item-content">RT</span>
   </p>
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
     <span class="item-content">
-      2019-05-29
+      2018-10-25
       
     </span>
   </p>
@@ -567,10 +555,7 @@
     
 
     <footer class="post-footer">
-      <div class="post-tags">
-          <a href="https://elx123.github.io/tags/golang/">golang</a>
-          
-        </div>
+      
 
       
       <nav class="post-nav">

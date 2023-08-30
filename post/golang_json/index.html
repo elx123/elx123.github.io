@@ -22,7 +22,7 @@
 
 <meta name="mobile-web-app-capable" content="yes">
 
-<meta name="author" content="alx" />
+<meta name="author" content="RT" />
   <meta name="description" content="简介 最近发现一篇关于golang原生Json库的文章,转载过来 https://zhuanlan.zhihu.com/p/37165706 介绍 encoding/json库的意义相对其他语言来说在Golang中尤其重" />
 
   <meta name="keywords" content="Hugo, theme, jane" />
@@ -32,7 +32,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.98.0" />
+<meta name="generator" content="Hugo 0.117.0" />
 
 
 <link rel="canonical" href="https://elx123.github.io/post/golang_json/" />
@@ -53,7 +53,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.b3a8813c06e6d785beba22bf8264e174fa2cb3a396b22f9ba24e2c00c18aaf7f.css" integrity="sha256-s6iBPAbm14W&#43;uiK/gmThdPoss6OWsi&#43;bok4sAMGKr38=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.fa4b2b9f31b5c6d0b683db81157a9226e17b06e61911791ab547242a4a0556f2.css" integrity="sha256-&#43;ksrnzG1xtC2g9uBFXqSJuF7BuYZEXkatUckKkoFVvI=" media="screen" crossorigin="anonymous">
 
 
 
@@ -63,14 +63,13 @@
 <meta property="og:description" content="简介 最近发现一篇关于golang原生Json库的文章,转载过来 https://zhuanlan.zhihu.com/p/37165706 介绍 encoding/json库的意义相对其他语言来说在Golang中尤其重" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://elx123.github.io/post/golang_json/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2018-12-23T00:00:00+08:00" />
-<meta property="article:modified_time" content="2019-05-29T17:04:36+08:00" />
-
+<meta property="article:published_time" content="2018-12-23T00:00:00+00:00" />
+<meta property="article:modified_time" content="2018-12-23T00:00:00+00:00" />
 <meta itemprop="name" content="[转载]Golang Json库源码">
-<meta itemprop="description" content="简介 最近发现一篇关于golang原生Json库的文章,转载过来 https://zhuanlan.zhihu.com/p/37165706 介绍 encoding/json库的意义相对其他语言来说在Golang中尤其重"><meta itemprop="datePublished" content="2018-12-23T00:00:00+08:00" />
-<meta itemprop="dateModified" content="2019-05-29T17:04:36+08:00" />
-<meta itemprop="wordCount" content="5105">
-<meta itemprop="keywords" content="golang," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="description" content="简介 最近发现一篇关于golang原生Json库的文章,转载过来 https://zhuanlan.zhihu.com/p/37165706 介绍 encoding/json库的意义相对其他语言来说在Golang中尤其重"><meta itemprop="datePublished" content="2018-12-23T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2018-12-23T00:00:00+00:00" />
+<meta itemprop="wordCount" content="5128">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="[转载]Golang Json库源码"/>
 <meta name="twitter:description" content="简介 最近发现一篇关于golang原生Json库的文章,转载过来 https://zhuanlan.zhihu.com/p/37165706 介绍 encoding/json库的意义相对其他语言来说在Golang中尤其重"/>
 
@@ -153,39 +152,6 @@
               </i>
             </a>
           
-        
-      </li><li class="mobile-menu-item">
-        
-          
-          <div class="mobile-menu-parent">
-            <span class="mobile-submenu-open"></span>
-            <a href="https://elx123.github.io/">
-              docs
-            </a>
-          </div>
-          <ul class="mobile-submenu-list">
-            
-              <li>
-                <a href="https://elx123.github.io/bk/jane-theme-preview/">Jane Theme Preview</a>
-              </li>
-            
-              <li>
-                <a href="https://elx123.github.io/post/shortcodes-preview/">Shortcodes Preview</a>
-              </li>
-            
-              <li>
-                <a href="https://elx123.github.io/post/image-preview/">Image Preview</a>
-              </li>
-            
-              <li>
-                <a href="https://elx123.github.io/post/syntax-highlighting/">Syntax Highlighting</a>
-              </li>
-            
-              <li>
-                <a href="https://elx123.github.io/post/math-preview/">Math Preview</a>
-              </li>
-            
-          </ul>
         
       </li>
     
@@ -350,38 +316,6 @@
 
       </li>
     
-        <li class="menu-item">
-        
-          
-          <a class="menu-item-link menu-parent" href="https://elx123.github.io/">docs</a>
-          <ul class="submenu">
-            
-              <li>
-                <a href="https://elx123.github.io/bk/jane-theme-preview/">Jane Theme Preview</a>
-              </li>
-            
-              <li>
-                <a href="https://elx123.github.io/post/shortcodes-preview/">Shortcodes Preview</a>
-              </li>
-            
-              <li>
-                <a href="https://elx123.github.io/post/image-preview/">Image Preview</a>
-              </li>
-            
-              <li>
-                <a href="https://elx123.github.io/post/syntax-highlighting/">Syntax Highlighting</a>
-              </li>
-            
-              <li>
-                <a href="https://elx123.github.io/post/math-preview/">Math Preview</a>
-              </li>
-            
-          </ul>
-
-        
-
-      </li>
-    
 
     
     
@@ -405,10 +339,7 @@
         <time datetime="2018-12-23" class="post-time">
           2018-12-23
         </time>
-        <div class="post-category">
-            <a href="https://elx123.github.io/categories/golang/"> golang </a>
-            
-          </div>
+        
         
 
         
@@ -425,76 +356,117 @@
   <h2 class="post-toc-title">Table of Contents</h2>
   <div class="post-toc-content">
     <nav id="TableOfContents">
-  <ul>
-    <li><a href="#简介">简介</a></li>
-    <li><a href="#介绍">介绍</a></li>
-    <li><a href="#基本规则">基本规则</a></li>
-    <li><a href="#类库解析">类库解析</a>
-      <ul>
-        <li><a href="#主要的接口和结构">主要的接口和结构</a></li>
-      </ul>
-    </li>
-    <li><a href="#源码分析">源码分析</a></li>
-  </ul>
+<ul>
+<li><a href="#headline-1">简介</a>
+</li>
+<li><a href="#headline-2">介绍</a>
+</li>
+<li><a href="#headline-3">基本规则</a>
+</li>
+<li><a href="#headline-4">类库解析</a>
+<ul>
+<li><a href="#headline-5">主要的接口和结构</a>
+</li>
+</ul>
+</li>
+<li><a href="#headline-6">源码分析</a>
+</li>
+</ul>
 </nav>
   </div>
 </div>
 
     
     <div class="post-content">
-      <!-- more -->
-<h2 id="简介">简介</h2>
-<p>最近发现一篇关于golang原生Json库的文章,转载过来<br />
+      
+<!-- more -->
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+简介
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>最近发现一篇关于golang原生Json库的文章,转载过来<br>
 <a href="https://zhuanlan.zhihu.com/p/37165706">https://zhuanlan.zhihu.com/p/37165706</a></p>
-<h2 id="介绍">介绍</h2>
+</div>
+</div>
+<div id="outline-container-headline-2" class="outline-2">
+<h2 id="headline-2">
+介绍
+</h2>
+<div id="outline-text-headline-2" class="outline-text-2">
 <p>encoding/json库的意义相对其他语言来说在Golang中尤其重要，因为它还扮演着struct转换器的角色，即对于字段列表存在公共子集的不同结构体之间进行转换（如果你不知道为什么要做这件事，这是另一个话题，需要单独讨论）。目前来看使用Marshal和Unmarshal方法是最优解（不要告诉我你要对字段进行one by one的赋值，虽然这种low逼方法有时候更加有效）。</p>
-<h2 id="基本规则">基本规则</h2>
+</div>
+</div>
+<div id="outline-container-headline-3" class="outline-2">
+<h2 id="headline-3">
+基本规则
+</h2>
+<div id="outline-text-headline-3" class="outline-text-2">
 <ul>
 <li>只有合法的json串才能解析（废话）</li>
 </ul>
-<p>key只能是string；<br />
-map的形式必须是map[string]T，T是Go的基本类型；<br />
-Channel, complex, function 不能进行编码；<br />
-循环数据不支持；<br />
+<p>key只能是string；<br>
+map的形式必须是map[string]T，T是Go的基本类型；<br>
+Channel, complex, function 不能进行编码；<br>
+循环数据不支持；<br>
 指针会被编码成指针的值，nil是null。</p>
 <ul>
 <li>只有可导出（exported）的字段才能解析</li>
 </ul>
-<p>即首字符大写的字段才能显示在json对象中，解析规则有如下顺序，例如一个key：Foo<br />
-1.先找tag是Foo的<br />
-2.找字段名是Foo的<br />
-3.找FOO或者FoO等<br /></p>
+<p>即首字符大写的字段才能显示在json对象中，解析规则有如下顺序，例如一个key：Foo<br>
+1.先找tag是Foo的<br>
+2.找字段名是Foo的<br>
+3.找FOO或者FoO等\\</p>
 <ul>
 <li>只能解码在目标对象存在的字段</li>
-<li>这个特性其实是很有用的，你可以设计一个大而全的兼容结构体，当你希望从里面挑选一些字段时就可以利用它；<br /></li>
-<li>这也意味着目标对象中unexported的字段不受Unmarshal的影响；<br /></li>
+</ul>
+<ol>
+<li>这个特性其实是很有用的，你可以设计一个大而全的兼容结构体，当你希望从里面挑选一些字段时就可以利用它；\\</li>
+<li>这也意味着目标对象中unexported的字段不受Unmarshal的影响；\\</li>
+</ol>
+<ul>
 <li>Unmarshal可以自动对对象内部的指针赋值</li>
 </ul>
+<div class="src src-go">
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">//这个特性是指一个struct包含其他的引用类型的字段，你不需要先创建它
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">//看下面的例子，对于Parents这个数组你不需要提前声明，有值就自动创建好，没值就是nil
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">FamilyMember</span> <span style="color:#66d9ef">struct</span> {
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Name</span>    <span style="color:#66d9ef">string</span>	<span style="color:#e6db74">`json:&#34;name&#34;`</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Age</span>     <span style="color:#66d9ef">int</span>	<span style="color:#e6db74">`json:&#34;age&#34;`</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Parents</span> []<span style="color:#66d9ef">string</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Name</span>    <span style="color:#66d9ef">string</span>	<span style="color:#e6db74">`json:&#34;name&#34;`</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Age</span>     <span style="color:#66d9ef">int</span>	<span style="color:#e6db74">`json:&#34;age&#34;`</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Parents</span> []<span style="color:#66d9ef">string</span>
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">b</span> <span style="color:#f92672">:=</span> []byte(<span style="color:#e6db74">`{&#34;Name&#34;:&#34;Wednesday&#34;,&#34;Age&#34;:6,&#34;Parents&#34;:[&#34;Gomez&#34;,&#34;Morticia&#34;]}`</span>)
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">m</span> <span style="color:#a6e22e">FamilyMember</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Unmarshal</span>(<span style="color:#a6e22e">b</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">m</span>)
-</span></span></code></pre></div><h2 id="类库解析">类库解析</h2>
-<h3 id="主要的接口和结构">主要的接口和结构</h3>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">json</span>.<span style="color:#a6e22e">Unmarshal</span>(<span style="color:#a6e22e">b</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">m</span>)</span></span></code></pre></div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-4" class="outline-2">
+<h2 id="headline-4">
+类库解析
+</h2>
+<div id="outline-text-headline-4" class="outline-text-2">
+<div id="outline-container-headline-5" class="outline-3">
+<h3 id="headline-5">
+主要的接口和结构
+</h3>
+<div id="outline-text-headline-5" class="outline-text-3">
 <ul>
 <li>Marshaler</li>
 </ul>
 <p>核心的encode接口，为第三方提供了encode的可能性。</p>
+<div class="src src-go">
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">// Marshaler is the interface implemented by types that
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">// can marshal themselves into valid JSON.
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Marshaler</span> <span style="color:#66d9ef">interface</span> {
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">MarshalJSON</span>() ([]<span style="color:#66d9ef">byte</span>, <span style="color:#66d9ef">error</span>)
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><ul>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">MarshalJSON</span>() ([]<span style="color:#66d9ef">byte</span>, <span style="color:#66d9ef">error</span>)
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+</div>
+<ul>
 <li>Unmarshaler</li>
 </ul>
 <p>同上，核心的decode接口</p>
+<div class="src src-go">
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#75715e">// Unmarshaler is the interface implemented by types
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">// that can unmarshal a JSON description of themselves.
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">// The input can be assumed to be a valid encoding of
@@ -504,238 +476,263 @@ Channel, complex, function 不能进行编码；<br />
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">// By convention, to approximate the behavior of Unmarshal itself,
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">// Unmarshalers implement UnmarshalJSON([]byte(&#34;null&#34;)) as a no-op.
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Unmarshaler</span> <span style="color:#66d9ef">interface</span> {
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">UnmarshalJSON</span>([]<span style="color:#66d9ef">byte</span>) <span style="color:#66d9ef">error</span>
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><ol>
-<li>Decoder / Encoder：解码输入流和编码json到输出流的对象<br /></li>
-<li>UnmarshalTypeError：最主要的错误类型，表示一个json值不能转化为特定的go类型的值，还提供了其他若干Error类型，不一一列举了。<br /></li>
-<li>Number：实际上是json的number类型的包装类，解析时提供对应方法取得值<br /></li>
-<li>RawMessage：保持原本的json对象。实现了Marshaler和Unmarshaler接口，用于延迟json的解码或者预计算json的编码。前面是注释的翻译，其实就是个[]byte，delay和预计算没理解什么意思，这个类型在encode和decode过程中也没有用到<br /></li>
-<li>重要方法</li>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">UnmarshalJSON</span>([]<span style="color:#66d9ef">byte</span>) <span style="color:#66d9ef">error</span>
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+</div>
+<ol>
+<li>Decoder / Encoder：解码输入流和编码json到输出流的对象\\</li>
+<li>UnmarshalTypeError：最主要的错误类型，表示一个json值不能转化为特定的go类型的值，还提供了其他若干Error类型，不一一列举了。\\</li>
+<li>Number：实际上是json的number类型的包装类，解析时提供对应方法取得值\\</li>
+<li>RawMessage：保持原本的json对象。实现了Marshaler和Unmarshaler接口，用于延迟json的解码或者预计算json的编码。前面是注释的翻译，其实就是个[]byte，delay和预计算没理解什么意思，这个类型在encode和decode过程中也没有用到\\</li>
 </ol>
+<ul>
+<li>重要方法</li>
+</ul>
 <p>其中最主要的就是Marshal和Unmarshal两个方法，有很多细节需要注意。</p>
 <ul>
 <li>Marshal</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">Marshal</span>(<span style="color:#a6e22e">v</span> <span style="color:#66d9ef">interface</span>{}) ([]<span style="color:#66d9ef">byte</span>, <span style="color:#66d9ef">error</span>) {
-</span></span></code></pre></div><p>Marshal函数返回v的json编码。<br /></p>
-<p>数组和切片类型的值编码为json数组，但[]byte编码为base64编码字符串；nil切片编码为null；结构体编码为json对象。每一个导出字段变成该对象的一个成员，除非：<br /></p>
+<div class="src src-go">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">Marshal</span>(<span style="color:#a6e22e">v</span> <span style="color:#66d9ef">interface</span>{}) ([]<span style="color:#66d9ef">byte</span>, <span style="color:#66d9ef">error</span>) {</span></span></code></pre></div>
+</div>
+<p>Marshal函数返回v的json编码。\\</p>
+<p>
+数组和切片类型的值编码为json数组，但[]byte编码为base64编码字符串；nil切片编码为null；结构体编码为json对象。每一个导出字段变成该对象的一个成员，除非：\\</p>
 <ol>
-<li>字段的标签是&quot;-&quot;<br /></li>
-<li>字段是空值，而其标签指定了omitempty //空值包括false、0、&quot;&quot;、nil指针、nil接口、长度为0的数组、切片、映射。（经我测试，空值是可以正常解析并显示的，tag里加上omitempty后就会被忽略掉）<br /></li>
+<li>字段的标签是&#34;-&#34;\\</li>
+<li>字段是空值，而其标签指定了omitempty //空值包括false、0、&#34;&#34;、nil指针、nil接口、长度为0的数组、切片、映射。（经我测试，空值是可以正常解析并显示的，tag里加上omitempty后就会被忽略掉）\\</li>
 </ol>
-<p>&ldquo;string&quot;选项标记一个字段在编码json时应编码为字符串。它只适用于字符串、浮点数、整数类型的字段。（这在对象转换过程中非常有用，避免了类型必须一致的尴尬，可动态调整目标对象，提高了灵活性）</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">id</span> <span style="color:#66d9ef">int64</span> <span style="color:#e6db74">`json:&#34;id,string&#34;`</span>
-</span></span></code></pre></div><p>map类型的值编码为json对象，键必须是字符串，对象的键直接使用map的key。指针类型的值编码为其指向的值，nil指针编码为null。接口类型的值编码为接口内保持的具体类型的值，nil接口编码为null。</p>
+<p>&#34;string&#34;选项标记一个字段在编码json时应编码为字符串。它只适用于字符串、浮点数、整数类型的字段。（这在对象转换过程中非常有用，避免了类型必须一致的尴尬，可动态调整目标对象，提高了灵活性）</p>
+<div class="src src-go">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">id</span> <span style="color:#66d9ef">int64</span> <span style="color:#e6db74">`json:&#34;id,string&#34;`</span></span></span></code></pre></div>
+</div>
+<p>map类型的值编码为json对象，键必须是字符串，对象的键直接使用map的key。指针类型的值编码为其指向的值，nil指针编码为null。接口类型的值编码为接口内保持的具体类型的值，nil接口编码为null。</p>
 <ul>
 <li>Unmarshal</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">Unmarshal</span>(<span style="color:#a6e22e">data</span> []<span style="color:#66d9ef">byte</span>, <span style="color:#a6e22e">v</span> <span style="color:#66d9ef">interface</span>{}) <span style="color:#66d9ef">error</span> {
-</span></span></code></pre></div><p>Unmarshal函数解析json编码的数据并将结果存入v指向的值。<br />
-要将json数据解码写入一个指针，Unmarshal函数首先处理json数据是json字面值null的情况。此时，函数将指针设为nil；否则，函数将json数据解码写入指针指向的值；如果指针本身是nil，函数会先申请一个值并使指针指向它。<br />
-要将json数据解码写入一个结构体，函数会匹配输入对象的键和Marshal使用的键（结构体字段名或者它的标签指定的键名），优先选择精确的匹配，但也接受大小写不敏感的匹配。<br />
-JSON的null值解码为go的接口、指针、切片时会将它们设为nil<br /></p>
+<div class="src src-go">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">Unmarshal</span>(<span style="color:#a6e22e">data</span> []<span style="color:#66d9ef">byte</span>, <span style="color:#a6e22e">v</span> <span style="color:#66d9ef">interface</span>{}) <span style="color:#66d9ef">error</span> {</span></span></code></pre></div>
+</div>
+<p>Unmarshal函数解析json编码的数据并将结果存入v指向的值。<br>
+要将json数据解码写入一个指针，Unmarshal函数首先处理json数据是json字面值null的情况。此时，函数将指针设为nil；否则，函数将json数据解码写入指针指向的值；如果指针本身是nil，函数会先申请一个值并使指针指向它。<br>
+要将json数据解码写入一个结构体，函数会匹配输入对象的键和Marshal使用的键（结构体字段名或者它的标签指定的键名），优先选择精确的匹配，但也接受大小写不敏感的匹配。<br>
+JSON的null值解码为go的接口、指针、切片时会将它们设为nil\\</p>
 <ul>
 <li>Compact：将json编码的src中无用的空白字符剔除后写入dst</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">Compact</span>(<span style="color:#a6e22e">dst</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">bytes</span>.<span style="color:#a6e22e">Buffer</span>, <span style="color:#a6e22e">src</span> []<span style="color:#66d9ef">byte</span>) <span style="color:#66d9ef">error</span>
-</span></span></code></pre></div><ul>
+<div class="src src-go">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">Compact</span>(<span style="color:#a6e22e">dst</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">bytes</span>.<span style="color:#a6e22e">Buffer</span>, <span style="color:#a6e22e">src</span> []<span style="color:#66d9ef">byte</span>) <span style="color:#66d9ef">error</span></span></span></code></pre></div>
+</div>
+<ul>
 <li>Indent：将json编码的调整缩进之后写入dst，说白了就是美化一下，加个缩进啥的</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">Indent</span>(<span style="color:#a6e22e">dst</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">bytes</span>.<span style="color:#a6e22e">Buffer</span>, <span style="color:#a6e22e">src</span> []<span style="color:#66d9ef">byte</span>, <span style="color:#a6e22e">prefix</span>, <span style="color:#a6e22e">indent</span> <span style="color:#66d9ef">string</span>) <span style="color:#66d9ef">error</span>
-</span></span></code></pre></div><h2 id="源码分析">源码分析</h2>
+<div class="src src-go">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">Indent</span>(<span style="color:#a6e22e">dst</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">bytes</span>.<span style="color:#a6e22e">Buffer</span>, <span style="color:#a6e22e">src</span> []<span style="color:#66d9ef">byte</span>, <span style="color:#a6e22e">prefix</span>, <span style="color:#a6e22e">indent</span> <span style="color:#66d9ef">string</span>) <span style="color:#66d9ef">error</span></span></span></code></pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-6" class="outline-2">
+<h2 id="headline-6">
+源码分析
+</h2>
+<div id="outline-text-headline-6" class="outline-text-2">
 <p>接下来看看Marshal和Unmarshal具体是如何工作的，重要和需要解释的地方我都加了相应的注释。</p>
 <ul>
 <li>Marshal</li>
 </ul>
+<div class="src src-go">
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">Marshal</span>(<span style="color:#a6e22e">v</span> <span style="color:#66d9ef">interface</span>{}) ([]<span style="color:#66d9ef">byte</span>, <span style="color:#66d9ef">error</span>) {
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">encodeState</span>{}  <span style="color:#75715e">//一个内部结构，其实就是Buffer的包装
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">e</span> <span style="color:#f92672">:=</span> <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">encodeState</span>{}  <span style="color:#75715e">//一个内部结构，其实就是Buffer的包装
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">//具体将v递归转换为json串并写入结构e的buffer中
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">marshal</span>(<span style="color:#a6e22e">v</span>, <span style="color:#a6e22e">encOpts</span>{<span style="color:#a6e22e">escapeHTML</span>: <span style="color:#66d9ef">true</span>})
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">err</span>
-</span></span><span style="display:flex;"><span>        }
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">marshal</span>(<span style="color:#a6e22e">v</span>, <span style="color:#a6e22e">encOpts</span>{<span style="color:#a6e22e">escapeHTML</span>: <span style="color:#66d9ef">true</span>})
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">err</span>
+</span></span><span style="display:flex;"><span>	}
 </span></span><span style="display:flex;"><span>        <span style="color:#75715e">//Buffer的Bytes方法返回，即拿到JSON串
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">Bytes</span>(), <span style="color:#66d9ef">nil</span>
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">Bytes</span>(), <span style="color:#66d9ef">nil</span> 
 </span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span><span style="color:#75715e">//==&gt;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//==&gt; 
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">e</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">encodeState</span>) <span style="color:#a6e22e">marshal</span>(<span style="color:#a6e22e">v</span> <span style="color:#66d9ef">interface</span>{}, <span style="color:#a6e22e">opts</span> <span style="color:#a6e22e">encOpts</span>) (<span style="color:#a6e22e">err</span> <span style="color:#66d9ef">error</span>) {
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">//defer 错误
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">//...
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">reflectValue</span>(<span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">ValueOf</span>(<span style="color:#a6e22e">v</span>), <span style="color:#a6e22e">opts</span>)
 </span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span><span style="color:#75715e">//==&gt;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//==&gt; 
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">valueEncoder</span>(<span style="color:#a6e22e">v</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Value</span>) <span style="color:#a6e22e">encoderFunc</span> {
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">//判断v是否是value，0值返回false
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> !<span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">IsValid</span>() {
-</span></span><span style="display:flex;"><span>            <span style="color:#75715e">//实际上是写null
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">invalidValueEncoder</span>
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">typeEncoder</span>(<span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Type</span>())
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">if</span> !<span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">IsValid</span>() {
+</span></span><span style="display:flex;"><span>	    <span style="color:#75715e">//实际上是写null
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">invalidValueEncoder</span>
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">typeEncoder</span>(<span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Type</span>())
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span><span style="color:#75715e">//==&gt;
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">typeEncoder</span>(<span style="color:#a6e22e">t</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Type</span>) <span style="color:#a6e22e">encoderFunc</span> {
-</span></span><span style="display:flex;"><span><span style="color:#75715e">//load...
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//load... 
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">// Compute the real encoder and replace the indirect func with it.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">f</span> = <span style="color:#a6e22e">newTypeEncoder</span>(<span style="color:#a6e22e">t</span>, <span style="color:#66d9ef">true</span>)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">f</span> = <span style="color:#a6e22e">newTypeEncoder</span>(<span style="color:#a6e22e">t</span>, <span style="color:#66d9ef">true</span>)
 </span></span><span style="display:flex;"><span><span style="color:#75715e">//store...
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">//==&gt;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//==&gt; 
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">newTypeEncoder是核心方法</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">递归</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">根据类型回写buffer对应的json字符串</span><span style="color:#960050;background-color:#1e0010">（</span><span style="color:#a6e22e">buf</span>.<span style="color:#a6e22e">WriteString</span><span style="color:#960050;background-color:#1e0010">）</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">// newTypeEncoder constructs an encoderFunc for a type.
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">// The returned encoder only checks CanAddr when allowAddr is true.
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">newTypeEncoder</span>(<span style="color:#a6e22e">t</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Type</span>, <span style="color:#a6e22e">allowAddr</span> <span style="color:#66d9ef">bool</span>) <span style="color:#a6e22e">encoderFunc</span> {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">Implements</span>(<span style="color:#a6e22e">marshalerType</span>) {
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">marshalerEncoder</span> <span style="color:#75715e">//优先处理nil情况
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        }
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">Kind</span>() <span style="color:#f92672">!=</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Ptr</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">allowAddr</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">Implements</span>(<span style="color:#a6e22e">marshalerType</span>) {
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">marshalerEncoder</span> <span style="color:#75715e">//优先处理nil情况
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">Kind</span>() <span style="color:#f92672">!=</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Ptr</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">allowAddr</span> {
 </span></span><span style="display:flex;"><span>                <span style="color:#75715e">//对可以寻址的，调用m.MarshalJSON()，即addrMarshalerEncoder方法里通过调用Addr拿到具体值，否则继续回到这个方法
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">PtrTo</span>(<span style="color:#a6e22e">t</span>).<span style="color:#a6e22e">Implements</span>(<span style="color:#a6e22e">marshalerType</span>) {
-</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">newCondAddrEncoder</span>(<span style="color:#a6e22e">addrMarshalerEncoder</span>, <span style="color:#a6e22e">newTypeEncoder</span>(<span style="color:#a6e22e">t</span>, <span style="color:#66d9ef">false</span>))
-</span></span><span style="display:flex;"><span>                }
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">Implements</span>(<span style="color:#a6e22e">textMarshalerType</span>) {
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">textMarshalerEncoder</span>
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">Kind</span>() <span style="color:#f92672">!=</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Ptr</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">allowAddr</span> {
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">PtrTo</span>(<span style="color:#a6e22e">t</span>).<span style="color:#a6e22e">Implements</span>(<span style="color:#a6e22e">textMarshalerType</span>) {
-</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">newCondAddrEncoder</span>(<span style="color:#a6e22e">addrTextMarshalerEncoder</span>, <span style="color:#a6e22e">newTypeEncoder</span>(<span style="color:#a6e22e">t</span>, <span style="color:#66d9ef">false</span>))
-</span></span><span style="display:flex;"><span>                }
-</span></span><span style="display:flex;"><span>        }
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">PtrTo</span>(<span style="color:#a6e22e">t</span>).<span style="color:#a6e22e">Implements</span>(<span style="color:#a6e22e">marshalerType</span>) {
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">newCondAddrEncoder</span>(<span style="color:#a6e22e">addrMarshalerEncoder</span>, <span style="color:#a6e22e">newTypeEncoder</span>(<span style="color:#a6e22e">t</span>, <span style="color:#66d9ef">false</span>))
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">Implements</span>(<span style="color:#a6e22e">textMarshalerType</span>) {
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">textMarshalerEncoder</span>
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">Kind</span>() <span style="color:#f92672">!=</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Ptr</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">allowAddr</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">PtrTo</span>(<span style="color:#a6e22e">t</span>).<span style="color:#a6e22e">Implements</span>(<span style="color:#a6e22e">textMarshalerType</span>) {
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">newCondAddrEncoder</span>(<span style="color:#a6e22e">addrTextMarshalerEncoder</span>, <span style="color:#a6e22e">newTypeEncoder</span>(<span style="color:#a6e22e">t</span>, <span style="color:#66d9ef">false</span>))
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>	}
 </span></span><span style="display:flex;"><span>        <span style="color:#75715e">//对各种类型进行encode，复合类型继续调用typeEncoder递归处理
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">switch</span> <span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">Kind</span>() {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">case</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Bool</span>:
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">boolEncoder</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">case</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Int</span>, <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Int8</span>, <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Int16</span>, <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Int32</span>, <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Int64</span>:
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">intEncoder</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">case</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Uint</span>, <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Uint8</span>, <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Uint16</span>, <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Uint32</span>, <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Uint64</span>, <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Uintptr</span>:
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">uintEncoder</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">case</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Float32</span>:
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">float32Encoder</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">case</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Float64</span>:
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">float64Encoder</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">case</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">String</span>:
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">stringEncoder</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">case</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Interface</span>:
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">interfaceEncoder</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">case</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Struct</span>:
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">newStructEncoder</span>(<span style="color:#a6e22e">t</span>)
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">case</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Map</span>:
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">newMapEncoder</span>(<span style="color:#a6e22e">t</span>)
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">case</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Slice</span>:
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">newSliceEncoder</span>(<span style="color:#a6e22e">t</span>)
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">case</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Array</span>:
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">newArrayEncoder</span>(<span style="color:#a6e22e">t</span>)
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">case</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Ptr</span>:
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">newPtrEncoder</span>(<span style="color:#a6e22e">t</span>)
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">default</span>:
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">unsupportedTypeEncoder</span>
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//... ...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">switch</span> <span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">Kind</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">case</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Bool</span>:
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">boolEncoder</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">case</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Int</span>, <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Int8</span>, <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Int16</span>, <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Int32</span>, <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Int64</span>:
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">intEncoder</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">case</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Uint</span>, <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Uint8</span>, <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Uint16</span>, <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Uint32</span>, <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Uint64</span>, <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Uintptr</span>:
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">uintEncoder</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">case</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Float32</span>:
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">float32Encoder</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">case</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Float64</span>:
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">float64Encoder</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">case</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">String</span>:
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">stringEncoder</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">case</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Interface</span>:
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">interfaceEncoder</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">case</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Struct</span>:
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">newStructEncoder</span>(<span style="color:#a6e22e">t</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">case</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Map</span>:
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">newMapEncoder</span>(<span style="color:#a6e22e">t</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">case</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Slice</span>:
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">newSliceEncoder</span>(<span style="color:#a6e22e">t</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">case</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Array</span>:
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">newArrayEncoder</span>(<span style="color:#a6e22e">t</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">case</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Ptr</span>:
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">newPtrEncoder</span>(<span style="color:#a6e22e">t</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">default</span>:
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">unsupportedTypeEncoder</span>
+</span></span><span style="display:flex;"><span>	} 
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//... ...
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
 </span></span><span style="display:flex;"><span><span style="color:#75715e">//通过bool的encoder看看最终的json串赋值操作：是不是也挺low逼的？
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">boolEncoder</span>(<span style="color:#a6e22e">e</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">encodeState</span>, <span style="color:#a6e22e">v</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Value</span>, <span style="color:#a6e22e">opts</span> <span style="color:#a6e22e">encOpts</span>) {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">opts</span>.<span style="color:#a6e22e">quoted</span> {
-</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">WriteByte</span>(<span style="color:#e6db74">&#39;&#34;&#39;</span>)
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Bool</span>() {
-</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">WriteString</span>(<span style="color:#e6db74">&#34;true&#34;</span>)
-</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">WriteString</span>(<span style="color:#e6db74">&#34;false&#34;</span>)
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">opts</span>.<span style="color:#a6e22e">quoted</span> {
-</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">WriteByte</span>(<span style="color:#e6db74">&#39;&#34;&#39;</span>)
-</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">opts</span>.<span style="color:#a6e22e">quoted</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">WriteByte</span>(<span style="color:#e6db74">&#39;&#34;&#39;</span>)
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Bool</span>() {
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">WriteString</span>(<span style="color:#e6db74">&#34;true&#34;</span>)
+</span></span><span style="display:flex;"><span>	} <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">WriteString</span>(<span style="color:#e6db74">&#34;false&#34;</span>)
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">opts</span>.<span style="color:#a6e22e">quoted</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">WriteByte</span>(<span style="color:#e6db74">&#39;&#34;&#39;</span>)
+</span></span><span style="display:flex;"><span>	}
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">//再看一个对结构体encode的，很明显看到进行{key:value}的封装操作：
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">se</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">structEncoder</span>) <span style="color:#a6e22e">encode</span>(<span style="color:#a6e22e">e</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">encodeState</span>, <span style="color:#a6e22e">v</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Value</span>, <span style="color:#a6e22e">opts</span> <span style="color:#a6e22e">encOpts</span>) {
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">WriteByte</span>(<span style="color:#e6db74">&#39;{&#39;</span>)
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">first</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">true</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span>, <span style="color:#a6e22e">f</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">se</span>.<span style="color:#a6e22e">fields</span> {
-</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">fv</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">fieldByIndex</span>(<span style="color:#a6e22e">v</span>, <span style="color:#a6e22e">f</span>.<span style="color:#a6e22e">index</span>)
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> !<span style="color:#a6e22e">fv</span>.<span style="color:#a6e22e">IsValid</span>() <span style="color:#f92672">||</span> <span style="color:#a6e22e">f</span>.<span style="color:#a6e22e">omitEmpty</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">isEmptyValue</span>(<span style="color:#a6e22e">fv</span>) {
-</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">continue</span>
-</span></span><span style="display:flex;"><span>                }
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">first</span> {
-</span></span><span style="display:flex;"><span>                        <span style="color:#a6e22e">first</span> = <span style="color:#66d9ef">false</span>
-</span></span><span style="display:flex;"><span>                } <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>                        <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">WriteByte</span>(<span style="color:#e6db74">&#39;,&#39;</span>)
-</span></span><span style="display:flex;"><span>                }
-</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">e</span>.string(<span style="color:#a6e22e">f</span>.<span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">opts</span>.<span style="color:#a6e22e">escapeHTML</span>)
-</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">WriteByte</span>(<span style="color:#e6db74">&#39;:&#39;</span>)
-</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">opts</span>.<span style="color:#a6e22e">quoted</span> = <span style="color:#a6e22e">f</span>.<span style="color:#a6e22e">quoted</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">se</span>.<span style="color:#a6e22e">fieldEncs</span>[<span style="color:#a6e22e">i</span>](<span style="color:#a6e22e">e</span>, <span style="color:#a6e22e">fv</span>, <span style="color:#a6e22e">opts</span>)
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">WriteByte</span>(<span style="color:#e6db74">&#39;}&#39;</span>)
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>Marshal的核心代码差不多就这些，没有太多玄机，基本上就是递归对对象进行json解析操作。</p>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">WriteByte</span>(<span style="color:#e6db74">&#39;{&#39;</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">first</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span>, <span style="color:#a6e22e">f</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">se</span>.<span style="color:#a6e22e">fields</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">fv</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">fieldByIndex</span>(<span style="color:#a6e22e">v</span>, <span style="color:#a6e22e">f</span>.<span style="color:#a6e22e">index</span>)
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> !<span style="color:#a6e22e">fv</span>.<span style="color:#a6e22e">IsValid</span>() <span style="color:#f92672">||</span> <span style="color:#a6e22e">f</span>.<span style="color:#a6e22e">omitEmpty</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">isEmptyValue</span>(<span style="color:#a6e22e">fv</span>) {
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">continue</span>
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">first</span> {
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">first</span> = <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>		} <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">WriteByte</span>(<span style="color:#e6db74">&#39;,&#39;</span>)
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">e</span>.string(<span style="color:#a6e22e">f</span>.<span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">opts</span>.<span style="color:#a6e22e">escapeHTML</span>)
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">WriteByte</span>(<span style="color:#e6db74">&#39;:&#39;</span>)
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">opts</span>.<span style="color:#a6e22e">quoted</span> = <span style="color:#a6e22e">f</span>.<span style="color:#a6e22e">quoted</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">se</span>.<span style="color:#a6e22e">fieldEncs</span>[<span style="color:#a6e22e">i</span>](<span style="color:#a6e22e">e</span>, <span style="color:#a6e22e">fv</span>, <span style="color:#a6e22e">opts</span>)
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">WriteByte</span>(<span style="color:#e6db74">&#39;}&#39;</span>)
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+</div>
+<p>Marshal的核心代码差不多就这些，没有太多玄机，基本上就是递归对对象进行json解析操作。</p>
 <ul>
 <li>Unmarshal</li>
 </ul>
+<div class="src src-go">
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#ae81ff">1.</span> <span style="color:#a6e22e">创建一个data的包装类</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">check是否合法</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">调用unmarshal</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">Unmarshal</span>(<span style="color:#a6e22e">data</span> []<span style="color:#66d9ef">byte</span>, <span style="color:#a6e22e">v</span> <span style="color:#66d9ef">interface</span>{}) <span style="color:#66d9ef">error</span> {
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// Check for well-formedness.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">// Avoids filling out half a data structure
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">// before discovering a JSON syntax error.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">d</span> <span style="color:#a6e22e">decodeState</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">checkValid</span>(<span style="color:#a6e22e">data</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">scan</span>)
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">err</span>
-</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// Check for well-formedness.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">// Avoids filling out half a data structure
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">// before discovering a JSON syntax error.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">d</span> <span style="color:#a6e22e">decodeState</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">checkValid</span>(<span style="color:#a6e22e">data</span>, <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">scan</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">err</span>
+</span></span><span style="display:flex;"><span>	}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">init</span>(<span style="color:#a6e22e">data</span>)
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">unmarshal</span>(<span style="color:#a6e22e">v</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">init</span>(<span style="color:#a6e22e">data</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">unmarshal</span>(<span style="color:#a6e22e">v</span>)
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span><span style="color:#ae81ff">2.</span> <span style="color:#a6e22e">scan是一个状态机</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">用来把byte数组分割成一个个完整的值</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">然后调用d</span>.<span style="color:#a6e22e">value进行赋值处理</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">d</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">decodeState</span>) <span style="color:#a6e22e">unmarshal</span>(<span style="color:#a6e22e">v</span> <span style="color:#66d9ef">interface</span>{}) (<span style="color:#a6e22e">err</span> <span style="color:#66d9ef">error</span>) {
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//... ...
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">rv</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">ValueOf</span>(<span style="color:#a6e22e">v</span>)
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">rv</span>.<span style="color:#a6e22e">Kind</span>() <span style="color:#f92672">!=</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Ptr</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">rv</span>.<span style="color:#a6e22e">IsNil</span>() {
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">InvalidUnmarshalError</span>{<span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">TypeOf</span>(<span style="color:#a6e22e">v</span>)}
-</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//... ...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">rv</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">ValueOf</span>(<span style="color:#a6e22e">v</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">rv</span>.<span style="color:#a6e22e">Kind</span>() <span style="color:#f92672">!=</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Ptr</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">rv</span>.<span style="color:#a6e22e">IsNil</span>() {
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">InvalidUnmarshalError</span>{<span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">TypeOf</span>(<span style="color:#a6e22e">v</span>)}
+</span></span><span style="display:flex;"><span>	}
 </span></span><span style="display:flex;"><span>        <span style="color:#75715e">//scan是状态机，reset方法用来分割byte数组
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">scan</span>.<span style="color:#a6e22e">reset</span>()
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// We decode rv not rv.Elem because the Unmarshaler interface
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">// test must be applied at the top level of the value.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">value</span>(<span style="color:#a6e22e">rv</span>)
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">savedError</span>
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">scan</span>.<span style="color:#a6e22e">reset</span>()
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// We decode rv not rv.Elem because the Unmarshaler interface
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">// test must be applied at the top level of the value.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">value</span>(<span style="color:#a6e22e">rv</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">savedError</span>
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span><span style="color:#ae81ff">3.</span> <span style="color:#a6e22e">主要是对不同的类型如array</span><span style="color:#960050;background-color:#1e0010">、</span><span style="color:#a6e22e">obj调用对应方法继续处理</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">// value decodes a JSON value from d.data[d.off:] into the value.
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">// it updates d.off to point past the decoded value.
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">d</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">decodeState</span>) <span style="color:#a6e22e">value</span>(<span style="color:#a6e22e">v</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Value</span>) {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> !<span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">IsValid</span>() {
-</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">rest</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">nextValue</span>(<span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">data</span>[<span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">off</span>:], <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">nextscan</span>)
-</span></span><span style="display:flex;"><span>                <span style="color:#75715e">//... ...
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        }
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">switch</span> <span style="color:#a6e22e">op</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">scanWhile</span>(<span style="color:#a6e22e">scanSkipSpace</span>); <span style="color:#a6e22e">op</span> {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">default</span>:
-</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">d</span>.error(<span style="color:#a6e22e">errPhase</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> !<span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">IsValid</span>() {
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">rest</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">nextValue</span>(<span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">data</span>[<span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">off</span>:], <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">nextscan</span>)
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">//... ...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">switch</span> <span style="color:#a6e22e">op</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">scanWhile</span>(<span style="color:#a6e22e">scanSkipSpace</span>); <span style="color:#a6e22e">op</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">default</span>:
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">d</span>.error(<span style="color:#a6e22e">errPhase</span>)
 </span></span><span style="display:flex;"><span>        <span style="color:#75715e">//对复合类型继续调用d.value进行处理；
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">//内部对各个元素也是使用Zero进行假赋值（没分配内存）
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">// Array. Zero the rest.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">//		z := reflect.Zero(v.Type().Elem())
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">//		for ; i &lt; v.Len(); i++ {
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">//			v.Index(i).Set(z)
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">//		}
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">case</span> <span style="color:#a6e22e">scanBeginArray</span>:
-</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">array</span>(<span style="color:#a6e22e">v</span>)
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//对map单独进行了处理，对应子指针和map类型都使用了New分配地址，估计目的是让子对象的赋值操作正常，单个值调用了literalStore方法
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">//		z := reflect.Zero(v.Type().Elem())
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">//		for ; i &lt; v.Len(); i++ {
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">//			v.Index(i).Set(z)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">//		}
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">case</span> <span style="color:#a6e22e">scanBeginArray</span>:
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">array</span>(<span style="color:#a6e22e">v</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//对map单独进行了处理，对应子指针和map类型都使用了New分配地址，估计目的是让子对象的赋值操作正常，单个值调用了literalStore方法
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">//if subv.Kind() == reflect.Ptr {
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">//	if subv.IsNil() {
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">//		subv.Set(reflect.New(subv.Type().Elem()))
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">//	}
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">//	subv = subv.Elem()
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">//}
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">case</span> <span style="color:#a6e22e">scanBeginObject</span>:
-</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">object</span>(<span style="color:#a6e22e">v</span>)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">//	if subv.IsNil() {
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">//		subv.Set(reflect.New(subv.Type().Elem()))
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">//	}
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">//	subv = subv.Elem()
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">//}
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">case</span> <span style="color:#a6e22e">scanBeginObject</span>:
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">object</span>(<span style="color:#a6e22e">v</span>)
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">//字面量的处理，调用literalStore
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">case</span> <span style="color:#a6e22e">scanBeginLiteral</span>:
-</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">literal</span>(<span style="color:#a6e22e">v</span>)
-</span></span><span style="display:flex;"><span>        }
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">case</span> <span style="color:#a6e22e">scanBeginLiteral</span>:
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">literal</span>(<span style="color:#a6e22e">v</span>)
+</span></span><span style="display:flex;"><span>	}
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">注意</span><span style="color:#960050;background-color:#1e0010">：</span><span style="color:#a6e22e">上面3个具体的decode方法都先判断实现了Unmarshaler接口的v直接调用实现的UnmarshalJSON进行处理而不走自己的流程</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">为三方扩展提供可能性</span><span style="color:#960050;background-color:#1e0010">。</span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">下面的literalStore是核心方法</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">具体将json串赋值给Value</span>
@@ -744,168 +741,170 @@ JSON的null值解码为go的接口、指针、切片时会将它们设为nil<br 
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">// string from the &#34;,string&#34; struct tag option. this is used only to
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">// produce more helpful error messages.
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">d</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">decodeState</span>) <span style="color:#a6e22e">literalStore</span>(<span style="color:#a6e22e">item</span> []<span style="color:#66d9ef">byte</span>, <span style="color:#a6e22e">v</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Value</span>, <span style="color:#a6e22e">fromQuoted</span> <span style="color:#66d9ef">bool</span>) {
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//...
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">isNull</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">item</span>[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;n&#39;</span> <span style="color:#75715e">// null
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">//找到非空指针的value然后返回
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">u</span>, <span style="color:#a6e22e">ut</span>, <span style="color:#a6e22e">pv</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">indirect</span>(<span style="color:#a6e22e">v</span>, <span style="color:#a6e22e">isNull</span>)
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">u</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">u</span>.<span style="color:#a6e22e">UnmarshalJSON</span>(<span style="color:#a6e22e">item</span>)
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-</span></span><span style="display:flex;"><span>                        <span style="color:#a6e22e">d</span>.error(<span style="color:#a6e22e">err</span>)
-</span></span><span style="display:flex;"><span>                }
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span>
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e">//... ...
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">//核心代码，对不同类型进行value的赋值操作
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">switch</span> <span style="color:#a6e22e">c</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">item</span>[<span style="color:#ae81ff">0</span>]; <span style="color:#a6e22e">c</span> {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;n&#39;</span>: <span style="color:#75715e">// null
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                <span style="color:#75715e">// The main parser checks that only true and false can reach here,
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                <span style="color:#75715e">// but if this was a quoted string input, it could be anything.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">fromQuoted</span> <span style="color:#f92672">&amp;&amp;</span> string(<span style="color:#a6e22e">item</span>) <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#34;null&#34;</span> {
-</span></span><span style="display:flex;"><span>                        <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">saveError</span>(<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Errorf</span>(<span style="color:#e6db74">&#34;json: invalid use of ,string struct tag, trying to unmarshal %q into %v&#34;</span>, <span style="color:#a6e22e">item</span>, <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Type</span>()))
-</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">break</span>
-</span></span><span style="display:flex;"><span>                }
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">switch</span> <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Kind</span>() {
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">case</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Interface</span>, <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Ptr</span>, <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Map</span>, <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Slice</span>:
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">isNull</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">item</span>[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;n&#39;</span> <span style="color:#75715e">// null
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">//找到非空指针的value然后返回
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#a6e22e">u</span>, <span style="color:#a6e22e">ut</span>, <span style="color:#a6e22e">pv</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">indirect</span>(<span style="color:#a6e22e">v</span>, <span style="color:#a6e22e">isNull</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">u</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">u</span>.<span style="color:#a6e22e">UnmarshalJSON</span>(<span style="color:#a6e22e">item</span>)
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">d</span>.error(<span style="color:#a6e22e">err</span>)
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span>
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">//... ... 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#75715e">//核心代码，对不同类型进行value的赋值操作
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>	<span style="color:#66d9ef">switch</span> <span style="color:#a6e22e">c</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">item</span>[<span style="color:#ae81ff">0</span>]; <span style="color:#a6e22e">c</span> {
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;n&#39;</span>: <span style="color:#75715e">// null
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#75715e">// The main parser checks that only true and false can reach here,
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#75715e">// but if this was a quoted string input, it could be anything.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">fromQuoted</span> <span style="color:#f92672">&amp;&amp;</span> string(<span style="color:#a6e22e">item</span>) <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#34;null&#34;</span> {
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">saveError</span>(<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Errorf</span>(<span style="color:#e6db74">&#34;json: invalid use of ,string struct tag, trying to unmarshal %q into %v&#34;</span>, <span style="color:#a6e22e">item</span>, <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Type</span>()))
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">switch</span> <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Kind</span>() {
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">case</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Interface</span>, <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Ptr</span>, <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Map</span>, <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Slice</span>:
 </span></span><span style="display:flex;"><span>                       <span style="color:#75715e">//重要地方：对空值这些引用类型使用了未分配地址的Zero方法
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                        <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Set</span>(<span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Zero</span>(<span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Type</span>()))
-</span></span><span style="display:flex;"><span>                        <span style="color:#75715e">// otherwise, ignore null for primitives/string
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                }
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;t&#39;</span>, <span style="color:#e6db74">&#39;f&#39;</span>: <span style="color:#75715e">// true, false
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                <span style="color:#a6e22e">value</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">item</span>[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;t&#39;</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#75715e">// The main parser checks that only true and false can reach here,
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                <span style="color:#75715e">// but if this was a quoted string input, it could be anything.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">fromQuoted</span> <span style="color:#f92672">&amp;&amp;</span> string(<span style="color:#a6e22e">item</span>) <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#34;true&#34;</span> <span style="color:#f92672">&amp;&amp;</span> string(<span style="color:#a6e22e">item</span>) <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#34;false&#34;</span> {
-</span></span><span style="display:flex;"><span>                        <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">saveError</span>(<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Errorf</span>(<span style="color:#e6db74">&#34;json: invalid use of ,string struct tag, trying to unmarshal %q into %v&#34;</span>, <span style="color:#a6e22e">item</span>, <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Type</span>()))
-</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">break</span>
-</span></span><span style="display:flex;"><span>                }
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">switch</span> <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Kind</span>() {
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">default</span>:
-</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">fromQuoted</span> {
-</span></span><span style="display:flex;"><span>                                <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">saveError</span>(<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Errorf</span>(<span style="color:#e6db74">&#34;json: invalid use of ,string struct tag, trying to unmarshal %q into %v&#34;</span>, <span style="color:#a6e22e">item</span>, <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Type</span>()))
-</span></span><span style="display:flex;"><span>                        } <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>                                <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">saveError</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">UnmarshalTypeError</span>{<span style="color:#a6e22e">Value</span>: <span style="color:#e6db74">&#34;bool&#34;</span>, <span style="color:#a6e22e">Type</span>: <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Type</span>(), <span style="color:#a6e22e">Offset</span>: int64(<span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">off</span>)})
-</span></span><span style="display:flex;"><span>                        }
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">case</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Bool</span>:
-</span></span><span style="display:flex;"><span>                        <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">SetBool</span>(<span style="color:#a6e22e">value</span>)
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">case</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Interface</span>:
-</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">NumMethod</span>() <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> {
-</span></span><span style="display:flex;"><span>                                <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Set</span>(<span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">ValueOf</span>(<span style="color:#a6e22e">value</span>))
-</span></span><span style="display:flex;"><span>                        } <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>                                <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">saveError</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">UnmarshalTypeError</span>{<span style="color:#a6e22e">Value</span>: <span style="color:#e6db74">&#34;bool&#34;</span>, <span style="color:#a6e22e">Type</span>: <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Type</span>(), <span style="color:#a6e22e">Offset</span>: int64(<span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">off</span>)})
-</span></span><span style="display:flex;"><span>                        }
-</span></span><span style="display:flex;"><span>                }
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>			<span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Set</span>(<span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Zero</span>(<span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Type</span>()))
+</span></span><span style="display:flex;"><span>			<span style="color:#75715e">// otherwise, ignore null for primitives/string
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;t&#39;</span>, <span style="color:#e6db74">&#39;f&#39;</span>: <span style="color:#75715e">// true, false
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#a6e22e">value</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">item</span>[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;t&#39;</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// The main parser checks that only true and false can reach here,
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#75715e">// but if this was a quoted string input, it could be anything.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">fromQuoted</span> <span style="color:#f92672">&amp;&amp;</span> string(<span style="color:#a6e22e">item</span>) <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#34;true&#34;</span> <span style="color:#f92672">&amp;&amp;</span> string(<span style="color:#a6e22e">item</span>) <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#34;false&#34;</span> {
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">saveError</span>(<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Errorf</span>(<span style="color:#e6db74">&#34;json: invalid use of ,string struct tag, trying to unmarshal %q into %v&#34;</span>, <span style="color:#a6e22e">item</span>, <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Type</span>()))
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">switch</span> <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Kind</span>() {
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">default</span>:
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">fromQuoted</span> {
+</span></span><span style="display:flex;"><span>				<span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">saveError</span>(<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Errorf</span>(<span style="color:#e6db74">&#34;json: invalid use of ,string struct tag, trying to unmarshal %q into %v&#34;</span>, <span style="color:#a6e22e">item</span>, <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Type</span>()))
+</span></span><span style="display:flex;"><span>			} <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>				<span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">saveError</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">UnmarshalTypeError</span>{<span style="color:#a6e22e">Value</span>: <span style="color:#e6db74">&#34;bool&#34;</span>, <span style="color:#a6e22e">Type</span>: <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Type</span>(), <span style="color:#a6e22e">Offset</span>: int64(<span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">off</span>)})
+</span></span><span style="display:flex;"><span>			}
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">case</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Bool</span>:
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">SetBool</span>(<span style="color:#a6e22e">value</span>)
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">case</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Interface</span>:
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">NumMethod</span>() <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> {
+</span></span><span style="display:flex;"><span>				<span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Set</span>(<span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">ValueOf</span>(<span style="color:#a6e22e">value</span>))
+</span></span><span style="display:flex;"><span>			} <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>				<span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">saveError</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">UnmarshalTypeError</span>{<span style="color:#a6e22e">Value</span>: <span style="color:#e6db74">&#34;bool&#34;</span>, <span style="color:#a6e22e">Type</span>: <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Type</span>(), <span style="color:#a6e22e">Offset</span>: int64(<span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">off</span>)})
+</span></span><span style="display:flex;"><span>			}
+</span></span><span style="display:flex;"><span>		}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;&#34;&#39;</span>: <span style="color:#75715e">// string
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                <span style="color:#a6e22e">s</span>, <span style="color:#a6e22e">ok</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">unquoteBytes</span>(<span style="color:#a6e22e">item</span>)
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> !<span style="color:#a6e22e">ok</span> {
-</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">fromQuoted</span> {
-</span></span><span style="display:flex;"><span>                                <span style="color:#a6e22e">d</span>.error(<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Errorf</span>(<span style="color:#e6db74">&#34;json: invalid use of ,string struct tag, trying to unmarshal %q into %v&#34;</span>, <span style="color:#a6e22e">item</span>, <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Type</span>()))
-</span></span><span style="display:flex;"><span>                        } <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>                                <span style="color:#a6e22e">d</span>.error(<span style="color:#a6e22e">errPhase</span>)
-</span></span><span style="display:flex;"><span>                        }
-</span></span><span style="display:flex;"><span>                }
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">switch</span> <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Kind</span>() {
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">default</span>:
-</span></span><span style="display:flex;"><span>                        <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">saveError</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">UnmarshalTypeError</span>{<span style="color:#a6e22e">Value</span>: <span style="color:#e6db74">&#34;string&#34;</span>, <span style="color:#a6e22e">Type</span>: <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Type</span>(), <span style="color:#a6e22e">Offset</span>: int64(<span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">off</span>)})
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">case</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Slice</span>:
-</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Type</span>().<span style="color:#a6e22e">Elem</span>().<span style="color:#a6e22e">Kind</span>() <span style="color:#f92672">!=</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Uint8</span> {
-</span></span><span style="display:flex;"><span>                                <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">saveError</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">UnmarshalTypeError</span>{<span style="color:#a6e22e">Value</span>: <span style="color:#e6db74">&#34;string&#34;</span>, <span style="color:#a6e22e">Type</span>: <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Type</span>(), <span style="color:#a6e22e">Offset</span>: int64(<span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">off</span>)})
-</span></span><span style="display:flex;"><span>                                <span style="color:#66d9ef">break</span>
-</span></span><span style="display:flex;"><span>                        }
-</span></span><span style="display:flex;"><span>                        <span style="color:#a6e22e">b</span> <span style="color:#f92672">:=</span> make([]<span style="color:#66d9ef">byte</span>, <span style="color:#a6e22e">base64</span>.<span style="color:#a6e22e">StdEncoding</span>.<span style="color:#a6e22e">DecodedLen</span>(len(<span style="color:#a6e22e">s</span>)))
-</span></span><span style="display:flex;"><span>                        <span style="color:#a6e22e">n</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">base64</span>.<span style="color:#a6e22e">StdEncoding</span>.<span style="color:#a6e22e">Decode</span>(<span style="color:#a6e22e">b</span>, <span style="color:#a6e22e">s</span>)
-</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-</span></span><span style="display:flex;"><span>                                <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">saveError</span>(<span style="color:#a6e22e">err</span>)
-</span></span><span style="display:flex;"><span>                                <span style="color:#66d9ef">break</span>
-</span></span><span style="display:flex;"><span>                        }
-</span></span><span style="display:flex;"><span>                        <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">SetBytes</span>(<span style="color:#a6e22e">b</span>[:<span style="color:#a6e22e">n</span>])
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">case</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">String</span>:
-</span></span><span style="display:flex;"><span>                        <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">SetString</span>(string(<span style="color:#a6e22e">s</span>))
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">case</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Interface</span>:
-</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">NumMethod</span>() <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> {
-</span></span><span style="display:flex;"><span>                                <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Set</span>(<span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">ValueOf</span>(string(<span style="color:#a6e22e">s</span>)))
-</span></span><span style="display:flex;"><span>                        } <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>                                <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">saveError</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">UnmarshalTypeError</span>{<span style="color:#a6e22e">Value</span>: <span style="color:#e6db74">&#34;string&#34;</span>, <span style="color:#a6e22e">Type</span>: <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Type</span>(), <span style="color:#a6e22e">Offset</span>: int64(<span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">off</span>)})
-</span></span><span style="display:flex;"><span>                        }
-</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;&#34;&#39;</span>: <span style="color:#75715e">// string
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#a6e22e">s</span>, <span style="color:#a6e22e">ok</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">unquoteBytes</span>(<span style="color:#a6e22e">item</span>)
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">if</span> !<span style="color:#a6e22e">ok</span> {
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">fromQuoted</span> {
+</span></span><span style="display:flex;"><span>				<span style="color:#a6e22e">d</span>.error(<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Errorf</span>(<span style="color:#e6db74">&#34;json: invalid use of ,string struct tag, trying to unmarshal %q into %v&#34;</span>, <span style="color:#a6e22e">item</span>, <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Type</span>()))
+</span></span><span style="display:flex;"><span>			} <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>				<span style="color:#a6e22e">d</span>.error(<span style="color:#a6e22e">errPhase</span>)
+</span></span><span style="display:flex;"><span>			}
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">switch</span> <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Kind</span>() {
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">default</span>:
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">saveError</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">UnmarshalTypeError</span>{<span style="color:#a6e22e">Value</span>: <span style="color:#e6db74">&#34;string&#34;</span>, <span style="color:#a6e22e">Type</span>: <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Type</span>(), <span style="color:#a6e22e">Offset</span>: int64(<span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">off</span>)})
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">case</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Slice</span>:
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Type</span>().<span style="color:#a6e22e">Elem</span>().<span style="color:#a6e22e">Kind</span>() <span style="color:#f92672">!=</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Uint8</span> {
+</span></span><span style="display:flex;"><span>				<span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">saveError</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">UnmarshalTypeError</span>{<span style="color:#a6e22e">Value</span>: <span style="color:#e6db74">&#34;string&#34;</span>, <span style="color:#a6e22e">Type</span>: <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Type</span>(), <span style="color:#a6e22e">Offset</span>: int64(<span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">off</span>)})
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>			}
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">b</span> <span style="color:#f92672">:=</span> make([]<span style="color:#66d9ef">byte</span>, <span style="color:#a6e22e">base64</span>.<span style="color:#a6e22e">StdEncoding</span>.<span style="color:#a6e22e">DecodedLen</span>(len(<span style="color:#a6e22e">s</span>)))
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">n</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">base64</span>.<span style="color:#a6e22e">StdEncoding</span>.<span style="color:#a6e22e">Decode</span>(<span style="color:#a6e22e">b</span>, <span style="color:#a6e22e">s</span>)
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>				<span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">saveError</span>(<span style="color:#a6e22e">err</span>)
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>			}
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">SetBytes</span>(<span style="color:#a6e22e">b</span>[:<span style="color:#a6e22e">n</span>])
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">case</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">String</span>:
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">SetString</span>(string(<span style="color:#a6e22e">s</span>))
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">case</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Interface</span>:
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">NumMethod</span>() <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> {
+</span></span><span style="display:flex;"><span>				<span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Set</span>(<span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">ValueOf</span>(string(<span style="color:#a6e22e">s</span>)))
+</span></span><span style="display:flex;"><span>			} <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>				<span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">saveError</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">UnmarshalTypeError</span>{<span style="color:#a6e22e">Value</span>: <span style="color:#e6db74">&#34;string&#34;</span>, <span style="color:#a6e22e">Type</span>: <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Type</span>(), <span style="color:#a6e22e">Offset</span>: int64(<span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">off</span>)})
+</span></span><span style="display:flex;"><span>			}
+</span></span><span style="display:flex;"><span>		}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">default</span>: <span style="color:#75715e">// number
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">c</span> <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#39;-&#39;</span> <span style="color:#f92672">&amp;&amp;</span> (<span style="color:#a6e22e">c</span> &lt; <span style="color:#e6db74">&#39;0&#39;</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">c</span> &gt; <span style="color:#e6db74">&#39;9&#39;</span>) {
-</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">fromQuoted</span> {
-</span></span><span style="display:flex;"><span>                                <span style="color:#a6e22e">d</span>.error(<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Errorf</span>(<span style="color:#e6db74">&#34;json: invalid use of ,string struct tag, trying to unmarshal %q into %v&#34;</span>, <span style="color:#a6e22e">item</span>, <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Type</span>()))
-</span></span><span style="display:flex;"><span>                        } <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>                                <span style="color:#a6e22e">d</span>.error(<span style="color:#a6e22e">errPhase</span>)
-</span></span><span style="display:flex;"><span>                        }
-</span></span><span style="display:flex;"><span>                }
-</span></span><span style="display:flex;"><span>                <span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> string(<span style="color:#a6e22e">item</span>)
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">switch</span> <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Kind</span>() {
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">default</span>:
-</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Kind</span>() <span style="color:#f92672">==</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">String</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Type</span>() <span style="color:#f92672">==</span> <span style="color:#a6e22e">numberType</span> {
-</span></span><span style="display:flex;"><span>                                <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">SetString</span>(<span style="color:#a6e22e">s</span>)
-</span></span><span style="display:flex;"><span>                                <span style="color:#66d9ef">if</span> !<span style="color:#a6e22e">isValidNumber</span>(<span style="color:#a6e22e">s</span>) {
-</span></span><span style="display:flex;"><span>                                        <span style="color:#a6e22e">d</span>.error(<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Errorf</span>(<span style="color:#e6db74">&#34;json: invalid number literal, trying to unmarshal %q into Number&#34;</span>, <span style="color:#a6e22e">item</span>))
-</span></span><span style="display:flex;"><span>                                }
-</span></span><span style="display:flex;"><span>                                <span style="color:#66d9ef">break</span>
-</span></span><span style="display:flex;"><span>                        }
-</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">fromQuoted</span> {
-</span></span><span style="display:flex;"><span>                                <span style="color:#a6e22e">d</span>.error(<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Errorf</span>(<span style="color:#e6db74">&#34;json: invalid use of ,string struct tag, trying to unmarshal %q into %v&#34;</span>, <span style="color:#a6e22e">item</span>, <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Type</span>()))
-</span></span><span style="display:flex;"><span>                        } <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>                                <span style="color:#a6e22e">d</span>.error(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">UnmarshalTypeError</span>{<span style="color:#a6e22e">Value</span>: <span style="color:#e6db74">&#34;number&#34;</span>, <span style="color:#a6e22e">Type</span>: <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Type</span>(), <span style="color:#a6e22e">Offset</span>: int64(<span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">off</span>)})
-</span></span><span style="display:flex;"><span>                        }
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">case</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Interface</span>:
-</span></span><span style="display:flex;"><span>                        <span style="color:#a6e22e">n</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">convertNumber</span>(<span style="color:#a6e22e">s</span>)
-</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-</span></span><span style="display:flex;"><span>                                <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">saveError</span>(<span style="color:#a6e22e">err</span>)
-</span></span><span style="display:flex;"><span>                                <span style="color:#66d9ef">break</span>
-</span></span><span style="display:flex;"><span>                        }
-</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">NumMethod</span>() <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span> {
-</span></span><span style="display:flex;"><span>                                <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">saveError</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">UnmarshalTypeError</span>{<span style="color:#a6e22e">Value</span>: <span style="color:#e6db74">&#34;number&#34;</span>, <span style="color:#a6e22e">Type</span>: <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Type</span>(), <span style="color:#a6e22e">Offset</span>: int64(<span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">off</span>)})
-</span></span><span style="display:flex;"><span>                                <span style="color:#66d9ef">break</span>
-</span></span><span style="display:flex;"><span>                        }
-</span></span><span style="display:flex;"><span>                        <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Set</span>(<span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">ValueOf</span>(<span style="color:#a6e22e">n</span>))
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">default</span>: <span style="color:#75715e">// number
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>		<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">c</span> <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#39;-&#39;</span> <span style="color:#f92672">&amp;&amp;</span> (<span style="color:#a6e22e">c</span> &lt; <span style="color:#e6db74">&#39;0&#39;</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">c</span> &gt; <span style="color:#e6db74">&#39;9&#39;</span>) {
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">fromQuoted</span> {
+</span></span><span style="display:flex;"><span>				<span style="color:#a6e22e">d</span>.error(<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Errorf</span>(<span style="color:#e6db74">&#34;json: invalid use of ,string struct tag, trying to unmarshal %q into %v&#34;</span>, <span style="color:#a6e22e">item</span>, <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Type</span>()))
+</span></span><span style="display:flex;"><span>			} <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>				<span style="color:#a6e22e">d</span>.error(<span style="color:#a6e22e">errPhase</span>)
+</span></span><span style="display:flex;"><span>			}
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">s</span> <span style="color:#f92672">:=</span> string(<span style="color:#a6e22e">item</span>)
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">switch</span> <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Kind</span>() {
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">default</span>:
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Kind</span>() <span style="color:#f92672">==</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">String</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Type</span>() <span style="color:#f92672">==</span> <span style="color:#a6e22e">numberType</span> {
+</span></span><span style="display:flex;"><span>				<span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">SetString</span>(<span style="color:#a6e22e">s</span>)
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">if</span> !<span style="color:#a6e22e">isValidNumber</span>(<span style="color:#a6e22e">s</span>) {
+</span></span><span style="display:flex;"><span>					<span style="color:#a6e22e">d</span>.error(<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Errorf</span>(<span style="color:#e6db74">&#34;json: invalid number literal, trying to unmarshal %q into Number&#34;</span>, <span style="color:#a6e22e">item</span>))
+</span></span><span style="display:flex;"><span>				}
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>			}
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">fromQuoted</span> {
+</span></span><span style="display:flex;"><span>				<span style="color:#a6e22e">d</span>.error(<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Errorf</span>(<span style="color:#e6db74">&#34;json: invalid use of ,string struct tag, trying to unmarshal %q into %v&#34;</span>, <span style="color:#a6e22e">item</span>, <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Type</span>()))
+</span></span><span style="display:flex;"><span>			} <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>				<span style="color:#a6e22e">d</span>.error(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">UnmarshalTypeError</span>{<span style="color:#a6e22e">Value</span>: <span style="color:#e6db74">&#34;number&#34;</span>, <span style="color:#a6e22e">Type</span>: <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Type</span>(), <span style="color:#a6e22e">Offset</span>: int64(<span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">off</span>)})
+</span></span><span style="display:flex;"><span>			}
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">case</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Interface</span>:
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">n</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">convertNumber</span>(<span style="color:#a6e22e">s</span>)
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>				<span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">saveError</span>(<span style="color:#a6e22e">err</span>)
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>			}
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">NumMethod</span>() <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span> {
+</span></span><span style="display:flex;"><span>				<span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">saveError</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">UnmarshalTypeError</span>{<span style="color:#a6e22e">Value</span>: <span style="color:#e6db74">&#34;number&#34;</span>, <span style="color:#a6e22e">Type</span>: <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Type</span>(), <span style="color:#a6e22e">Offset</span>: int64(<span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">off</span>)})
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>			}
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Set</span>(<span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">ValueOf</span>(<span style="color:#a6e22e">n</span>))
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">case</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Int</span>, <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Int8</span>, <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Int16</span>, <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Int32</span>, <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Int64</span>:
-</span></span><span style="display:flex;"><span>                        <span style="color:#a6e22e">n</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strconv</span>.<span style="color:#a6e22e">ParseInt</span>(<span style="color:#a6e22e">s</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">64</span>)
-</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">OverflowInt</span>(<span style="color:#a6e22e">n</span>) {
-</span></span><span style="display:flex;"><span>                                <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">saveError</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">UnmarshalTypeError</span>{<span style="color:#a6e22e">Value</span>: <span style="color:#e6db74">&#34;number &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">s</span>, <span style="color:#a6e22e">Type</span>: <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Type</span>(), <span style="color:#a6e22e">Offset</span>: int64(<span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">off</span>)})
-</span></span><span style="display:flex;"><span>                                <span style="color:#66d9ef">break</span>
-</span></span><span style="display:flex;"><span>                        }
-</span></span><span style="display:flex;"><span>                        <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">SetInt</span>(<span style="color:#a6e22e">n</span>)
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">case</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Int</span>, <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Int8</span>, <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Int16</span>, <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Int32</span>, <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Int64</span>:
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">n</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strconv</span>.<span style="color:#a6e22e">ParseInt</span>(<span style="color:#a6e22e">s</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">64</span>)
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">OverflowInt</span>(<span style="color:#a6e22e">n</span>) {
+</span></span><span style="display:flex;"><span>				<span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">saveError</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">UnmarshalTypeError</span>{<span style="color:#a6e22e">Value</span>: <span style="color:#e6db74">&#34;number &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">s</span>, <span style="color:#a6e22e">Type</span>: <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Type</span>(), <span style="color:#a6e22e">Offset</span>: int64(<span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">off</span>)})
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>			}
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">SetInt</span>(<span style="color:#a6e22e">n</span>)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">case</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Uint</span>, <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Uint8</span>, <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Uint16</span>, <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Uint32</span>, <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Uint64</span>, <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Uintptr</span>:
-</span></span><span style="display:flex;"><span>                        <span style="color:#a6e22e">n</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strconv</span>.<span style="color:#a6e22e">ParseUint</span>(<span style="color:#a6e22e">s</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">64</span>)
-</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">OverflowUint</span>(<span style="color:#a6e22e">n</span>) {
-</span></span><span style="display:flex;"><span>                                <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">saveError</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">UnmarshalTypeError</span>{<span style="color:#a6e22e">Value</span>: <span style="color:#e6db74">&#34;number &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">s</span>, <span style="color:#a6e22e">Type</span>: <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Type</span>(), <span style="color:#a6e22e">Offset</span>: int64(<span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">off</span>)})
-</span></span><span style="display:flex;"><span>                                <span style="color:#66d9ef">break</span>
-</span></span><span style="display:flex;"><span>                        }
-</span></span><span style="display:flex;"><span>                        <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">SetUint</span>(<span style="color:#a6e22e">n</span>)
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">case</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Uint</span>, <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Uint8</span>, <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Uint16</span>, <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Uint32</span>, <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Uint64</span>, <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Uintptr</span>:
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">n</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strconv</span>.<span style="color:#a6e22e">ParseUint</span>(<span style="color:#a6e22e">s</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">64</span>)
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">OverflowUint</span>(<span style="color:#a6e22e">n</span>) {
+</span></span><span style="display:flex;"><span>				<span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">saveError</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">UnmarshalTypeError</span>{<span style="color:#a6e22e">Value</span>: <span style="color:#e6db74">&#34;number &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">s</span>, <span style="color:#a6e22e">Type</span>: <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Type</span>(), <span style="color:#a6e22e">Offset</span>: int64(<span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">off</span>)})
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>			}
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">SetUint</span>(<span style="color:#a6e22e">n</span>)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">case</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Float32</span>, <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Float64</span>:
-</span></span><span style="display:flex;"><span>                        <span style="color:#a6e22e">n</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strconv</span>.<span style="color:#a6e22e">ParseFloat</span>(<span style="color:#a6e22e">s</span>, <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Type</span>().<span style="color:#a6e22e">Bits</span>())
-</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">OverflowFloat</span>(<span style="color:#a6e22e">n</span>) {
-</span></span><span style="display:flex;"><span>                                <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">saveError</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">UnmarshalTypeError</span>{<span style="color:#a6e22e">Value</span>: <span style="color:#e6db74">&#34;number &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">s</span>, <span style="color:#a6e22e">Type</span>: <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Type</span>(), <span style="color:#a6e22e">Offset</span>: int64(<span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">off</span>)})
-</span></span><span style="display:flex;"><span>                                <span style="color:#66d9ef">break</span>
-</span></span><span style="display:flex;"><span>                        }
-</span></span><span style="display:flex;"><span>                        <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">SetFloat</span>(<span style="color:#a6e22e">n</span>)
-</span></span><span style="display:flex;"><span>                }
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>Unmarshal的代码稍微复杂一点点，引入了一个状态机scan对[]byte进行分割，其他还是一个套路，递归，利用反射把json串写入Value中，最终还原结构体。</p>
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">case</span> <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Float32</span>, <span style="color:#a6e22e">reflect</span>.<span style="color:#a6e22e">Float64</span>:
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">n</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">strconv</span>.<span style="color:#a6e22e">ParseFloat</span>(<span style="color:#a6e22e">s</span>, <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Type</span>().<span style="color:#a6e22e">Bits</span>())
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">OverflowFloat</span>(<span style="color:#a6e22e">n</span>) {
+</span></span><span style="display:flex;"><span>				<span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">saveError</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">UnmarshalTypeError</span>{<span style="color:#a6e22e">Value</span>: <span style="color:#e6db74">&#34;number &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">s</span>, <span style="color:#a6e22e">Type</span>: <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">Type</span>(), <span style="color:#a6e22e">Offset</span>: int64(<span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">off</span>)})
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>			}
+</span></span><span style="display:flex;"><span>			<span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">SetFloat</span>(<span style="color:#a6e22e">n</span>)
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+</div>
+<p>Unmarshal的代码稍微复杂一点点，引入了一个状态机scan对[]byte进行分割，其他还是一个套路，递归，利用反射把json串写入Value中，最终还原结构体。</p>
 <ul>
 <li>几个重要的reflect方法</li>
 </ul>
 <p>在encode特别是decode的过程中，有几个反射方法非常重要，会直接影响json转换的结果稍后在分析一个三方库的时候会做比较，这里先抛出在Golang的反射中几个比较重要的概念。</p>
+<div class="src src-go">
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">根据类型新建一个值</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">// New returns a Value representing a pointer to a new zero value
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">// for the specified type. That is, the returned Value&#39;s Type is PtrTo(typ).
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">New</span>(<span style="color:#a6e22e">typ</span> <span style="color:#a6e22e">Type</span>) <span style="color:#a6e22e">Value</span> {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">typ</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span> {
-</span></span><span style="display:flex;"><span>                panic(<span style="color:#e6db74">&#34;reflect: New(nil)&#34;</span>)
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">ptr</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">unsafe_New</span>(<span style="color:#a6e22e">typ</span>.(<span style="color:#f92672">*</span><span style="color:#a6e22e">rtype</span>))
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">fl</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">flag</span>(<span style="color:#a6e22e">Ptr</span>)
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">Value</span>{<span style="color:#a6e22e">typ</span>.<span style="color:#a6e22e">common</span>().<span style="color:#a6e22e">ptrTo</span>(), <span style="color:#a6e22e">ptr</span>, <span style="color:#a6e22e">fl</span>} <span style="color:#75715e">//注意此处和下面方法的比较
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">typ</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>		panic(<span style="color:#e6db74">&#34;reflect: New(nil)&#34;</span>)
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">ptr</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">unsafe_New</span>(<span style="color:#a6e22e">typ</span>.(<span style="color:#f92672">*</span><span style="color:#a6e22e">rtype</span>))
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fl</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">flag</span>(<span style="color:#a6e22e">Ptr</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">Value</span>{<span style="color:#a6e22e">typ</span>.<span style="color:#a6e22e">common</span>().<span style="color:#a6e22e">ptrTo</span>(), <span style="color:#a6e22e">ptr</span>, <span style="color:#a6e22e">fl</span>} <span style="color:#75715e">//注意此处和下面方法的比较
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">对一个空值进行假赋值</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">返回值不可寻址也不能set值</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">没有分配内存</span>
@@ -915,15 +914,15 @@ JSON的null值解码为go的接口、指针、切片时会将它们设为nil<br 
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">// For example, Zero(TypeOf(42)) returns a Value with Kind Int and value 0.
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">// The returned value is neither addressable nor settable.
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">Zero</span>(<span style="color:#a6e22e">typ</span> <span style="color:#a6e22e">Type</span>) <span style="color:#a6e22e">Value</span> {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">typ</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span> {
-</span></span><span style="display:flex;"><span>                panic(<span style="color:#e6db74">&#34;reflect: Zero(nil)&#34;</span>)
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">t</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">typ</span>.<span style="color:#a6e22e">common</span>()
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">fl</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">flag</span>(<span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">Kind</span>())
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">ifaceIndir</span>(<span style="color:#a6e22e">t</span>) {
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">Value</span>{<span style="color:#a6e22e">t</span>, <span style="color:#a6e22e">unsafe_New</span>(<span style="color:#a6e22e">typ</span>.(<span style="color:#f92672">*</span><span style="color:#a6e22e">rtype</span>)), <span style="color:#a6e22e">fl</span> | <span style="color:#a6e22e">flagIndir</span>}
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">Value</span>{<span style="color:#a6e22e">t</span>, <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">fl</span>} <span style="color:#75715e">//直接赋值nil，导致这个Value不可寻址不能Set
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">typ</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">nil</span> {
+</span></span><span style="display:flex;"><span>		panic(<span style="color:#e6db74">&#34;reflect: Zero(nil)&#34;</span>)
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">t</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">typ</span>.<span style="color:#a6e22e">common</span>()
+</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">fl</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">flag</span>(<span style="color:#a6e22e">t</span>.<span style="color:#a6e22e">Kind</span>())
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">ifaceIndir</span>(<span style="color:#a6e22e">t</span>) {
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">Value</span>{<span style="color:#a6e22e">t</span>, <span style="color:#a6e22e">unsafe_New</span>(<span style="color:#a6e22e">typ</span>.(<span style="color:#f92672">*</span><span style="color:#a6e22e">rtype</span>)), <span style="color:#a6e22e">fl</span> | <span style="color:#a6e22e">flagIndir</span>}
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">Value</span>{<span style="color:#a6e22e">t</span>, <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">fl</span>} <span style="color:#75715e">//直接赋值nil，导致这个Value不可寻址不能Set
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">这个方法提到了可寻址的概念</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">在Marshal的newTypeEncoder方法中用到</span>
@@ -933,7 +932,7 @@ JSON的null值解码为go的接口、指针、切片时会将它们设为nil<br 
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">// a field of an addressable struct, or the result of dereferencing a pointer.
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">// If CanAddr returns false, calling Addr will panic.
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">v</span> <span style="color:#a6e22e">Value</span>) <span style="color:#a6e22e">CanAddr</span>() <span style="color:#66d9ef">bool</span> {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">flag</span><span style="color:#f92672">&amp;</span><span style="color:#a6e22e">flagAddr</span> <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">flag</span><span style="color:#f92672">&amp;</span><span style="color:#a6e22e">flagAddr</span> <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span>
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">对应的CanSet的解释</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">即不可寻址的Value无法Set值</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">// CanSet reports whether the value of v can be changed.
@@ -942,7 +941,7 @@ JSON的null值解码为go的接口、指针、切片时会将它们设为nil<br 
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">// If CanSet returns false, calling Set or any type-specific
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">// setter (e.g., SetBool, SetInt) will panic.
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">v</span> <span style="color:#a6e22e">Value</span>) <span style="color:#a6e22e">CanSet</span>() <span style="color:#66d9ef">bool</span> {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">flag</span><span style="color:#f92672">&amp;</span>(<span style="color:#a6e22e">flagAddr</span>|<span style="color:#a6e22e">flagRO</span>) <span style="color:#f92672">==</span> <span style="color:#a6e22e">flagAddr</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">v</span>.<span style="color:#a6e22e">flag</span><span style="color:#f92672">&amp;</span>(<span style="color:#a6e22e">flagAddr</span>|<span style="color:#a6e22e">flagRO</span>) <span style="color:#f92672">==</span> <span style="color:#a6e22e">flagAddr</span>
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">另外需要注意这个注释</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#ae81ff">0</span><span style="color:#a6e22e">值表示没值</span><span style="color:#960050;background-color:#1e0010">，</span><span style="color:#a6e22e">对应的方法要么false要不不可用</span>
@@ -951,14 +950,17 @@ JSON的null值解码为go的接口、指针、切片时会将它们设为nil<br 
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">// its String method returns &#34;&lt;invalid Value&gt;&#34;, and all other methods panic.
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">// Most functions and methods never return an invalid value.
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">// If one does, its documentation states the conditions explicitly.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Value</span> <span style="color:#66d9ef">struct</span> {
-</span></span></code></pre></div><p>总结一下上面几个方法中提出的重要概念：</p>
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Value</span> <span style="color:#66d9ef">struct</span> {</span></span></code></pre></div>
+</div>
+<p>总结一下上面几个方法中提出的重要概念：</p>
 <ol>
-<li>addressable：可寻址的，表示一个Value被分配了地址空间，即真实存在的，可以取到值也可以赋值；<br /></li>
-<li>unaddressable：反之，不可寻址，没分配内存，就是个nil，无法获取无法Set值。unaddressable的Value会导致转换的json中对应键的缺失，这也是为什么我们的项目中Unmarshal没有用标准库的原因。<br /></li>
-<li>zero value：0值，就是没值，反射包中提供的若干Value的方法都不可用。<br /></li>
+<li>addressable：可寻址的，表示一个Value被分配了地址空间，即真实存在的，可以取到值也可以赋值；\\</li>
+<li>unaddressable：反之，不可寻址，没分配内存，就是个nil，无法获取无法Set值。unaddressable的Value会导致转换的json中对应键的缺失，这也是为什么我们的项目中Unmarshal没有用标准库的原因。\\</li>
+<li>zero value：0值，就是没值，反射包中提供的若干Value的方法都不可用。\\</li>
 </ol>
 <p>另外，通过源码也可以看出来，递归以及反射的大量使用导致转换的效率并不高，代码的质量很一般，为实现功能而写，没有经过精雕细琢（有人可能说你说不好你咋不写一个好的？老实说，我还真写不出来。。。）。有一些开源的三方lib在性能方面做了改进，可以参考。</p>
+</div>
+</div>
 
     </div>
 
@@ -967,12 +969,12 @@ JSON的null值解码为go的接口、指针、切片时会将它们设为nil<br 
 <div class="post-copyright">
   <p class="copyright-item">
     <span class="item-title">Author</span>
-    <span class="item-content">alx</span>
+    <span class="item-content">RT</span>
   </p>
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
     <span class="item-content">
-      2019-05-29
+      2018-12-23
       
     </span>
   </p>
@@ -988,10 +990,7 @@ JSON的null值解码为go的接口、指针、切片时会将它们设为nil<br 
     
 
     <footer class="post-footer">
-      <div class="post-tags">
-          <a href="https://elx123.github.io/tags/golang/">golang</a>
-          
-        </div>
+      
 
       
       <nav class="post-nav">

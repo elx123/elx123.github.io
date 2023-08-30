@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.98.0" />
+<meta name="generator" content="Hugo 0.117.0" />
 
 
 <link rel="canonical" href="https://elx123.github.io/" />
@@ -52,7 +52,7 @@
 
 
 
-<link rel="stylesheet" href="/sass/jane.min.b3a8813c06e6d785beba22bf8264e174fa2cb3a396b22f9ba24e2c00c18aaf7f.css" integrity="sha256-s6iBPAbm14W&#43;uiK/gmThdPoss6OWsi&#43;bok4sAMGKr38=" media="screen" crossorigin="anonymous">
+<link rel="stylesheet" href="/sass/jane.min.fa4b2b9f31b5c6d0b683db81157a9226e17b06e61911791ab547242a4a0556f2.css" integrity="sha256-&#43;ksrnzG1xtC2g9uBFXqSJuF7BuYZEXkatUckKkoFVvI=" media="screen" crossorigin="anonymous">
 
 
 
@@ -62,7 +62,6 @@
 <meta property="og:description" content="Hugo theme jane example site." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://elx123.github.io/" />
-
 <meta itemprop="name" content="Jane - A super concise theme for Hugo">
 <meta itemprop="description" content="Hugo theme jane example site."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Jane - A super concise theme for Hugo"/>
@@ -147,39 +146,6 @@
               </i>
             </a>
           
-        
-      </li><li class="mobile-menu-item">
-        
-          
-          <div class="mobile-menu-parent">
-            <span class="mobile-submenu-open"></span>
-            <a href="https://elx123.github.io/">
-              docs
-            </a>
-          </div>
-          <ul class="mobile-submenu-list">
-            
-              <li>
-                <a href="https://elx123.github.io/bk/jane-theme-preview/">Jane Theme Preview</a>
-              </li>
-            
-              <li>
-                <a href="https://elx123.github.io/post/shortcodes-preview/">Shortcodes Preview</a>
-              </li>
-            
-              <li>
-                <a href="https://elx123.github.io/post/image-preview/">Image Preview</a>
-              </li>
-            
-              <li>
-                <a href="https://elx123.github.io/post/syntax-highlighting/">Syntax Highlighting</a>
-              </li>
-            
-              <li>
-                <a href="https://elx123.github.io/post/math-preview/">Math Preview</a>
-              </li>
-            
-          </ul>
         
       </li>
     
@@ -344,38 +310,6 @@
 
       </li>
     
-        <li class="menu-item">
-        
-          
-          <a class="menu-item-link menu-parent" href="https://elx123.github.io/">docs</a>
-          <ul class="submenu">
-            
-              <li>
-                <a href="https://elx123.github.io/bk/jane-theme-preview/">Jane Theme Preview</a>
-              </li>
-            
-              <li>
-                <a href="https://elx123.github.io/post/shortcodes-preview/">Shortcodes Preview</a>
-              </li>
-            
-              <li>
-                <a href="https://elx123.github.io/post/image-preview/">Image Preview</a>
-              </li>
-            
-              <li>
-                <a href="https://elx123.github.io/post/syntax-highlighting/">Syntax Highlighting</a>
-              </li>
-            
-              <li>
-                <a href="https://elx123.github.io/post/math-preview/">Math Preview</a>
-              </li>
-            
-          </ul>
-
-        
-
-      </li>
-    
 
     
     
@@ -402,40 +336,6 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/priorityqueue/">优先队列</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2018-10-25" class="post-time">
-        2018-10-25
-      </time>
-      <div class="post-category">
-          <a href="https://elx123.github.io/categories/golang/"> golang </a>
-          
-        </div>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      简介 最近在多个框架中遇到优先队列,在这里记录下原理 实现方式 堆 目前只知道顺序数组可以用来作为heap底层结构,以实现优先队列 实现 // An Item is something we manage
-    </div>
-    <div class="read-more">
-      <a href="/post/priorityqueue/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
       <a class="post-link" href="/post/rwlockandrecursive/">读写锁(RWLock),递归锁(reentrant)和互斥锁(mutex)</a>
     </h1>
     
@@ -443,10 +343,7 @@
       <time datetime="2018-10-25" class="post-time">
         2018-10-25
       </time>
-      <div class="post-category">
-          <a href="https://elx123.github.io/categories/golang/"> golang </a>
-          
-        </div>
+      
       
       
       
@@ -456,7 +353,7 @@
   <div class="post-content">
     
     <div class="post-summary">
-      简介 这里介绍下我对于3种锁的使用观点 个人观点 个人观点尽量使用互斥锁,因为递归锁和读写锁的复杂度,下面举出几种错误例子 递归锁 #include &#34;../Mutex.h&#34;#include &#34;../Thread.h&#34;#include &lt;vector&gt;#include &lt;stdio.h&gt; using namespace muduo; class
+      简介 这里介绍下我对于3种锁的使用观点 个人观点 个人观点尽量使用互斥锁,因为递归锁和读写锁的复杂度,下面举出几种错误例子 递归锁 #include &#34;../Mutex.h&#34; #include &#34;../Thread.h&#34; #include &lt;vector&gt; #include &lt;stdio.h&gt; using
     </div>
     <div class="read-more">
       <a href="/post/rwlockandrecursive/" class="read-more-link">Read more</a>
@@ -477,10 +374,7 @@
       <time datetime="2018-10-14" class="post-time">
         2018-10-14
       </time>
-      <div class="post-category">
-          <a href="https://elx123.github.io/categories/golang/"> golang </a>
-          
-        </div>
+      
       
       
       
@@ -494,6 +388,37 @@
     </div>
     <div class="read-more">
       <a href="/post/float64/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/mgoandsession/">[转载]mgo 的 session 与连接池</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2018-10-08" class="post-time">
+        2018-10-08
+      </time>
+      
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      简介 最近发现一篇关于mgo连接池很有价值的文章,转载过来 https://cardinfolink.github.io/2017/05/17/mgo-session/ 介绍 mgo是由Golang编写的开源mongodb驱动。由于mongodb官方并没
+    </div>
+    <div class="read-more">
+      <a href="/post/mgoandsession/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -559,18 +484,6 @@
       
       <li >
         <a href="/page/9/">9</a>
-      </li>
-      
-      <li >
-        <a href="/page/10/">10</a>
-      </li>
-      
-      <li >
-        <a href="/page/11/">11</a>
-      </li>
-      
-      <li >
-        <a href="/page/12/">12</a>
       </li>
       
     </ul>
