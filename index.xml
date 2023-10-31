@@ -6,7 +6,7 @@
     <description>Recent content on Jane - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 30 Aug 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 31 Oct 2023 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://elx123.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -27,6 +27,31 @@
 &lt;li&gt;&lt;a href=&#34;https://github.com/spf13/cast&#34;&gt;Cast&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Learn more and contribute on &lt;a href=&#34;https://github.com/gohugoio&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>2023-10-31近期总结</title>
+      <link>https://elx123.github.io/post/2023-10-31/</link>
+      <pubDate>Tue, 31 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://elx123.github.io/post/2023-10-31/</guid>
+      
+        <description>
+&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-1&#34;&gt;
+简介
+&lt;/h2&gt;
+&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;p&gt;总结下近期的学习,这几个月在学习分布式相关知识&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;lt;&amp;lt;Designing Data-Intensive Applications: The Big Ideas Behind Reliable, Scalable, and Maintainable Systems&amp;gt;&amp;gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=UEAMfLPZZhE&amp;amp;list=PLeKd45zvjcDFUEv_ohr_HdUFe97RItdiB&amp;amp;pp=iAQB&#34;&gt;https://www.youtube.com/watch?v=UEAMfLPZZhE&amp;amp;list=PLeKd45zvjcDFUEv_ohr_HdUFe97RItdiB&amp;amp;pp=iAQB&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Designing Distributed Systems: Patterns and Paradigms for Scalable, Reliable Services&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 </description>
       
     </item>
@@ -2673,136 +2698,6 @@ JSON的null值解码为go的接口、指针、切片时会将它们设为nil\\&l
 &lt;/h2&gt;
 &lt;div id=&#34;outline-text-headline-15&#34; class=&#34;outline-text-2&#34;&gt;
 &lt;p&gt;&lt;a href=&#34;https://segmentfault.com/q/1010000000420677&#34;&gt;https://segmentfault.com/q/1010000000420677&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>go包管理器</title>
-      <link>https://elx123.github.io/post/package/</link>
-      <pubDate>Thu, 25 Oct 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://elx123.github.io/post/package/</guid>
-      
-        <description>
-&lt;!-- more --&gt;
-&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-1&#34;&gt;
-简介
-&lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;
-&lt;p&gt;分别记录下glide和dep的使用心得&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-2&#34;&gt;
-问题描述
-&lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;
-&lt;p&gt;如果公司存在多个版本库,那么控制第三方包的版本能有效降低风险&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-3&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-3&#34;&gt;
-使用心得
-&lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-3&#34; class=&#34;outline-text-2&#34;&gt;
-&lt;div id=&#34;outline-container-headline-4&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-4&#34;&gt;
-glide
-&lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-4&#34; class=&#34;outline-text-3&#34;&gt;
-&lt;div id=&#34;outline-container-headline-5&#34; class=&#34;outline-4&#34;&gt;
-&lt;h4 id=&#34;headline-5&#34;&gt;
-glide.yaml和glide.lock
-&lt;/h4&gt;
-&lt;div id=&#34;outline-text-headline-5&#34; class=&#34;outline-text-4&#34;&gt;
-&lt;p&gt;通过glide.yaml管理第三方包,并使用glide.lock控制具体包的版本.&lt;br&gt;
-lock 文件是一个比较通用的依赖关系持久化机制.在 NodeJs 的 yarn 、Rust 的 Cargo 以及 Ruby 的 Bundler 等工具上同样被使用。它会记录所有的依赖关系树，并且记录初始化时候拉取的具体版本。&lt;br&gt;
-举个例子：即使两个人都只有一个相同内容的 glide.yaml 文件，但是他们未必拉取的版本是相同的。原因在于版本是可以取范围的：例如上面的: ~v0.11 。&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-6&#34; class=&#34;outline-4&#34;&gt;
-&lt;h4 id=&#34;headline-6&#34;&gt;
-如何管理local包  
-&lt;/h4&gt;
-&lt;div id=&#34;outline-text-headline-6&#34; class=&#34;outline-text-4&#34;&gt;
-&lt;p&gt;glide官方是不支持将local包移进vendor的,作者推荐的解决办法: \\&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-7&#34; class=&#34;outline-4&#34;&gt;
-&lt;h4 id=&#34;headline-7&#34;&gt;
-Glide can handle private packages using the repo property. 
-&lt;/h4&gt;
-&lt;div id=&#34;outline-text-headline-7&#34; class=&#34;outline-text-4&#34;&gt;
-&lt;p&gt;See the glide.yaml file docs. You can specify a repo, such as git@git.example.com/foo/bar.git. 
-If you&amp;#39;re using a build environment that does not know how to 
-access your private packages check them into the app.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-8&#34; class=&#34;outline-4&#34;&gt;
-&lt;h4 id=&#34;headline-8&#34;&gt;
-The packages that need manual building…. vendor/ 
-&lt;/h4&gt;
-&lt;div id=&#34;outline-text-headline-8&#34; class=&#34;outline-text-4&#34;&gt;
-&lt;p&gt;was designed for external dependency storage rather than
- our internally generated elements. In writing responses here
- I double checked the intent of vendor/ from the original authors.
- This may not be the best place for your built elements.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-9&#34; class=&#34;outline-4&#34;&gt;
-&lt;h4 id=&#34;headline-9&#34;&gt;
-glide缺点
-&lt;/h4&gt;
-&lt;div id=&#34;outline-text-headline-9&#34; class=&#34;outline-text-4&#34;&gt;
-&lt;p&gt;每次get新的包总会对已经有的包做更新操作,假如yaml中包多了这点是很恶心的,推荐使用dep&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-10&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-10&#34;&gt;
-dep
-&lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-10&#34; class=&#34;outline-text-3&#34;&gt;
-&lt;p&gt;dep的使用逻辑和glide差不&lt;/p&gt;
-&lt;div id=&#34;outline-container-headline-11&#34; class=&#34;outline-4&#34;&gt;
-&lt;h4 id=&#34;headline-11&#34;&gt;
-添加包
-&lt;/h4&gt;
-&lt;div id=&#34;outline-text-headline-11&#34; class=&#34;outline-text-4&#34;&gt;
-&lt;div class=&#34;src src-bash&#34;&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dep ensure -add xxx&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-12&#34; class=&#34;outline-4&#34;&gt;
-&lt;h4 id=&#34;headline-12&#34;&gt;
-更新包
-&lt;/h4&gt;
-&lt;div id=&#34;outline-text-headline-12&#34; class=&#34;outline-text-4&#34;&gt;
-&lt;div class=&#34;src src-bash&#34;&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dep ensure -update -v&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-13&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-13&#34;&gt;
-参考材料
-&lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-13&#34; class=&#34;outline-text-3&#34;&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://blog.bluerain.io/p/Golang-Glide.html&#34;&gt;https://blog.bluerain.io/p/Golang-Glide.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/Masterminds/glide/issues/579&#34;&gt;https://github.com/Masterminds/glide/issues/579&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/Masterminds/glide/issues/328&#34;&gt;https://github.com/Masterminds/glide/issues/328&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>
