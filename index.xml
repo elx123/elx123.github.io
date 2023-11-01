@@ -52,6 +52,14 @@
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-2&#34;&gt;
+随笔
+&lt;/h2&gt;
+&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;p&gt;我之所以花这么多时间学习分布式相关的知识,主要是nakama的源码仅仅是单节点下.而为了之后让整个后端可以Fault-Tolerant,必然需要引入分布式功能,而且后期如果转向分布式数据库比如CockroachDB,那么这方面的知识肯定也是刚需.所以目前来看这笔投资性价比还是挺高的.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 </description>
       
     </item>
