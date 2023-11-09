@@ -6,7 +6,7 @@
     <description>Recent content on Jane - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 31 Oct 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 09 Nov 2023 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://elx123.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -27,6 +27,57 @@
 &lt;li&gt;&lt;a href=&#34;https://github.com/spf13/cast&#34;&gt;Cast&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Learn more and contribute on &lt;a href=&#34;https://github.com/gohugoio&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>2023-11-09近期总结</title>
+      <link>https://elx123.github.io/post/2023-11-09/</link>
+      <pubDate>Thu, 09 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://elx123.github.io/post/2023-11-09/</guid>
+      
+        <description>
+&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-1&#34;&gt;
+总结下最近学习的技术
+&lt;/h2&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-2&#34;&gt;
+DMA
+&lt;/h2&gt;
+&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;p&gt;近期很火的CF事件,让我想起之前UC上看到的一个观点,直接修改物理内存,来躲过BE的检测,这才几年的时间,已经形成成熟的产业链了哈哈 &lt;br&gt;
+相关资料 &lt;br&gt;
+&lt;a href=&#34;https://bbs.kanxue.com/thread-276693.htm&#34;&gt;https://bbs.kanxue.com/thread-276693.htm&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-3&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-3&#34;&gt;
+进一步学习分布式相关知识
+&lt;/h2&gt;
+&lt;div id=&#34;outline-text-headline-3&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;p&gt;辩证的学习分布式技术的使用场景,避免重复造轮子 &lt;br&gt;
+找到一个不错的博客 &lt;br&gt;
+&lt;a href=&#34;https://timilearning.com/&#34;&gt;https://timilearning.com/&lt;/a&gt; &lt;br&gt;
+在之前知识的基础上更进一步分析Raft,ZooKeeper,Consistency_Models&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-4&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-4&#34;&gt;
+进一步学习游戏设计
+&lt;/h2&gt;
+&lt;div id=&#34;outline-text-headline-4&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://theredrad.medium.com/designing-a-distributed-system-for-an-online-multiplayer-game-basics-part-1-17c149245bd2&#34;&gt;https://theredrad.medium.com/designing-a-distributed-system-for-an-online-multiplayer-game-basics-part-1-17c149245bd2&lt;/a&gt; &lt;br&gt;
+这篇博客,是一篇不错的游戏服务器架构教程 &lt;br&gt;
+作者受到agones的启发,自研了相应的调度策略,针对特定游戏 &lt;br&gt;
+&lt;a href=&#34;https://theredrad.medium.com/kubernetes-scaler-for-dedicated-stateful-servers-8d4231ce85c7&#34;&gt;https://theredrad.medium.com/kubernetes-scaler-for-dedicated-stateful-servers-8d4231ce85c7&lt;/a&gt; &lt;br&gt;
+部分逻辑可以参考nakama如何设计 &lt;br&gt;
+非常适合用来练手&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 </description>
       
     </item>
@@ -2531,204 +2582,6 @@ JSON的null值解码为go的接口、指针、切片时会将它们设为nil\\&l
 &lt;li&gt;zero value：0值，就是没值，反射包中提供的若干Value的方法都不可用。\\&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;另外，通过源码也可以看出来，递归以及反射的大量使用导致转换的效率并不高，代码的质量很一般，为实现功能而写，没有经过精雕细琢（有人可能说你说不好你咋不写一个好的？老实说，我还真写不出来。。。）。有一些开源的三方lib在性能方面做了改进，可以参考。&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Golang位运算符的溢出情况</title>
-      <link>https://elx123.github.io/post/golang_%3c%3c/</link>
-      <pubDate>Sun, 23 Dec 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://elx123.github.io/post/golang_%3c%3c/</guid>
-      
-        <description>
-&lt;!-- more --&gt;
-&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-1&#34;&gt;
-简介
-&lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;
-&lt;p&gt;在编码过程中,经常会遇到使用逻辑运算符的情况,其中对于溢出操作需要特别小心&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-2&#34;&gt;
-介绍
-&lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;
-&lt;ol&gt;
-&lt;li&gt;编译型语言，编译器的静态求值是自然的。&lt;/li&gt;
-&lt;li&gt;必须使用强制类型转换。甚至于对一个uint16变量赋uint8的值都是不允许的。&lt;/li&gt;
-&lt;li&gt;整数字面值不包含存储空间的大小，可以直接赋给各种uintX（必须不溢出）。&lt;/li&gt;
-&lt;li&gt;&amp;lt;&amp;lt;运算的结果的类型，以左侧操作数为准。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div id=&#34;outline-container-headline-3&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-3&#34;&gt;
-直接表现为
-&lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-3&#34; class=&#34;outline-text-3&#34;&gt;
-&lt;ol&gt;
-&lt;li&gt;静态求值的规则是先不顾代码范围，强制求值，之后再塞回目标的存储空间中&lt;/li&gt;
-&lt;li&gt;对变量左移的时候，会直接考虑存储空间大小，将左移的数据丢弃&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-4&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-4&#34;&gt;
-反例
-&lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-4&#34; class=&#34;outline-text-2&#34;&gt;
-&lt;div class=&#34;src src-go&#34;&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;c_i8&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;uint8&lt;/span&gt; = &lt;span style=&#34;color:#ae81ff&#34;&gt;255&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;i16&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;uint16&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;i16&lt;/span&gt; = uint16(&lt;span style=&#34;color:#a6e22e&#34;&gt;c_i8&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;) &lt;span style=&#34;color:#75715e&#34;&gt;// constant 4080 overflows uint8
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;i16&lt;/span&gt; = uint16(uint8(&lt;span style=&#34;color:#ae81ff&#34;&gt;255&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;) &lt;span style=&#34;color:#75715e&#34;&gt;// constant 4080 overflows uint8
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;因为&amp;lt;&amp;lt;左侧都是uint8，所以最终的结果也是uint8，则得出的结果装不下uint8就会报错，哪怕最后准备了uint16的容器也不行&lt;/p&gt;
-&lt;div id=&#34;outline-container-headline-5&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-5&#34;&gt;
-对于常量
-&lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-5&#34; class=&#34;outline-text-3&#34;&gt;
-&lt;div class=&#34;src src-go&#34;&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;i8&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;uint8&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;i8_2&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;uint8&lt;/span&gt; = &lt;span style=&#34;color:#ae81ff&#34;&gt;255&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;i8&lt;/span&gt; = &lt;span style=&#34;color:#a6e22e&#34;&gt;i8_2&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;fmt&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Printf&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;%x\n&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;i8&lt;/span&gt;) &lt;span style=&#34;color:#75715e&#34;&gt;// f0
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;i8_2&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;fmt&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Printf&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;%x\n&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;i8_2&lt;/span&gt;) &lt;span style=&#34;color:#75715e&#34;&gt;// f0
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;这里也会有溢出的报警&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-6&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-6&#34;&gt;
-结论
-&lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-6&#34; class=&#34;outline-text-3&#34;&gt;
-&lt;p&gt;常量左移之后，Go面对溢出的行为并不是截断而是报错。&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-7&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-7&#34;&gt;
-临时解决方案
-&lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-7&#34; class=&#34;outline-text-2&#34;&gt;
-&lt;div id=&#34;outline-container-headline-8&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-8&#34;&gt;
-方案一
-&lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-8&#34; class=&#34;outline-text-3&#34;&gt;
-&lt;p&gt;对付这个问题，你可能需要先用不定长度的uint类型绕开溢出的限制，
-再用掩码(&amp;amp; 0xFF)运算去约束结果的范围：&lt;/p&gt;
-&lt;div class=&#34;src src-go&#34;&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;c_i8&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;uint8&lt;/span&gt; = &lt;span style=&#34;color:#ae81ff&#34;&gt;255&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;var&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;i16&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;uint16&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;i16&lt;/span&gt; = uint16(uint(&lt;span style=&#34;color:#a6e22e&#34;&gt;c_i8&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0xFF&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;fmt&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Printf&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;%x\n&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;i16&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-9&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-9&#34;&gt;
-方案二
-&lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-9&#34; class=&#34;outline-text-3&#34;&gt;
-&lt;div class=&#34;src src-text&#34;&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;package main
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;import (
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&amp;#34;fmt&amp;#34;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&amp;#34;math&amp;#34;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;func main() {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	var cronField uint64
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	var start int
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	var end int
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	start = 1
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	end = 30
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	cronField |= ^(math.MaxUint64 &amp;lt;&amp;lt; uint(end+1)) &amp;amp; (math.MaxUint64 &amp;lt;&amp;lt; uint(start))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	fmt.Println(uint64(math.MaxUint64))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	fmt.Println(cronField)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;这里首先将math.math.MaxUint64左移end+1,然后与math.MaxUint64左移动start位的结果相与,然后再取反,画个简单的示意图
-假设end=1,start=1&lt;/p&gt;
-&lt;div id=&#34;outline-container-headline-10&#34; class=&#34;outline-4&#34;&gt;
-&lt;h4 id=&#34;headline-10&#34;&gt;
-流程一
-&lt;/h4&gt;
-&lt;div id=&#34;outline-text-headline-10&#34; class=&#34;outline-text-4&#34;&gt;
-&lt;div class=&#34;src src-sh&#34;&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; | &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; | &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; | &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; | &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; | &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; | &lt;span style=&#34;color:#f92672&#34;&gt;===&lt;/span&gt;&amp;gt;        &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;   &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; | &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; | &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; | &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; | &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; | &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; |&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;这里右补0&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-11&#34; class=&#34;outline-4&#34;&gt;
-&lt;h4 id=&#34;headline-11&#34;&gt;
-流程二(取反)
-&lt;/h4&gt;
-&lt;div id=&#34;outline-text-headline-11&#34; class=&#34;outline-text-4&#34;&gt;
-&lt;div class=&#34;src src-sh&#34;&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; | &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; | &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; | &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; | &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; | &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; | &lt;span style=&#34;color:#f92672&#34;&gt;===&lt;/span&gt;&amp;gt;   &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;   &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; | &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; | &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; | &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; | &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; | &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; |&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-12&#34; class=&#34;outline-4&#34;&gt;
-&lt;h4 id=&#34;headline-12&#34;&gt;
-流程三
-&lt;/h4&gt;
-&lt;div id=&#34;outline-text-headline-12&#34; class=&#34;outline-text-4&#34;&gt;
-&lt;div class=&#34;src src-sh&#34;&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; | &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; | &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; | &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; | &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; | &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; | &lt;span style=&#34;color:#f92672&#34;&gt;===&lt;/span&gt;&amp;gt;  &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; | &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; | &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; | &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; | &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; | &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; |&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-13&#34; class=&#34;outline-4&#34;&gt;
-&lt;h4 id=&#34;headline-13&#34;&gt;
-流程四
-&lt;/h4&gt;
-&lt;div id=&#34;outline-text-headline-13&#34; class=&#34;outline-text-4&#34;&gt;
-&lt;div class=&#34;src src-sh&#34;&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;   &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; | &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; | &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; | &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; | &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; | &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; |
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;              &amp;amp;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; | &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; | &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; | &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; | &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; | &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; |
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;   &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;   &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;   &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;   &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;   &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-14&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-14&#34;&gt;
-总结下
-&lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-14&#34; class=&#34;outline-text-3&#34;&gt;
-&lt;p&gt;在计算过程中,先不顾代码范围，强制求值，之后再塞回目标的存储空间中,
-特别是例子二中,cronField最终作为目标,单独(math.MaxUint64 &amp;lt;&amp;lt; uint(start))已不再提示溢出&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-15&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-15&#34;&gt;
-参考资料
-&lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-15&#34; class=&#34;outline-text-2&#34;&gt;
-&lt;p&gt;&lt;a href=&#34;https://segmentfault.com/q/1010000000420677&#34;&gt;https://segmentfault.com/q/1010000000420677&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>
