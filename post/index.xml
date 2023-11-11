@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Jane - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 09 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://elx123.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 11 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://elx123.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>后端学习资料</title>
+      <link>https://elx123.github.io/post/backendsummarize/</link>
+      <pubDate>Sat, 11 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://elx123.github.io/post/backendsummarize/</guid>
+      <description>简介 第六次调整课程,最近Ultimate Service 4.0更新了,必看课程啊 Microservices 视频 Microservices: The Big Picture By Antonio Goncalves Ardanlabs系列 视频 书籍 Kubernetes ArdanLabs - Introduction To KinD Kubernetes ArdanLabs - Intensive Kubernetes Kubernetes</description>
+    </item>
+    
     <item>
       <title>2023-11-09近期总结</title>
       <link>https://elx123.github.io/post/2023-11-09/</link>
@@ -59,15 +68,6 @@
       
       <guid>https://elx123.github.io/post/windows%E7%9B%B8%E5%85%B3/</guid>
       <description>简介 总结下windows相关课程和资料 概述 视频 书籍 windows Windows Presentation Foundation Masterclass Windows Kernel Programming Pavel Yosifovich Unit Testing for C# Developers Windows 10 System Programming Pavel Yosifovich complete C# Programming Course Beginner to Expert Windows 10 System Programming Part 2 Getting Started With Reverse Engineering By Josh Stroschein Windows 11 Internals</description>
-    </item>
-    
-    <item>
-      <title>后端学习资料</title>
-      <link>https://elx123.github.io/post/backendsummarize/</link>
-      <pubDate>Thu, 06 Apr 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://elx123.github.io/post/backendsummarize/</guid>
-      <description>简介 第五次次调整课程 Microservices 视频 Microservices: The Big Picture By Antonio Goncalves Ardanlabs系列 视频 书籍 Kubernetes ArdanLabs - Introduction To KinD Kubernetes ArdanLabs - Intensive Kubernetes Kubernetes ArdanLabs - Intensive Kubernetes_ Advanced Concepts Kubernetes ArdanLabs - Deep Dive Into Kubernetes Networking with CNI golang Ardan Labs Ultimate GO golang Ardan</description>
     </item>
     
     <item>
