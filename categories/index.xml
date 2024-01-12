@@ -5,6 +5,7 @@
     <link>https://elx123.github.io/categories/</link>
     <description>Recent content in Categories on Jane - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://elx123.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <atom:link href="https://elx123.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

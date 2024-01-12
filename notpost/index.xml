@@ -6,69 +6,56 @@
     <description>Recent content in Notposts on Jane - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 20 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://elx123.github.io/notpost/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 20 Jan 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://elx123.github.io/notpost/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>LifeFor30Years</title>
       <link>https://elx123.github.io/notpost/lifefor30years/</link>
       <pubDate>Fri, 20 Jan 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://elx123.github.io/notpost/lifefor30years/</guid>
       <description>简介 过年后,自己也快奔三了,回顾自己前半生 感叹人生不易,父母都是底层,又不爱读书 也就自己能知道在成长的旅途中,自己有多难 在今天整个比拼智力的</description>
     </item>
-    
     <item>
       <title>工作3年经验总结</title>
       <link>https://elx123.github.io/notpost/%E5%B7%A5%E4%BD%9C3%E5%B9%B4%E7%BB%8F%E9%AA%8C%E6%80%BB%E7%BB%93/</link>
       <pubDate>Tue, 17 Dec 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://elx123.github.io/notpost/%E5%B7%A5%E4%BD%9C3%E5%B9%B4%E7%BB%8F%E9%AA%8C%E6%80%BB%E7%BB%93/</guid>
       <description>简介 记录下自己在it行业工作3年的经验 内容 不要老想着去什么什么公司就能增涨技术,增涨经验,如今互联网如此发达,只要有时间有一台电脑,没有什么</description>
     </item>
-    
     <item>
       <title>&#34;About&#34;</title>
       <link>https://elx123.github.io/notpost/about/</link>
       <pubDate>Wed, 29 May 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://elx123.github.io/notpost/about/</guid>
       <description>人生苦短,只争朝夕,浮生若梦,为欢几何</description>
     </item>
-    
     <item>
       <title></title>
       <link>https://elx123.github.io/notpost/anticheatone/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://elx123.github.io/notpost/anticheatone/</guid>
       <description>转载自 https://bbs.pediy.com/thread-249303.htm 简介 1.稳定注入姿势 2.处理TenRpcs检测CLL 3.处理TCJ 4.探测GameRpcs 笔者最近迷上LOL，中低分段总是有脚本，被</description>
     </item>
-    
     <item>
       <title></title>
       <link>https://elx123.github.io/notpost/anticheatthree/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://elx123.github.io/notpost/anticheatthree/</guid>
       <description>转载自 https://bbs.pediy.com/thread-249348.htm 正文 代码段没法发了，因为里面有别人的东西（发了之后避免不了一些不法分子会利用，所以这里只分享处理检测流程和思路） 目前整体已经完善好了</description>
     </item>
-    
     <item>
       <title></title>
       <link>https://elx123.github.io/notpost/anticheattwo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://elx123.github.io/notpost/anticheattwo/</guid>
       <description>转载自 https://bbs.pediy.com/thread-249309.htm 正文 回顾一下前文提到的东西 游戏主要检测分为5大块 1.CALL检测 -&amp;gt;由TenRpcs负责 2.文件及内存检测 - &amp;gt; 由TCJ负责 3.</description>
     </item>
-    
     <item>
       <title></title>
       <link>https://elx123.github.io/notpost/seh/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://elx123.github.io/notpost/seh/</guid>
       <description>SEH是window操作系统默认的异常处理机制，逆向分析中，SEH除了基本的异常处理功能外，还大量用于反调试程序（这里SEH时保存在栈中的，</description>
     </item>
-    
   </channel>
 </rss>
