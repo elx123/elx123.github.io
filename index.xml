@@ -6,7 +6,7 @@
     <description>Recent content on Jane - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 26 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 08 Jul 2024 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://elx123.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -34,7 +34,7 @@
     <item>
       <title>程序员学习资料</title>
       <link>https://elx123.github.io/post/summarize/</link>
-      <pubDate>Wed, 26 Jun 2024 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 08 Jul 2024 00:00:00 +0000</pubDate>
       
       <guid>https://elx123.github.io/post/summarize/</guid>
       
@@ -448,28 +448,9 @@ k8s
 &lt;/div&gt;
 &lt;div id=&#34;outline-container-headline-21&#34; class=&#34;outline-3&#34;&gt;
 &lt;h3 id=&#34;headline-21&#34;&gt;
-kafka
-&lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-21&#34; class=&#34;outline-text-3&#34;&gt;
-&lt;table&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
-&lt;td&gt;视频&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
-&lt;td&gt;Apache Kafka Series - Learn Apache Kafka for Beginners&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-22&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-22&#34;&gt;
 aws and eks
 &lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-22&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;div id=&#34;outline-text-headline-21&#34; class=&#34;outline-text-3&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -491,11 +472,11 @@ aws and eks
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-23&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-23&#34;&gt;
+&lt;div id=&#34;outline-container-headline-22&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-22&#34;&gt;
 database
 &lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-23&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;div id=&#34;outline-text-headline-22&#34; class=&#34;outline-text-3&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -522,11 +503,11 @@ database
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-24&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-24&#34;&gt;
+&lt;div id=&#34;outline-container-headline-23&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-23&#34;&gt;
 rest-api
 &lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-24&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;div id=&#34;outline-text-headline-23&#34; class=&#34;outline-text-3&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -543,11 +524,11 @@ rest-api
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-25&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-25&#34;&gt;
+&lt;div id=&#34;outline-container-headline-24&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-24&#34;&gt;
 GraphQL
 &lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-25&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;div id=&#34;outline-text-headline-24&#34; class=&#34;outline-text-3&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -562,11 +543,11 @@ GraphQL
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-26&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-26&#34;&gt;
+&lt;div id=&#34;outline-container-headline-25&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-25&#34;&gt;
 Terraform
 &lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-26&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;div id=&#34;outline-text-headline-25&#34; class=&#34;outline-text-3&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -588,11 +569,11 @@ Terraform
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-27&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-27&#34;&gt;
+&lt;div id=&#34;outline-container-headline-26&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-26&#34;&gt;
 open telemetry
 &lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-27&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;div id=&#34;outline-text-headline-26&#34; class=&#34;outline-text-3&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -609,11 +590,11 @@ open telemetry
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-28&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-28&#34;&gt;
+&lt;div id=&#34;outline-container-headline-27&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-27&#34;&gt;
 docker
 &lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-28&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;div id=&#34;outline-text-headline-27&#34; class=&#34;outline-text-3&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -635,11 +616,11 @@ docker
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-29&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-29&#34;&gt;
+&lt;div id=&#34;outline-container-headline-28&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-28&#34;&gt;
 tls
 &lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-29&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;div id=&#34;outline-text-headline-28&#34; class=&#34;outline-text-3&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -656,11 +637,11 @@ tls
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-30&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-30&#34;&gt;
+&lt;div id=&#34;outline-container-headline-29&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-29&#34;&gt;
 Distributed Systems
 &lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-30&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;div id=&#34;outline-text-headline-29&#34; class=&#34;outline-text-3&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -679,6 +660,25 @@ Distributed Systems
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-30&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-30&#34;&gt;
+Unit Testing
+&lt;/h2&gt;
+&lt;div id=&#34;outline-text-headline-30&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;table&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
+&lt;td&gt;书籍&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
+&lt;td&gt;Unit Testing Principles, Practices, and Patterns&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;outline-container-headline-31&#34; class=&#34;outline-2&#34;&gt;
