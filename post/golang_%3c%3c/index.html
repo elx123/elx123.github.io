@@ -28,8 +28,10 @@
 
 <meta name="mobile-web-app-capable" content="yes">
 
-<meta name="author" content="RT" />
-  <meta name="description" content="简介 在编码过程中,经常会遇到使用逻辑运算符的情况,其中对于溢出操作需要特别小心 介绍 编译型语言，编译器的静态求值是自然的。 必须使用强制类型转换" />
+<meta name="author" content="elx123" />
+  <meta name="description" content=" 简介 在编码过程中,经常会遇到使用逻辑运算符的情况,其中对于溢出操作需要特别小心
+介绍 编译型语言，编译器的静态求值是自然的。 必须使用强制类型转换。甚至于对一个uint16变量赋uint8的值都是不允许的。 整数字面值不包含存储空间的大小，可以直接赋给各种uintX（必须不溢出）。 &lt;&lt;运算的结果的类型，以左侧操作数为准。 直接表现为 静态求值的规则是先不顾代码范围，强制求值，之后再塞回目标的存储空间中 对变量左移的时候，会直接考虑存储空间大小，将左移的数据丢弃 反例 const c_i8 uint8 = 255 var i16 uint16 i16 = uint16(c_i8 &lt;&lt; 4) // constant 4080 overflows uint8 i16 = uint16(uint8(255) &lt;&lt; 4) // constant 4080 overflows uint8 因为&lt;&lt;左侧都是uint8，所以最终的结果也是uint8，则得出的结果装不下uint8就会报错，哪怕最后准备了uint16的容器也不行
+" />
 
   <meta name="keywords" content="Hugo, theme, jane" />
 
@@ -38,7 +40,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.121.1" />
+<meta name="generator" content="Hugo 0.135.0" />
 
 
 <link rel="canonical" href="https://elx123.github.io/post/golang_%3c%3c/" />
@@ -67,19 +69,27 @@
 
 
 
-<meta property="og:title" content="Golang位运算符的溢出情况" />
-<meta property="og:description" content="简介 在编码过程中,经常会遇到使用逻辑运算符的情况,其中对于溢出操作需要特别小心 介绍 编译型语言，编译器的静态求值是自然的。 必须使用强制类型转换" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://elx123.github.io/post/golang_%3c%3c/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2018-12-23T00:00:00+00:00" />
-<meta property="article:modified_time" content="2018-12-23T00:00:00+00:00" />
+<meta property="og:url" content="https://elx123.github.io/post/golang_%3c%3c/">
+  <meta property="og:site_name" content="Jane - A super concise theme for Hugo">
+  <meta property="og:title" content="Golang位运算符的溢出情况">
+  <meta property="og:description" content=" 简介 在编码过程中,经常会遇到使用逻辑运算符的情况,其中对于溢出操作需要特别小心
+介绍 编译型语言，编译器的静态求值是自然的。 必须使用强制类型转换。甚至于对一个uint16变量赋uint8的值都是不允许的。 整数字面值不包含存储空间的大小，可以直接赋给各种uintX（必须不溢出）。 &lt;&lt;运算的结果的类型，以左侧操作数为准。 直接表现为 静态求值的规则是先不顾代码范围，强制求值，之后再塞回目标的存储空间中 对变量左移的时候，会直接考虑存储空间大小，将左移的数据丢弃 反例 const c_i8 uint8 = 255 var i16 uint16 i16 = uint16(c_i8 &lt;&lt; 4) // constant 4080 overflows uint8 i16 = uint16(uint8(255) &lt;&lt; 4) // constant 4080 overflows uint8 因为&lt;&lt;左侧都是uint8，所以最终的结果也是uint8，则得出的结果装不下uint8就会报错，哪怕最后准备了uint16的容器也不行">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2018-12-23T00:00:00+00:00">
+    <meta property="article:modified_time" content="2018-12-23T00:00:00+00:00">
 
-<meta itemprop="name" content="Golang位运算符的溢出情况">
-<meta itemprop="description" content="简介 在编码过程中,经常会遇到使用逻辑运算符的情况,其中对于溢出操作需要特别小心 介绍 编译型语言，编译器的静态求值是自然的。 必须使用强制类型转换"><meta itemprop="datePublished" content="2018-12-23T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2018-12-23T00:00:00+00:00" />
-<meta itemprop="wordCount" content="848">
-<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Golang位运算符的溢出情况"/>
-<meta name="twitter:description" content="简介 在编码过程中,经常会遇到使用逻辑运算符的情况,其中对于溢出操作需要特别小心 介绍 编译型语言，编译器的静态求值是自然的。 必须使用强制类型转换"/>
+  <meta itemprop="name" content="Golang位运算符的溢出情况">
+  <meta itemprop="description" content=" 简介 在编码过程中,经常会遇到使用逻辑运算符的情况,其中对于溢出操作需要特别小心
+介绍 编译型语言，编译器的静态求值是自然的。 必须使用强制类型转换。甚至于对一个uint16变量赋uint8的值都是不允许的。 整数字面值不包含存储空间的大小，可以直接赋给各种uintX（必须不溢出）。 &lt;&lt;运算的结果的类型，以左侧操作数为准。 直接表现为 静态求值的规则是先不顾代码范围，强制求值，之后再塞回目标的存储空间中 对变量左移的时候，会直接考虑存储空间大小，将左移的数据丢弃 反例 const c_i8 uint8 = 255 var i16 uint16 i16 = uint16(c_i8 &lt;&lt; 4) // constant 4080 overflows uint8 i16 = uint16(uint8(255) &lt;&lt; 4) // constant 4080 overflows uint8 因为&lt;&lt;左侧都是uint8，所以最终的结果也是uint8，则得出的结果装不下uint8就会报错，哪怕最后准备了uint16的容器也不行">
+  <meta itemprop="datePublished" content="2018-12-23T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2018-12-23T00:00:00+00:00">
+  <meta itemprop="wordCount" content="848">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Golang位运算符的溢出情况">
+  <meta name="twitter:description" content=" 简介 在编码过程中,经常会遇到使用逻辑运算符的情况,其中对于溢出操作需要特别小心
+介绍 编译型语言，编译器的静态求值是自然的。 必须使用强制类型转换。甚至于对一个uint16变量赋uint8的值都是不允许的。 整数字面值不包含存储空间的大小，可以直接赋给各种uintX（必须不溢出）。 &lt;&lt;运算的结果的类型，以左侧操作数为准。 直接表现为 静态求值的规则是先不顾代码范围，强制求值，之后再塞回目标的存储空间中 对变量左移的时候，会直接考虑存储空间大小，将左移的数据丢弃 反例 const c_i8 uint8 = 255 var i16 uint16 i16 = uint16(c_i8 &lt;&lt; 4) // constant 4080 overflows uint8 i16 = uint16(uint8(255) &lt;&lt; 4) // constant 4080 overflows uint8 因为&lt;&lt;左侧都是uint8，所以最终的结果也是uint8，则得出的结果装不下uint8就会报错，哪怕最后准备了uint16的容器也不行">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -148,19 +158,7 @@
         
           
           
-            <a class="menu-item-link" href="https://gohugo.io" rel="noopener" target="_blank">
-              external-link
-              
-              <i class="iconfont">
-                <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
-  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-  width="18" height="18">
-  <path d="M623.36 272.96 473.216 423.04C467.2 429.056 467.072 438.656 472.896 444.416c0 0-6.72-6.656 1.6 1.6C496.064 467.648 528.64 500.224 528.64 500.224 534.464 506.048 544 505.856 550.016 499.904l150.08-150.144 67.328 66.432c9.024 8.96 27.456 4.544 30.4-8.96 19.968-92.608 46.656-227.52 46.656-227.52 6.848-34.496-16.192-56.704-49.92-49.92 0 0-134.656 26.816-227.328 46.784C560.32 178.048 556.352 182.272 554.752 187.136c-3.2 6.208-3.008 14.208 3.776 20.992L623.36 272.96z"></path>
-  <path d="M841.152 457.152c-30.528 0-54.784 24.512-54.784 54.656l0 274.752L237.696 786.56 237.696 237.696l206.016 0c6.656 0 10.752 0 13.248 0C487.68 237.696 512 213.184 512 182.848 512 152.32 487.36 128 456.96 128L183.04 128C153.216 128 128 152.576 128 182.848c0 3.136 0.256 6.272 0.768 9.28C128.256 195.136 128 198.272 128 201.408l0 639.488c0 0.064 0 0.192 0 0.256 0 0.128 0 0.192 0 0.32 0 30.528 24.512 54.784 54.784 54.784l646.976 0c6.592 0 9.728 0 11.712 0 28.736 0 52.928-22.976 54.464-51.968C896 843.264 896 842.304 896 841.344l0-20.352L896 561.408 896 512.128C896 481.792 871.424 457.152 841.152 457.152z"></path>
-</svg>
-
-              </i>
-            </a>
+            <a class="menu-item-link" href="https://elx123.github.io/">external-link</a>
           
         
       </li>
@@ -305,19 +303,7 @@
         
           
           
-            <a class="menu-item-link" href="https://gohugo.io" rel="noopener" target="_blank">
-              external-link
-              
-              <i class="iconfont">
-                <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
-  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-  width="18" height="18">
-  <path d="M623.36 272.96 473.216 423.04C467.2 429.056 467.072 438.656 472.896 444.416c0 0-6.72-6.656 1.6 1.6C496.064 467.648 528.64 500.224 528.64 500.224 534.464 506.048 544 505.856 550.016 499.904l150.08-150.144 67.328 66.432c9.024 8.96 27.456 4.544 30.4-8.96 19.968-92.608 46.656-227.52 46.656-227.52 6.848-34.496-16.192-56.704-49.92-49.92 0 0-134.656 26.816-227.328 46.784C560.32 178.048 556.352 182.272 554.752 187.136c-3.2 6.208-3.008 14.208 3.776 20.992L623.36 272.96z"></path>
-  <path d="M841.152 457.152c-30.528 0-54.784 24.512-54.784 54.656l0 274.752L237.696 786.56 237.696 237.696l206.016 0c6.656 0 10.752 0 13.248 0C487.68 237.696 512 213.184 512 182.848 512 152.32 487.36 128 456.96 128L183.04 128C153.216 128 128 152.576 128 182.848c0 3.136 0.256 6.272 0.768 9.28C128.256 195.136 128 198.272 128 201.408l0 639.488c0 0.064 0 0.192 0 0.256 0 0.128 0 0.192 0 0.32 0 30.528 24.512 54.784 54.784 54.784l646.976 0c6.592 0 9.728 0 11.712 0 28.736 0 52.928-22.976 54.464-51.968C896 843.264 896 842.304 896 841.344l0-20.352L896 561.408 896 512.128C896 481.792 871.424 457.152 841.152 457.152z"></path>
-</svg>
-
-              </i>
-            </a>
+            <a class="menu-item-link" href="https://elx123.github.io/">external-link</a>
           
 
         
@@ -347,7 +333,11 @@
           <div class="post-meta">
   <div class="post-meta-author">
     by
-      RT
+      <a href="/about">
+        <span class="post-meta-author-name">
+          elx123
+        </span>
+      </a>
     
   </div>
 
@@ -574,7 +564,7 @@
 <div class="post-copyright">
   <p class="copyright-item">
     <span class="item-title">Author</span>
-    <span class="item-content">RT</span>
+    <span class="item-content">elx123</span>
   </p>
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
@@ -647,17 +637,6 @@
   
 
   
-  
-    <div class="post">
-  <script src="https://utteranc.es/client.js"
-        repo= "elx123/comments-for-blog"
-        issue-term="pathname"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-  </script>
-</div>
-
   
 
   
@@ -1007,7 +986,7 @@
 
       </i>
     </span><span class="author">
-        RT
+        elx123
         
       </span></span>
 
