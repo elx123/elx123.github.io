@@ -7,9 +7,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>
-          Weighted Random Selection - Jane - A super concise theme for Hugo
-        </title>
+    <title>Learning · Jane - A super concise theme for Hugo</title>
     
 
 <meta name="renderer" content="webkit" />
@@ -29,10 +27,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="elx123" />
-  <meta name="description" content=" 简介 最近在项目中遇到了加密权重算法,记录下使用心得
-问题描述 Given a list of items where each item has a weight (integer value), select a random item from the list based on that weight. The key requirement — items with a higher weight value are more likely to be returned. So even the lowest weighted value will still sometimes be returned from the function. 解决思路 1.Add up all the weights for all the items in the list 2.Pick a number at random between 1 and the sum of the weights 3.Iterate over the items 4.For the current item, subtract the item’s weight from the random number that was originally picked 5.Compare the result to zero. If less than or equal to zero then break otherwise keep iterating. The key is that the larger the weight the more likely to be less than zero when compared to the random selection between zero and the sum of weights. 6.If not less than zero, continue iterating over the list, all the while subtracting more and more weights off the random number chosen from the sum of the weights.
-" />
-
+  <meta name="description" content="Hugo theme jane example site." />
   <meta name="keywords" content="Hugo, theme, jane" />
 
 
@@ -43,8 +38,8 @@
 <meta name="generator" content="Hugo 0.135.0" />
 
 
-<link rel="canonical" href="https://elx123.github.io/post/weightsort/" />
-
+<link rel="canonical" href="https://elx123.github.io/categories/learning/" />
+<link href="/categories/learning/index.xml" rel="alternate" type="application/rss+xml" title="Jane - A super concise theme for Hugo" />
 
 
 
@@ -69,30 +64,20 @@
 
 
 
-<meta property="og:url" content="https://elx123.github.io/post/weightsort/">
+<meta property="og:url" content="https://elx123.github.io/categories/learning/">
   <meta property="og:site_name" content="Jane - A super concise theme for Hugo">
-  <meta property="og:title" content="Weighted Random Selection">
-  <meta property="og:description" content=" 简介 最近在项目中遇到了加密权重算法,记录下使用心得
-问题描述 Given a list of items where each item has a weight (integer value), select a random item from the list based on that weight. The key requirement — items with a higher weight value are more likely to be returned. So even the lowest weighted value will still sometimes be returned from the function. 解决思路 1.Add up all the weights for all the items in the list 2.Pick a number at random between 1 and the sum of the weights 3.Iterate over the items 4.For the current item, subtract the item’s weight from the random number that was originally picked 5.Compare the result to zero. If less than or equal to zero then break otherwise keep iterating. The key is that the larger the weight the more likely to be less than zero when compared to the random selection between zero and the sum of weights. 6.If not less than zero, continue iterating over the list, all the while subtracting more and more weights off the random number chosen from the sum of the weights.">
+  <meta property="og:title" content="Learning">
+  <meta property="og:description" content="Hugo theme jane example site.">
   <meta property="og:locale" content="en">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="post">
-    <meta property="article:published_time" content="2019-01-14T00:00:00+00:00">
-    <meta property="article:modified_time" content="2019-01-14T00:00:00+00:00">
-    <meta property="article:tag" content="Golang">
-    <meta property="article:tag" content="Algorithm">
+  <meta property="og:type" content="website">
 
-  <meta itemprop="name" content="Weighted Random Selection">
-  <meta itemprop="description" content=" 简介 最近在项目中遇到了加密权重算法,记录下使用心得
-问题描述 Given a list of items where each item has a weight (integer value), select a random item from the list based on that weight. The key requirement — items with a higher weight value are more likely to be returned. So even the lowest weighted value will still sometimes be returned from the function. 解决思路 1.Add up all the weights for all the items in the list 2.Pick a number at random between 1 and the sum of the weights 3.Iterate over the items 4.For the current item, subtract the item’s weight from the random number that was originally picked 5.Compare the result to zero. If less than or equal to zero then break otherwise keep iterating. The key is that the larger the weight the more likely to be less than zero when compared to the random selection between zero and the sum of weights. 6.If not less than zero, continue iterating over the list, all the while subtracting more and more weights off the random number chosen from the sum of the weights.">
-  <meta itemprop="datePublished" content="2019-01-14T00:00:00+00:00">
-  <meta itemprop="dateModified" content="2019-01-14T00:00:00+00:00">
-  <meta itemprop="wordCount" content="399">
-  <meta itemprop="keywords" content="Golang,Algorithm">
+  <meta itemprop="name" content="Learning">
+  <meta itemprop="description" content="Hugo theme jane example site.">
+  <meta itemprop="datePublished" content="2024-10-14T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2024-10-14T00:00:00+00:00">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Weighted Random Selection">
-  <meta name="twitter:description" content=" 简介 最近在项目中遇到了加密权重算法,记录下使用心得
-问题描述 Given a list of items where each item has a weight (integer value), select a random item from the list based on that weight. The key requirement — items with a higher weight value are more likely to be returned. So even the lowest weighted value will still sometimes be returned from the function. 解决思路 1.Add up all the weights for all the items in the list 2.Pick a number at random between 1 and the sum of the weights 3.Iterate over the items 4.For the current item, subtract the item’s weight from the random number that was originally picked 5.Compare the result to zero. If less than or equal to zero then break otherwise keep iterating. The key is that the larger the weight the more likely to be less than zero when compared to the random selection between zero and the sum of weights. 6.If not less than zero, continue iterating over the list, all the while subtracting more and more weights off the random number chosen from the sum of the weights.">
+  <meta name="twitter:title" content="Learning">
+  <meta name="twitter:description" content="Hugo theme jane example site.">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -325,304 +310,56 @@
 
     <div id="mobile-panel">
       <main id="main" class="main bg-llight wallpaper">
-        <div class="content-wrapper">
-    <div id="content" class="content">
-      <article class="post">
         
-        <header class="post-header">
-          <h1 class="post-title">Weighted Random Selection</h1>
-          
 
-          <div class="post-meta">
-  <div class="post-meta-author">
-    by
-      <a href="/about">
-        <span class="post-meta-author-name">
-          elx123
-        </span>
-      </a>
-    
-  </div>
-
-  <div class="post-meta-time">
-    <time datetime="2019-01-14">
-      2019-01-14
-    </time>
-  </div>
-
+<section id="archive" class="archive">
   
-
-
-  <div class="post-meta__right">
     
-
-    <div class="post-meta-category">
-        <a href="https://elx123.github.io/categories/golang/"> golang </a>
-          <a href="https://elx123.github.io/categories/algorithm/"> algorithm </a>
-          
+      <div class="archive-title category">
+        <h2 class="archive-name">Category: Learning</h2>
       </div>
-
-
     
-    
-
-
-    
-    
-  </div>
-</div>
-
-        </header>
-
-        
-        <div class="post-content">
-          
-<!-- more -->
-<div id="outline-container-headline-1" class="outline-2">
-<h2 id="headline-1">
-简介
-</h2>
-<div id="outline-text-headline-1" class="outline-text-2">
-<p>最近在项目中遇到了加密权重算法,记录下使用心得</p>
-</div>
-</div>
-<div id="outline-container-headline-2" class="outline-2">
-<h2 id="headline-2">
-问题描述
-</h2>
-<div id="outline-text-headline-2" class="outline-text-2">
-<ul>
-<li>Given a list of items where each item has a weight (integer value), select a random item from the list based on that weight.</li>
-<li>The key requirement — items with a higher weight value are more likely to be returned. So even the lowest weighted value will still sometimes be returned from the function.</li>
-</ul>
-</div>
-</div>
-<div id="outline-container-headline-3" class="outline-2">
-<h2 id="headline-3">
-解决思路
-</h2>
-<div id="outline-text-headline-3" class="outline-text-2">
-<p>1.Add up all the weights for all the items in the list
-2.Pick a number at random between 1 and the sum of the weights
-3.Iterate over the items
-4.For the current item, subtract the item’s weight from the random number that was originally picked
-5.Compare the result to zero. If less than or equal to zero then break otherwise keep iterating. The key is that the larger the weight the more likely to be less than zero when compared to the random selection between zero and the sum of weights.
-6.If not less than zero, continue iterating over the list, all the while subtracting more and more weights off the random number chosen from the sum of the weights.</p>
-</div>
-</div>
-<div id="outline-container-headline-4" class="outline-2">
-<h2 id="headline-4">
-伪码
-</h2>
-<div id="outline-text-headline-4" class="outline-text-2">
-<div class="src src-go">
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">randomWeight</span> = <span style="color:#a6e22e">rand</span>(<span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">sumOfWeights</span>)
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> <span style="color:#a6e22e">each</span> <span style="color:#a6e22e">item</span> <span style="color:#a6e22e">in</span> <span style="color:#a6e22e">array</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#a6e22e">randomWeight</span> = <span style="color:#a6e22e">randomWeight</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">Weight</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">randomWeight</span> <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">0</span>
-</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">break</span> <span style="color:#75715e">// done, we select this item
-</span></span></span></code></pre></div>
-</div>
-</div>
-</div>
-<div id="outline-container-headline-5" class="outline-2">
-<h2 id="headline-5">
-例子(golang)
-</h2>
-<div id="outline-text-headline-5" class="outline-text-2">
-<div class="src src-go">
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> (
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;errors&#34;</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#e6db74">&#34;fmt&#34;</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#e6db74">&#34;math/rand&#34;</span>
-</span></span><span style="display:flex;"><span>     <span style="color:#e6db74">&#34;time&#34;</span>
-</span></span><span style="display:flex;"><span>)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Game</span> <span style="color:#66d9ef">struct</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Name</span>   <span style="color:#66d9ef">string</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Weight</span> <span style="color:#66d9ef">int</span>
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">games</span> <span style="color:#f92672">:=</span> []<span style="color:#a6e22e">Game</span>{
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Game</span>{<span style="color:#a6e22e">Name</span>: <span style="color:#e6db74">&#34;Mario&#34;</span>, <span style="color:#a6e22e">Weight</span>: <span style="color:#ae81ff">1</span>},
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Game</span>{<span style="color:#a6e22e">Name</span>: <span style="color:#e6db74">&#34;Sonic&#34;</span>, <span style="color:#a6e22e">Weight</span>: <span style="color:#ae81ff">2</span>},
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Game</span>{<span style="color:#a6e22e">Name</span>: <span style="color:#e6db74">&#34;CoD&#34;</span>, <span style="color:#a6e22e">Weight</span>: <span style="color:#ae81ff">4</span>},
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Game</span>{<span style="color:#a6e22e">Name</span>: <span style="color:#e6db74">&#34;Link&#34;</span>, <span style="color:#a6e22e">Weight</span>: <span style="color:#ae81ff">8</span>},
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Game</span>{<span style="color:#a6e22e">Name</span>: <span style="color:#e6db74">&#34;Fantasy&#34;</span>, <span style="color:#a6e22e">Weight</span>: <span style="color:#ae81ff">10</span>},
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Game</span>{<span style="color:#a6e22e">Name</span>: <span style="color:#e6db74">&#34;Destiny&#34;</span>, <span style="color:#a6e22e">Weight</span>: <span style="color:#ae81ff">7</span>},
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">totalWeight</span> <span style="color:#66d9ef">int</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">g</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">games</span> {
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">totalWeight</span> <span style="color:#f92672">+=</span> <span style="color:#a6e22e">g</span>.<span style="color:#a6e22e">Weight</span>
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">results</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">int</span>{}
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">:=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> &lt; <span style="color:#ae81ff">10000</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span> {
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">g</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">RandomWeightedSelect</span>(<span style="color:#a6e22e">games</span>, <span style="color:#a6e22e">totalWeight</span>)
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-</span></span><span style="display:flex;"><span>            panic(<span style="color:#a6e22e">err</span>)
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">ok</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">results</span>[<span style="color:#a6e22e">g</span>.<span style="color:#a6e22e">Name</span>]; <span style="color:#a6e22e">ok</span> {
-</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">results</span>[<span style="color:#a6e22e">g</span>.<span style="color:#a6e22e">Name</span>]<span style="color:#f92672">++</span>
-</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">else</span> {
-</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">results</span>[<span style="color:#a6e22e">g</span>.<span style="color:#a6e22e">Name</span>] = <span style="color:#ae81ff">1</span>
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Println</span>(<span style="color:#a6e22e">results</span>)
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">RandomWeightedSelect</span>(<span style="color:#a6e22e">games</span> []<span style="color:#a6e22e">Game</span>, <span style="color:#a6e22e">totalWeight</span> <span style="color:#66d9ef">int</span>) (<span style="color:#a6e22e">Game</span>, <span style="color:#66d9ef">error</span>) {
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">rand</span>.<span style="color:#a6e22e">Seed</span>(<span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">Now</span>().<span style="color:#a6e22e">UnixNano</span>())
-</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">r</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">rand</span>.<span style="color:#a6e22e">Intn</span>(<span style="color:#a6e22e">totalWeight</span>)
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">g</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">games</span> {
-</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">r</span> <span style="color:#f92672">-=</span> <span style="color:#a6e22e">g</span>.<span style="color:#a6e22e">Weight</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#a6e22e">r</span> <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">0</span> {
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">g</span>, <span style="color:#66d9ef">nil</span>
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">Game</span>{}, <span style="color:#a6e22e">errors</span>.<span style="color:#a6e22e">New</span>(<span style="color:#e6db74">&#34;No game selected&#34;</span>)
-</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
-</div>
-</div>
-</div>
-<div id="outline-container-headline-6" class="outline-2">
-<h2 id="headline-6">
-参考连接
-</h2>
-<div id="outline-text-headline-6" class="outline-text-2">
-<p><a href="https://www.cnblogs.com/UnGeek/p/5917995.html">https://www.cnblogs.com/UnGeek/p/5917995.html</a> <br>
-<a href="https://medium.com/@peterkellyonline/weighted-random-selection-3ff222917eb6">https://medium.com/@peterkellyonline/weighted-random-selection-3ff222917eb6</a> \\</p>
-</div>
-</div>
-
-        </div>
-
-        
-        
-<div class="post-copyright">
-  <p class="copyright-item">
-    <span class="item-title">Author</span>
-    <span class="item-content">elx123</span>
-  </p>
-  <p class="copyright-item">
-    <span class="item-title">LastMod</span>
-    <span class="item-content">
-      2019-01-14
-      
-    </span>
-  </p>
-  
-  <p class="copyright-item">
-    <span class="item-title">License</span>
-    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
-  </p>
-</div>
-
-
-
-        
-        
-
-
-        <footer class="post-footer">
-          <div class="post-tags">
-              <a href="https://elx123.github.io/tags/golang/">golang</a>
-                <a href="https://elx123.github.io/tags/algorithm/">algorithm</a>
-                
-            </div>
-
-
-          
-          <nav class="post-nav">
-            
-              <a class="prev" href="/post/summarize/">
-                
-                <i class="iconfont">
-                  <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
-  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-  width="18" height="18">
-  <path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417 757.434875 204.940602c11.338233-12.190647 11.035334-32.285311-0.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-0.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891 0.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"></path>
-</svg>
-
-                </i>
-                <span class="prev-text nav-default">程序员学习资料</span>
-                <span class="prev-text nav-mobile">Prev</span>
-              </a>
-            
-              <a class="next" href="/post/golang_%3c%3c/">
-                <span class="next-text nav-default">Golang位运算符的溢出情况</span>
-                <span class="prev-text nav-mobile">Next</span>
-                
-                <i class="iconfont">
-                  <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
-  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-  width="18" height="18">
-  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
-</svg>
-
-                </i>
-              </a>
-          </nav>
-        </footer>
-      </article>
-
-      
-      
-
-
-      
-      
-
   
 
   
-  
-
-  
-  
-
-  
-
-  
-
-    
-
-  
-
-  
-
-
+    <div class="archive-post">
+      <time datetime="2024-10-14" class="archive-post-time">
+        2024-10-14
+      </time>
+      <span class="archive-post-title">
+        <a href="/post/summarize/" class="archive-post-link">
+          程序员学习资料
+        </a>
+      </span>
     </div>
-
-    
-    <nav class="toc" id="toc">
-    <div class="toc-title">Table of Contents</div>
-    <div class="toc-content custom-scrollbar">
-      <nav id="TableOfContents">
-<ul>
-<li><a href="#headline-1">简介</a>
-</li>
-<li><a href="#headline-2">问题描述</a>
-</li>
-<li><a href="#headline-3">解决思路</a>
-</li>
-<li><a href="#headline-4">伪码</a>
-</li>
-<li><a href="#headline-5">例子(golang)</a>
-</li>
-<li><a href="#headline-6">参考连接</a>
-</li>
-</ul>
-</nav>
-    </div>
-  </nav>
+  
+</section>
 
 
-  </div>
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+
+
+
+
 
       </main>
 
