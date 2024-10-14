@@ -6,7 +6,7 @@
     <description>Recent content on Jane - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 20 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 14 Oct 2024 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://elx123.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -34,7 +34,7 @@
     <item>
       <title>程序员学习资料</title>
       <link>https://elx123.github.io/post/summarize/</link>
-      <pubDate>Tue, 20 Aug 2024 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 14 Oct 2024 00:00:00 +0000</pubDate>
       
       <guid>https://elx123.github.io/post/summarize/</guid>
       
@@ -45,7 +45,7 @@
 简介
 &lt;/h2&gt;
 &lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;
-&lt;p&gt;记录自己作为程序学习过程中,一些重点的学习资料&lt;/p&gt;
+&lt;p&gt;记录自己作为程序学习过程中,一些重点的学习资料,视频多为udemy或者其他平台&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;
@@ -115,7 +115,7 @@ bootstrap
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=Jyvffr3aCp0&amp;amp;ab_channel=WebDevSimplified&#34;&gt;https://www.youtube.com/watch?v=Jyvffr3aCp0&amp;amp;ab_channel=WebDevSimplified&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://youtu.be/Jyvffr3aCp0?feature=shared&#34;&gt;Bootstrap 5 Crash Course&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -172,7 +172,7 @@ Angular vs React vs Vue
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=lYWYWyX04JI&amp;amp;ab_channel=Academind&#34;&gt;https://www.youtube.com/watch?v=lYWYWyX04JI&amp;amp;ab_channel=Academind&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://youtu.be/lYWYWyX04JI?feature=shared&#34;&gt;Angular vs React vs Vue&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -283,7 +283,11 @@ golang
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
-&lt;td&gt;Jon_Bodner__Learning_Go__An_Idiomatic_Approach_to_Real_world_Go_Programming_2nd_Edition_2024&lt;/td&gt;
+&lt;td&gt;Learning Go An Idiomatic Approach to Real world Go Programming 2nd Edition 2024(Jon_Bodner )&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
+&lt;td&gt;Network Programming with Go Learn to Code Secure and Reliable Network Services from Scratch-No Starch Press(Adam Woodbeck)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -291,28 +295,9 @@ golang
 &lt;/div&gt;
 &lt;div id=&#34;outline-container-headline-14&#34; class=&#34;outline-3&#34;&gt;
 &lt;h3 id=&#34;headline-14&#34;&gt;
-golang network
-&lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-14&#34; class=&#34;outline-text-3&#34;&gt;
-&lt;table&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
-&lt;td&gt;书籍&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
-&lt;td&gt;Adam Woodbeck - Network Programming with Go_ Learn to Code Secure and Reliable Network Services from Scratch-No Starch Press (2021)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-15&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-15&#34;&gt;
 Protocol Buffers 3
 &lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-15&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;div id=&#34;outline-text-headline-14&#34; class=&#34;outline-text-3&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -327,11 +312,11 @@ Protocol Buffers 3
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-16&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-16&#34;&gt;
+&lt;div id=&#34;outline-container-headline-15&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-15&#34;&gt;
 openapi
 &lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-16&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;div id=&#34;outline-text-headline-15&#34; class=&#34;outline-text-3&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -346,11 +331,11 @@ openapi
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-17&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-17&#34;&gt;
+&lt;div id=&#34;outline-container-headline-16&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-16&#34;&gt;
 grpc
 &lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-17&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;div id=&#34;outline-text-headline-16&#34; class=&#34;outline-text-3&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -365,11 +350,11 @@ grpc
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-18&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-18&#34;&gt;
+&lt;div id=&#34;outline-container-headline-17&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-17&#34;&gt;
 Microservices
 &lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-18&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;div id=&#34;outline-text-headline-17&#34; class=&#34;outline-text-3&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -384,31 +369,62 @@ Microservices
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-18&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-18&#34;&gt;
+kodekloud
+&lt;/h3&gt;
+&lt;div id=&#34;outline-text-headline-18&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;table&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
+&lt;td&gt;视频&lt;/td&gt;
+&lt;td&gt;书籍&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
+&lt;td&gt;Prometheus Certified Associate (PCA) KodeKloud&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
+&lt;td&gt;Certified Kubernetes Administrator (CKA) with Practice Tests&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
+&lt;td&gt;Certified Kubernetes Application Developer (CKAD)&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;div id=&#34;outline-container-headline-19&#34; class=&#34;outline-3&#34;&gt;
 &lt;h3 id=&#34;headline-19&#34;&gt;
-kodekloud
+k8s
 &lt;/h3&gt;
 &lt;div id=&#34;outline-text-headline-19&#34; class=&#34;outline-text-3&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
+&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
 &lt;td&gt;视频&lt;/td&gt;
 &lt;td&gt;书籍&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;Prometheus Certified Associate (PCA) KodeKloud&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Kubernetes&lt;/td&gt;
-&lt;td&gt;Certified Kubernetes Administrator (CKA) with Practice Tests&lt;/td&gt;
+&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
+&lt;td&gt;Kubernetes for the Absolute Beginners - Hands-on&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;Kubernetes&lt;/td&gt;
-&lt;td&gt;Certified Kubernetes Application Developer (CKAD)&lt;/td&gt;
+&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Learn Kubernetes in a Month of Lunches (Elton Stoneman)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
+&lt;td&gt;istio-hands-on-for-kubernetes&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -417,29 +433,24 @@ kodekloud
 &lt;/div&gt;
 &lt;div id=&#34;outline-container-headline-20&#34; class=&#34;outline-3&#34;&gt;
 &lt;h3 id=&#34;headline-20&#34;&gt;
-k8s
+aws and eks
 &lt;/h3&gt;
 &lt;div id=&#34;outline-text-headline-20&#34; class=&#34;outline-text-3&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
+&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
 &lt;td&gt;视频&lt;/td&gt;
 &lt;td&gt;书籍&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;Kubernetes&lt;/td&gt;
-&lt;td&gt;Kubernetes for the Absolute Beginners - Hands-on&lt;/td&gt;
+&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
+&lt;td&gt;Ultimate AWS Certified Solutions Architect Associate SAA-C03&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;Kubernetes&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;Learn Kubernetes in a Month of Lunches (Elton Stoneman)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Istio&lt;/td&gt;
-&lt;td&gt;istio-hands-on-for-kubernetes&lt;/td&gt;
+&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
+&lt;td&gt;Amazon EKS Starter Docker on AWS EKS with Kubernetes&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -448,24 +459,29 @@ k8s
 &lt;/div&gt;
 &lt;div id=&#34;outline-container-headline-21&#34; class=&#34;outline-3&#34;&gt;
 &lt;h3 id=&#34;headline-21&#34;&gt;
-aws and eks
+database
 &lt;/h3&gt;
 &lt;div id=&#34;outline-text-headline-21&#34; class=&#34;outline-text-3&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
+&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
 &lt;td&gt;视频&lt;/td&gt;
 &lt;td&gt;书籍&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;aws&lt;/td&gt;
-&lt;td&gt;Ultimate AWS Certified Solutions Architect Associate SAA-C03&lt;/td&gt;
+&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
+&lt;td&gt;Fundamentals of Database Engineering&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;eks&lt;/td&gt;
-&lt;td&gt;Amazon EKS Starter Docker on AWS EKS with Kubernetes&lt;/td&gt;
+&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
+&lt;td&gt;CMU Intro to Database Systems (15-445/645 - Fall 2022)&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://youtube.com/playlist?list=PL3TE2CsKK478JNAXYLD_hzQFx5JE360KO&amp;amp;feature=shared&#34;&gt;Databases Course&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -474,29 +490,19 @@ aws and eks
 &lt;/div&gt;
 &lt;div id=&#34;outline-container-headline-22&#34; class=&#34;outline-3&#34;&gt;
 &lt;h3 id=&#34;headline-22&#34;&gt;
-database
+rest-api
 &lt;/h3&gt;
 &lt;div id=&#34;outline-text-headline-22&#34; class=&#34;outline-text-3&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
+&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
 &lt;td&gt;视频&lt;/td&gt;
 &lt;td&gt;书籍&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;database&lt;/td&gt;
-&lt;td&gt;Fundamentals of Database Engineering&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;database&lt;/td&gt;
-&lt;td&gt;CMU Intro to Database Systems (15-445/645 - Fall 2022)&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;database&lt;/td&gt;
-&lt;td&gt;Introduction to Databases(&lt;a href=&#34;https://www.youtube.com/playlist?list=PL3TE2CsKK478JNAXYLD_hzQFx5JE360KO)&#34;&gt;https://www.youtube.com/playlist?list=PL3TE2CsKK478JNAXYLD_hzQFx5JE360KO)&lt;/a&gt;&lt;/td&gt;
+&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
+&lt;td&gt;REST API Design,Eevelopment&amp;amp;Management&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -505,30 +511,9 @@ database
 &lt;/div&gt;
 &lt;div id=&#34;outline-container-headline-23&#34; class=&#34;outline-3&#34;&gt;
 &lt;h3 id=&#34;headline-23&#34;&gt;
-rest-api
-&lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-23&#34; class=&#34;outline-text-3&#34;&gt;
-&lt;table&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;视频&lt;/td&gt;
-&lt;td&gt;书籍&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;rest-api&lt;/td&gt;
-&lt;td&gt;REST API Design,Eevelopment&amp;amp;Management&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-24&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-24&#34;&gt;
 GraphQL
 &lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-24&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;div id=&#34;outline-text-headline-23&#34; class=&#34;outline-text-3&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -543,37 +528,11 @@ GraphQL
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-25&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-25&#34;&gt;
-Terraform
-&lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-25&#34; class=&#34;outline-text-3&#34;&gt;
-&lt;table&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;视频&lt;/td&gt;
-&lt;td&gt;书籍&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Terraform&lt;/td&gt;
-&lt;td&gt;HashiCorp Certified: Terraform Associate - Hands-On Labs&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Terraform&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;Yevgeniy Brikman - Terraform_ Up &amp;amp; Running_ Writing Infrastructure as Code&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-26&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-26&#34;&gt;
+&lt;div id=&#34;outline-container-headline-24&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-24&#34;&gt;
 OpenTelemetry
 &lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-26&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;div id=&#34;outline-text-headline-24&#34; class=&#34;outline-text-3&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -592,25 +551,25 @@ OpenTelemetry
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-27&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-27&#34;&gt;
+&lt;div id=&#34;outline-container-headline-25&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-25&#34;&gt;
 docker
 &lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-27&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;div id=&#34;outline-text-headline-25&#34; class=&#34;outline-text-3&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
+&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
 &lt;td&gt;视频&lt;/td&gt;
 &lt;td&gt;书籍&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;docker&lt;/td&gt;
+&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;Learn Docker in a Month of Lunches-Manning Publications (2020)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;docker&lt;/td&gt;
+&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
 &lt;td&gt;Docker for the Absolute Beginner - Hands On - DevOps&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
@@ -618,44 +577,52 @@ docker
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-28&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-28&#34;&gt;
+&lt;div id=&#34;outline-container-headline-26&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-26&#34;&gt;
 tls
 &lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-28&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;div id=&#34;outline-text-headline-26&#34; class=&#34;outline-text-3&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
+&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
 &lt;td&gt;视频&lt;/td&gt;
 &lt;td&gt;书籍&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;tls&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.youtube.com/playlist?list=PLQnljOFTspQU3YDMRSMvzflh_qXoz9zfv&#34;&gt;https://www.youtube.com/playlist?list=PLQnljOFTspQU3YDMRSMvzflh_qXoz9zfv&lt;/a&gt;&lt;/td&gt;
+&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://youtube.com/playlist?list=PLQnljOFTspQU3YDMRSMvzflh_qXoz9zfv&amp;amp;feature=shared&#34;&gt;Web Security&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-29&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-29&#34;&gt;
+&lt;div id=&#34;outline-container-headline-27&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-27&#34;&gt;
 Distributed Systems
 &lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-29&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;div id=&#34;outline-text-headline-27&#34; class=&#34;outline-text-3&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
+&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
 &lt;td&gt;视频&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=UEAMfLPZZhE&amp;amp;list=PLeKd45zvjcDFUEv_ohr_HdUFe97RItdiB&amp;amp;pp=iAQB&#34;&gt;https://www.youtube.com/watch?v=UEAMfLPZZhE&amp;amp;list=PLeKd45zvjcDFUEv_ohr_HdUFe97RItdiB&amp;amp;pp=iAQB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;书籍&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;书籍&lt;/td&gt;
+&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https:youtube.com/playlist?list=PLeKd45zvjcDFUEv_ohr_HdUFe97RItdiB&amp;amp;feature=shared&#34;&gt;Distributed Systems lecture series&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;td&gt;Designing Data-Intensive Applications: The Big Ideas Behind Reliable, Scalable, and Maintainable Systems&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;书籍&lt;/td&gt;
+&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;td&gt;Designing Distributed Systems: Patterns and Paradigms for Scalable, Reliable Services&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -664,11 +631,11 @@ Distributed Systems
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-30&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-30&#34;&gt;
+&lt;div id=&#34;outline-container-headline-28&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-28&#34;&gt;
 Unit Testing
 &lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-30&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;div id=&#34;outline-text-headline-28&#34; class=&#34;outline-text-2&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -683,11 +650,11 @@ Unit Testing
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-31&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-31&#34;&gt;
+&lt;div id=&#34;outline-container-headline-29&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-29&#34;&gt;
 functional programming
 &lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-31&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;div id=&#34;outline-text-headline-29&#34; class=&#34;outline-text-2&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -700,184 +667,6 @@ functional programming
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-32&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-32&#34;&gt;
-windows相关
-&lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-32&#34; class=&#34;outline-text-2&#34;&gt;
-&lt;div id=&#34;outline-container-headline-33&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-33&#34;&gt;
-应用层
-&lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-33&#34; class=&#34;outline-text-3&#34;&gt;
-&lt;table&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
-&lt;td&gt;视频&lt;/td&gt;
-&lt;td&gt;书籍&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
-&lt;td&gt;Windows Presentation Foundation Masterclass&lt;/td&gt;
-&lt;td&gt;Windows 10 System Programming Pavel Yosifovich&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
-&lt;td&gt;Unit Testing for C# Developers&lt;/td&gt;
-&lt;td&gt;Windows 10 System Programming Part 2&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
-&lt;td&gt;complete C# Programming Course Beginner to Expert&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
-&lt;td&gt;Getting Started With Reverse Engineering By Josh Stroschein&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
-&lt;td&gt;Windows 11 Internals Foundations By Pavel Yosifovich&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-34&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-34&#34;&gt;
-内核层
-&lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-34&#34; class=&#34;outline-text-3&#34;&gt;
-&lt;table&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
-&lt;td&gt;书籍&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
-&lt;td&gt;Windows Kernel Programming - Pavel Yosifovich&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
-&lt;td&gt;Pavel_Yosifovich_-_Windows_Kernel_Programming-Independently_published_(2023)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>windows相关</title>
-      <link>https://elx123.github.io/post/windows%E7%9B%B8%E5%85%B3/</link>
-      <pubDate>Thu, 06 Apr 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://elx123.github.io/post/windows%E7%9B%B8%E5%85%B3/</guid>
-      
-        <description>
-&lt;!-- more --&gt;
-&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-1&#34;&gt;
-简介
-&lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;
-&lt;p&gt;总结下windows相关课程和资料&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-2&#34;&gt;
-概述
-&lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;
-&lt;table&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;视频&lt;/td&gt;
-&lt;td&gt;书籍&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;windows&lt;/td&gt;
-&lt;td&gt;Windows Presentation Foundation Masterclass&lt;/td&gt;
-&lt;td&gt;Windows Kernel Programming Pavel Yosifovich&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;Unit Testing for C# Developers&lt;/td&gt;
-&lt;td&gt;Windows 10 System Programming Pavel Yosifovich&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;complete C# Programming Course Beginner to Expert&lt;/td&gt;
-&lt;td&gt;Windows 10 System Programming Part 2&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;Getting Started With Reverse Engineering By Josh Stroschein&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;Windows 11 Internals Foundations By Pavel Yosifovich&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>windows内核以及驱动</title>
-      <link>https://elx123.github.io/post/windows/</link>
-      <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://elx123.github.io/post/windows/</guid>
-      
-        <description>
-&lt;!-- more --&gt;
-&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-1&#34;&gt;
-简介
-&lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;
-&lt;p&gt;之前一段时间一直在研究windows相关的技术(驱动,kernel mode debug,user mode debug) &lt;br&gt;
-接下来一段时间我会慢慢记录下之前一些书籍和资料&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-2&#34;&gt;
-补上相关知识
-&lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-2&#34;&gt;
-&lt;div id=&#34;outline-container-headline-3&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-3&#34;&gt;
-这本书是现代windows驱动开发必看的
-&lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-3&#34; class=&#34;outline-text-3&#34;&gt;
-&lt;p&gt;Windows Kernel Programming - Pavel Yosifovich&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-4&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-4&#34;&gt;
-其他可以参考老外的黑客论坛
-&lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-4&#34; class=&#34;outline-text-3&#34;&gt;
-&lt;p&gt;比如uc等等,因为BE等等反作弊软件,一般都有对应的驱动,而只有同样为驱动的外挂程序才能hack对应的程序,uc的学习氛围很好,很适合入门小白&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>
