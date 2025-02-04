@@ -9,7 +9,7 @@
     <managingEditor>me@example.com (elx123)</managingEditor>
     <webMaster>me@example.com (elx123)</webMaster>
     <copyright>elx123</copyright>
-    <lastBuildDate>Sat, 28 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 04 Feb 2025 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://elx123.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -29,7 +29,7 @@
     <item>
       <title>程序员学习资料</title>
       <link>https://elx123.github.io/post/summarize/</link>
-      <pubDate>Sat, 28 Dec 2024 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 04 Feb 2025 00:00:00 +0000</pubDate>
       <author>me@example.com (elx123)</author>
       <guid>https://elx123.github.io/post/summarize/</guid>
       
@@ -370,7 +370,7 @@ Microservices
 &lt;/div&gt;
 &lt;div id=&#34;outline-container-headline-18&#34; class=&#34;outline-3&#34;&gt;
 &lt;h3 id=&#34;headline-18&#34;&gt;
-kodekloud
+k8s
 &lt;/h3&gt;
 &lt;div id=&#34;outline-text-headline-18&#34; class=&#34;outline-text-3&#34;&gt;
 &lt;table&gt;
@@ -382,11 +382,6 @@ kodekloud
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
-&lt;td&gt;Prometheus Certified Associate (PCA) KodeKloud&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
 &lt;td&gt;Certified Kubernetes Administrator (CKA) with Practice Tests&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
@@ -395,46 +390,20 @@ kodekloud
 &lt;td&gt;Certified Kubernetes Application Developer (CKAD)&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;The Kubernetes Book 2024&lt;/td&gt;
+&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;outline-container-headline-19&#34; class=&#34;outline-3&#34;&gt;
 &lt;h3 id=&#34;headline-19&#34;&gt;
-k8s
-&lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-19&#34; class=&#34;outline-text-3&#34;&gt;
-&lt;table&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
-&lt;td&gt;视频&lt;/td&gt;
-&lt;td&gt;书籍&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
-&lt;td&gt;Kubernetes for the Absolute Beginners - Hands-on&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;Learn Kubernetes in a Month of Lunches (Elton Stoneman)&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
-&lt;td&gt;istio-hands-on-for-kubernetes&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-20&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-20&#34;&gt;
 aws and eks
 &lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-20&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;div id=&#34;outline-text-headline-19&#34; class=&#34;outline-text-3&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -456,11 +425,11 @@ aws and eks
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-21&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-21&#34;&gt;
+&lt;div id=&#34;outline-container-headline-20&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-20&#34;&gt;
 database
 &lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-21&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;div id=&#34;outline-text-headline-20&#34; class=&#34;outline-text-3&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -487,11 +456,11 @@ database
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-22&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-22&#34;&gt;
+&lt;div id=&#34;outline-container-headline-21&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-21&#34;&gt;
 rest-api
 &lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-22&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;div id=&#34;outline-text-headline-21&#34; class=&#34;outline-text-3&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -508,11 +477,11 @@ rest-api
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-23&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-23&#34;&gt;
+&lt;div id=&#34;outline-container-headline-22&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-22&#34;&gt;
 GraphQL
 &lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-23&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;div id=&#34;outline-text-headline-22&#34; class=&#34;outline-text-3&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -527,11 +496,11 @@ GraphQL
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-24&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-24&#34;&gt;
+&lt;div id=&#34;outline-container-headline-23&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-23&#34;&gt;
 docker
 &lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-24&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;div id=&#34;outline-text-headline-23&#34; class=&#34;outline-text-3&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -553,11 +522,11 @@ docker
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-25&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-25&#34;&gt;
+&lt;div id=&#34;outline-container-headline-24&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-24&#34;&gt;
 tls
 &lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-25&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;div id=&#34;outline-text-headline-24&#34; class=&#34;outline-text-3&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -574,11 +543,11 @@ tls
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-26&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-26&#34;&gt;
+&lt;div id=&#34;outline-container-headline-25&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-25&#34;&gt;
 Distributed Systems
 &lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-26&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;div id=&#34;outline-text-headline-25&#34; class=&#34;outline-text-3&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -588,7 +557,7 @@ Distributed Systems
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https:youtube.com/playlist?list=PLeKd45zvjcDFUEv_ohr_HdUFe97RItdiB&amp;amp;feature=shared&#34;&gt;Distributed Systems lecture series&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Distributed Systems lecture series&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -607,16 +576,16 @@ Distributed Systems
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-27&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-27&#34;&gt;
+&lt;div id=&#34;outline-container-headline-26&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-26&#34;&gt;
 Observability
 &lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-27&#34; class=&#34;outline-text-2&#34;&gt;
-&lt;div id=&#34;outline-container-headline-28&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-28&#34;&gt;
+&lt;div id=&#34;outline-text-headline-26&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;div id=&#34;outline-container-headline-27&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-27&#34;&gt;
 OpenTelemetry
 &lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-28&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;div id=&#34;outline-text-headline-27&#34; class=&#34;outline-text-3&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -635,11 +604,11 @@ OpenTelemetry
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-29&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-29&#34;&gt;
+&lt;div id=&#34;outline-container-headline-28&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-28&#34;&gt;
 Grafana
 &lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-29&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;div id=&#34;outline-text-headline-28&#34; class=&#34;outline-text-3&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -661,11 +630,11 @@ Grafana
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-30&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-30&#34;&gt;
+&lt;div id=&#34;outline-container-headline-29&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-29&#34;&gt;
 Prometheus
 &lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-30&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;div id=&#34;outline-text-headline-29&#34; class=&#34;outline-text-3&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -676,17 +645,21 @@ Prometheus
 &lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
 &lt;td&gt;Prometheus Certified Associate&lt;/td&gt;
 &lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
+&lt;td&gt;Prometheus Certified Associate (PCA) KodeKloud&lt;/td&gt;
+&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-31&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-31&#34;&gt;
+&lt;div id=&#34;outline-container-headline-30&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-30&#34;&gt;
 Unit Testing
 &lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-31&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;div id=&#34;outline-text-headline-30&#34; class=&#34;outline-text-2&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -701,11 +674,11 @@ Unit Testing
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-32&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-32&#34;&gt;
+&lt;div id=&#34;outline-container-headline-31&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-31&#34;&gt;
 functional programming
 &lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-32&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;div id=&#34;outline-text-headline-31&#34; class=&#34;outline-text-2&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
