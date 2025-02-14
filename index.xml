@@ -9,7 +9,7 @@
     <managingEditor>me@example.com (elx123)</managingEditor>
     <webMaster>me@example.com (elx123)</webMaster>
     <copyright>elx123</copyright>
-    <lastBuildDate>Tue, 04 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 14 Feb 2025 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://elx123.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -29,7 +29,7 @@
     <item>
       <title>程序员学习资料</title>
       <link>https://elx123.github.io/post/summarize/</link>
-      <pubDate>Tue, 04 Feb 2025 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 14 Feb 2025 00:00:00 +0000</pubDate>
       <author>me@example.com (elx123)</author>
       <guid>https://elx123.github.io/post/summarize/</guid>
       
@@ -394,6 +394,11 @@ k8s
 &lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;The Kubernetes Book 2024&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Learning CoreDNS&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
