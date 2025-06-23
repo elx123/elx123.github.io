@@ -9,7 +9,7 @@
     <managingEditor>me@example.com (elx123)</managingEditor>
     <webMaster>me@example.com (elx123)</webMaster>
     <copyright>elx123</copyright>
-    <lastBuildDate>Mon, 12 May 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 23 Jun 2025 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://elx123.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -29,7 +29,7 @@
     <item>
       <title>程序员学习资料</title>
       <link>https://elx123.github.io/post/summarize/</link>
-      <pubDate>Mon, 12 May 2025 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 23 Jun 2025 00:00:00 +0000</pubDate>
       <author>me@example.com (elx123)</author>
       <guid>https://elx123.github.io/post/summarize/</guid>
       
@@ -405,33 +405,14 @@ tcp/ip
 &lt;/div&gt;
 &lt;div id=&#34;outline-container-headline-17&#34; class=&#34;outline-2&#34;&gt;
 &lt;h2 id=&#34;headline-17&#34;&gt;
-tls
-&lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-17&#34; class=&#34;outline-text-2&#34;&gt;
-&lt;table&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
-&lt;td&gt;视频&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://youtube.com/playlist?list=PLQnljOFTspQU3YDMRSMvzflh_qXoz9zfv&amp;amp;feature=shared&#34;&gt;Web Security&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-18&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-18&#34;&gt;
 devops
 &lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-18&#34; class=&#34;outline-text-2&#34;&gt;
-&lt;div id=&#34;outline-container-headline-19&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-19&#34;&gt;
+&lt;div id=&#34;outline-text-headline-17&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;div id=&#34;outline-container-headline-18&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-18&#34;&gt;
 git
 &lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-19&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;div id=&#34;outline-text-headline-18&#34; class=&#34;outline-text-3&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -448,16 +429,16 @@ git
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-20&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-20&#34;&gt;
+&lt;div id=&#34;outline-container-headline-19&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-19&#34;&gt;
 Observability
 &lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-20&#34; class=&#34;outline-text-2&#34;&gt;
-&lt;div id=&#34;outline-container-headline-21&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-21&#34;&gt;
+&lt;div id=&#34;outline-text-headline-19&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;div id=&#34;outline-container-headline-20&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-20&#34;&gt;
 OpenTelemetry
 &lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-21&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;div id=&#34;outline-text-headline-20&#34; class=&#34;outline-text-3&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -476,11 +457,11 @@ OpenTelemetry
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-22&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-22&#34;&gt;
+&lt;div id=&#34;outline-container-headline-21&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-21&#34;&gt;
 Grafana
 &lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-22&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;div id=&#34;outline-text-headline-21&#34; class=&#34;outline-text-3&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -499,11 +480,11 @@ Grafana
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-23&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-23&#34;&gt;
+&lt;div id=&#34;outline-container-headline-22&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-22&#34;&gt;
 Prometheus
 &lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-23&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;div id=&#34;outline-text-headline-22&#34; class=&#34;outline-text-3&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -524,11 +505,11 @@ Prometheus
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-24&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-24&#34;&gt;
+&lt;div id=&#34;outline-container-headline-23&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-23&#34;&gt;
 Unit Testing
 &lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-24&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;div id=&#34;outline-text-headline-23&#34; class=&#34;outline-text-2&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -543,11 +524,11 @@ Unit Testing
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-25&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-25&#34;&gt;
+&lt;div id=&#34;outline-container-headline-24&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-24&#34;&gt;
 functional programming
 &lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-25&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;div id=&#34;outline-text-headline-24&#34; class=&#34;outline-text-2&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -562,16 +543,16 @@ functional programming
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-26&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-26&#34;&gt;
+&lt;div id=&#34;outline-container-headline-25&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-25&#34;&gt;
 前端
 &lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-26&#34; class=&#34;outline-text-2&#34;&gt;
-&lt;div id=&#34;outline-container-headline-27&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-27&#34;&gt;
+&lt;div id=&#34;outline-text-headline-25&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;div id=&#34;outline-container-headline-26&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-26&#34;&gt;
 javascript
 &lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-27&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;div id=&#34;outline-text-headline-26&#34; class=&#34;outline-text-3&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -586,11 +567,11 @@ javascript
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-28&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-28&#34;&gt;
+&lt;div id=&#34;outline-container-headline-27&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-27&#34;&gt;
 bootstrap
 &lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-28&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;div id=&#34;outline-text-headline-27&#34; class=&#34;outline-text-3&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -609,11 +590,11 @@ bootstrap
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-29&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-29&#34;&gt;
+&lt;div id=&#34;outline-container-headline-28&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-28&#34;&gt;
 React
 &lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-29&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;div id=&#34;outline-text-headline-28&#34; class=&#34;outline-text-3&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -628,49 +609,11 @@ React
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-30&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-30&#34;&gt;
-nextjs
-&lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-30&#34; class=&#34;outline-text-3&#34;&gt;
-&lt;table&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
-&lt;td&gt;视频&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
-&lt;td&gt;Next.js 14 &amp;amp; React - The Complete Guide&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-31&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-31&#34;&gt;
-Angular vs React vs Vue
-&lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-31&#34; class=&#34;outline-text-3&#34;&gt;
-&lt;table&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
-&lt;td&gt;视频&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://youtu.be/lYWYWyX04JI?feature=shared&#34;&gt;Angular vs React vs Vue&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-32&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-32&#34;&gt;
+&lt;div id=&#34;outline-container-headline-29&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-29&#34;&gt;
 TypeScript
 &lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-32&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;div id=&#34;outline-text-headline-29&#34; class=&#34;outline-text-3&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
