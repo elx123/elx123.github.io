@@ -471,9 +471,32 @@ redis
 &lt;/div&gt;
 &lt;div id=&#34;outline-container-headline-20&#34; class=&#34;outline-2&#34;&gt;
 &lt;h2 id=&#34;headline-20&#34;&gt;
-tcp/ip
+ai agent
 &lt;/h2&gt;
 &lt;div id=&#34;outline-text-headline-20&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;table&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
+&lt;td&gt;书籍&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
+&lt;td&gt;A Simple Guide to Retrieval Augmented Generation&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td class=&#34;align-right&#34;&gt;&lt;/td&gt;
+&lt;td&gt;AI Agents and Applications With LangChain, LangGraph, and MCP&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-21&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-21&#34;&gt;
+tcp/ip
+&lt;/h2&gt;
+&lt;div id=&#34;outline-text-headline-21&#34; class=&#34;outline-text-2&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -488,16 +511,16 @@ tcp/ip
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-21&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-21&#34;&gt;
+&lt;div id=&#34;outline-container-headline-22&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-22&#34;&gt;
 devops
 &lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-21&#34; class=&#34;outline-text-2&#34;&gt;
-&lt;div id=&#34;outline-container-headline-22&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-22&#34;&gt;
+&lt;div id=&#34;outline-text-headline-22&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;div id=&#34;outline-container-headline-23&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-23&#34;&gt;
 git
 &lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-22&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;div id=&#34;outline-text-headline-23&#34; class=&#34;outline-text-3&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -514,16 +537,16 @@ git
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-23&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-23&#34;&gt;
+&lt;div id=&#34;outline-container-headline-24&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-24&#34;&gt;
 Observability
 &lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-23&#34; class=&#34;outline-text-2&#34;&gt;
-&lt;div id=&#34;outline-container-headline-24&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-24&#34;&gt;
+&lt;div id=&#34;outline-text-headline-24&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;div id=&#34;outline-container-headline-25&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-25&#34;&gt;
 OpenTelemetry
 &lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-24&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;div id=&#34;outline-text-headline-25&#34; class=&#34;outline-text-3&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -542,11 +565,11 @@ OpenTelemetry
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-25&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-25&#34;&gt;
+&lt;div id=&#34;outline-container-headline-26&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-26&#34;&gt;
 Grafana
 &lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-25&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;div id=&#34;outline-text-headline-26&#34; class=&#34;outline-text-3&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -565,11 +588,11 @@ Grafana
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-26&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-26&#34;&gt;
+&lt;div id=&#34;outline-container-headline-27&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-27&#34;&gt;
 Prometheus
 &lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-26&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;div id=&#34;outline-text-headline-27&#34; class=&#34;outline-text-3&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -590,11 +613,11 @@ Prometheus
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-27&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-27&#34;&gt;
+&lt;div id=&#34;outline-container-headline-28&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-28&#34;&gt;
 Unit Testing
 &lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-27&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;div id=&#34;outline-text-headline-28&#34; class=&#34;outline-text-2&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -609,11 +632,11 @@ Unit Testing
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-28&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-28&#34;&gt;
+&lt;div id=&#34;outline-container-headline-29&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-29&#34;&gt;
 functional programming
 &lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-28&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;div id=&#34;outline-text-headline-29&#34; class=&#34;outline-text-2&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -628,16 +651,16 @@ functional programming
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-29&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-29&#34;&gt;
+&lt;div id=&#34;outline-container-headline-30&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-30&#34;&gt;
 前端
 &lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-29&#34; class=&#34;outline-text-2&#34;&gt;
-&lt;div id=&#34;outline-container-headline-30&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-30&#34;&gt;
+&lt;div id=&#34;outline-text-headline-30&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;div id=&#34;outline-container-headline-31&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-31&#34;&gt;
 javascript
 &lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-30&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;div id=&#34;outline-text-headline-31&#34; class=&#34;outline-text-3&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -652,11 +675,11 @@ javascript
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-31&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-31&#34;&gt;
+&lt;div id=&#34;outline-container-headline-32&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-32&#34;&gt;
 bootstrap
 &lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-31&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;div id=&#34;outline-text-headline-32&#34; class=&#34;outline-text-3&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -675,11 +698,11 @@ bootstrap
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-32&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-32&#34;&gt;
+&lt;div id=&#34;outline-container-headline-33&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-33&#34;&gt;
 React
 &lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-32&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;div id=&#34;outline-text-headline-33&#34; class=&#34;outline-text-3&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -694,11 +717,11 @@ React
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-33&#34; class=&#34;outline-3&#34;&gt;
-&lt;h3 id=&#34;headline-33&#34;&gt;
+&lt;div id=&#34;outline-container-headline-34&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-34&#34;&gt;
 TypeScript
 &lt;/h3&gt;
-&lt;div id=&#34;outline-text-headline-33&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;div id=&#34;outline-text-headline-34&#34; class=&#34;outline-text-3&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -715,11 +738,11 @@ TypeScript
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-34&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-34&#34;&gt;
+&lt;div id=&#34;outline-container-headline-35&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-35&#34;&gt;
 Algorithms
 &lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-34&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;div id=&#34;outline-text-headline-35&#34; class=&#34;outline-text-2&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
@@ -734,11 +757,11 @@ Algorithms
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div id=&#34;outline-container-headline-35&#34; class=&#34;outline-2&#34;&gt;
-&lt;h2 id=&#34;headline-35&#34;&gt;
+&lt;div id=&#34;outline-container-headline-36&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-36&#34;&gt;
 正则表达式
 &lt;/h2&gt;
-&lt;div id=&#34;outline-text-headline-35&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;div id=&#34;outline-text-headline-36&#34; class=&#34;outline-text-2&#34;&gt;
 &lt;table&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
